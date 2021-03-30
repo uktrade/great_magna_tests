@@ -14,7 +14,7 @@ certifi==2020.4.5.1       # via great-magna-tests-shared, requests
 cffi==1.14.0              # via cryptography, great-magna-tests-shared
 chardet==3.0.4            # via great-magna-tests-shared, requests
 constantly==15.1.0        # via great-magna-tests-shared, twisted
-cryptography==3.2         # via great-magna-tests-shared, pyopenssl, scrapy, service-identity
+cryptography==3.3.2         # via great-magna-tests-shared, pyopenssl, scrapy, service-identity
 cssselect==1.1.0          # via great-magna-tests-shared, parsel, scrapy
 directory-api-client==21.8.0  # via great-magna-tests-shared
 directory-client-core==6.1.0  # via directory-api-client, directory-cms-client, directory-forms-api-client, directory-sso-api-client, great-magna-tests-shared

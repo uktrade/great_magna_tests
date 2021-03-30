@@ -13,7 +13,7 @@ chardet==3.0.4            # via great-magna-tests-shared, requests
 click==7.1.2              # via flask
 configargparse==1.2.3     # via locust
 constantly==15.1.0        # via great-magna-tests-shared, twisted
-cryptography==3.2         # via great-magna-tests-shared, pyopenssl, scrapy, service-identity
+cryptography==3.3.2         # via great-magna-tests-shared, pyopenssl, scrapy, service-identity
 cssselect==1.1.0          # via great-magna-tests-shared, parsel, scrapy
 django==2.2.18            # via directory-api-client, directory-client-core, directory-constants, great-magna-tests-shared, djangorestframework, sigauth
 djangorestframework==3.11.2  # via great-magna-tests-shared, sigauth

@@ -17,7 +17,7 @@ cffi==1.14.0              # via cryptography, great-magna-tests-shared
 chardet==3.0.4            # via great-magna-tests-shared, requests
 circleclient==0.1.6       # via -r requirements_periodic_tasks.in
 constantly==15.1.0        # via great-magna-tests-shared, twisted
-cryptography==3.2         # via great-magna-tests-shared, oauthlib, pyopenssl, scrapy, service-identity
+cryptography==3.3.2         # via great-magna-tests-shared, oauthlib, pyopenssl, scrapy, service-identity
 cssselect==1.1.0          # via great-magna-tests-shared, parsel, scrapy
 defusedxml==0.6.0         # via jira
 directory-api-client==21.8.0  # via great-magna-tests-shared
