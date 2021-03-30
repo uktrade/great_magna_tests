@@ -12,7 +12,7 @@ Feature: GreatMagna - Business Risk Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on element "Business Risk" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Back" on page "Build An Export Plan - Export Plan Dashboard"

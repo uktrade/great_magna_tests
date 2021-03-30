@@ -15,7 +15,7 @@
 #  Examples: email address and password
 #     |      emailaddress                 | password    |
 #     | santoshtesting10008+98851@gmail.com | Testing@123!|
-#  #And "Robert" should be able to click on SkipWalkthrough
+#  And "Robert" should be able to click on SkipWalkthrough
 #
 #    Then "Robert" decides to click on "Build an export plan"
 #     And "Robert" decides to click on section "About Your Business" on page "Build An Export Plan - Export Plan Dashboard"

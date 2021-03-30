@@ -46,28 +46,28 @@ SELECTORS = {
             By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[1]/div/a/div[2]/h3"
         ),
         "how you started example": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-form\"]/div[1]/div/button"
+            By.CSS_SELECTOR, "#about-your-business-form > div:nth-child(1) > div > div.learning__buttons.m-b-xs > button"
         ),
         "how you started educational": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-form\"]/div[1]/div/div/div/button/i"
+            By.CSS_SELECTOR, "#about-your-business-form > div:nth-child(1) > div > div.learning__buttons.m-b-xs > div > div > button > i"
         ),
         "how you started": Selector(
             By.XPATH, "//*[@id=\"story\"]", type=ElementType.INPUT
         ),
         "where you're based example": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-form\"]/div[2]/div/button", type=ElementType.INPUT
+            By.CSS_SELECTOR, "#about-your-business-form > div:nth-child(2) > div > div.learning__buttons.m-b-xs > button", type=ElementType.INPUT
         ),
         "where you're based": Selector(
             By.XPATH, "//*[@id=\"location\"]", type=ElementType.INPUT
         ),
         "how you make your products example": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-form\"]/div[3]/div/button"
+            By.CSS_SELECTOR, "#about-your-business-form > div:nth-child(3) > div > div.learning__buttons.m-b-xs > button"
         ),
         "how you make your products": Selector(
             By.XPATH, "//*[@id=\"processes\"]", type=ElementType.INPUT
         ),
         "your product packaging example": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-form\"]/div[4]/div/button"
+            By.CSS_SELECTOR, "#about-your-business-form > div:nth-child(4) > div > div.learning__buttons.m-b-xs > button"
         ),
         "your product packaging": Selector(
             By.XPATH, "//*[@id=\"packaging\"]", type=ElementType.INPUT
@@ -79,7 +79,7 @@ SELECTORS = {
             By.XPATH, "//*[@id=\"about-your-business-content\"]/section[4]/div/div/div[2]/a/span"
         ),
         "export plan home": Selector(
-            By.XPATH, "//*[@id=\"about-your-business-content\"]/section[4]/div/div/div[2]/div/a"
+            By.CSS_SELECTOR, "#about-your-business-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
         ),
         "move from accidental exporting to strategic exporting": Selector(
             By.XPATH, "//*[@id=\"about-your-business-content\"]/section[3]/div/div[1]/div/a/div/p"
@@ -98,7 +98,7 @@ SELECTORS = {
             By.XPATH, "//a[contains(text(),'Business objectives')]"
         ),
         "yes checkbox": Selector(
-            By.XPATH, "//label[contains(text(),'Yes')]"
+            By.XPATH, "//*[@id=\"about-your-business-content\"]/section[4]/div/div/div[2]/a/span"
         ),
     }
 }

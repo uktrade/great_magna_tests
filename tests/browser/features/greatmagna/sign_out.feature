@@ -11,7 +11,7 @@ Feature: GreatMagna - Sign out Page
   Given "Robert" visited "GreatMagna - Login" page
   When "Robert" decides to enter email address "<email address>", password "<password>" and click Login
   And "Robert" should be on the "GreatMagna - Dashboard" Page
-  #And "Robert" should be able to click on SkipWalkthrough
+  And "Robert" should be able to click on SkipWalkthrough
   And "Robert" should be able to click on Avatar
   And "Robert" should be able to click on SignOut
   Then "Robert" should be on the "GreatMagna - Login" page

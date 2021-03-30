@@ -11,7 +11,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Open Data Snapshot" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -24,7 +24,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     #And "Robert" decides to click on element "Labelling educational" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -58,7 +58,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     #And "Robert" decides to click on element "Certificate of origin educational" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -85,7 +85,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Add another document" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -103,7 +103,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on section "Export Plan Home" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -116,7 +116,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Open Navigation" on page "Build An Export Plan - Costs And Pricing"
@@ -130,7 +130,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on section "Marketing Approach" on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -142,7 +142,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" fill document details on page "Build An Export Plan - Adaptation For Your Target Market"
@@ -160,7 +160,7 @@ Feature: GreatMagna - Adaptation For Your Target Market Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
      Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to delete document details on page "Build An Export Plan - Adaptation For Your Target Market"

@@ -30,6 +30,7 @@ from steps.when_impl import (
     generic_accept_all_cookies,
     promo_video_watch,
     promo_video_close,
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months,
 )
 
 
@@ -169,3 +170,8 @@ def when_actor_decides_to_enter_email_address_and_click_sign_up(
 # def when_actor_decides_to_accept_all_cookies(
 #         context, actor_alias):
 #     generic_accept_all_cookies(context, actor_alias)
+
+@when('"{actor_alias}" should be able to click on I have exported in the last 12 months')
+def when_actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
+        context, actor_alias):
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(context, actor_alias)

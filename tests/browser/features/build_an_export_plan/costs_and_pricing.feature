@@ -12,7 +12,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Open Navigation" on page "Build An Export Plan - Costs And Pricing"
@@ -26,7 +26,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Costs And Pricing"
@@ -38,7 +38,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on section "Export Plan Home" on page "Build An Export Plan - Costs And Pricing"
@@ -50,7 +50,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to enter value in "Number of units" on page "Build An Export Plan - Costs And Pricing"
@@ -66,7 +66,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Product Cost educational" on page "Build An Export Plan - Costs And Pricing"
@@ -84,7 +84,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Product Adaptation educational" on page "Build An Export Plan - Costs And Pricing"
@@ -106,7 +106,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Net Price educational" on page "Build An Export Plan - Costs And Pricing"
@@ -125,7 +125,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Net Price educational" on page "Build An Export Plan - Costs And Pricing"
@@ -144,7 +144,7 @@ Feature: GreatMagna - Costs And Pricing Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-   #And "Robert" should be able to click on SkipWalkthrough
+   And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Costs And Pricing"
