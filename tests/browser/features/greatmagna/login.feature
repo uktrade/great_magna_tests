@@ -6,6 +6,7 @@ Feature: GreatMagna - Login Page
 
    @allure.link:XOT-001
    @Great-Magna-Login
+     @failure
 Scenario Outline:Visitor should be able to login with email address and password
 
   Given "Robert" visited "GreatMagna - Login" page

@@ -18,7 +18,7 @@
 #  Examples: email address and password
 #     |      emailaddress                 | password    |
 #     | santoshtesting10008+xxxx@gmail.com | Testing@123!|
-#  #And "Robert" should be able to click on SkipWalkthrough
+#  And "Robert" should be able to click on SkipWalkthrough
 ##    Then "Robert" should be able to enter products "<products>" and country "<country>"
 ##        Examples: Products and Country
 ##         | products                 | country      |

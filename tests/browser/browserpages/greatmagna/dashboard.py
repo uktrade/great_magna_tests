@@ -68,8 +68,20 @@ SELECTORS = {
         "country-btn": Selector(
             By.CSS_SELECTOR, "#set-country-button > span > button"
         ),
-        "contact us": Selector(
-            By.XPATH, "//a[contains(text(),'Contact us')]"
+        "i have exported in last 12 months": Selector(
+            By.XPATH, "//label[contains(text(),'I have exported in the last 12 months')]"
+        ),
+        "i have exported before but not in the last 12 months": Selector(
+            By.XPATH, "//label[contains(text(),'I have exported before but not in the last 12 mont')]"
+        ),
+        "i have never exported but have a product or service": Selector(
+            By.XPATH, "//label[contains(text(),'I have never exported but have a product or servic')]"
+        ),
+        "i do not have a product or service for export": Selector(
+            By.XPATH, "//label[contains(text(),'I do not have a product or service for export')]"
+        ),
+        "save": Selector(
+            By.XPATH, "//button[contains(text(),'Save')]"
         ),
 
     },
@@ -308,3 +320,13 @@ def fill_out_products(driver: WebDriver, products: str):
         driver, find_selector_by_name(SELECTORS, "#search-input")
     )
     product_btn.click()
+
+def click_on_i_have_exported_in_the_last_12_months(driver: WebDriver):
+    click_element = find_element(
+        driver, find_selector_by_name(SELECTORS, "i have exported in last 12 months")
+    )
+    click_element.click()
+    save = find_element(
+        driver, find_selector_by_name(SELECTORS, "save")
+    )
+    save.click()

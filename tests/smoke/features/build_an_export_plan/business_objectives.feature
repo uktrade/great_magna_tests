@@ -72,7 +72,7 @@ Feature: GreatMagna - Business Objectives Page
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   #And "Robert" should be able to click on SkipWalkthrough
+#   And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Build an export plan"
 #    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
 #    And "Robert" fill business objective details on page "Build An Export Plan - Business Objectives"
@@ -90,7 +90,7 @@ Feature: GreatMagna - Business Objectives Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Target Markets Research" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Data Snapshot" on page "Build An Export Plan - Target Markets Research"
@@ -104,7 +104,7 @@ Feature: GreatMagna - Business Objectives Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Target Markets Research" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Target Markets Research"
@@ -132,7 +132,7 @@ Feature: GreatMagna - Business Objectives Page
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    #And "Robert" should be able to click on SkipWalkthrough
+#    And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Build an export plan"
 #     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
 #     And "Robert" decides to enter value in "Number of units" on page "Build An Export Plan - Costs And Pricing"
@@ -147,7 +147,7 @@ Feature: GreatMagna - Business Objectives Page
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   #And "Robert" should be able to click on SkipWalkthrough
+#   And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Build an export plan"
 #    And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
 #     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Costs And Pricing"
@@ -165,7 +165,7 @@ Feature: GreatMagna - Business Objectives Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on element "Travel Plan" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click on element "Back" on page "Build An Export Plan - Export Plan Dashboard"
@@ -181,7 +181,7 @@ Feature: GreatMagna - Business Objectives Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Getting Paid" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to select random item for "Payment Terms" on page "Build An Export Plan - Getting Paid"
@@ -208,7 +208,7 @@ Feature: GreatMagna - Business Objectives Page
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click section complete on "Build An Export Plan - Business Objectives"

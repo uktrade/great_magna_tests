@@ -643,3 +643,9 @@ def generic_submit_form(context: Context, actor_alias: str):
     page = get_last_visited_page(context, actor_alias)
     has_action(page, "submit")
     page.submit(context.driver)
+
+def actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
+        context, actor_alias):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "click_on_i_have_exported_in_the_last_12_months")
+    page.click_on_i_have_exported_in_the_last_12_months(context.driver)

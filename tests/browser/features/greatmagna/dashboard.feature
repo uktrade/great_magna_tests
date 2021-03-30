@@ -5,21 +5,32 @@ Feature: GreatMagna - Dashboard Page
    Background:
     Given Test authentication is done
 
+#   @allure.link:XOT-020
+#   @Great-Magna-Dashboard
+#  Scenario Outline:User should be able to view Dashboard pages
+#
+#    Given "Robert" visited "GreatMagna - Login" page
+#    When "Robert" decides to enter email address "<email address>", password "<password>" and click Login
+#    And "Robert" should be on the "GreatMagna - Dashboard" Page
+#    And "Robert" should be able to click on SkipWalkthrough
+#    Then "Robert" should see following sections
+#      | sections             |
+#      | Learn to export      |
+#      | Compare countries    |
+#      | Build an export plan |
+#      Examples: email address and password
+#          | email address | password |
+#          | santoshtesting10008+888@gmail.com | Testing@123! |
+
+
    @allure.link:XOT-020
    @Great-Magna-Dashboard
-  Scenario Outline:User should be able to view Dashboard pages
+  Scenario Outline:User should be click on the questions for vfm
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "<email address>", password "<password>" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
-    Then "Robert" should see following sections
-      | sections             |
-      | Learn to export      |
-      | Compare countries    |
-      | Build an export plan |
+    And "Robert" should be able to click on I have exported in the last 12 months
       Examples: email address and password
           | email address | password |
           | santoshtesting10008+888@gmail.com | Testing@123! |
-
-

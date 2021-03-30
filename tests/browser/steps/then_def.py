@@ -41,6 +41,7 @@ from steps.then_impl import (
     actor_decides_to_select_funding_options_on_page,
     actor_decides_to_enter_product_name,
     actor_should_be_able_to_click_on_skipwalkthrough,
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months,
 )
 
 from steps.when_impl import (
@@ -393,3 +394,9 @@ def then_actor_decides_to_enter_product_name(
 def then_actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
     actor_should_be_able_to_click_on_skipwalkthrough(context, actor_alias)
+
+
+@then('"{actor_alias}" should be able to click on I have exported in the last 12 months')
+def when_actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
+        context, actor_alias):
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(context, actor_alias)

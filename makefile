@@ -71,7 +71,7 @@ functional_tests:
 functional_tests_feature_dir:
 	behave --format=allure_behave.formatter:AllureFormatter --define AllureFormatter.issue_pattern=$(BUG_TRACKER_URL_PATTERN) --define AllureFormatter.link_pattern=$(BUG_TRACKER_URL_PATTERN) --outfile=results_${FEATURE_DIR}/ --no-skipped --format progress3 --logging-filter=-root --tags=~@wip --tags=~@skip --tags=~@fixme tests/functional/features/${FEATURE_DIR} ${TAGS} || true
 
-BROWSER ?= chrome
+BROWSER ?= firefox
 HEADLESS ?= false
 AUTO_RETRY ?= true
 BROWSER_TYPE ?= desktop

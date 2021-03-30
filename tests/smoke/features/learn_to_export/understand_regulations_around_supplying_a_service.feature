@@ -13,7 +13,7 @@ Feature: GreatMagna - Lessons Page
   Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    #And "Robert" should be able to click on SkipWalkthrough
+    And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
    And "Robert" decides to click on section "Regulations licensing and logistics" on page "LearnToExport - Learn Categories"
     And "Robert" decides to click on section "Understand regulations around supplying a service" on page "LearnToExport - Regulations licensing and logistics"
