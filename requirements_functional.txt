@@ -46,7 +46,7 @@ parsel==1.6.0             # via great-magna-tests-shared, scrapy
 pdfminer2==20151206       # via great-magna-tests-shared
 pluggy==0.13.1            # via allure-python-commons, pytest
 protego==0.1.16           # via great-magna-tests-shared, scrapy
-py==1.8.1                 # via pytest
+py==1.10.0                # via pytest
 pyasn1-modules==0.2.8     # via great-magna-tests-shared, service-identity
 pyasn1==0.4.8             # via great-magna-tests-shared, pyasn1-modules, service-identity
 pycparser==2.20           # via cffi, great-magna-tests-shared
