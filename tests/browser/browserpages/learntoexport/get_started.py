@@ -42,7 +42,7 @@ PAGE_TITLE = "Get Started Page "
 
 SELECTORS = {
     "get started": {
-        "what you'll find in each lesson": Selector(
+        "what youll find in each lesson": Selector(
             By.XPATH, "//*[@id=\"330\"]/ul/li[1]/a/span"
         ),
         "how lessons can help": Selector(

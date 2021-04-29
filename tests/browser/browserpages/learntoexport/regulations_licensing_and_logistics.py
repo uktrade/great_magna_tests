@@ -48,7 +48,7 @@ SELECTORS = {
         "understand duties and taxes": Selector(
             By.XPATH, "//span[contains(text(),'Understand duties and taxes')]"
         ),
-        "understand regulations around supplying a service": Selector(
+        "Regulations around supplying a service": Selector(
             By.XPATH, "//span[contains(text(),'Understand regulations around supplying a service')]"
         ),
         "freight forwarders": Selector(

@@ -83,6 +83,9 @@ class URLs(Enum):
     SSO_API_USER = SSOApiUrl("api/v1/session-user/")
 
     # Great Magna Pages
+    # GREAT_MAGNA_LANDING = GreatMagnaUrl("https://great.dev.uktrade.digital/")
+    #GREAT_MAGNA_HOME = GreatMagnaUrl("https://great-magna.staging.uktrade.digital/")
+    GREAT_MAGNA_HOME = GreatMagnaUrl("https://magna-beta.great.uktrade.digital/")
     GREAT_MAGNA_START = GreatMagnaUrl("")
     GREAT_MAGNA_SIGNUP = GreatMagnaUrl("signup/")
     GREAT_MAGNA_LOGIN = GreatMagnaUrl("login/")
@@ -98,6 +101,8 @@ class URLs(Enum):
     GREAT_MAGNA_WHERE_TO_EXPORT = GreatMagnaUrl("where-to-export/")
 
     GREAT_MAGNA_LESSONS_GET_STARTED = GreatMagnaUrl("learn/categories/getting-started/")
+    GREAT_MAGNA_LESSONS_WHAT_YOULL_FIND_IN_EACH_LESSON = GreatMagnaUrl(
+        "learn/categories/getting-started/introduction-learning/what-youll-find-each-lesson/")
     GREAT_MAGNA_LESSONS_INTRODUCTION_TO_LESSONS_AND_LEARNING = GreatMagnaUrl(
         "learn/categories/getting-started/lesson-basics/introduction-lessons-and-learning/")
     GREAT_MAGNA_LESSONS_NEW_LESSON_ADDED = GreatMagnaUrl(
@@ -105,72 +110,95 @@ class URLs(Enum):
     GREAT_MAGNA_LESSONS_HOW_LESSONS_CAN_HELP = GreatMagnaUrl(
         "learn/categories/getting-started/introduction-learning/how-lessons-can-help-you-make-export-plan/")
 
-
     GREAT_MAGNA_LESSONS_IDENTIFY_OPPORTUNITIES_AND_RESEARCH_THE_MARKET = GreatMagnaUrl(
         "learn/categories/market-research/")
-    GREAT_MAGNA_LESSONS_CHOOSING_THE_RIGHT_OPPORTUNITIES = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_CHOOSING_THE_RIGHT_EXPORT_OPPORTUNITIES = GreatMagnaUrl(
         "learn/categories/market-research/evaluate-opportunities/opportunity-right-you/")
     GREAT_MAGNA_LESSONS_MOVE_FROM_ACCIDENTAL_EXPORTING_TO_STRATEGIC_EXPORTING = GreatMagnaUrl(
         "learn/categories/market-research/evaluate-opportunities/move-accidental-exporting-strategic-exporting/")
     GREAT_MAGNA_LESSONS_IN_MARKET_RESEARCH = GreatMagnaUrl(
         "learn/categories/market-research/market-research-approaches/-market-research/")
-    GREAT_MAGNA_LESSONS_QUANTIFY_CUSTOMER_DEMAND_HOW_MUCH_YOU_MIGHT_SELL = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_ONLINE_RESEARCH = GreatMagnaUrl(
+        "learn/categories/market-research/market-research-approaches/online-research/")
+    GREAT_MAGNA_LESSONS_WORK_OUT_CUSTOMER_DEMAND = GreatMagnaUrl(
         "learn/categories/market-research/calculate-customer-demand/quantifying-customer-demand-how-much-might-you-sell/")
-    GREAT_MAGNA_LESSONS_USING_WHAT_YOU_KNOW = GreatMagnaUrl(
-        "/learn/categories/market-research/calculate-customer-demand/using-what-you-know-to-help-inform-your-positioning-and-competitive-advantage/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_MARKET_TRENDS = GreatMagnaUrl(
-        "/learn/categories/market-research/calculate-customer-demand/understand-market-trends/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_MARKET_BARRIERS = GreatMagnaUrl(
-        "learn/categories/market-research/research-countries-and-choose-destination-markets/understand-market-barriers/")
-    GREAT_MAGNA_LESSONS_HOW_TO_ASSESS_EASE_OF_ENTRY_INTO_A_NEW_MARKET = GreatMagnaUrl(
-        "learn/categories/market -research/research-countries-and-choose-destination-markets/how-assess-ease-entry-new-market/")
-    GREAT_MAGNA_LESSONS_LOCAL_INFRASTRUCTURE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_UNDERSTAND_YOUR_MARKET_SIZE_AND_ITS_SEGMENTS = GreatMagnaUrl(
+        "learn/categories/market-research/calculate-customer-demand/understand-your-market-size-and-its-segments/")
+    GREAT_MAGNA_LESSONS_UNDERSTANDING_THE_COMPETITION = GreatMagnaUrl(
+        "learn/categories/market-research/competitor-analysis/understanding-competitor-market-share-and-pricing/")
+    GREAT_MAGNA_LESSONS_RESEARCH_CURRENT_MARKET_CONDITIONS = GreatMagnaUrl(
+        "learn/categories/market-research/research-countries-and-choose-destination-markets/research-current-market-conditions/")
+    # GREAT_MAGNA_LESSONS_USING_WHAT_YOU_KNOW = GreatMagnaUrl(
+    #     "/learn/categories/market-research/calculate-customer-demand/using-what-you-know-to-help-inform-your-positioning-and-competitive-advantage/")
+    # GREAT_MAGNA_LESSONS_UNDERSTAND_MARKET_TRENDS = GreatMagnaUrl(
+    #     "/learn/categories/market-research/calculate-customer-demand/understand-market-trends/")
+    # GREAT_MAGNA_LESSONS_UNDERSTAND_MARKET_BARRIERS = GreatMagnaUrl(
+    #     "learn/categories/market-research/research-countries-and-choose-destination-markets/understand-market-barriers/")
+    GREAT_MAGNA_LESSONS_EASE_OF_ENTRY_INTO_A_NEW_MARKET = GreatMagnaUrl(
+        "learn/categories/market-research/research-countries-and-choose-destination-markets/how-assess-ease-entry-new-market/")
+    GREAT_MAGNA_LESSONS_RESEARCH_LOCAL_INFRASTRUCTURE = GreatMagnaUrl(
         "learn/categories/market-research/research-countries-and-choose-destination-markets/local-infrastructure/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_HOW_YOU_MAY_NEED_TO_ADAPT_YOUR_PRODUCT_TO_MEET_INTERNATIONAL_STANDARDS = GreatMagnaUrl(
+    # GREAT_MAGNA_LESSONS_UNDERSTAND_HOW_YOU_MAY_NEED_TO_ADAPT_YOUR_PRODUCT_TO_MEET_INTERNATIONAL_STANDARDS = GreatMagnaUrl(
+    #     "learn/categories/market-research/research-countries-and-choose-destination-markets/understand-how-you-may-need-adapt-your-product-meet-international-standards/")
+    # GREAT_MAGNA_LESSONS_INFORMATION_YOU_NEED_TO_CHOOSE_A_TARGET_COUNTRY = GreatMagnaUrl(
+    #     "learn/categories/market-research/research-countries-and-choose-destination-markets/information-you-need-choose-target-country/")
+    GREAT_MAGNA_LESSONS_ADAPTING_YOUR_PRODUCT_OR_SERVICE = GreatMagnaUrl(
         "learn/categories/market-research/research-countries-and-choose-destination-markets/understand-how-you-may-need-adapt-your-product-meet-international-standards/")
     GREAT_MAGNA_LESSONS_INFORMATION_YOU_NEED_TO_CHOOSE_A_TARGET_COUNTRY = GreatMagnaUrl(
         "learn/categories/market-research/research-countries-and-choose-destination-markets/information-you-need-choose-target-country/")
+    GREAT_MAGNA_LESSONS_CUSTOMER_DEMAND_VS_EASE_OF_ENTRY = GreatMagnaUrl(
+        "learn/categories/market-research/research-countries-and-choose-destination-markets/plot-market-demand-against-ease-entry/")
 
     GREAT_MAGNA_LESSONS_PREPARE_TO_SELL_INTO_A_NEW_COUNTRY = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/")
     GREAT_MAGNA_LESSONS_CHOOSE_THE_RIGHT_ROUTE_TO_MARKET = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/choose-right-route-market/")
-    GREAT_MAGNA_LESSONS_SELL_DIRECT_TO_YOUR_CUSTOMER = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_SELLING_DIRECT_TO_YOUR_CUSTOMER = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/sell-direct-your-customer/")
-    GREAT_MAGNA_LESSONS_SELL_WITH_INTERNATIONAL_E_COMMERCE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_SELLING_WITH_INTERNATIONAL_E_COMMERCE = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/international-e-commerce/")
-    GREAT_MAGNA_LESSONS_SET_UP_JOINT_VENTURES_ABROAD = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_SETTING_UP_JOINT_VENTURES_ABROAD = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/set-joint-ventures-abroad/")
     GREAT_MAGNA_LESSONS_SETTING_UP_A_FRANCHISE_ABROAD = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/setting-franchise-abroad/")
-    GREAT_MAGNA_LESSONS_DECIDE_WHETHER_TO_USE_LICENSING = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_USING_LICENSING = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/decide-whether-use-licensing/")
-    GREAT_MAGNA_LESSONS_HOW_TO_SET_UP_A_BUSINESS_ABROAD = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_SETTING_UP_A_BUSINESS_ABROAD = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/routes-to-market/how-set-business-abroad/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_THE_LOCAL_BUSINESS_CULTURE_IN_YOUR_TARGET_MARKET = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_USING_AN_AGENT_OR_DISTRIBUTOR = GreatMagnaUrl(
+        "learn/categories/prepare-sell-new-country/routes-to-market/when-use-agent-or-distributor/")
+    GREAT_MAGNA_LESSONS_UNDERSTAND_THE_LOCAL_BUSINESS_CULTURE = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/different-ways-of-doing-business-across-borders/understand-local-business-culture-your-target-market/")
     GREAT_MAGNA_LESSONS_UNDERSTAND_PRODUCT_LIABILITY = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/understanding-product-liability/")
     GREAT_MAGNA_LESSONS_PROTECT_YOUR_INTELLECTUAL_PROPERTY_ABROAD = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/protect-your-intellectual-property-abroad/")
-    GREAT_MAGNA_LESSONS_HOW_TO_PREPARE_FOR_A_TRADE_MISSION = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_PREPARING_FOR_A_TRADE_MISSION = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-mission/")
-    GREAT_MAGNA_LESSONS_HOW_TO_PREPARE_FOR_A_TRADE_SHOW_AS_AN_ATTENDEE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_PREPARING_FOR_A_TRADE_SHOW_AS_AN_ATTENDEE = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-attendee/")
-    GREAT_MAGNA_LESSONS_HOW_TO_PREPARE_FOR_A_TRADE_SHOW_AS_AN_EXHIBITOR = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_GETTING_READY_FOR_A_TRADE_SHOW_AS_AN_EXHIBITOR = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-exhibitor/")
-    GREAT_MAGNA_LESSONS_HOW_TO_ADAPT_YOUR_WEBSITE_FOR_AN_INTERNATIONAL_AUDIENCE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_ADAPTING_YOUR_WEBSITE_FOR_AN_INTERNATIONAL_AUDIENCE = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-online/how-adapt-your-website-international-audience/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_DIGITAL_MARKETING = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_UNDERSTANDING_DIGITAL_MARKETING = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-online/understand-digital-marketing/")
+    GREAT_MAGNA_LESSONS_USING_ONLINE_MARKETPLACES = GreatMagnaUrl(
+        "learn/categories/prepare-sell-new-country/finding-customers-and-marketing-online/using-online-marketplaces/")
     GREAT_MAGNA_LESSONS_PROTECT_YOUR_BUSINESS_FROM_BRIBERY_AND_CORRUPTION = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-business-bribery-and-corruption/")
-    GREAT_MAGNA_LESSONS_OPERATING_WITH_BUSINESS_INTEGRITY = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_HOW_TO_OPERATE_WITH_BUSINESS_INTEGRITY = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/operating-business-integrity/")
     GREAT_MAGNA_LESSONS_PROTECT_YOUR_DATA_ABROAD = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-data-abroad/")
+    GREAT_MAGNA_LESSONS_PITCHING_AND_TENDERING_IN_A_NEW_MARKET = GreatMagnaUrl(
+        "learn/categories/prepare-sell-new-country/winning-bids-and-expansion/pitching-and-tendering-in-a-new-market/")
     GREAT_MAGNA_HOW_TO_DRAFT_A_CONTRACT = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/winning-bids-and-expansion/how-draft-contract/")
+    GREAT_MAGNA_LESSONS_USING_SAMPLES_PROTOTYPES_AND_DEMOS = GreatMagnaUrl(
+        "learn/categories/prepare-sell-new-country/winning-bids-and-expansion/using-samples-prototypes-and-demos/")
+    GREAT_MAGNA_LESSONS_HOW_TO_HANDLE_PRICE_NEGOTIATIONS = GreatMagnaUrl(
+        "learn/categories/prepare-sell-new-country/winning-bids-and-expansion/how-handle-price-negotiations/")
 
     GREAT_MAGNA_LESSONS_REGULATIONS_LICENSING_AND_LOGISTICS = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/")
@@ -178,32 +206,38 @@ class URLs(Enum):
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/labelling-and-packaging/")
     GREAT_MAGNA_LESSONS_UNDERSTAND_DUTIES_AND_TAXES = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-duties-and-taxes/")
+    GREAT_MAGNA_LESSONS_UNDERSTAND_LOCAL_MARKET_REGULATIONS_FOR_PRODUCTS = GreatMagnaUrl(
+        "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-local-market-regulations-products/")
     GREAT_MAGNA_LESSONS_CHOOSE_WHICH_INCOTERMS_ARE_RIGHT_FOR_YOU = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/incoterms/")
-    GREAT_MAGNA_LESSONS_FREIGHT_FORWARDERS = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_USING_FREIGHT_FORWARDERS = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/freight-forwarders/")
     GREAT_MAGNA_LESSONS_REGULATIONS_AROUND_E_COMMERCE = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/regulations-around-e-commerce/")
-    GREAT_MAGNA_LESSONS_UNDERSTAND_REGULATIONS_AROUND_SUPPLYING_A_SERVICE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_REGULATIONS_AROUND_SUPPLYING_A_SERVICE = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-regulations-around-supplying-service/")
     GREAT_MAGNA_LESSONS_UNDERSTAND_DATA_REGULATIONS_AND_DATA_PROTECTION = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-data-regulations-and-data-protection/")
+    GREAT_MAGNA_LESSONS_HOW_TO_MAKE_A_UK_CUSTOMS_DECLARATION = GreatMagnaUrl(
+        "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/how-make-uk-customs-declaration/")
+    GREAT_MAGNA_LESSONS_UNDERSTAND_EXPORT_LICENSING = GreatMagnaUrl(
+        "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/understand-export-licensing/")
 
     GREAT_MAGNA_LESSONS_FUNDING_FINANCE_AND_GETTING_PAID = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/")
     GREAT_MAGNA_LESSONS_CHOOSE_THE_RIGHT_FUNDING_AND_CREDIT_OPTIONS = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/manage-cash-flow/funding-and-credit-options-doing-business-across-borders/")
-    GREAT_MAGNA_LESSONS_HOW_TO_AVOID_CASHFLOW_CHALLENGES_WHEN_EXPORTING = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_AVOID_CASHFLOW_CHALLENGES_WHEN_EXPORTING = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/manage-cash-flow/how-avoid-cashflow-challenges-when-exporting/")
-    GREAT_MAGNA_LESSONS_HOW_TO_INSURE_AGAINST_NON_PAYMENT = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_INSURE_AGAINST_NON_PAYMENT = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/get-paid/insure-against-non-payment/")
-    GREAT_MAGNA_LESSONS_HOW_TO_CREATE_AN_EXPORT_INVOICE = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_CREATE_AN_EXPORT_INVOICE = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/get-paid/how-create-export-invoice/")
     GREAT_MAGNA_LESSONS_DECIDE_WHEN_TO_GET_PAID = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/get-paid/decide-when-get-paid-export-orders/")
     GREAT_MAGNA_LESSONS_CHOOSE_THE_RIGHT_PAYMENT_METHOD = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/get-paid/payment-methods-exporters/")
-    GREAT_MAGNA_LESSONS_HOW_TO_MANAGE_EXCHANGE_RATES = GreatMagnaUrl(
+    GREAT_MAGNA_LESSONS_MANAGE_EXCHANGE_RATES = GreatMagnaUrl(
         "learn/categories/funding-financing-and-getting-paid/exchange-rates-and-moving-money/managing-exchange-rates/")
 
     GREAT_MAGNA_EXPORT_PLAN_DASHBOARD = GreatMagnaUrl("export-plan/dashboard/")
@@ -216,8 +250,8 @@ class URLs(Enum):
         "export-plan/section/marketing-approach/")
     GREAT_MAGNA_EXPORT_PLAN_TARGET_MARKET_RESEARCH = GreatMagnaUrl(
         "export-plan/section/target-markets-research/")
-    GREAT_MAGNA_EXPORT_PLAN_ADAPTATION_FOR_YOUR_TARGET_MARKET = GreatMagnaUrl(
-        "export-plan/section/adaptation-for-your-target-market/")
+    GREAT_MAGNA_EXPORT_PLAN_ADAPTING_YOUR_PRODUCT = GreatMagnaUrl(
+        "export-plan/section/adapting-your-product/")
     GREAT_MAGNA_EXPORT_PLAN_COSTS_AND_PRICING = GreatMagnaUrl(
         "export-plan/section/costs-and-pricing/")
     GREAT_MAGNA_EXPORT_PLAN_FUNDING_AND_CREDIT = GreatMagnaUrl(
@@ -225,6 +259,6 @@ class URLs(Enum):
     GREAT_MAGNA_EXPORT_PLAN_GETTING_PAID = GreatMagnaUrl(
         "export-plan/section/getting-paid/")
     GREAT_MAGNA_EXPORT_PLAN_TRAVEL_PLAN = GreatMagnaUrl(
-        "export-plan/section/travel-and-business-policies/")
+        "export-plan/section/travel-plan/")
     GREAT_MAGNA_EXPORT_PLAN_BUSINESS_RISK = GreatMagnaUrl(
         "export-plan/section/business-risk/")

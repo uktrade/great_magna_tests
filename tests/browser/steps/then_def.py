@@ -31,6 +31,7 @@ from steps.then_impl import (
     actor_decides_to_select_random_item_list_on_page,
     actor_fill_business_objectives_details_on_page,
     actor_decides_to_delete_business_objectives_on_page,
+    actor_decides_to_delete_country_details_on_page,
     actor_decides_to_click_checkbox_section_complete,
     actor_decides_to_select_random_checkbox_on_page,
     actor_decides_to_enter_value,
@@ -42,6 +43,22 @@ from steps.then_impl import (
     actor_decides_to_enter_product_name,
     actor_should_be_able_to_click_on_skipwalkthrough,
     actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months,
+    actor_decides_to_click_on_search_again,
+    actor_decides_to_click_on_product_and_search_again,
+    actor_decides_to_click_on_select_save_random_products,
+    actor_fill_trip_details_on_page,
+    actor_decides_to_delete_trip_details_on_page,
+    actor_decides_to_select_radio_button,
+    actor_decides_to_enter_country_details,
+    actor_decides_to_enter_country_name,
+    generic_fill_out_and_submit_form,
+    actor_fill_risk_details_on_page,
+    actor_should_see_country_details_on_page,
+    actor_should_see_last_visited_page_under_section_on_page,
+    actor_decides_to_delete_route_to_market_on_page,
+    actor_decides_to_delete_funding_options_on_page,
+    actor_decides_to_validate_entered_country_details_and_change_from_the_list,
+    actor_fills_out_and_submits_the_form,
 )
 
 from steps.when_impl import (
@@ -335,6 +352,19 @@ def then_actor_decides_to_delete_business_objectives_on_page(context, actor_alia
         actor_decides_to_delete_business_objectives_on_page(context, actor_alias, row["Position"], page_name)
 
 
+@then('"{actor_alias}" fill risk details on page "{page_name}"')
+def then_actor_fill_risk_details_on_page(context, actor_alias,page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_fill_risk_details_on_page(context, actor_alias, row["Position"], row["Risktext"], row["Contingencyplan"],page_name)
+
+@then('"{actor_alias}" decides to delete country details on page "{page_name}"')
+def then_actor_decides_to_delete_country_details_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_delete_country_details_on_page(context, actor_alias, row["Position"], page_name)
+
+
 @then('"{actor_alias}" decides to select random checkbox "{element_name}" on page "{page_name}"')
 def then_actor_decides_to_select_random_checkbox_on_page(context, actor_alias, element_name, page_name):
     actor_decides_to_select_random_checkbox_on_page(context, actor_alias, element_name, page_name)
@@ -390,6 +420,12 @@ def then_actor_decides_to_enter_product_name(
     actor_decides_to_enter_product_name(context, actor_alias, product_name, page_name)
 
 
+@then('"{actor_alias}" decides to enter country name "{country_name}" on the "{page_name}" Page')
+def then_actor_decides_to_enter_country_name(
+        context, actor_alias, country_name, *, form_name: str = None, page_name):
+    actor_decides_to_enter_country_name(context, actor_alias, country_name, page_name)
+
+
 @then('"{actor_alias}" should be able to click on SkipWalkthrough')
 def then_actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
@@ -400,3 +436,103 @@ def then_actor_should_be_able_to_click_on_skipwalkthrough(
 def when_actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
         context, actor_alias):
     actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(context, actor_alias)
+
+
+@then('"{actor_alias}" decides to click on Search again on the "{page_name}" page')
+def then_actor_decides_to_click_on_search_again(context, actor_alias, page_name):
+    actor_decides_to_click_on_search_again(context, actor_alias, page_name)
+
+
+@then('"{actor_alias}" decides to click on Product and Search again for "{product_name}" on the "{page_name}" Page')
+def then_actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name):
+    actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name)
+
+
+@then('"{actor_alias}" decides to click on select and save random product options on the "{page_name}" page')
+def then_actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name):
+    actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name)
+
+
+@then('"{actor_alias}" fill trip details on page "{page_name}"')
+def then_actor_fill_trip_details_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_fill_trip_details_on_page(context, actor_alias, row["Position"], row["TripName"], page_name)
+
+
+@then('"{actor_alias}" decides to delete trip details on page "{page_name}"')
+def then_actor_decides_to_delete_trip_details_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_delete_trip_details_on_page(context, actor_alias, row["Position"], page_name)
+
+
+@then('"{actor_alias}" decides to select radio button "{element_name}" on page "{page_name}"')
+def then_actor_decides_to_select_radio_button(context, actor_alias, element_name, page_name):
+    actor_decides_to_select_radio_button(context, element_name, page_name)
+
+
+@then(
+    '"{actor_alias}" decides to enter maximum "{country_max}" country names with display "{display_tab_count}" tabs on page "{page_name}"')
+def then_actor_decides_to_enter_country_details(context, actor_alias, country_max, display_tab_count, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_enter_country_details(context, actor_alias, row["CountryName"]
+                                               , country_place_number=row["CountryPlaceNumber"]
+                                               , country_max=country_max
+                                               , display_tab_count=display_tab_count
+                                               , page_name=page_name)
+
+
+@then('"{actor_alias}" fills out and submits the form')
+def when_actor_fills_out_and_submits_the_form(
+        context: Context, actor_alias: str, *, form_name: str = None, check_captcha_dev_mode: bool = True
+):
+    generic_fill_out_and_submit_form(
+        context, actor_alias, custom_details_table=context.table, form_name=form_name,
+        check_captcha_dev_mode=check_captcha_dev_mode,
+    )
+
+@then('"{actor_alias}" fills out and submits the contact us form')
+def then_actor_fills_out_and_submits_the_form(
+        context: Context, actor_alias: str, *,page_name):
+    actor_fills_out_and_submits_the_form(context, actor_alias, page_name)
+
+@then('"{actor_alias}" should see country details on page "{page_name}"')
+def then_actor_should_see_country_details_on_page(context, actor_alias, page_name):
+    actor_should_see_country_details_on_page(context, actor_alias, page_name, on_all_tabs=False)
+
+
+@then('"{actor_alias}" should see country details on all tabs on page "{page_name}"')
+def then_actor_should_see_country_details_on_all_tabs_on_page(context, actor_alias, page_name):
+    actor_should_see_country_details_on_page(context, actor_alias, page_name, on_all_tabs=True)
+
+
+@then('"{actor_alias}" should see "{text_to_see}" text under section "{section_name}" on page "{page_name}"')
+def then_actor_should_see_last_visited_page_under_section_on_page(context, actor_alias, text_to_see, section_name,
+                                                                  page_name):
+    actor_should_see_last_visited_page_under_section_on_page(context, actor_alias, text_to_see, section_name, page_name)
+
+
+@then('"{actor_alias}" decides to delete route to market on page "{page_name}"')
+def then_actor_decides_to_delete_route_to_market_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_delete_route_to_market_on_page(context, actor_alias, row["Position"], page_name)
+
+
+@then('"{actor_alias}" decides to delete funding options on page "{page_name}"')
+def then_actor_decides_to_delete_funding_options_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_delete_funding_options_on_page(context, actor_alias, row["Position"], page_name)
+
+@then('"{actor_alias}" decides to validate entered country details and change from the list "{page_name}"')
+def then_actor_decides_to_validate_entered_country_details_and_change_from_the_list(context, actor_alias, country_max,list_selection, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_validate_entered_country_details_and_change_from_the_list(context, actor_alias, row["CountryName"]
+                                               , country_place_number=row["CountryPlaceNumber"]
+                                               , country_max=country_max
+                                               ,list_selection=list_selection
+                                               , page_name=page_name)

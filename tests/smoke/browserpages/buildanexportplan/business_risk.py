@@ -41,77 +41,73 @@ PAGE_TITLE = "Business Risk Page"
 
 SELECTORS = {
     "business risk": {
-        "product cost educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[1]/td[1]/div/div/button/i"
+        "risk educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[1]/td/div[1]/div[1]/div/div/button/i"
         ),
-        "product cost": Selector(
-            By.XPATH, "//input[@id='product_costs']", type=ElementType.INPUT
+        "risk example": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[1]/td/div[1]/div[1]/button"
         ),
-        "labour cost educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[2]/td[1]/div/div[1]/button/i"
+        "risk": Selector(
+            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[2]/td[1]/div/div[1]/button/i" , type=ElementType.INPUT
         ),
-        "labour cost": Selector(
-            By.XPATH, "//input[@id='labour_costs']", type=ElementType.INPUT
+        "risk likelihood educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[2]/td/div[1]/div[1]/div/div/button/i"
         ),
-        "additional margin": Selector(
-            By.XPATH, "//input[@id='other_direct_costs']", type=ElementType.INPUT
+        "rare": Selector(
+            By.XPATH, "//label[contains(text(),'Rare')]"
         ),
-        "direct costs total": Selector(
-            By.XPATH, "//span[@class='body-l-b text-white']"
+        "unlikely": Selector(
+            By.XPATH, "//label[contains(text(),'Unlikely')]"
         ),
-        "product adaptation educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[1]/td[1]/div/div/button/i",
-            type=ElementType.INPUT
+        "possible": Selector(
+            By.XPATH, "//label[contains(text(),'Possible')]"
         ),
-        "product adaptation": Selector(
-            By.XPATH, "//input[@id='product_adaption']", type=ElementType.INPUT
+        "likely": Selector(
+            By.XPATH, "//label[contains(text(),'Likely')]"
         ),
-        "freight and logistics educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[2]/td[1]/div/div/button/i"
+        "certain": Selector(
+            By.XPATH, "//label[contains(text(),'Certain')]"
         ),
         "freight and logistics": Selector(
             By.XPATH, "//input[@id='freight_logistics']"
         ),
-        "agent and distributor fees educational": Selector(
+        "trivial": Selector(
+            By.XPATH, "//label[contains(text(),'Trivial')]"
+        ),
+        "minor": Selector(
+            By.XPATH, "//label[contains(text(),'Minor')]"
+        ),
+        "moderate": Selector(
+            By.XPATH, "//label[contains(text(),'Moderate')]"
+        ),
+        "severe": Selector(
+            By.XPATH, "//label[contains(text(),'Severe')]"
+        ),
+        "major": Selector(
+            By.XPATH, "//label[contains(text(),'Major')]"
+        ),
+        "contingency plan educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[4]/td/div[1]/div[1]/div/div/button/i"
+        ),
+        "contingency plan example": Selector(
             By.CSS_SELECTOR,
-            "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[3]/td[1]/div/div[1]/button/i"
+            "#business-risks > div.costs.costs--risks.bg-blue-deep-10.p-v-s.m-b-s > table > tbody > tr:nth-child(4) > td > div.learning > div.learning__buttons.m-b-xs > button"
         ),
-        "add route to market": Selector(
-            By.CSS_SELECTOR, "#route-to-market > button"
-        ),
-        "marketing resources example": Selector(
-            By.CSS_SELECTOR, "#resources > div > div.m-b-xs > button"
-        ),
-        "marketing resources text": Selector(
-            By.XPATH, "//textarea[@id='resources']"
-        ),
-        "next": Selector(
-            By.XPATH, "//p[contains(text(),'Next')]"
-        ),
-        "funding and credit": Selector(
-            By.XPATH, "//span[contains(text(),'Funding and Credit')]"
+        "add a risk": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/button"
         ),
         "export plan home": Selector(
-            By.CSS_SELECTOR,
-            "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[4]/div/div/div[2]/div[2]/a/span"
         ),
-        "sell direct to your customer link": Selector(
-            By.CSS_SELECTOR,
-            "#marketing-approach-content > section.container.m-b-l > div > div.c-1-4.m-t-s > div > a > div > p"
-        ),
-        "how to manage exchange rates": Selector(
-            By.XPATH, "//h4[contains(text(),'How to manage exchange rates')]"
-        ),
-        "lesson": Selector(
-            By.CSS_SELECTOR,
-            "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > button"
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
         ),
         "open navigation": Selector(
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
         ),
-        "nav adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "nav Adapting Your Product": Selector(
+            By.XPATH, "//a[contains(text(),'Adapting Your Product')]"
         ),
         "back": Selector(
             By.XPATH, "//body/div[10]/div/div/div/div[1]/a"

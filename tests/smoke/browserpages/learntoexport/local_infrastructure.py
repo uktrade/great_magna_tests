@@ -37,7 +37,7 @@ from browserpages.common_actions import (
 NAME = "Local infrastructure"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_LOCAL_INFRASTRUCTURE.absolute
+URL = URLs.GREAT_MAGNA_LESSONS_RESEARCH_LOCAL_INFRASTRUCTURE.absolute
 PAGE_TITLE = "Local infrastructure"
 
 SELECTORS = {

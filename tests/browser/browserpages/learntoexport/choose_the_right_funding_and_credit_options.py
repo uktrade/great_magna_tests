@@ -69,6 +69,9 @@ SELECTORS = {
         "read time": Selector(
             By.XPATH, "//body/main/div/div[1]/div/div/div/div[2]/p/strong"
         ),
+        "funding and credit": Selector(
+            By.XPATH, "//span[contains(text(),'Funding and credit')]"
+        ),
 
     },
 }

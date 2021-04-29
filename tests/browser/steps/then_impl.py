@@ -28,6 +28,7 @@ from browserpages.common_actions import (
     selenium_action,
     take_screenshot,
     update_actor,
+    update_actor_forms_data,
 )
 from steps import has_action
 from browserutils.browser import clear_driver_cookies
@@ -258,6 +259,30 @@ def actor_decides_to_delete_business_objectives_on_page(context, actor_alias, po
     page.delete_all_business_objectives(context.driver, position)
 
 
+def actor_fill_risk_details_on_page(context, actor_alias, position, risktext, contingencyplan, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "enter_risk_details")
+    page.enter_risk_details(context.driver, position, risktext, contingencyplan, page_name)
+
+
+def actor_decides_to_delete_country_details_on_page(context, actor_alias, position, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "delete_all_country_details")
+    page.delete_all_country_details(context.driver, position)
+
+
+def actor_decides_to_delete_route_to_market_on_page(context, actor_alias, position, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "delete_all_route_to_market")
+    page.delete_all_route_to_market(context.driver, position)
+
+
+def actor_decides_to_delete_funding_options_on_page(context, actor_alias, position, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "delete_all_funding_options")
+    page.delete_all_funding_options(context.driver, position)
+
+
 def should_see_sections(
         context: Context,
         actor_alias: str,
@@ -279,8 +304,8 @@ def should_see_sections(
 
 def actor_decides_to_select_random_checkbox_on_page(context, actor_alias, element_name, page_name):
     page = get_page_object(page_name)
-    has_action(page, "random_select")
-    page.random_select(context.driver, element_name)
+    has_action(page, "random_select_checkbox")
+    page.random_select_checkbox(context.driver, element_name)
 
 
 def actor_decides_to_enter_value(context, element_name, page_name):
@@ -321,10 +346,17 @@ def actor_decides_to_select_funding_options_on_page(context, actor_alias, positi
     page.find_and_select_random_funding_options(context.driver, position, amount)
 
 
-def actor_decides_to_enter_product_name(context, actor_alias, product_name,page_name):
+def actor_decides_to_enter_product_name(context, actor_alias, product_name, page_name):
     page = get_page_object(page_name)
-    has_action(page, "where_to_export")
-    page.where_to_export(context.driver, product_name=product_name)
+    has_action(page, "fill_out_product")
+    page.fill_out_product(context.driver, product_name)
+
+
+def actor_decides_to_enter_country_name(context, actor_alias, country_name, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "fill_out_country")
+    page.fill_out_country(context.driver, country=country_name)
+
 
 def actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
@@ -335,8 +367,162 @@ def actor_should_be_able_to_click_on_skipwalkthrough(
     page.click_skip_walk_through(context.driver)
     # page.click_avatar(context.driver)
 
+
 def actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
         context, actor_alias):
     page = get_last_visited_page(context, actor_alias)
     has_action(page, "click_on_i_have_exported_in_the_last_12_months")
     page.click_on_i_have_exported_in_the_last_12_months(context.driver)
+
+
+def actor_decides_to_click_on_search_again(context, actor_alias, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "search_again_top_bottom")
+    page.search_again_top_bottom(context.driver)
+
+
+def actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "select_product_search_again_top_bottom")
+    page.select_product_search_again_top_bottom(context.driver, product_name)
+
+
+def actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "search_select_save_random_next")
+    page.search_select_save_random_next(context.driver)
+
+
+def actor_fill_trip_details_on_page(context, actor_alias, position, tripname, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "enter_trip_details")
+    page.enter_trip_details(context.driver, position, tripname)
+
+
+def actor_decides_to_delete_trip_details_on_page(context, actor_alias, position, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "delete_all_trip_details")
+    page.delete_all_trip_details(context.driver, position)
+
+
+def actor_decides_to_select_radio_button(context, element_name, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "select_radio_button")
+    page.select_radio_button(context.driver, element_name=element_name)
+
+
+def actor_decides_to_enter_country_details(context, actor_alias, countryname, country_place_number, country_max
+                                           , display_tab_count, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "enter_country_details")
+    page.enter_country_details(context.driver, countryname
+                               , country_place_number=int(country_place_number)
+                               , country_max=int(country_max)
+                               , display_tab_count=int(display_tab_count))
+
+
+def generic_fill_out_and_submit_form(
+        context: Context,
+        actor_alias: str,
+        *,
+        custom_details_table: Table = None,
+        retry_on_errors: bool = False,
+        go_back: bool = False,
+        form_name: str = None,
+        check_captcha_dev_mode: bool = True,
+):
+    # if check_captcha_dev_mode:
+    #     assert_catcha_in_dev_mode(context.driver)
+    actor = get_actor(context, actor_alias)
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "generate_form_details")
+    has_action(page, "fill_out")
+    has_action(page, "submit")
+    if form_name:
+        error = f"generate_form_details() in {page} should accept 'form_name' but it doesn't"
+        assert signature(page.generate_form_details).parameters.get("form_name"), error
+        error = f"fill_out() in {page} should accept 'form_name' but it doesn't"
+        assert signature(page.fill_out).parameters.get("form_name"), error
+        error = f"submit() in {page} should accept 'form_name' but it doesn't"
+        assert signature(page.submit).parameters.get("form_name"), error
+    if custom_details_table:
+        custom_details_table.require_column("field")
+        custom_details_table.require_column("value")
+        value_mapping = {"unchecked": False, "checked": True, "empty": None}
+        custom_details = {}
+        for row in custom_details_table.rows:
+            key = row["field"].lower()
+            value = row["value"]
+            custom_details[key] = value_mapping.get(value, value)
+        if form_name:
+            details = page.generate_form_details(
+                actor, custom_details=custom_details, form_name=form_name
+            )
+        else:
+            details = page.generate_form_details(actor, custom_details=custom_details)
+    else:
+        if form_name:
+            details = page.generate_form_details(actor, form_name=form_name)
+        else:
+            details = page.generate_form_details(actor)
+    logging.debug(f"{actor_alias} will fill out the form with: {details}")
+
+    update_actor_forms_data(context, actor, details)
+
+    if form_name:
+        page.fill_out(context.driver, details, form_name=form_name)
+    else:
+        page.fill_out(context.driver, details)
+
+    if hasattr(page, "get_form_details"):
+        logging.debug(f"Getting form details from filled out form: {page}")
+        form_data = page.get_form_details(context.driver)
+        if form_data:
+            update_actor_forms_data(context, actor, form_data)
+    else:
+        if details:
+            update_actor_forms_data(context, actor, details)
+
+    if form_name:
+        page.submit(context.driver, form_name=form_name)
+    else:
+        page.submit(context.driver)
+    # if retry_on_errors:
+    #     check_for_errors_or_non_trading_companies(context.driver, go_back=go_back)
+
+
+def generic_submit_form(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "submit")
+    page.submit(context.driver)
+
+
+def actor_should_see_country_details_on_page(context, actor_alias, page_name, on_all_tabs: bool = False):
+    page = get_page_object(page_name)
+    has_action(page, "check_country_details")
+    page.check_country_details(context.driver, on_all_tabs=on_all_tabs)
+
+
+def actor_should_see_last_visited_page_under_section_on_page(context, actor_alias, text_to_see, section_name,
+                                                             page_name):
+    page = get_last_visited_page(context, actor_alias)
+    # page_to_be_landed = get_page_object(page_name)
+    if page.NAME != text_to_see:
+        raise Exception("Last visited page is incorrect - " + str(page.NAME))
+
+
+def actor_decides_to_validate_entered_country_details_and_change_from_the_list(context, actor_alias, countryname,
+                                                                               country_place_number, country_max
+                                                                               , list_selection, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "vallidate_entered_country_details")
+    page.validate_entered_country_details(context.driver, countryname
+                                          , country_place_number=int(country_place_number)
+                                          , country_max=int(country_max)
+                                          , list_selection=int(list_selection))
+
+
+def actor_fills_out_and_submits_the_form(context, actor_alias, page_name):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "fills_out_submit")
+    page.fills_out_submit(context.driver)

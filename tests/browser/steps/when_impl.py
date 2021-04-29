@@ -372,7 +372,6 @@ def generic_product_name_to_fill_country_and_click_on_continue(
     has_action(page, "searchcontinue")
     page.searchcontinue(context.driver)
 
-
 def actor_decides_to_fill_product_and_click_on_continue(
         context, actor_alias, product_name):
     page = get_last_visited_page(context, actor_alias)

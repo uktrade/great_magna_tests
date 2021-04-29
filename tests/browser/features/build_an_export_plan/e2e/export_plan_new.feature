@@ -15,16 +15,16 @@
 #  Examples: email address and password
 #     |      emailaddress                 | password    |
 #     | santoshtesting10008+98851@gmail.com | Testing@123!|
-#  And "Robert" should be able to click on SkipWalkthrough
+#  #And "Robert" should be able to click on SkipWalkthrough
 #
 #    Then "Robert" decides to click on "Build an export plan"
 #     And "Robert" decides to click on section "About Your Business" on page "Build An Export Plan - Export Plan Dashboard"
 #    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - About Your Business"
 #    And "Robert" decides to click on section "Target Markets Research" on page "Build An Export Plan - Business Objectives"
 #    And "Robert" decides to click on element "Back" on page "Build An Export Plan - Target Markets Research"
-#    And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Export Plan Dashboard"
-#    #And "Robert" decides to click on section "Adaptation For Your Target Market" on page "Build An Export Plan - Target Markets Research"
-#    And "Robert" decides to click on element "Back" on page "Build An Export Plan - Adaptation For Your Target Market"
+#    And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+#    #And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Target Markets Research"
+#    And "Robert" decides to click on element "Back" on page "Build An Export Plan - Adapting Your Product"
 #    #And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
 #    #And "Robert" decides to click on element "Back" on page "Build An Export Plan - Marketing approach"
 #    And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
@@ -70,7 +70,7 @@
 #  Examples: email address and password
 #     |      emailaddress                 | password    |
 #     | santoshtesting10008+9802@gmail.com | Testing@123!|
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Build an export plan"
 #    And "Robert" decides to click on section "About Your Business" on page "Build An Export Plan - Export Plan Dashboard"
 #    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - About Your Business"

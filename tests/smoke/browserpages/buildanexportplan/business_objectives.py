@@ -43,10 +43,10 @@ PAGE_TITLE = "Business Objectives Page"
 SELECTORS = {
     "business objectives": {
         "business objectives": Selector(
-            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(2) > div > a > div.p-v-s.p-h-xs > h3"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(2) > div > a > div.p-t-s.p-b-xs.p-h-xs"
         ),
         "why you want to export example": Selector(
-            By.CSS_SELECTOR, "#objectives-reasons > div > div.m-b-xs > button", type=ElementType.INPUT
+            By.CSS_SELECTOR, "#objectives-reasons > div > div.learning > div.learning__buttons.m-b-xs > button", type=ElementType.INPUT
         ),
         "why you want to export": Selector(
             By.XPATH, "//textarea[@id='rationale']", type=ElementType.INPUT
@@ -82,7 +82,7 @@ SELECTORS = {
         #     , wait_after_click=False
         # ),
         "yes checkbox": Selector(
-            By.XPATH, "//label[contains(text(),'Yes')]"
+            By.CSS_SELECTOR, "#section-complete > div > label"
         ),
         "target markets research": Selector(
             By.XPATH, "//span[contains(text(),'Target markets research')]"
@@ -96,6 +96,19 @@ SELECTORS = {
         ),
         "move from accidental exporting to strategic exporting": Selector(
             By.XPATH, "//*[@id=\"business-objectives-content\"]/section[4]/div/div[1]/div/a/div/p"
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
+        ),
+        "add goal": Selector(
+            By.CSS_SELECTOR, "#objectives-form--objectives > div > button"
+        ),
+        "open navigation": Selector(
+            By.XPATH,
+            "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
+        ),
+        "nav target markets research": Selector(
+            By.XPATH, "//a[contains(text(),'Target markets research')]"
         ),
     }
 }

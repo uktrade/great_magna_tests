@@ -7,13 +7,13 @@ from envparse import env
 
 # GREAT_MAGNA_URL = env.str("GREAT_MAGNA_URL", default="https://great-magna.dev.uktrade.digital/")
 # GREAT_MAGNA_URL_LANDING = env.str("GREAT_MAGNA_URL_LANDING", default="https://great-magna.dev.uktrade.digital/dashboard")
-GREAT_MAGNA_URL = env.str("GREAT_MAGNA_URL", default="https://great-magna.staging.uktrade.digital/")
-GREAT_MAGNA_URL_LANDING = env.str("GREAT_MAGNA_URL_LANDING",
-                                  default="https://great-magna.staging.uktrade.digital/dashboard")
-# TOKEN ="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY="
-#
-# GREAT_MAGNA_URL = env.str("GREAT_MAGNA_URL", default="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY=")
-# GREAT_MAGNA_URL_LANDING = env.str("GREAT_MAGNA_URL_LANDING", default="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY=")
+# GREAT_MAGNA_URL = env.str("GREAT_MAGNA_URL", default="https://great-magna.staging.uktrade.digital/")
+# GREAT_MAGNA_URL_LANDING = env.str("GREAT_MAGNA_URL_LANDING",
+#                                   default="https://great-magna.staging.uktrade.digital/dashboard")
+TOKEN ="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY="
+
+GREAT_MAGNA_URL = env.str("GREAT_MAGNA_URL", default="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY=")
+GREAT_MAGNA_URL_LANDING = env.str("GREAT_MAGNA_URL_LANDING", default="https://magna-beta.great.uktrade.digital/signup?enc=gAAAAABgF-Gia1slIhrlp4r6x3BdqsFCnpp1VRANWAhb6fDX_VnPi8iDIaXNYceAq-Z7e234b77gF-_HlPmQue6L47pnvKr46xU6s22ZC-4m8En3V4uISwY=")
 
 #####################################################################
 # External Services

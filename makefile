@@ -80,7 +80,7 @@ VERSION ?= ""
 
 browser_tests_locally:
 	cd tests/browser && \
-	BROWSER_ENVIRONMENT=$(BROWSER_ENVIRONMENT) BROWSER_TYPE=$(BROWSER_TYPE) BROWSER=$(BROWSER) VERSION=$(VERSION) HEADLESS=$(HEADLESS) AUTO_RETRY=$(AUTO_RETRY) behave -f pretty --no-skipped --tags=~@wip --tags=~@fixme --tags=~@skip ${TAGS}
+	BROWSER_ENVIRONMENT=$(BROWSER_ENVIRONMENT) BROWSER_TYPE=$(BROWSER_TYPE) BROWSER=$(BROWSER) VERSION=$(VERSION) HEADLESS=$(HEADLESS) AUTO_RETRY=$(AUTO_RETRY) behave --format=allure_behave.formatter:AllureFormatter --define AllureFormatter.issue_pattern=$(BUG_TRACKER_URL_PATTERN) --define AllureFormatter.link_pattern=$(BUG_TRACKER_URL_PATTERN) --outfile=results/ -f pretty --no-skipped --tags=~@wip --tags=~@fixme --tags=~@skip ${TAGS}
 
 requirements_browser:
 	pip3 install -r requirements_browser.txt
@@ -172,7 +172,7 @@ results_functional:
 serve:
 	@echo Allure
 	@allure --version
-	@allure serve results/
+	@allure serve tests/browser/results/
 
 serve_smoke:
 	@echo Allure
@@ -182,7 +182,7 @@ serve_smoke:
 report:
 	@echo Allure
 	@allure --version
-	@allure generate --clean --output ./allure_report results/
+	@allure generate --clean --output ./allure_report tests/browser/results/
 
 report_smoke:
 	@echo Allure

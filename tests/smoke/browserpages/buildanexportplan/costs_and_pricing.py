@@ -133,7 +133,7 @@ SELECTORS = {
         ),
         "net price educational": Selector(
             By.CSS_SELECTOR,
-            "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(21) > div.m-b-xs > div > div > button > i"
+            "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[9]/div[2]/div[1]/div/div/button/i"
         ),
         "net price": Selector(
             By.XPATH, "//input[@id='net_price']", type=ElementType.INPUT
@@ -174,13 +174,13 @@ SELECTORS = {
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
         "funding and credit": Selector(
-            By.XPATH, "//span[contains(text(),'Funding and Credit')]"
+            By.CSS_SELECTOR, "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > a > span"
         ),
         "export plan home": Selector(
             By.CSS_SELECTOR,
             "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
         ),
-        "sell direct to your customer link": Selector(
+        "Selling direct to your customer link": Selector(
             By.CSS_SELECTOR,
             "#marketing-approach-content > section.container.m-b-l > div > div.c-1-4.m-t-s > div > a > div > p"
         ),
@@ -195,8 +195,8 @@ SELECTORS = {
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
         ),
-        "nav adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "nav Adapting Your Product": Selector(
+            By.XPATH, "//a[contains(text(),'Adapting Your Product')]"
         ),
         "back": Selector(
             By.XPATH, "//body/div[10]/div/div/div/div[1]/a"
@@ -206,6 +206,9 @@ SELECTORS = {
         ),
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
         ),
     }
 }

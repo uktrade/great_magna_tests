@@ -54,7 +54,7 @@ SELECTORS = {
         "in market research": Selector(
             By.XPATH, "//span[contains(text(),'In-market research')]"
         ),
-        "quantify customer demand": Selector(
+        "Work out customer demand": Selector(
             By.XPATH, "//span[contains(text(),'Quantify customer demand – how much might you sell')]"
         ),
         "module_progress": Selector(

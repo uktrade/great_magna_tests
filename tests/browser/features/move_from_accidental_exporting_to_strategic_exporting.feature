@@ -12,7 +12,7 @@ Feature: GreatMagna - Lessons Page
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Learn to export"
 #     And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #     And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "LearnToExport - Identify opportunities"
@@ -25,7 +25,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #   And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "LearnToExport - Identify opportunities"
@@ -40,7 +40,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "LearnToExport - Identify opportunities"
@@ -55,7 +55,7 @@ Feature: GreatMagna - Lessons Page
 Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
    And "Robert" should be on the "GreatMagna - Dashboard" Page
-   And "Robert" should be able to click on SkipWalkthrough
+   #And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
    Then "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
    And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "LearnToExport - Identify opportunities"
@@ -72,7 +72,7 @@ Given "Robert" visited "GreatMagna - Login" page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "LearnToExport - Identify opportunities"

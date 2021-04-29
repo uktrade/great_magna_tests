@@ -47,9 +47,9 @@ SELECTORS = {
         "data snapshot": Selector(
             By.XPATH, "//*[@id=\"target-age-groups\"]/div/button"
         ),
-        # "open": Selector(
-        #     By.XPATH, "//span[contains(text(),'open')]"
-        # ),
+        "select": Selector(
+            By.XPATH, "//*[@id=\"target-age-groups\"]/div[1]/div[3]/div/button"
+        ),
         "close": Selector(
             By.XPATH, "//span[contains(text(),'close')]"
         ),
@@ -57,19 +57,19 @@ SELECTORS = {
             By.XPATH, "//button[contains(text(),'Confirm')]"
         ),
         "describe the consumer demand example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.learning > div.learning__buttons.m-b-xs > button.button-example.button.button--small.button--tertiary.m-r-xxs"
         ),
         "describe the consumer demand": Selector(
             By.CSS_SELECTOR, "#demand"
         ),
         "Who are your competitors example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(2) > div.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(2) > div.learning > div.learning__buttons.m-b-xs > button"
         ),
         "Who are your competitors": Selector(
             By.CSS_SELECTOR, "#competitors"
         ),
         "What are the product trends example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(3) > div.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(3) > div.learning > div.learning__buttons.m-b-xs > button"
         ),
         "What are the product trends": Selector(
             By.CSS_SELECTOR, "#trend"
@@ -78,13 +78,13 @@ SELECTORS = {
             By.CSS_SELECTOR, "#resources > div > div.m-b-xs > button"
         ),
         "What’s your unique selling proposition example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(4) > div.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(4) > div.learning > div.learning__buttons.m-b-xs > button"
         ),
         "What’s your unique selling proposition": Selector(
             By.CSS_SELECTOR, "#unqiue_selling_proposition"
         ),
-        "adaptation for your target market": Selector(
-            By.XPATH, "//span[contains(text(),'Adaptation for your target market')]"
+        "Adapting Your Product": Selector(
+            By.XPATH, "//span[contains(text(),'Adapting Your Product')]"
         ),
         "export plan home": Selector(
             By.CSS_SELECTOR,
@@ -96,8 +96,8 @@ SELECTORS = {
         "using what you know": Selector(
             By.XPATH, "//h4[contains(text(),'Using what you know to help inform your positionin')]"
         ),
-        "quantify customer demand": Selector(
-            By.XPATH, "//h4[contains(text(),'Quantify customer demand – how much might you sell')]"
+        "work out customer demand": Selector(
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.learning > div.learning__content > a > div > h4"
         ),
         "understand market trends": Selector(
             By.XPATH, "//h4[contains(text(),'Understand market trends')]"
@@ -106,15 +106,15 @@ SELECTORS = {
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
         ),
-        "nav adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "nav Adapting Your Product": Selector(
+            By.XPATH, "//a[contains(text(),'Adapting Your Product')]"
         ),
         "yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
         "lesson": Selector(
-            By.XPATH,
-            "//body/main[@id='content']/div[@id='target-markets-research-content']/section[4]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/button[2]"
+            By.CSS_SELECTOR,
+            "#target-markets-research > div:nth-child(1) > div.m-b-xs > button.button-lesson.button.button--small.button--tertiary.m-r-xxs"
         ),
         "add a product": Selector(
             By.XPATH, "//button[contains(text(),'Add a product')]", type=ElementType.INPUT
@@ -127,6 +127,9 @@ SELECTORS = {
         ),
         "search": Selector(
             By.CSS_SELECTOR, "#search-input", type=ElementType.INPUT
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
         ),
 
     }
@@ -180,18 +183,14 @@ def should_see_sections(driver: WebDriver, names: List[str]):
     check_for_sections(driver, all_sections=SELECTORS, sought_sections=names)
 
 
-def random_select(driver: WebDriver, age_group: int):
-    driver.find_element_by_xpath("//span[contains(text(),'open')]").click()
-    time.sleep(2)
-    if 0 == len(age_group):
-        path_random_age_group_element = "/html/body/main/div[2]/section[3]/div/div/div[2]/div/div[1]/form/ul/li" + "[(" + str(
-            random.randint(1, 8)) + ")]"
-        age_group_element = path_random_age_group_element + "/label]"
-        logging.debug(path_random_age_group_element.text)
-        time.sleep(10)
-        driver.find_element_by_xpath(path_random_age_group_element)
-        time.sleep(2)
+def random_select_checkbox(driver: WebDriver, element_name: str):
+    find_and_click(driver, element_selector_name="Select")
 
+    random_age_group_element_xpath = "//body/main/div[2]/section[3]/div/div/div[2]/div/div[1]/form/ul/li" \
+                                     + "["+ str(random.randint(0, 8)) + "]"+ "/label"
+    driver.implicitly_wait(1)
+    driver.find_element_by_xpath(random_age_group_element_xpath).click()
+    find_and_click(driver, element_selector_name="Confirm")
 
 def enter_value(driver: WebDriver, element_name: str):
     value_element = find_element(

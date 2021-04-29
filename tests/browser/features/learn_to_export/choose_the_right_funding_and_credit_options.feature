@@ -13,7 +13,7 @@ Feature: GreatMagna - Lessons Page
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Learn to export"
 #     And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
 #     And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"
@@ -28,7 +28,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #    And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"
@@ -43,7 +43,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #    And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"
@@ -57,7 +57,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #    And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"
@@ -70,13 +70,15 @@ Feature: GreatMagna - Lessons Page
   Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    And "Robert" should be able to click on SkipWalkthrough
+    #And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
     And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
     And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"
     And "Robert" should be able to see "read time" on page "LearnToExport - Choose the right funding"
     And "Robert" decides to click on section "Top Back" on page "LearnToExport - Choose the right funding"
-   And "Robert" should be able to see  "read time" on  "Choose the right funding"
+   And "Robert" should be able to see "read time" on "Choose the right funding"
+
+
 
    @allure.link:XOT-596
   @Great-Magna-Lessons
@@ -85,7 +87,7 @@ Feature: GreatMagna - Lessons Page
      Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
-    And "Robert" should be able to click on SkipWalkthrough
+    #And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
     And "Robert" decides to click on section "Funding finance and getting paid" on page "LearnToExport - Learn Categories"
     And "Robert" decides to click on section "Choose the right funding" on page "LearnToExport - Funding finance and getting paid"

@@ -34,14 +34,14 @@ from browserpages.common_actions import (
 
 )
 
-NAME = "Set up joint ventures abroad"
+NAME = "Setting up joint ventures abroad"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_SET_UP_JOINT_VENTURES_ABROAD.absolute
-PAGE_TITLE = "Set up joint ventures abroad"
+URL = URLs.GREAT_MAGNA_LESSONS_SETTING_UP_JOINT_VENTURES_ABROAD.absolute
+PAGE_TITLE = "Setting up joint ventures abroad"
 
 SELECTORS = {
-    "Set up joint ventures abroad": {
+    "setting up joint ventures abroad": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),

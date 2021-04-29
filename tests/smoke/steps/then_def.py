@@ -41,6 +41,14 @@ from steps.then_impl import (
     actor_decides_to_select_funding_options_on_page,
     actor_decides_to_enter_product_name,
     actor_should_be_able_to_click_on_skipwalkthrough,
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months,
+    actor_decides_to_click_on_search_again,
+    actor_decides_to_click_on_product_and_search_again,
+    actor_decides_to_click_on_select_save_random_products,
+    actor_fill_trip_details_on_page,
+    actor_decides_to_delete_trip_details_on_page,
+    actor_decides_to_select_radio_button,
+    actor_decides_to_enter_country_details,
 )
 
 from steps.when_impl import (
@@ -393,3 +401,50 @@ def then_actor_decides_to_enter_product_name(
 def then_actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
     actor_should_be_able_to_click_on_skipwalkthrough(context, actor_alias)
+
+
+@then('"{actor_alias}" should be able to click on I have exported in the last 12 months')
+def when_actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
+        context, actor_alias):
+    actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(context, actor_alias)
+
+
+@then('"{actor_alias}" decides to click on Search again on the "{page_name}" page')
+def then_actor_decides_to_click_on_search_again(context, actor_alias, page_name):
+    actor_decides_to_click_on_search_again(context, actor_alias, page_name)
+
+
+@then('"{actor_alias}" decides to click on Product and Search again for "{product_name}" on the "{page_name}" Page')
+def then_actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name):
+    actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name)
+
+
+@then('"{actor_alias}" decides to click on select and save random product options on the "{page_name}" page')
+def then_actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name):
+    actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name)
+
+
+@then('"{actor_alias}" fill trip details on page "{page_name}"')
+def then_actor_fill_trip_details_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_fill_trip_details_on_page(context, actor_alias, row["Position"], row["TripName"], page_name)
+
+
+@then('"{actor_alias}" decides to delete trip details on page "{page_name}"')
+def then_actor_decides_to_delete_trip_details_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_delete_trip_details_on_page(context, actor_alias, row["Position"], page_name)
+
+
+@then('"{actor_alias}" decides to select radio button "{element_name}" on page "{page_name}"')
+def then_actor_decides_to_select_radio_button(context, actor_alias, element_name, page_name):
+    actor_decides_to_select_radio_button(context, element_name, page_name)
+
+
+@then('"{actor_alias}" decides to enter country names on page "{page_name}"')
+def then_actor_decides_to_enter_country_details(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_enter_country_details(context, actor_alias, row["CountryName"], page_name)

@@ -12,12 +12,12 @@
 #    Given "Robert" visited "GreatMagna - Login" page
 #    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #    Then "Robert" decides to click on "Learn to export"
 #     And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #     And "Robert" decides to click on section "Understand market barriers" on page "LearnToExport - Identify opportunities"
-##     And "Robert" decides to click on "case study" on page "LearnToExport - Understand regulations around supplying a service"
-##     And "Robert" decides to click on "close" on page "LearnToExport - Understand regulations around supplying a service"
+##     And "Robert" decides to click on "case study" on page "LearnToExport - Regulations around supplying a service"
+##     And "Robert" decides to click on "close" on page "LearnToExport - Regulations around supplying a service"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand market barriers"
 ###
 # @allure.link:XOT-592
@@ -27,7 +27,7 @@
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #   And "Robert" decides to click on section "Understand market barriers" on page "LearnToExport - Identify opportunities"
@@ -42,7 +42,7 @@
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Understand market barriers" on page "LearnToExport - Identify opportunities"
@@ -56,7 +56,7 @@
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Understand market barriers" on page "LearnToExport - Identify opportunities"

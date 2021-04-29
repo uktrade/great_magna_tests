@@ -279,8 +279,8 @@ def should_see_sections(
 
 def actor_decides_to_select_random_checkbox_on_page(context, actor_alias, element_name, page_name):
     page = get_page_object(page_name)
-    has_action(page, "random_select")
-    page.random_select(context.driver, element_name)
+    has_action(page, "random_select_checkbox")
+    page.random_select_checkbox(context.driver, element_name)
 
 
 def actor_decides_to_enter_value(context, element_name, page_name):
@@ -321,10 +321,11 @@ def actor_decides_to_select_funding_options_on_page(context, actor_alias, positi
     page.find_and_select_random_funding_options(context.driver, position, amount)
 
 
-def actor_decides_to_enter_product_name(context, actor_alias, product_name,page_name):
+def actor_decides_to_enter_product_name(context, actor_alias, product_name, page_name):
     page = get_page_object(page_name)
     has_action(page, "where_to_export")
     page.where_to_export(context.driver, product_name=product_name)
+
 
 def actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
@@ -334,3 +335,52 @@ def actor_should_be_able_to_click_on_skipwalkthrough(
     # has_action(page, "click_avatar")
     page.click_skip_walk_through(context.driver)
     # page.click_avatar(context.driver)
+
+
+def actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
+        context, actor_alias):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "click_on_i_have_exported_in_the_last_12_months")
+    page.click_on_i_have_exported_in_the_last_12_months(context.driver)
+
+
+def actor_decides_to_click_on_search_again(context, actor_alias, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "search_again_top_bottom")
+    page.search_again_top_bottom(context.driver)
+
+
+def actor_decides_to_click_on_product_and_search_again(context, actor_alias, product_name, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "select_product_search_again_top_bottom")
+    page.select_product_search_again_top_bottom(context.driver, product_name)
+
+
+def actor_decides_to_click_on_select_save_random_products(context, actor_alias, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "search_select_save_random_next")
+    page.search_select_save_random_next(context.driver)
+
+
+def actor_fill_trip_details_on_page(context, actor_alias, position, tripname, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "enter_trip_details")
+    page.enter_trip_details(context.driver, position, tripname)
+
+
+def actor_decides_to_delete_trip_details_on_page(context, actor_alias, position, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "delete_all_trip_details")
+    page.delete_all_trip_details(context.driver, position)
+
+
+def actor_decides_to_select_radio_button(context, element_name, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "select_radio_button")
+    page.select_radio_button(context.driver, element_name=element_name)
+
+
+def actor_decides_to_enter_country_details(context, actor_alias, countryname, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "enter_country_details")
+    page.enter_country_details(context.driver, countryname)

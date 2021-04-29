@@ -45,8 +45,8 @@ SELECTORS = {
         "identify opportunities": Selector(
             By.XPATH, "//body/main[@id='content']/section[@id='learn-root']/section[1]/a[2]/article[1]"
         ),
-        "is this opportunity right for you": Selector(
-            By.XPATH, "//span[contains(text(),'Is this opportunity right for you?')]"
+        "choosing the right export opportunities": Selector(
+            By.XPATH, "//span[contains(text(),'Choosing the right export opportunities')]"
         ),
         "move from accidental exporting to strategic exporting": Selector(
             By.XPATH, "//span[contains(text(),'Move from accidental exporting to strategic export')]"
@@ -54,19 +54,17 @@ SELECTORS = {
         "in market research": Selector(
             By.XPATH, "//span[contains(text(),'In-market research')]"
         ),
-        "quantify customer demand": Selector(
+        "Work out customer demand": Selector(
             By.XPATH, "//span[contains(text(),'Quantify customer demand – how much might you sell')]"
         ),
         "module_progress": Selector(
-            By.XPATH,
-            "#learn-root > section.learn__single-category-header > div > div > div:nth-child(1) > div.learn__single-category-header-content > div.learn__category-progress-container"
+            By.XPATH, "#learn-root > section.learn__single-category-header > div > div > div:nth-child(1) > div.learn__single-category-header-content > div.learn__category-progress-container"
         ),
         "lessons_progress_bar": Selector(
             By.XPATH, "//*[@id=\"55\"]/div/p"
         ),
         "lesson_categories_progress": Selector(
-            By.CSS_SELECTOR,
-            "4. #learn-root > section > a:nth-child(3) > article > div > div.learn__category-content.learn__category-content--progress-bar > div.learn__category-progress-container > div"
+            By.CSS_SELECTOR, "4. #learn-root > section > a:nth-child(3) > article > div > div.learn__category-content.learn__category-content--progress-bar > div.learn__category-progress-container > div"
         ),
         "bottom back": Selector(
             By.CSS_SELECTOR, "#content > div > div.bg-blue-deep-80 > a > i"
@@ -89,6 +87,18 @@ SELECTORS = {
         "information you need to choose a target country": Selector(
             By.XPATH, "//span[contains(text(),'Information you need to choose a target country')]"
         ),
+        "placeholder lesson": Selector(
+            By.XPATH, "//*[@id=\"64\"]/ul/li[2]/a"
+        ),
+        "back" : Selector(
+            By.XPATH, "//body/div[7]/div/div/div/div[1]/a"
+        ),
+        "ok button": Selector(
+            By.XPATH, "//button[contains(text(),'Ok')]"
+        ),
+"ok button": Selector(
+            By.XPATH, "//*[@id=\"content\"]/div/div[3]/div[3]/div/div[2]/div/div[1]/p[3]/strong"
+        ),
     }
 }
 
@@ -100,11 +110,10 @@ def visit(driver: WebDriver, *, page_name: str = None):
 def should_be_here(driver: WebDriver):
     check_url(driver, URL, exact_match=False)
 
-
-def find_progress_bar(driver: WebDriver, element_name: str):
+def find_progress_bar(driver: WebDriver, element_name : str):
     # search for parent progress bar div class
     parent_div_element = driver.find_element_by_class_name("learn__category-progress-container")
-    # child_radio_div_elements = parent_div_radio_element.find_elements_by_tag_name("div")
+    #child_radio_div_elements = parent_div_radio_element.find_elements_by_tag_name("div")
     p_tag = parent_div_element.find_element_by_tag_name("p")
     logging.debug(p_tag.text)
     # get the child elements if any
@@ -116,3 +125,9 @@ def find_progress_bar(driver: WebDriver, element_name: str):
     #     driver, find_selector_by_name(SELECTORS, element_name)
     # )
     # find_and_click.click()
+
+def find_and_click(driver: WebDriver, *, element_selector_name: str):
+    find_and_click = find_element(
+        driver, find_selector_by_name(SELECTORS, element_selector_name)
+    )
+    find_and_click.click()

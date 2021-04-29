@@ -129,7 +129,7 @@ SELECTORS = {
         ),
         "net price example": Selector(
             By.CSS_SELECTOR,
-            "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(21) > div.m-b-xs > button"
+            "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(21) > div.learning > div.learning__buttons.m-b-xs > button"
         ),
         "net price educational": Selector(
             By.CSS_SELECTOR,
@@ -174,18 +174,32 @@ SELECTORS = {
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
         "funding and credit": Selector(
-            By.CSS_SELECTOR, "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > a > span"
+            By.CSS_SELECTOR,
+            "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > a > span"
         ),
         "export plan home": Selector(
             By.CSS_SELECTOR,
             "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
         ),
-        "sell direct to your customer link": Selector(
+        "Selling direct to your customer link": Selector(
             By.CSS_SELECTOR,
             "#marketing-approach-content > section.container.m-b-l > div > div.c-1-4.m-t-s > div > a > div > p"
         ),
-        "how to manage exchange rates": Selector(
-            By.XPATH, "//h4[contains(text(),'How to manage exchange rates')]"
+        "manage exchange rates": Selector(
+            By.CSS_SELECTOR,
+            "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > a > div"
+        ),
+        "choose the right payment method": Selector(
+            By.XPATH,
+            "//h4[contains(text(),'Choose the right payment method')]"
+        ),
+        "decide when to get paid": Selector(
+            By.XPATH,
+            "//h4[contains(text(),'Decide when to get paid')]"
+        ),
+        "choose which incoterms are right for you": Selector(
+            By.XPATH,
+            "//h4[contains(text(),'Choose which incoterms are right for you')]"
         ),
         "lesson": Selector(
             By.CSS_SELECTOR,
@@ -195,8 +209,8 @@ SELECTORS = {
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
         ),
-        "nav adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "nav funding and credit": Selector(
+            By.CSS_SELECTOR, "#collapseNav > div > ul > li:nth-child(7)"
         ),
         "back": Selector(
             By.XPATH, "//body/div[10]/div/div/div/div[1]/a"
@@ -206,6 +220,18 @@ SELECTORS = {
         ),
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"costs-and-pricing-content\"]/section[1]/div/div/div[2]/a/span"
+        ),
+        "yes checkbox": Selector(
+            By.CSS_SELECTOR, "#section-complete > div > label"
+        ),
+        "search next button": Selector(
+            By.XPATH, "//body/div[9]/div/div/form/div[2]/div/span/div/section/div/div/button"
+        ),
+        "dashboard": Selector(
+            By.XPATH, "//a[contains(text(),'Dashboard')]"
         ),
     }
 }
@@ -245,23 +271,29 @@ def find_and_click(driver: WebDriver, *, element_selector_name: str):
 
 def find_and_select_random_item_list(driver: WebDriver, element_selector_name: str):
     number_of_units_btn = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > button")
+        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > div.select__placeholder--input")
+    #        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > button")
     number_of_units_btn.click()
     time_frame_btn = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > button")
+        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > div.select__placeholder--input")
+    #        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > button")
     time_frame_btn.click()
     select_currency_btn = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-1-6.m-r-xs > div > div > div.select__button.text-blue-deep-20.button--toggle.select__button--close > button")
+        "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-5-12-m.c-1-3-l.m-r-xs > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > div.select__placeholder--input")
+    # cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-5-12-m.c-1-3-l.m-r-xs > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > div.select__placeholder--input
     select_currency_btn.click()
 
     driver.implicitly_wait(5)
     # select__list body-l bg-white radius
     number_of_units_element = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > ul")
+        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > ul")
+    #        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(16) > div > div.c-1-3 > div > ul")
     time_frame_element = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > ul")
+        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > ul")
+    #        "#cost-and-pricing > section.container > div > div.c-1-1.c-2-3-m.c-1-2-xl > div:nth-child(18) > div > div.c-1-3 > div > ul")
     select_currency_element = driver.find_element_by_css_selector(
-        "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-1-6.m-r-xs > div > div > ul")
+        "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-5-12-m.c-1-3-l.m-r-xs > div > div > div.select__placeholder.text-blue-deep-60.bg-white.radius > ul")
+    #        "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > div.bg-white.radius.p-xs.c-full.m-b-s.gross-price > div:nth-child(3) > div > div > div.c-1-6.m-r-xs > div > div > ul")
 
     li_elements = number_of_units_element.find_elements_by_tag_name("li")
     li_elements = time_frame_element.find_elements_by_tag_name("li")
@@ -359,3 +391,147 @@ def enter_value(driver: WebDriver, element_name: str):
     value_element.clear()
     value_element.send_keys("20")
     time.sleep(2)
+
+
+def check_section_complete_yes(driver: WebDriver, element_selector_name: str):
+    check_yes_link = find_element(
+        driver, find_selector_by_name(SELECTORS, element_selector_name)
+    )
+    check_yes_link.click()
+
+
+def fill_out_country(driver: WebDriver, country: str):
+    driver.implicitly_wait(1)
+    # parent div: //body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]
+    # parent ul: //body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul
+
+    # where to export : country search
+    # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[2]/div[2]
+    # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[2]/div[2]/ul
+
+    # country
+    country_btn = find_element(
+        driver, find_selector_by_name(SELECTORS, "add a target market")  # dashboard add country button
+    )
+    country_btn.click()
+
+    # try:
+    #     if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
+    #         driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
+    # except:
+    #     pass
+
+    if 0 == len(country):
+        # if country name is not provided from the test case, then select one of the random 5 countries listed on the browser
+        path_random_country_element = "body > div:nth-child(13) > div > div > div > div > div > div.only-desktop > div.suggested-markets > ul > button:nth-child(" + str(
+            random.randint(1, 5)) + ")"
+        driver.find_element_by_css_selector(path_random_country_element).click()
+    else:
+        # search using the provide country name from the test case
+        driver.find_element_by_css_selector("#search-input").clear()
+        driver.find_element_by_css_selector("#search-input").send_keys(country)
+
+        # look out for the list displayed after entering country name and select random/provided country
+        ul_list_element = driver.find_element_by_xpath(
+            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+
+        section_elements = ul_list_element.find_elements_by_tag_name("section")
+        logging.debug("length of section elements " + str(len(section_elements)))
+        # select random section element and within that select a country
+        index_random_element_to_be_selected = random.randint(0, len(section_elements) - 1)
+        logging.debug("Index of section elements " + str(index_random_element_to_be_selected))
+        section_element_selected = section_elements[index_random_element_to_be_selected]
+        logging.debug(section_element_selected)
+
+        div_elements = section_element_selected.find_elements_by_tag_name("div")  # 2 has to be present
+        logging.debug("length of div elements " + str(len(div_elements)))
+        level_1_div_element = div_elements[
+            1]  # section_element_selected.find_element_by_class_name("p-t-s expand-section open")
+        level_2_div_element = level_1_div_element.find_element_by_tag_name("div")
+        span_elements = level_2_div_element.find_elements_by_tag_name("span")
+        logging.debug("length of span elements " + str(len(span_elements)))
+        # select random span element and within that select a country
+        index_random_element_to_be_selected = random.randint(0, len(span_elements) - 1)
+        span_element_selected = span_elements[index_random_element_to_be_selected]
+        li_element = span_element_selected.find_element_by_tag_name("li")
+        # finally arrived at country name button(s)
+        buttons_elements = li_element.find_elements_by_tag_name("button")
+        logging.debug("length of country button elements " + str(len(buttons_elements)))
+        country_name_found = False
+        for button_element in buttons_elements:
+            if str(button_element.text).lower() == country.lower():
+                country_name_found = True
+                button_element.click()
+                time.sleep(2)
+                break
+        if country_name_found == False:
+            raise Exception("Country name could not be found " + str(country))
+
+
+def fill_out_product(driver: WebDriver, product_name: str):
+    product_btn = find_element(
+        driver, find_selector_by_name(SELECTORS, "add a product")
+    )
+    product_btn.click()
+    # search_again_top_bottom(driver)
+    driver.implicitly_wait(1)
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/label/div/input").clear()
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(
+        product_name)
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/button/i").click()
+
+    # Inorder to copy this code, 3 elements to be copied
+    # as per the element path on the browser
+    # save_product_btn, parent_1_div_element, search next button
+    # def search_select_save_radio(driver: WebDriver):
+    counter = 0
+    while True:
+
+        if counter >= 50:
+            break
+        # logging.debug("Counter: " + str(counter))
+
+        driver.implicitly_wait(1)
+
+        # check for save button
+        save_btn_found = False
+        try:
+            save_product_btn = driver.find_element_by_xpath(
+                "//body/div[9]/div/div/form/div[2]/div/span/div/section[1]/div[2]/button")
+            save_btn_found = True
+        except Exception as ex:
+            logging.debug("save button not found.Exception: " + str(ex))
+
+        if save_btn_found == True:
+            logging.debug("Save button found")
+            save_product_btn.click()
+            return
+        # look for div's and radio buttons
+        parent_1_div_element = driver.find_element_by_xpath(
+            "//body/div[9]/div/div/form/div[2]/div/span/div/section[1]/div")  # ("interaction grid m-v-xs")
+        child_1_div_element = parent_1_div_element.find_element_by_tag_name("div")  # ("c-fullwidth")
+        main_div_element = child_1_div_element.find_element_by_tag_name("div")  # "m-b-xs"
+        # radio button labels
+        label_elements = main_div_element.find_elements_by_tag_name("label")
+        radio_elements = []
+        for label_element in label_elements:
+            radio_ele = None
+            try:
+                radio_ele = label_element.find_element_by_tag_name("input")
+            except Exception as e:
+                continue
+            radio_elements.append(radio_ele)
+        # logging.debug('number of labels - ' + str(len(radio_elements)))
+        random_label_index = random.randint(0, len(radio_elements) - 1)
+        # logging.debug('Index of radio buttons to be selected -> ' + str(random_label_index))
+
+        radio_btn_selected = radio_elements[random_label_index]
+        radio_btn_selected.click()
+
+        driver.implicitly_wait(1)
+        search_next_btn = find_element(
+            driver, find_selector_by_name(SELECTORS, "search next button")
+        )
+        search_next_btn.click()
+
+        counter += 1

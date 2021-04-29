@@ -34,16 +34,16 @@ from browserpages.common_actions import (
 
 )
 
-NAME = "Quantify customer demand"
+NAME = "Work out customer demand"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_QUANTIFY_CUSTOMER_DEMAND_HOW_MUCH_YOU_MIGHT_SELL.absolute
-PAGE_TITLE = "Quantify customer demand"
+URL = URLs.GREAT_MAGNA_LESSONS_WORK_OUT_CUSTOMER_DEMAND.absolute
+PAGE_TITLE = "Work out customer demand"
 PROMO_VIDEO = Selector(By.CSS_SELECTOR,
                        "#content > div > div:nth-child(2) > div > div > div > div.c-1-2 > div.lesson-hero.media-section > video")
 CLOSE_VIDEO = Selector(By.ID, "campaign-section-videoplayer-close")
 SELECTORS = {
-    "quantify customer demand": {
+    "Work out customer demand": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),

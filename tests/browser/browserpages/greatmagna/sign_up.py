@@ -64,6 +64,15 @@ SELECTORS = {
         "continue": Selector(
             By.XPATH, "//a[@id='signup-modal-submit-success']"  # # #signup-modal-submit-success
         ),
+        "add a target market": Selector(
+            By.XPATH, "//button[contains(text(),'Add a target market')]"
+        ),
+        "search country": Selector(
+            By.CSS_SELECTOR, "#search-input", type=ElementType.INPUT
+        ),
+        "google login": Selector(
+            By.CSS_SELECTOR, "#signup-modal-google", type=ElementType.INPUT
+        ),
     },
 }
 
@@ -143,3 +152,70 @@ def should_be_error_message(driver: WebDriver, element_name: str, expected_error
         pass
 
     return False
+
+
+def fill_out_country(driver: WebDriver, country: str):
+    # try:
+    #     time.sleep(1)
+    # except:
+    #     pass
+    #
+    # try:
+    #     time.sleep(1)
+    #     if driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").is_displayed():
+    #         driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").click()
+    # except:
+    #     pass
+    #
+    # try:
+    #     if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
+    #         driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
+    # except:
+    #     pass
+
+    # country
+    driver.find_element_by_xpath("add a target market").click()
+    # time.sleep(1)
+    # country_btn = find_element(
+    #     driver, find_selector_by_name(SELECTORS, "add a target market")
+    # )
+    # country_btn.click()
+    # try:
+    #     time.sleep(1)
+    # if driver.find_element_by_css_selector(
+    #         "body > div:nth-child(19) > div > div > div > div > div > div.only-desktop > div:nth-child(6) > div:nth-child(4) > div:nth-child(2) > ul > section > div.p-t-s.expand-section.open > div > span > li").is_displayed():
+    #
+    #     driver.find_element_by_css_selector(
+    #         "body > div:nth-child(19) > div > div > div > div > div > div.only-desktop > div:nth-child(6) > div:nth-child(4) > div:nth-child(2) > ul > section > div.p-t-s.expand-section.open > div > span > li").click()
+    # # except:
+    #     pass
+
+    # time.sleep(1)
+    # if 0 == len(country):
+    #     path_random_country_element = "body > div:nth-child(13) > div > div > div > div > div > div.only-desktop > div.suggested-markets > ul > button:nth-child(" + str(
+    #         random.randint(1, 5)) + ")"
+    #     driver.find_element_by_css_selector(path_random_country_element).click()
+    # else:
+    #     try:
+        # if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
+        #     driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
+        # except:
+        #     pass
+    driver.find_element_by_css_selector("#search-input").clear()
+    driver.find_element_by_css_selector("#search-input").send_keys(country)
+
+    input_elements = driver.find_elements_by_tag_name("input")
+         # logging.debug(input_elements)
+    for input_element in input_elements:
+             # logging.debug(input_element.text)
+        if input_element.text == country.lower():
+            input_element.click()
+                # time.sleep(5)
+            # break
+        # country_name_btn_xpath = "//button[contains(text(),'"+ country + "')]"
+        # driver.find_element_by_xpath(country_name_btn_xpath).click()
+    # try:
+    #     time.sleep(1)
+    #     driver.find_element_by_xpath("//a[@id='page-tour-skip']").click()
+    # except:
+    #     pass

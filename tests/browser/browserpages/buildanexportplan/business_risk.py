@@ -41,83 +41,106 @@ PAGE_TITLE = "Business Risk Page"
 
 SELECTORS = {
     "business risk": {
-        "product cost educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[1]/td[1]/div/div/button/i"
+        "risk educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[1]/td/div[1]/div[1]/div/div/button/i"
         ),
-        "product cost": Selector(
-            By.XPATH, "//input[@id='product_costs']", type=ElementType.INPUT
+        "risk example": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[1]/td/div[1]/div[1]/button"
         ),
-        "labour cost educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[2]/td[1]/div/div[1]/button/i"
-        ),
-        "labour cost": Selector(
-            By.XPATH, "//input[@id='labour_costs']", type=ElementType.INPUT
-        ),
-        "additional margin": Selector(
-            By.XPATH, "//input[@id='other_direct_costs']", type=ElementType.INPUT
-        ),
-        "direct costs total": Selector(
-            By.XPATH, "//span[@class='body-l-b text-white']"
-        ),
-        "product adaptation educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[1]/td[1]/div/div/button/i",
+        "risk": Selector(
+            By.XPATH,
+            "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[1]/table/tr[2]/td[1]/div/div[1]/button/i",
             type=ElementType.INPUT
         ),
-        "product adaptation": Selector(
-            By.XPATH, "//input[@id='product_adaption']", type=ElementType.INPUT
+        "risk likelihood educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[2]/td/div[1]/div[1]/div/div/button/i"
         ),
-        "freight and logistics educational": Selector(
-            By.XPATH, "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[2]/td[1]/div/div/button/i"
+        "risk impact educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[3]/td/div[1]/div[1]/div/div[1]/button/i"
+        ),
+        "rare": Selector(
+            By.XPATH, "//label[contains(text(),'Rare')]"
+        ),
+        "unlikely": Selector(
+            By.XPATH, "//label[contains(text(),'Unlikely')]"
+        ),
+        "possible": Selector(
+            By.XPATH, "//label[contains(text(),'Possible')]"
+        ),
+        "likely": Selector(
+            By.XPATH, "//label[contains(text(),'Likely')]"
+        ),
+        "certain": Selector(
+            By.XPATH, "//label[contains(text(),'Certain')]"
         ),
         "freight and logistics": Selector(
             By.XPATH, "//input[@id='freight_logistics']"
         ),
-        "agent and distributor fees educational": Selector(
+        "trivial": Selector(
+            By.XPATH, "//label[contains(text(),'Trivial')]"
+        ),
+        "minor": Selector(
+            By.XPATH, "//label[contains(text(),'Minor')]"
+        ),
+        "moderate": Selector(
+            By.XPATH, "//label[contains(text(),'Moderate')]"
+        ),
+        "severe": Selector(
+            By.XPATH, "//label[contains(text(),'Severe')]"
+        ),
+        "major": Selector(
+            By.XPATH, "//label[contains(text(),'Major')]"
+        ),
+        "contingency plan educational": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div[2]/table/tbody/tr[4]/td/div[1]/div[1]/div/div/button/i"
+        ),
+        "contingency plan example": Selector(
             By.CSS_SELECTOR,
-            "//*[@id=\"cost-and-pricing\"]/section[1]/div/div[2]/div[3]/table/tr[3]/td[1]/div/div[1]/button/i"
+            "#business-risks > div.costs.costs--risks.bg-blue-deep-10.p-v-s.m-b-s > table > tbody > tr:nth-child(4) > td > div.learning > div.learning__buttons.m-b-xs > button"
         ),
-        "add route to market": Selector(
-            By.CSS_SELECTOR, "#route-to-market > button"
-        ),
-        "marketing resources example": Selector(
-            By.CSS_SELECTOR, "#resources > div > div.m-b-xs > button"
-        ),
-        "marketing resources text": Selector(
-            By.XPATH, "//textarea[@id='resources']"
-        ),
-        "next": Selector(
-            By.XPATH, "//p[contains(text(),'Next')]"
-        ),
-        "funding and credit": Selector(
-            By.XPATH, "//span[contains(text(),'Funding and Credit')]"
+        "add a risk": Selector(
+            By.CSS_SELECTOR, "#business-risks > button"
         ),
         "export plan home": Selector(
-            By.CSS_SELECTOR,
-            "#costs-and-pricing-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
+            By.XPATH,
+            "//body/main[@id='content']/div[@id='business-risk-content']/section[4]/div[1]/div[1]/div[2]/div[2]/a[1]"
         ),
-        "sell direct to your customer link": Selector(
-            By.CSS_SELECTOR,
-            "#marketing-approach-content > section.container.m-b-l > div > div.c-1-4.m-t-s > div > a > div > p"
-        ),
-        "how to manage exchange rates": Selector(
-            By.XPATH, "//h4[contains(text(),'How to manage exchange rates')]"
-        ),
-        "lesson": Selector(
-            By.CSS_SELECTOR,
-            "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > button"
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
         ),
         "open navigation": Selector(
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
         ),
-        "nav adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "nav Adapting Your Product": Selector(
+            By.XPATH, "//a[contains(text(),'Adapting Your Product')]"
         ),
         "back": Selector(
             By.XPATH, "//body/div[10]/div/div/div/div[1]/a"
         ),
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
+        ),
+        "nav download export plan": Selector(
+            By.XPATH, "//body/main/div[1]/nav/div/div[2]/button[2]/i"
+        ),
+        "share": Selector(
+            By.XPATH, "//body/main/div[1]/nav/div/div[2]/button[1]/i"
+        ),
+        "download export plan": Selector(
+            By.XPATH, "//body/main/div[1]/nav/div/div[2]/button[1]/i"
+        ),
+        "yes checkbox": Selector(
+            By.CSS_SELECTOR, "#section-complete > div > label"
+        ),
+        "add a product": Selector(
+            By.XPATH, "//button[contains(text(),'Add a product')]"
+        ),
+        "search next button": Selector(
+            By.XPATH, "//body/div[9]/div/div/form/div[2]/div/span/div/section/div/div/button"
+        ),
+        "dashboard": Selector(
+            By.XPATH, "//a[contains(text(),'Dashboard')]"
         ),
     }
 }
@@ -153,3 +176,275 @@ def find_and_click(driver: WebDriver, *, element_selector_name: str):
         driver, find_selector_by_name(SELECTORS, element_selector_name)
     )
     find_and_click.click()
+
+
+def check_section_complete_yes(driver: WebDriver, element_selector_name: str):
+    check_yes_link = find_element(
+        driver, find_selector_by_name(SELECTORS, element_selector_name)
+    )
+    check_yes_link.click()
+
+
+def find_and_select_random_radio_and_click_next(driver: WebDriver):
+    parent_div_radio_element = driver.find_element_by_class_name("m-b-xs")
+    time.sleep(2)
+    child_radio_div_elements = parent_div_radio_element.find_elements_by_xpath("//input[@type='radio']");
+    RADIO_SELECTORS_DICT = {}
+    for index in range(len(child_radio_div_elements)):
+        child_radio_element = child_radio_div_elements[index]
+        key_name = "radio" + str(index)
+        radio_element_xpath = f"//input[@id='" + str(child_radio_element.get_attribute("id")) + "']"
+        key_value = Selector(By.XPATH, radio_element_xpath, type=ElementType.RADIO)
+
+        if index == 0:
+            rsdict = {}
+            rsdict[key_name] = key_value
+            RADIO_SELECTORS_DICT["product radio info"] = rsdict
+        else:
+            rsdict = RADIO_SELECTORS_DICT["product radio info"]
+            rsdict[key_name] = key_value
+            RADIO_SELECTORS_DICT.clear()
+            RADIO_SELECTORS_DICT["product radio info"] = rsdict
+
+    radio_selectors = RADIO_SELECTORS_DICT["product radio info"]
+    check_random_radio(driver, radio_selectors)
+
+    nextbtnclick(driver)
+
+
+def nextbtnclick(driver: WebDriver):
+    driver.find_element_by_xpath("//button[contains(text(),'Next')]").click()
+
+
+def fill_out_country(driver: WebDriver, country: str):
+    driver.implicitly_wait(1)
+
+    country_btn = find_element(
+        driver, find_selector_by_name(SELECTORS, "add a target market")  # dashboard add country button
+    )
+    country_btn.click()
+
+    # try:
+    #     if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
+    #         driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
+    # except:
+    #     pass
+
+    if 0 == len(country):
+        # if country name is not provided from the test case, then select one of the random 5 countries listed on the browser
+        path_random_country_element = "body > div:nth-child(13) > div > div > div > div > div > div.only-desktop > div.suggested-markets > ul > button:nth-child(" + str(
+            random.randint(1, 5)) + ")"
+        driver.find_element_by_css_selector(path_random_country_element).click()
+    else:
+        # search using the provide country name from the test case
+        driver.find_element_by_css_selector("#search-input").clear()
+        driver.find_element_by_css_selector("#search-input").send_keys(country)
+
+        # look out for the list displayed after entering country name and select random/provided country
+        ul_list_element = driver.find_element_by_xpath(
+            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+
+        section_elements = ul_list_element.find_elements_by_tag_name("section")
+        logging.debug("length of section elements " + str(len(section_elements)))
+        # select random section element and within that select a country
+        index_random_element_to_be_selected = random.randint(0, len(section_elements) - 1)
+        logging.debug("Index of section elements " + str(index_random_element_to_be_selected))
+        section_element_selected = section_elements[index_random_element_to_be_selected]
+        logging.debug(section_element_selected)
+
+        div_elements = section_element_selected.find_elements_by_tag_name("div")  # 2 has to be present
+        logging.debug("length of div elements " + str(len(div_elements)))
+        level_1_div_element = div_elements[
+            1]  # section_element_selected.find_element_by_class_name("p-t-s expand-section open")
+        level_2_div_element = level_1_div_element.find_element_by_tag_name("div")
+        span_elements = level_2_div_element.find_elements_by_tag_name("span")
+        logging.debug("length of span elements " + str(len(span_elements)))
+        # select random span element and within that select a country
+        index_random_element_to_be_selected = random.randint(0, len(span_elements) - 1)
+        span_element_selected = span_elements[index_random_element_to_be_selected]
+        li_element = span_element_selected.find_element_by_tag_name("li")
+        # finally arrived at country name button(s)
+        buttons_elements = li_element.find_elements_by_tag_name("button")
+        logging.debug("length of country button elements " + str(len(buttons_elements)))
+        country_name_found = False
+        for button_element in buttons_elements:
+            if str(button_element.text).lower() == country.lower():
+                country_name_found = True
+                button_element.click()
+                time.sleep(2)
+                break
+        if country_name_found == False:
+            raise Exception("Country name could not be found " + str(country))
+
+
+def fill_out_product(driver: WebDriver, product_name: str):
+    product_btn = find_element(
+        driver, find_selector_by_name(SELECTORS, "add a product")
+    )
+    product_btn.click()
+    # search_again_top_bottom(driver)
+    driver.implicitly_wait(1)
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/label/div/input").clear()
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(
+        product_name)
+    driver.find_element_by_xpath("//body/div[9]/div/div/form/div[2]/div/div/div[2]/button/i").click()
+
+    # Inorder to copy this code, 3 elements to be copied
+    # as per the element path on the browser
+    # save_product_btn, parent_1_div_element, search next button
+    # def search_select_save_radio(driver: WebDriver):
+    counter = 0
+    while True:
+
+        if counter >= 50:
+            break
+        # logging.debug("Counter: " + str(counter))
+
+        driver.implicitly_wait(1)
+
+        # check for save button
+        save_btn_found = False
+        try:
+            save_product_btn = driver.find_element_by_xpath(
+                "//body/div[9]/div/div/form/div[2]/div/span/div/section[1]/div[2]/button")
+            save_btn_found = True
+        except Exception as ex:
+            logging.debug("save button not found.Exception: " + str(ex))
+
+        if save_btn_found == True:
+            logging.debug("Save button found")
+            save_product_btn.click()
+            return
+        # look for div's and radio buttons
+        parent_1_div_element = driver.find_element_by_xpath(
+            "//body/div[9]/div/div/form/div[2]/div/span/div/section[1]/div")  # ("interaction grid m-v-xs")
+        child_1_div_element = parent_1_div_element.find_element_by_tag_name("div")  # ("c-fullwidth")
+        main_div_element = child_1_div_element.find_element_by_tag_name("div")  # "m-b-xs"
+        # radio button labels
+        label_elements = main_div_element.find_elements_by_tag_name("label")
+        radio_elements = []
+        for label_element in label_elements:
+            radio_ele = None
+            try:
+                radio_ele = label_element.find_element_by_tag_name("input")
+            except Exception as e:
+                continue
+            radio_elements.append(radio_ele)
+        # logging.debug('number of labels - ' + str(len(radio_elements)))
+        random_label_index = random.randint(0, len(radio_elements) - 1)
+        # logging.debug('Index of radio buttons to be selected -> ' + str(random_label_index))
+
+        radio_btn_selected = radio_elements[random_label_index]
+        radio_btn_selected.click()
+
+        driver.implicitly_wait(1)
+        search_next_btn = find_element(
+            driver, find_selector_by_name(SELECTORS, "search next button")
+        )
+        search_next_btn.click()
+
+        counter += 1
+
+def enter_risk_details(driver: WebDriver, position: str, risktext : str , risklikelihood : str,
+                                                  contingencyplan : str ):
+    # every call of this function, click on Add Goal
+    find_and_click(driver, element_selector_name="Add a risk")
+    time.sleep(1)
+
+    position = int(position)
+    risktext = int((int(position) * 5) - 4)
+    risk_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(
+            risktext) + "]"
+    risk_text_ele_xpath = risk_div_element_xpath + "/td/div[2]/textarea"
+
+
+    # del_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
+    # del_btn_ele_xpath = del_element_xpath + "/td/button/i"
+
+    if 0 == len(risklikelihood):
+        path_random_risk_likelihood = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr[2]/td/div[2]/div" + "[" + str(
+            random.randint(1, 5)) + "]"
+        risk_button_ele_xpath = path_random_risk_likelihood + "/label"
+
+    # risk_likelihood_div_element_xpath = "/html/body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
+    # risk_likelihood_button_element_xpath = risk_likelihood_div_element_xpath + "/td/div[2]/div[1]/label"
+    #
+    # risk_impact_div_element_xpath = "/html/body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
+    # risk_impact_button_element_xpath = risk_impact_div_element_xpath + "/td/div[2]/div[1]/label"
+    position = int(position)
+    contingency_position = int((int(position) * 5) - 1)
+    contingencyplan_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(contingency_position) + "]"
+    contingencyplan_text_element_xpath = contingencyplan_div_element_xpath + "//td/div[2]/textarea"
+
+
+    driver.find_element_by_xpath(risk_text_ele_xpath).send_keys(risktext)
+    driver.find_element_by_xpath(risk_button_ele_xpath).click()
+    # driver.find_element_by_xpath(risk_impact_button_element_xpath).click()
+    driver.find_element_by_xpath(contingencyplan_text_element_xpath).send_keys(contingencyplan)
+
+
+    time.sleep(1)
+    # input_field_selectors = SELECTORS["business objectives"]
+    # input_details_dict = {"start date": startdate, "end date":enddate, "owner":owner}
+    # fill_out_input_fields(driver, input_field_selectors, input_details_dict)
+    #
+    # text_area_details_dict = {"objective text": objectives, "planned review": plannedreviews}
+    # fill_out_textarea_fields(driver, input_field_selectors, text_area_details_dict)
+
+# def delete_all_business_objectives(driver: WebDriver, position: str):
+#     objective_div_element_xpath = "//body/main[@id='content']/div[@id='business-objectives-content']/section[4]/div[1]/div[2]/div[2]/div[1]/div" + "[" + position + "]"
+#     del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button[1]"
+#
+#     driver.find_element_by_xpath(del_btn_ele_xpath).click()
+#     time.sleep(1)
+
+def delete_all_risk_details(driver: WebDriver, del_button_position: str):
+    # 1,3,5,7,......
+    # objective_div_element_xpath = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" + "[" + position + "]"
+    # objective_text_ele_xpath = objective_div_element_xpath + "/div[1]/div[1]/div[1]/textarea[1]"
+    # del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button[1]"
+    # start_date_ele_xpath = objective_div_element_xpath + "/div[1]/div[2]/div[1]/div/div[2]/input"
+    # end_date_ele_xpath = objective_div_element_xpath + "/div[1]/div[2]/div[2]/div/div[2]/input"
+    # owner_ele_xpath = objective_div_element_xpath + "/div[1]/div[3]/div[1]/div[2]/input[1]"
+    # planned_reviews_ele_xpath = objective_div_element_xpath + "/div[1]/div[4]/div[1]/textarea[1]"
+
+    objective_text_area_element_index = int(del_button_position)
+    #//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[5]/div[1]/div[1]/div/textarea
+    objective_text_area_element_x_path = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" \
+                                         + "[" + str(
+        objective_text_area_element_index) + "]" + "/div[1]/div[1]/div/textarea"
+    objective_text_area_text_exists = True
+    time.sleep(2)
+    # logging.debug(objective_text_area_element_index)
+    # logging.debug(objective_text_area_element_x_path)
+    try:
+        objective_text_area_text = driver.find_element_by_xpath(objective_text_area_element_x_path).text
+        if objective_text_area_text == None or len(objective_text_area_text) <= 0:
+            objective_text_area_text_exists = False
+    except Exception as e:
+        logging.error(e)
+        objective_text_area_text_exists = False
+    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[15]/div[2]/button/i
+    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[5]/div[2]/button/i
+    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[1]/div[2]/button/i
+    # del_button_position: 5,4,3,2,1
+    objective_div_element_xpath = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" + "[" + del_button_position + "]"
+    del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button"
+    driver.find_element_by_xpath(del_btn_ele_xpath).click()
+    #logging.debug("del_button_position " + str(del_button_position))
+    #time.sleep(2)
+    if objective_text_area_text_exists == True:
+        driver.implicitly_wait(1)
+        # 12,13,14,15.......
+        # 12 + (1 - 1), 12 + (2 - 1), 12 + (3 - 1), 12 + (4 - 1),.........
+        #/html/body/div[16]/div/div/div/div[2]/div[2]/button[1]/i
+        #/html/body/div[13]/div/div/div/div[2]/div[2]/button[1]
+        delete_msg_yes_index = int(12 + (int(del_button_position) - 1))
+        delete_message_yes_element_xpath = "//body/div" + "[" + str(
+            delete_msg_yes_index) + "]" + "/div/div/div/div[2]/div[2]/button[1]"
+        logging.debug(delete_message_yes_element_xpath)
+        delete_message_yes_element = driver.find_element_by_xpath(delete_message_yes_element_xpath)
+        delete_message_yes_element.click()
+        #time.sleep(1)
+    else:
+        logging.debug("objective_text_area_text_exists is False for del_button_position " +str(del_button_position))
