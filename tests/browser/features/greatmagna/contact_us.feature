@@ -6,7 +6,7 @@ Feature: Contact Us Form
     Given Test authentication is done
 
 
-   @allure.link:XOT-003
+   @allure.link:XOT-009
    @Great-Magna-Login
   Scenario:Visitor should be able to fill contact us form
   Given "Robert" visited "GreatMagna - Login" page

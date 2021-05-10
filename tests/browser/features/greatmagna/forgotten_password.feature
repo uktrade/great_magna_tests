@@ -4,7 +4,7 @@ Feature: GreatMagna -  Forgotten Password Page
   Background:
     Given test authentication is done
 
-  @allure.link:XOT-050
+  @allure.link:XOT-051
   @Great-Magna-Forgotten-Password
   Scenario Outline: Visitor should be able to click on forgotten password and create new password
 

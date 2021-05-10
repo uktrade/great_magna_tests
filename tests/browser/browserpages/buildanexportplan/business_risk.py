@@ -345,106 +345,59 @@ def fill_out_product(driver: WebDriver, product_name: str):
 
         counter += 1
 
-def enter_risk_details(driver: WebDriver, position: str, risktext : str , risklikelihood : str,
-                                                  contingencyplan : str ):
+def enter_risk_details(driver: WebDriver, position: str, risktext : str , contingencyplan : str ):
     # every call of this function, click on Add Goal
     find_and_click(driver, element_selector_name="Add a risk")
     time.sleep(1)
 
     position = int(position)
-    risktext = int((int(position) * 5) - 4)
-    risk_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(
-            risktext) + "]"
+    risktext_position = int((int(position) * 5) - 4)
+    risk_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(risktext_position) + "]"
     risk_text_ele_xpath = risk_div_element_xpath + "/td/div[2]/textarea"
-
-
-    # del_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
-    # del_btn_ele_xpath = del_element_xpath + "/td/button/i"
-
-    if 0 == len(risklikelihood):
-        path_random_risk_likelihood = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr[2]/td/div[2]/div" + "[" + str(
-            random.randint(1, 5)) + "]"
-        risk_button_ele_xpath = path_random_risk_likelihood + "/label"
-
-    # risk_likelihood_div_element_xpath = "/html/body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
-    # risk_likelihood_button_element_xpath = risk_likelihood_div_element_xpath + "/td/div[2]/div[1]/label"
-    #
-    # risk_impact_div_element_xpath = "/html/body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
-    # risk_impact_button_element_xpath = risk_impact_div_element_xpath + "/td/div[2]/div[1]/label"
-    position = int(position)
-    contingency_position = int((int(position) * 5) - 1)
-    contingencyplan_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(contingency_position) + "]"
-    contingencyplan_text_element_xpath = contingencyplan_div_element_xpath + "//td/div[2]/textarea"
-
-
     driver.find_element_by_xpath(risk_text_ele_xpath).send_keys(risktext)
-    driver.find_element_by_xpath(risk_button_ele_xpath).click()
-    # driver.find_element_by_xpath(risk_impact_button_element_xpath).click()
+    logging.debug(risk_text_ele_xpath)
+    logging.debug(risktext)
+    time.sleep(1)
+
+    path_random_risk_likelihood = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" \
+                                  + "[" + str(risktext_position + 1) + "]" + "/td/div[2]/div" \
+                                  + "[" + str(random.randint(1, 5)) + "]"
+    path_random_risk_likelihood_button_ele_xpath = path_random_risk_likelihood + "/label"
+    driver.find_element_by_xpath(path_random_risk_likelihood_button_ele_xpath).click()
+    time.sleep(1)
+    risk_impact_button_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" \
+                                    + "[" + str(risktext_position + 2) + "]" \
+                                    + "/td/div[2]/div"+ "[" + str(random.randint(1, 5)) + "]" + "/label"
+    driver.find_element_by_xpath(risk_impact_button_element_xpath).click()
+
+    contingencyplan_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" \
+                                        + "[" + str(risktext_position + 3) + "]"
+    contingencyplan_text_element_xpath = contingencyplan_div_element_xpath + "//td/div[2]/textarea"
     driver.find_element_by_xpath(contingencyplan_text_element_xpath).send_keys(contingencyplan)
 
-
-    time.sleep(1)
-    # input_field_selectors = SELECTORS["business objectives"]
-    # input_details_dict = {"start date": startdate, "end date":enddate, "owner":owner}
-    # fill_out_input_fields(driver, input_field_selectors, input_details_dict)
-    #
-    # text_area_details_dict = {"objective text": objectives, "planned review": plannedreviews}
-    # fill_out_textarea_fields(driver, input_field_selectors, text_area_details_dict)
-
-# def delete_all_business_objectives(driver: WebDriver, position: str):
-#     objective_div_element_xpath = "//body/main[@id='content']/div[@id='business-objectives-content']/section[4]/div[1]/div[2]/div[2]/div[1]/div" + "[" + position + "]"
-#     del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button[1]"
-#
-#     driver.find_element_by_xpath(del_btn_ele_xpath).click()
-#     time.sleep(1)
+    time.sleep(5)
 
 def delete_all_risk_details(driver: WebDriver, del_button_position: str):
     # 1,3,5,7,......
-    # objective_div_element_xpath = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" + "[" + position + "]"
-    # objective_text_ele_xpath = objective_div_element_xpath + "/div[1]/div[1]/div[1]/textarea[1]"
-    # del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button[1]"
-    # start_date_ele_xpath = objective_div_element_xpath + "/div[1]/div[2]/div[1]/div/div[2]/input"
-    # end_date_ele_xpath = objective_div_element_xpath + "/div[1]/div[2]/div[2]/div/div[2]/input"
-    # owner_ele_xpath = objective_div_element_xpath + "/div[1]/div[3]/div[1]/div[2]/input[1]"
-    # planned_reviews_ele_xpath = objective_div_element_xpath + "/div[1]/div[4]/div[1]/textarea[1]"
-
-    objective_text_area_element_index = int(del_button_position)
-    #//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[5]/div[1]/div[1]/div/textarea
-    objective_text_area_element_x_path = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" \
-                                         + "[" + str(
-        objective_text_area_element_index) + "]" + "/div[1]/div[1]/div/textarea"
-    objective_text_area_text_exists = True
-    time.sleep(2)
-    # logging.debug(objective_text_area_element_index)
-    # logging.debug(objective_text_area_element_x_path)
-    try:
-        objective_text_area_text = driver.find_element_by_xpath(objective_text_area_element_x_path).text
-        if objective_text_area_text == None or len(objective_text_area_text) <= 0:
-            objective_text_area_text_exists = False
-    except Exception as e:
-        logging.error(e)
-        objective_text_area_text_exists = False
-    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[15]/div[2]/button/i
-    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[5]/div[2]/button/i
-    #/html/body/main/div[2]/section[4]/div/div[2]/div[2]/div/div[1]/div[2]/button/i
-    # del_button_position: 5,4,3,2,1
-    objective_div_element_xpath = "//body/main/div[2]/section[4]/div/div[2]/div[2]/div/div" + "[" + del_button_position + "]"
-    del_btn_ele_xpath = objective_div_element_xpath + "/div[2]/button"
-    driver.find_element_by_xpath(del_btn_ele_xpath).click()
+    #/html/body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr[5]/td/button/i
+    # del_button_position: 5,10,15,20,25
+    driver.implicitly_wait(5)
+    time.sleep(5)
+    del_button_index = int(del_button_position) * 5
+    risk_detail_div_element_xpath = "//body/main/div[2]/section[3]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + str(del_button_index) + "]"
+    risk_btn_ele_xpath = risk_detail_div_element_xpath + "/td/button/i"
+    driver.find_element_by_xpath(risk_btn_ele_xpath).click()
     #logging.debug("del_button_position " + str(del_button_position))
-    #time.sleep(2)
-    if objective_text_area_text_exists == True:
-        driver.implicitly_wait(1)
+    time.sleep(5)
+    driver.implicitly_wait(5)
+
         # 12,13,14,15.......
         # 12 + (1 - 1), 12 + (2 - 1), 12 + (3 - 1), 12 + (4 - 1),.........
-        #/html/body/div[16]/div/div/div/div[2]/div[2]/button[1]/i
-        #/html/body/div[13]/div/div/div/div[2]/div[2]/button[1]
-        delete_msg_yes_index = int(12 + (int(del_button_position) - 1))
-        delete_message_yes_element_xpath = "//body/div" + "[" + str(
-            delete_msg_yes_index) + "]" + "/div/div/div/div[2]/div[2]/button[1]"
-        logging.debug(delete_message_yes_element_xpath)
-        delete_message_yes_element = driver.find_element_by_xpath(delete_message_yes_element_xpath)
-        delete_message_yes_element.click()
-        #time.sleep(1)
-    else:
-        logging.debug("objective_text_area_text_exists is False for del_button_position " +str(del_button_position))
+        #//body/div[12]/div/div/div/div[2]/div[2]/button[1]/span
+    delete_msg_yes_index = int(12 + (int(del_button_position) - 1))
+    delete_message_yes_element_xpath = "//body/div" + "[" + str(
+        delete_msg_yes_index) + "]" + "/div/div/div/div[2]/div[2]/button[1]/span"
+    logging.debug(delete_message_yes_element_xpath)
+    delete_message_yes_element = driver.find_element_by_xpath(delete_message_yes_element_xpath)
+    delete_message_yes_element.click()
+    time.sleep(1)

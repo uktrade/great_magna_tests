@@ -5,7 +5,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-591
+#   @allure.link:XOT-451
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Local infrastructure" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Local infrastructure"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Local infrastructure"
 ###
-# @allure.link:XOT-592
+# @allure.link:XOT-452
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Local infrastructure" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Local infrastructure"
 #
 #
-#   @allure.link:XOT-593
+#   @allure.link:XOT-453
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Local infrastructure" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Local infrastructure"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Local infrastructure"
 #
-#  @allure.link:XOT-594
+#  @allure.link:XOT-454
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson page "Local infrastructure" and click view all lessons
 #

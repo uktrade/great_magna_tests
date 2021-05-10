@@ -4,7 +4,7 @@ Feature: GreatMagna - Adapting Your Product Page
    Background:
    Given test authentication is done
 
-   @allure.link:XOT-1021
+   @allure.link:XOT-1031
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Open DataSnapshot" and check whether atleast one language is present
 
@@ -17,7 +17,7 @@ Feature: GreatMagna - Adapting Your Product Page
     And "Robert" decides to click on element "Open Data Snapshot" on page "Build An Export Plan - Adapting Your Product"
      #And "Robert" decides to click on element "Hide Data Snapshot" on page "Build An Export Plan - Adapting Your Product"
 
-   @allure.link:XOT-1026
+   @allure.link:XOT-1032
    @Great_Magna_Export_Plan_1040
  Scenario:User should be able to click lesson link "Adapting your product or service" and click link back to "Adapting your product"
 
@@ -33,7 +33,7 @@ Feature: GreatMagna - Adapting Your Product Page
      And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - Adapting your product or service"
 
 
-   @allure.link:XOT-1022
+   @allure.link:XOT-1033
    @Great_Magna_Export_Plan
   Scenario:User should be able to view tool tip and enter relevant text in "Changing your product to adapt to your target market"
 
@@ -67,7 +67,7 @@ Feature: GreatMagna - Adapting Your Product Page
     And "Robert" decides to validate entered text at "Other changes" on page "Build An Export Plan - Adapting Your Product"
 
 
-   @allure.link:XOT-1023
+   @allure.link:XOT-1034
    @Great_Magna_Export_Plan
   Scenario:User should be able to view educational tool tip and enter relevant text in "Documents you need to provide to meet the requirements for your target market"
 
@@ -93,8 +93,8 @@ Feature: GreatMagna - Adapting Your Product Page
     And "Robert" decides to enter text at "UK customs declaration" on page "Build An Export Plan - Adapting Your Product"
     And "Robert" decides to validate entered text at "UK customs declaration" on page "Build An Export Plan - Adapting Your Product"
 
-    @allure.link:XOT-1026
-   @Great_Magna_Export_Plan
+    @allure.link:XOT-1035
+   @Great_Magna_Export_Plan_Nav
   Scenario:User should be able to click on navigation bar and navigate to "Marketing Approach" page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -107,7 +107,7 @@ Feature: GreatMagna - Adapting Your Product Page
      And "Robert" decides to click on element "Nav Marketing Approach" on page "Build An Export Plan - Adapting Your Product"
      And "Robert" should be on the "Build An Export Plan - Marketing Approach" Page
 
-  @allure.link:XOT-1027
+  @allure.link:XOT-1036
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on page "Marketing approach link" at the bottom of the page
 
@@ -121,7 +121,7 @@ Feature: GreatMagna - Adapting Your Product Page
      And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Adapting Your Product"
      And "Robert" should be on the "Build An Export Plan - Marketing approach" page
 
-   @allure.link:XOT-1028
+   @allure.link:XOT-1037
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on Export plan home and should be on Export plan Home page
 
@@ -135,7 +135,7 @@ Feature: GreatMagna - Adapting Your Product Page
     And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
 
- @allure.link:XOT-1028
+ @allure.link:XOT-1038
    @Great_Magna_Export_Plan_112D
   Scenario:User should be able to click on "Add another document" and enter the Document name and Notes
 
@@ -153,7 +153,7 @@ Feature: GreatMagna - Adapting Your Product Page
           | 4        | Address Proof | Address Proof   |
           | 5        | Packing List  | Packing List    |
 
-    @allure.link:XOT-1029
+    @allure.link:XOT-1039
    @Great_Magna_Export_Plan_112D
    Scenario:User should be able to click on "Add another document" and delete the document and notes
 
@@ -171,7 +171,7 @@ Feature: GreatMagna - Adapting Your Product Page
           | 2     |
           | 1     |
 
-  @allure.link:XOT-1016
+  @allure.link:XOT-1040
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on Top Export plan home and should be on Export plan dashboard page
 
@@ -184,7 +184,7 @@ Feature: GreatMagna - Adapting Your Product Page
      And "Robert" decides to click on section "Top Export Plan Home" on page "Build An Export Plan - Adapting Your Product"
      And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
-@allure.link:XOT-031
+@allure.link:XOT-1041
   @Great-Magna-Sign-Up
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Adapting your product" Page and enter the "Add Product" and "Add Country"
 
@@ -200,7 +200,7 @@ Feature: GreatMagna - Adapting Your Product Page
   And "Robert" decides to enter product name "Coffee" on page "Build An Export Plan - Adapting Your Product"
   And "Robert" decides to enter country name "India" on the "Build An Export Plan - Adapting Your Product" page
 
-     @allure.link:XOT-1002
+     @allure.link:XOT-1042
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Open DataSnapshot" on Adapting Your Product page and click on dashboard should see "Adapting Your Product" as last visited page
 

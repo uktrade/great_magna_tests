@@ -24,7 +24,7 @@ from .constants import (
 )
 
 
-# from .settings import BASICAUTH_PASS, BASICAUTH_USER
+from .settings import BASICAUTH_PASS, BASICAUTH_USER
 
 
 def get_random_email_address():
@@ -40,6 +40,8 @@ def is_500(exception):
     """Return True exception message contains 500"""
     return "500" in str(exception)
 
+def basic_auth():
+    return BASICAUTH_USER, BASICAUTH_PASS
 
 def sentence(
         *,

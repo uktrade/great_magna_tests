@@ -93,7 +93,7 @@ SELECTORS = {
             By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
         "avoid cashflow challenges when exporting": Selector(
-            By.XPATH, "//h4[contains(text(),'Avoid cashflow challenges when exporting')]"
+            By.CSS_SELECTOR, "#finance-how-much-funding > div > div.learning > div.learning__content > a > div"
         ),
         "choose the right funding": Selector(
             By.XPATH, "//*[@id=\"finance-funding-credit-options\"]/a/div/h4"

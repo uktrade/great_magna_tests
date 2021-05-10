@@ -4,7 +4,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-331
+#   @allure.link:XOT-521
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "How to prepare for a trade mission" and click continue
 #
@@ -19,7 +19,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - How to prepare for a trade mission"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to prepare for a trade mission"
 #
-# @allure.link:XOT-332
+# @allure.link:XOT-522
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to prepare for a trade mission" and click bottom back
 #
@@ -34,7 +34,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - How to prepare for a trade mission"
 #
 #
-#   @allure.link:XOT-333
+#   @allure.link:XOT-523
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to prepare for a trade mission" and click top back
 #
@@ -48,7 +48,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to prepare for a trade mission"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - How to prepare for a trade mission"
 #
-# @allure.link:XOT-334
+# @allure.link:XOT-524
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to prepare for a trade mission" and click view all lessons
 #

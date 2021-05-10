@@ -5,7 +5,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-591
+#   @allure.link:XOT-541
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "How to assess ease of entry into a new market" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - How to assess ease of entry into a new market"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to assess ease of entry into a new market"
 ###
-# @allure.link:XOT-592
+# @allure.link:XOT-542
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to assess ease of entry into a new market" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - How to assess ease of entry into a new market"
 #
 #
-#   @allure.link:XOT-593
+#   @allure.link:XOT-543
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to assess ease of entry into a new market" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to assess ease of entry into a new market"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - How to assess ease of entry into a new market"
 #
-#   @allure.link:XOT-235
+#   @allure.link:XOT-544
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to assess ease of entry into a new market" and click view all lessons
 #

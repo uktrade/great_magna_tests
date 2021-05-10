@@ -4,7 +4,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-331
+#   @allure.link:XOT-421
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Protect your business from bribery and corruption" and click continue
 #
@@ -19,7 +19,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Protect your business from bribery and corruption"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Protect your business from bribery and corruption"
 #
-# @allure.link:XOT-332
+# @allure.link:XOT-422
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your business from bribery and corruption" and click bottom back
 #
@@ -34,7 +34,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Protect your business from bribery and corruption"
 #
 #
-#   @allure.link:XOT-333
+#   @allure.link:XOT-423
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your business from bribery and corruption" and click top back
 #
@@ -48,7 +48,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Protect your business from bribery and corruption"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Protect your business from bribery and corruption"
 #
-#@allure.link:XOT-334
+#@allure.link:XOT-424
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your business from bribery and corruption" and click view all lessons
 #

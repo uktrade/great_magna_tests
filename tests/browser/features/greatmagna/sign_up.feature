@@ -42,7 +42,7 @@ Feature: GreatMagna - Sign up Page
 #   |      emailaddress                 | password    |
 #     | santoshtesting10008+xxxx@gmail.com | Testing@123!|
 
-@allure.link:XOT-031
+@allure.link:XOT-034
   @Great-Magna-Sign-Up_1
   Scenario: New User should be able to navigate to Export Plan with "Google login"
 
@@ -51,7 +51,7 @@ Feature: GreatMagna - Sign up Page
   And "Robert" decides to enter email address "santoshtesting10008+887@gmail.com"
   Then "Robert" should be on the "GreatMagna - Dashboard" Page
 
-  @allure.link:XOT-031
+  @allure.link:XOT-035
   @Great-Magna-Sign-Up_1
   Scenario: New User should be able to navigate to Export Plan with "Google login"
 

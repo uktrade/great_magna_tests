@@ -5,7 +5,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-591
+#   @allure.link:XOT-351
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Understand market barriers" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Regulations around supplying a service"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand market barriers"
 ###
-# @allure.link:XOT-592
+# @allure.link:XOT-352
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand market barriers" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Understand market barriers"
 #
 #
-#   @allure.link:XOT-593
+#   @allure.link:XOT-353
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand market barriers" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand market barriers"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Understand market barriers"
 #
-#  @allure.link:XOT-594
+#  @allure.link:XOT-354
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand market barriers" and click view all lessons
 #

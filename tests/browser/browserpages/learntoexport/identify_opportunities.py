@@ -96,9 +96,6 @@ SELECTORS = {
         "ok button": Selector(
             By.XPATH, "//button[contains(text(),'Ok')]"
         ),
-"ok button": Selector(
-            By.XPATH, "//*[@id=\"content\"]/div/div[3]/div[3]/div/div[2]/div/div[1]/p[3]/strong"
-        ),
     }
 }
 

@@ -5,7 +5,7 @@ Feature: GreatMagna - Getting Paid Page
   Background:
    Given test authentication is done
 
-   @allure.link:XOT-1017
+   @allure.link:XOT-1131
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Payment methods" section and enter Notes
 
@@ -18,7 +18,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to select random item for "Payment Methods" on page "Build An Export Plan - Getting Paid"
      And "Robert" decides to enter text at "Payment Methods Notes" on page "Build An Export Plan - Getting Paid"
 
-   @allure.link:XOT-1017
+   @allure.link:XOT-1132
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Payment Terms" section and enter Notes
 
@@ -31,7 +31,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to select random item for "Payment Terms" on page "Build An Export Plan - Getting Paid"
      And "Robert" decides to enter text at "Payment Terms Notes" on page "Build An Export Plan - Getting Paid"
 
-   @allure.link:XOT-1017
+   @allure.link:XOT-1133
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Incoterms" section and enter Notes
 
@@ -45,7 +45,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to enter text at "Incoterms Notes" on page "Build An Export Plan - Getting Paid"
 
 
-   @allure.link:XOT-1014
+   @allure.link:XOT-1134
    @Great_Magna_Export_Plan_321
   Scenario:User should be able to click lessons link "Choose the right payment method"
 
@@ -61,7 +61,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on section "Getting Paid" on page "LearnToExport - Choose the right payment method"
 
 
-        @allure.link:XOT-1014
+   @allure.link:XOT-1135
    @Great_Magna_Export_Plan_321
   Scenario:User should be able to click lessons link "Decide when to get paid"
 
@@ -76,7 +76,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" should be on the "LearnToExport - Decide when to get paid" page
      And "Robert" decides to click on section "Getting Paid" on page "LearnToExport - Decide when to get paid"
 
-   @allure.link:XOT-1014
+   @allure.link:XOT-1136
    @Great_Magna_Export_Plan_321
   Scenario:User should be able to click lessons link "Choose which incoterms are right for you"
 
@@ -92,7 +92,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on section "Getting Paid" on page "LearnToExport - Choose which incoterms are right for you"
 
 
-  @allure.link:XOT-1014
+  @allure.link:XOT-1137
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on navigation bar and navigate to "Travel Plan" page
 
@@ -106,7 +106,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on element "Nav Travel Plan" on page "Build An Export Plan - Getting Paid"
      And "Robert" should be on the "Build An Export Plan - Travel Plan"" Page
 
-@allure.link:XOT-1015
+@allure.link:XOT-1138
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on page "Travel Plan" at the bottom of the page
 
@@ -120,7 +120,7 @@ Feature: GreatMagna - Getting Paid Page
   And "Robert" decides to click on section "Travel plan" on page "Build An Export Plan - Getting Paid"
   And "Robert" should be on the "Build An Export Plan - Travel plan" page
 
-   @allure.link:XOT-1016
+   @allure.link:XOT-1139
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on Export plan home and should be on Export plan Home page
 
@@ -133,7 +133,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on section "Export Plan Home" on page "Build An Export Plan - Getting Paid"
      And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
-@allure.link:XOT-1016
+@allure.link:XOT-1140
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on Top Export plan home in Getting Paid and should be on Export plan dashboard page
 
@@ -146,7 +146,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on section "Top Export Plan Home" on page "Build An Export Plan - Getting Paid"
      And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
-@allure.link:XOT-031
+@allure.link:XOT-1141
   @Great-Magna-Sign-Up_1
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Getting paid" Page and enter the "Add a target market"
 
@@ -161,7 +161,7 @@ Feature: GreatMagna - Getting Paid Page
   And "Robert" "Robert" decides to click on section "Getting Paid" on page "Build An Export Plan - Export Plan Dashboard"
   And "Robert" decides to enter country name "India" on the "Build An Export Plan - Getting Paid" Page
 
- @allure.link:XOT-1002
+ @allure.link:XOT-1142
    @Great_Magna_Export_Plan_113
   Scenario:User should be able to click on "Incoterms" on Getting Paid page and click on dashboard should see "Getting Paid" as last visited page
 

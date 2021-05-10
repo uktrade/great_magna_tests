@@ -5,7 +5,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-591
+#   @allure.link:XOT-391
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson page "Understand data regulations and data protection" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Understand data regulations and data protection"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand data regulations and data protection"
 
-# @allure.link:XOT-592
+# @allure.link:XOT-392
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand data regulations and data protection" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Understand data regulations and data protection"
 #
 #
-#   @allure.link:XOT-593
+#   @allure.link:XOT-393
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand data regulations and data protection" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand data regulations and data protection"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Understand data regulations and data protection"
 #
-#   @allure.link:XOT-594
+#   @allure.link:XOT-394
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand data regulations and data protection" and click view all lessons
 #

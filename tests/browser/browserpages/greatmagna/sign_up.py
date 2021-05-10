@@ -40,8 +40,17 @@ from browserpages.common_actions import (
 NAME = "Sign up"
 SERVICE = Service.GREATMAGNA
 TYPE = PageType.SEARCH
-URL = URLs.GREAT_MAGNA_SIGNUP.absolute
+URL = URLs.GREAT_MAGNA_SIGNUP.absolute_template
 PAGE_TITLE = "Sign up Page"
+
+SubURLs = {
+    "sign up": URL,
+    #Sign up learn to export,where to export, make an export plan
+    "?next=/learn/categories/": URLs.GREAT_MAGNA_SIGNUP_LEARN_TO_EXPORT.absolute_template,
+    "?next=/where-to-export/": URLs.GREAT_MAGNA_SIGNUP_WHERE_TO_EXPORT.absolute_template,
+    "?next=/export-plan/dashboard/": URLs.GREAT_MAGNA_SIGNUP_MAKE_AN_EXPORT_PLAN.absolute_template,
+
+}
 
 SELECTORS = {
     "sign up": {
@@ -73,16 +82,29 @@ SELECTORS = {
         "google login": Selector(
             By.CSS_SELECTOR, "#signup-modal-google", type=ElementType.INPUT
         ),
+        "sign in": Selector(
+            By.CSS_SELECTOR, "#signup-modal-log-in"
+        ),
+
     },
 }
-
+SubURLs = {
+    "sign up": URL,
+    "required":
+        URLs.GREAT_MAGNA_SIGNUP.absolute_template,
+}
 
 def visit(driver: WebDriver, *, page_name: str = None):
     go_to_url(driver, URL, page_name or NAME)
 
 
-def should_be_here(driver: WebDriver):
+def should_be_here(driver: WebDriver, *, page_name: str = None):
     check_url(driver, URL, exact_match=False)
+    #check_url_path_matches_template(URL, driver.current_url)
+    # url = SubURLs[page_name.lower()] if page_name else URL
+    # check_url(driver, url, exact_match=False)
+    # msg = f"Got 404 on {driver.current_url}"
+    # assert "This page cannot be found" not in driver.page_source, msg
 
 
 def sign_up(driver: WebDriver, email_address: str, password: str):
@@ -155,52 +177,9 @@ def should_be_error_message(driver: WebDriver, element_name: str, expected_error
 
 
 def fill_out_country(driver: WebDriver, country: str):
-    # try:
-    #     time.sleep(1)
-    # except:
-    #     pass
-    #
-    # try:
-    #     time.sleep(1)
-    #     if driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").is_displayed():
-    #         driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").click()
-    # except:
-    #     pass
-    #
-    # try:
-    #     if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
-    #         driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
-    # except:
-    #     pass
 
-    # country
     driver.find_element_by_xpath("add a target market").click()
-    # time.sleep(1)
-    # country_btn = find_element(
-    #     driver, find_selector_by_name(SELECTORS, "add a target market")
-    # )
-    # country_btn.click()
-    # try:
-    #     time.sleep(1)
-    # if driver.find_element_by_css_selector(
-    #         "body > div:nth-child(19) > div > div > div > div > div > div.only-desktop > div:nth-child(6) > div:nth-child(4) > div:nth-child(2) > ul > section > div.p-t-s.expand-section.open > div > span > li").is_displayed():
-    #
-    #     driver.find_element_by_css_selector(
-    #         "body > div:nth-child(19) > div > div > div > div > div > div.only-desktop > div:nth-child(6) > div:nth-child(4) > div:nth-child(2) > ul > section > div.p-t-s.expand-section.open > div > span > li").click()
-    # # except:
-    #     pass
 
-    # time.sleep(1)
-    # if 0 == len(country):
-    #     path_random_country_element = "body > div:nth-child(13) > div > div > div > div > div > div.only-desktop > div.suggested-markets > ul > button:nth-child(" + str(
-    #         random.randint(1, 5)) + ")"
-    #     driver.find_element_by_css_selector(path_random_country_element).click()
-    # else:
-    #     try:
-        # if driver.find_element_by_xpath("//button[contains(text(),'Got it')]").is_displayed():
-        #     driver.find_element_by_xpath("//button[contains(text(),'Got it')]").click()
-        # except:
-        #     pass
     driver.find_element_by_css_selector("#search-input").clear()
     driver.find_element_by_css_selector("#search-input").send_keys(country)
 
@@ -210,12 +189,10 @@ def fill_out_country(driver: WebDriver, country: str):
              # logging.debug(input_element.text)
         if input_element.text == country.lower():
             input_element.click()
-                # time.sleep(5)
-            # break
-        # country_name_btn_xpath = "//button[contains(text(),'"+ country + "')]"
-        # driver.find_element_by_xpath(country_name_btn_xpath).click()
-    # try:
-    #     time.sleep(1)
-    #     driver.find_element_by_xpath("//a[@id='page-tour-skip']").click()
-    # except:
-    #     pass
+
+
+def find_and_click(driver: WebDriver, *, element_selector_name: str):
+    find_and_click = find_element(
+        driver, find_selector_by_name(SELECTORS, element_selector_name)
+    )
+    find_and_click.click()

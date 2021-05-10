@@ -4,7 +4,7 @@ Feature: GreatMagna - Sign out Page
    Background:
     Given test authentication is done
 
-  @allure.link:XOT-030
+  @allure.link:XOT-029
   @Great-Magna-Sign-Out
   Scenario Outline:Visitor should be able to sign out from the dashboard page
 

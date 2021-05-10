@@ -5,7 +5,7 @@
 #Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-471
+#   @allure.link:XOT-371
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Understand duties and taxes" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Understand duties and taxes"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand duties and taxes"
 #
-# @allure.link:XOT-472
+# @allure.link:XOT-372
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand duties and taxes" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Understand duties and taxes"
 #
 #
-#   @allure.link:XOT-473
+#   @allure.link:XOT-373
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand duties and taxes" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand duties and taxes"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Understand duties and taxes"
 #
-#@allure.link:XOT-474
+#@allure.link:XOT-374
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand duties and taxes" and click view all lessons
 #

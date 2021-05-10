@@ -5,7 +5,7 @@ Feature: GreatMagna - Dashboard Page
    Background:
     Given Test authentication is done
 
-   @allure.link:XOT-020
+   @allure.link:XOT-021
    @Great-Magna-Dashboard
   Scenario Outline:User should be able to view Dashboard pages
 
@@ -23,7 +23,7 @@ Feature: GreatMagna - Dashboard Page
           | santoshtesting10008+888@gmail.com | Testing@123! |
 
 #
-   @allure.link:XOT-020
+   @allure.link:XOT-022
    @Great-Magna-Dashboard
   Scenario Outline:User should be click on the questions for vfm
 
@@ -36,7 +36,7 @@ Feature: GreatMagna - Dashboard Page
           | santoshtesting10008+888@gmail.com | Testing@123! |
 
 
-   @allure.link:XOT-021
+   @allure.link:XOT-023
    @Great-Magna-Dashboard
   Scenario:User should be able to click Menu and the links
 
@@ -55,7 +55,7 @@ Feature: GreatMagna - Dashboard Page
 #          | email address | password |
 #          | santoshtesting10008+888@gmail.com | Testing@123! |
 
- @allure.link:XOT-031
+ @allure.link:XOT-024
   @Great-Magna-Export_Plan_Dashboard_12
   Scenario: New User should be able to navigate to Dashbaord and click on Export plan section and click on Got to export plan and Start BUtton
 
@@ -70,7 +70,7 @@ Feature: GreatMagna - Dashboard Page
    And "Robert" should be on the "Build An Export Plan - About Your Business" Page
 
 #
-#@allure.link:XOT-031
+#@allure.link:XOT-025
 #  @Great-Magna-Sign-Up
 #  Scenario Outline: First time landing on the dashboard page
 #  Given "Robert" visited "GreatMagna - Sign Up" page

@@ -49,7 +49,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#login > form > a"  # //a[contains(text(),'Forgotten password?')]
         ),
         "emailaddress": Selector(
-            By.XPATH, "//input[@id='email']", type=ElementType.INPUT
+            By.CSS_SELECTOR, "#email", type=ElementType.INPUT
         ),
         "password": Selector(
             By.XPATH, "//input[@id='password']", type=ElementType.INPUT

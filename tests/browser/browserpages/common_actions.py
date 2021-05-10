@@ -1239,3 +1239,25 @@ def generic_set_basic_auth_creds(driver: WebDriver, *, service_name: str = None)
     assertion_msg = f"Access is still denied after authentication attempt → {base_url}"
     with selenium_action(driver, assertion_msg):
         assert "ok" in driver.page_source
+
+# def generic_set_basic_auth_creds(driver: WebDriver, *, service_name: str = None):
+#     if service_name == "ERP":
+#         base_url = URLs.ERP_LANDING.absolute
+#     else:
+#         base_url = URLs.DOMESTIC_LANDING.absolute
+#     parsed = urlparse(base_url)
+#     with_creds = f"{parsed.scheme}://{BASICAUTH_USER}:{BASICAUTH_PASS}@{parsed.netloc}/automated-test-auth"
+#     logging.debug(f"Doing basic auth")
+#     with wait_for_page_load_after_action(driver):
+#         driver.get(with_creds)
+#     assertion_msg = f"Access is still denied after authentication attempt → {base_url}"
+#     with selenium_action(driver, assertion_msg):
+#         assert "ok" in driver.page_source
+#
+def revisit_page_on_access_denied(driver: WebDriver, page: ModuleType, page_name: str):
+    if access_was_denied(driver.page_source):
+        logging.debug(
+            f"Access Denied. Trying to re-authenticate on '{page_name}' {page.URL}"
+        )
+        generic_set_basic_auth_creds(driver)
+        driver.get(page.URL)

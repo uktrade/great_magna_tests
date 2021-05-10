@@ -4,7 +4,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-331
+#   @allure.link:XOT-401
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Protect your intellectual property abroad" and click continue
 #
@@ -19,7 +19,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Choose the right route to market"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Protect your intellectual property abroad"
 #
-# @allure.link:XOT-332
+# @allure.link:XOT-402
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your intellectual property abroad" and click bottom back
 #
@@ -34,7 +34,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Protect your intellectual property abroad"
 #
 #
-#   @allure.link:XOT-333
+#   @allure.link:XOT-403
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your intellectual property abroad" and click top back
 #
@@ -48,7 +48,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Protect your intellectual property abroad"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Protect your intellectual property abroad"
 #
-# @allure.link:XOT-334
+# @allure.link:XOT-404
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Protect your intellectual property abroad" and click view all lessons
 #

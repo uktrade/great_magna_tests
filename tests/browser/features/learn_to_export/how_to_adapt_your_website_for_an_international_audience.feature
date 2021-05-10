@@ -5,7 +5,7 @@
 # Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-241
+#   @allure.link:XOT-551
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "How to adapt your website for an International audience" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Choose the right route to market"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to adapt your website for an International audience"
 ##
-# @allure.link:XOT-242
+# @allure.link:XOT-552
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to adapt your website for an International audience" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - How to adapt your website for an International audience"
 #
 #
-#   @allure.link:XOT-243
+#   @allure.link:XOT-553
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to adapt your website for an International audience" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - How to adapt your website for an International audience"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - How to adapt your website for an International audience"
 #
-# @allure.link:XOT-334
+# @allure.link:XOT-554
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "How to adapt your website for an International audience" and click view all lessons
 #

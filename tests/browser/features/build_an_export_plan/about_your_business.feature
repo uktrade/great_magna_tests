@@ -4,7 +4,7 @@ Feature: GreatMagna - About your Business Page
    Background:
    Given test authentication is done
 
-   @allure.link:XOT-1010
+   @allure.link:XOT-1011
    @Great_Magna_Export_Plan_A_Y_B_P
      @Great_Magna_Export_Plan
   Scenario:User should be able to view "How you started" section and enter text and validate
@@ -20,7 +20,7 @@ Feature: GreatMagna - About your Business Page
     And "Robert" decides to enter text at "How you started" on page "Build An Export Plan - About Your Business"
     And "Robert" decides to validate entered text at "How you started" on page "Build An Export Plan - About Your Business"
 
- @allure.link:XOT-1011
+ @allure.link:XOT-1012
    @Great_Magna_Export_Plan_A_Y_B_P
    @Great_Magna_Export_Plan
   Scenario:User should be able to view  "Where you're based" section and enter text and validate
@@ -35,7 +35,7 @@ Feature: GreatMagna - About your Business Page
      And "Robert" decides to enter text at "Where you're based" on page "Build An Export Plan - About Your Business"
      And "Robert" decides to validate entered text at "Where you're based" on page "Build An Export Plan - About Your Business"
 
-@allure.link:XOT-1012
+@allure.link:XOT-1013
    @Great_Magna_Export_Plan_A_Y_B_P
   @Great_Magna_Export_Plan
   Scenario:User should be able to enter "How you make your products" section and enter text and validate
@@ -50,7 +50,7 @@ Feature: GreatMagna - About your Business Page
      And "Robert" decides to enter text at "How you make your products" on page "Build An Export Plan - About Your Business"
      And "Robert" decides to validate entered text at "How you make your products" on page "Build An Export Plan - About Your Business"
 #
-  @allure.link:XOT-1013
+  @allure.link:XOT-1014
    @Great_Magna_Export_Plan_A_Y_B_P
     @Great_Magna_Export_Plan
   Scenario:User should be able to enter "Your product packaging" section and enter text and validate
@@ -137,7 +137,7 @@ Given "Robert" visited "GreatMagna - Login" page
     And "Robert" decides to click section complete on "Build An Export Plan - About Your Business"
     And "Robert" decides to click on "Build an export plan"
 
-#@allure.link:XOT-1016
+#@allure.link:XOT-1020
 #   @Great_Magna_Export_Plan
 #  Scenario:User should be able to click on Top Export plan home in "About your business" and should be on Export plan dashboard page
 #
@@ -150,7 +150,7 @@ Given "Robert" visited "GreatMagna - Login" page
 #     And "Robert" decides to click on section "Top Export Plan Home" on page "Build An Export Plan - About Your Business"
 #     And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
- @allure.link:XOT-1002
+ @allure.link:XOT-1021
    @Great_Magna_Export_Plan_B_O_Last_1
    @Great_Magna_Export_Plan_A_Y_B_P
    @Great_Magna_Export_Plan

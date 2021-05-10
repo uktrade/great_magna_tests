@@ -4,8 +4,8 @@
 from tests.periodic_tasks.geckoboard_updater.datasets import GeckoboardDatasets
 from tests.periodic_tasks.geckoboard_updater.geckoboard_utils import (
     push_circleci_test_results,
-    push_directory_service_build_results,
-    push_directory_tests_results,
+    push_great_magna_service_build_results,
+    push_great_magna_tests_results,
     push_jira_links,
     push_jira_stats,
     push_links_to_content_diff_reports,
@@ -25,8 +25,8 @@ if __name__ == "__main__":
 
     print(f"Pushing text widget data to GeckoBoard...")
     push_jira_links()
-    push_directory_service_build_results()
-    push_directory_tests_results()
+    push_great_magna_service_build_results()
+    push_great_magna_tests_results()
     push_links_to_useful_content_test_jobs()
     push_periodic_tests_results()
     push_links_to_content_diff_reports()

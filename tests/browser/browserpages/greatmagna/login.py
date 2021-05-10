@@ -46,7 +46,7 @@ PAGE_TITLE = "Login Page "
 SELECTORS = {
     "login": {
         "forgotten_password": Selector(
-            By.CSS_SELECTOR, "#login > form > a"  # //a[contains(text(),'Forgotten password?')]
+            By.CSS_SELECTOR, "#login > div > div.signup__steps-panel > form > a.text-red-80.inline-block"  # //a[contains(text(),'Forgotten password?')]
         ),
         "emailaddress": Selector(
             By.XPATH, "//input[@id='email']", type=ElementType.INPUT

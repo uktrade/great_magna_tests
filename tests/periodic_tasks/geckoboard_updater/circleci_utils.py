@@ -13,7 +13,7 @@ from retrying import retry
 from circleclient.circleclient import CircleClient
 
 # Mapping of CircleCI job names to human friendly ones
-DIRECTORY_PERIODIC_TESTS_JOB_NAME_MAPPINGS = {
+GREAT_MAGNA_PERIODIC_TESTS_JOB_NAME_MAPPINGS = {
     "Content diffs": {
         "domestic_compare_prod_and_dev_pages": "Domestic Prod Dev",
         "domestic_compare_prod_and_stage_pages": "Domestic Prod Stage",
@@ -47,7 +47,7 @@ USEFUL_CONTENT_TESTS_JOB_NAME_MAPPINGS = {
     "check_for_dead_links_on_dev": "Dead links - Dev",
 }
 
-DIRECTORY_LOAD_TESTS_JOB_NAME_MAPPINGS = {
+GREAT_MAGNA_LOAD_TESTS_JOB_NAME_MAPPINGS = {
     "load_cms_tests_stage": "Load STAGE CMS",
     "load_domestic_tests_stage": "Load STAGE Domestic",
     "load_erp_tests_stage": "Load STAGE ERP",
@@ -60,7 +60,7 @@ DIRECTORY_LOAD_TESTS_JOB_NAME_MAPPINGS = {
     "load_soo_tests_stage": "Load STAGE SOO",
 }
 
-DIRECTORY_TESTS_JOB_NAME_MAPPINGS = {
+GREAT_MAGNA_TESTS_JOB_NAME_MAPPINGS = {
     "dev_parallel_browser_tests_using_circleci": "Browser Dev",
     "func_fas_test_dev": "Dev FAS",
     "func_international_test_dev": "Dev Int",
@@ -82,14 +82,14 @@ DIRECTORY_TESTS_JOB_NAME_MAPPINGS = {
     "smoke_tests_uat": "UAT Smoke",
 }
 
-DIRECTORY_TESTS_JOB_NAME_MAPPINGS.update(DIRECTORY_LOAD_TESTS_JOB_NAME_MAPPINGS)
+GREAT_MAGNA_TESTS_JOB_NAME_MAPPINGS.update(GREAT_MAGNA_LOAD_TESTS_JOB_NAME_MAPPINGS)
 
-DIRECTORY_SERVICE_JOB_NAME_MAPPINGS = {
+GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS = {
     "test": "Unit Tests",
     "flake8": "flake8",
 }
 
-DIRECTORY_CH_SEARCH_JOB_NAME_MAPPINGS = {"test": "Unit Tests"}
+GREAT_MAGNA_CH_SEARCH_JOB_NAME_MAPPINGS = {"test": "Unit Tests"}
 
 
 @retry(wait_fixed=10000, stop_max_attempt_number=2)
@@ -315,11 +315,11 @@ def last_build_test_results(
     return last_workflow_test_results(build_per_job)
 
 
-def last_directory_tests_results(circle_ci_client: CircleClient) -> dict:
+def last_great_magna_tests_results(circle_ci_client: CircleClient) -> dict:
     return last_build_test_results(
         circle_ci_client,
-        "directory-tests",
-        job_name_mappings=DIRECTORY_TESTS_JOB_NAME_MAPPINGS,
+        "great-magna-tests",
+        job_name_mappings=GREAT_MAGNA_TESTS_JOB_NAME_MAPPINGS,
         limit=100,
     )
 
@@ -327,8 +327,8 @@ def last_directory_tests_results(circle_ci_client: CircleClient) -> dict:
 def last_periodic_tests_results(circle_ci_client: CircleClient, ) -> dict:
     return last_build_test_results(
         circle_ci_client,
-        "directory-tests",
-        job_name_mappings=DIRECTORY_PERIODIC_TESTS_JOB_NAME_MAPPINGS,
+        "great-magna-tests",
+        job_name_mappings=GREAT_MAGNA_PERIODIC_TESTS_JOB_NAME_MAPPINGS,
         limit=100,
     )
 
@@ -336,16 +336,16 @@ def last_periodic_tests_results(circle_ci_client: CircleClient, ) -> dict:
 def last_useful_content_tests_results(circle_ci_client: CircleClient) -> dict:
     return last_build_test_results(
         circle_ci_client,
-        "directory-tests",
+        "great-magna-tests",
         job_name_mappings=USEFUL_CONTENT_TESTS_JOB_NAME_MAPPINGS,
         limit=100,
     )
 
 
 def last_useful_content_diff_report_links(circle_ci_client: CircleClient) -> dict:
-    recent = recent_builds(circle_ci_client, "directory-tests", limit=100)
+    recent = recent_builds(circle_ci_client, "great-magna-tests", limit=100)
     build_per_job = last_build_per_job(
-        recent, DIRECTORY_PERIODIC_TESTS_JOB_NAME_MAPPINGS["Content diffs"]
+        recent, GREAT_MAGNA_PERIODIC_TESTS_JOB_NAME_MAPPINGS["Content diffs"]
     )
     return get_build_artifact_link(circle_ci_client, build_per_job, "index.html")
 
@@ -353,65 +353,65 @@ def last_useful_content_diff_report_links(circle_ci_client: CircleClient) -> dic
 def last_useful_production_cms_page_status_report_link(
         circle_ci_client: CircleClient,
 ) -> dict:
-    recent = recent_builds(circle_ci_client, "directory-tests", limit=100)
+    recent = recent_builds(circle_ci_client, "great-magna-tests", limit=100)
     build_per_job = last_build_per_job(
         recent,
-        DIRECTORY_PERIODIC_TESTS_JOB_NAME_MAPPINGS["Production CMS page status report"],
+        GREAT_MAGNA_PERIODIC_TESTS_JOB_NAME_MAPPINGS["Production CMS page status report"],
     )
     return get_build_artifact_link(circle_ci_client, build_per_job, "index.html")
 
 
-def last_directory_service_build_results(circle_ci_client: CircleClient) -> dict:
+def last_great_magna_service_build_results(circle_ci_client: CircleClient) -> dict:
     return {
         "API": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-api",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "FAB": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-ui-buyer",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "Domestic": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="great-domestic-ui",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "SSO": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-sso",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "Profile": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-sso-profile",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "SSO Proxy": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-sso-proxy",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "CH Search": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-companies-house-search",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "CMS": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-cms",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "International": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="great-international-ui",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
         "Forms API": last_build_test_results(
             circle_ci_client=circle_ci_client,
             project_name="directory-forms-api",
-            job_name_mappings=DIRECTORY_SERVICE_JOB_NAME_MAPPINGS,
+            job_name_mappings=GREAT_MAGNA_SERVICE_JOB_NAME_MAPPINGS,
         ),
     }
 

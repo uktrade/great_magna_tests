@@ -3,7 +3,7 @@
 #@allure.suite:Great_Magna_Show_Me_Around
 #Feature:GreatMagna - Show_Me_Around Page
 #
-#   @allure.link:XOT-010
+#   @allure.link:XOT-011
 #   @Great-Magna-Show-Me-Around
 #Scenario Outline:Visitor should be able visit page tour
 #

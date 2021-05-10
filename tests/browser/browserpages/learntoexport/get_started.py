@@ -69,3 +69,10 @@ def find_and_click(driver: WebDriver, *, page_name: str = None):
 
 # def find_and_select_click_continue(driver: WebDriver, *, page_name: str = None):
 #     select_click_continue(driver, URL, page_name)
+
+
+def find_and_click_case_study(driver: WebDriver, *, page_name: str = None):
+    find_and_click = find_element(
+        driver, find_selector_by_name(SELECTORS, element_selector_name)
+    )
+    find_and_click.click()

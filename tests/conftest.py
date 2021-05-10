@@ -89,7 +89,7 @@ def session_and_csrf_middleware_token() -> Tuple[Session, str]:
     return session, extract_csrf_middleware_token(response.content.decode("UTF-8"))
 
 
-#
+
 #
 @pytest.fixture
 def logged_in_session_and_user(
@@ -115,10 +115,10 @@ def logged_in_session_and_user(
     return session, test_sso_user_verified
 
 
-@pytest.fixture
-def logged_in_session(logged_in_session_and_user: Tuple[Session, dict]) -> Session:
-    session, _ = logged_in_session_and_user
-    return session
+# @pytest.fixture
+# def logged_in_session(logged_in_session_and_user: Tuple[Session, dict]) -> Session:
+#     session, _ = logged_in_session_and_user
+#     return session
 
 # def generic_set_basic_auth_creds(driver: WebDriver, *, service_name: str = None):
 #     base_url = URLs.GREAT_MAGNA_START.absolute

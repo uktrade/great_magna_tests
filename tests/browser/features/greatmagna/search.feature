@@ -16,7 +16,7 @@ Feature: Search product & country in personalisation
     And "Robert" decides to click on Search again on the "GreatMagna - Dashboard" Page
     And "Robert" should be on the "GreatMagna - Dashboard" page
 
-  @allure.link:XOT-081
+  @allure.link:XOT-082
    @Great-Magna-Search-2
   Scenario: Visitor should be able to Enter and Save Product
     Given "Robert" visited "GreatMagna - Login" page
@@ -27,7 +27,7 @@ Feature: Search product & country in personalisation
     And "Robert" decides to click on select and save random product options on the "GreatMagna - Dashboard" Page
 
 
-    @allure.link:XOT-082
+    @allure.link:XOT-083
    @Great-Magna-Search-2
   Scenario: Visitor should be able to Enter and Save Country
     Given "Robert" visited "GreatMagna - Login" page
@@ -37,7 +37,7 @@ Feature: Search product & country in personalisation
     Then "Robert" decides to enter country name "Germany" on the "GreatMagna - Dashboard" Page
 
 
-  @allure.link:XOT-082
+  @allure.link:XOT-084
   @Great-Magna-Search
  Scenario Outline: User should be able to search I want to export products in country
 
@@ -57,7 +57,7 @@ Feature: Search product & country in personalisation
 
 
 
-#  @allure.link:XOT-083
+#  @allure.link:XOT-085
 #  @Great-Magna-Search
 #  Scenario Outline: Visitor should be able to see error message on failure to enter product
 #    Given "Robert" visited "GreatMagna - Login" page

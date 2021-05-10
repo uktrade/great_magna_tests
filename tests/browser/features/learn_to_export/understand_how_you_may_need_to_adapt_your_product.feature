@@ -5,7 +5,7 @@
 #  Background:
 #    Given test authentication is done
 #
-#   @allure.link:XOT-591
+#   @allure.link:XOT-361
 #   @Great-Magna-Lessons
 #  Scenario:User should be able to view lesson pages for topic "Understand how you may need to adapt your product" and click continue
 #
@@ -20,7 +20,7 @@
 ##     And "Robert" decides to click on "close" on page "LearnToExport - Understand how you may need to adapt your product"
 #     And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand how you may need to adapt your product"
 ###
-# @allure.link:XOT-592
+# @allure.link:XOT-362
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand how you may need to adapt your product" and click bottom back
 #
@@ -35,7 +35,7 @@
 #   And "Robert" decides to click on section "Bottom Back" on page "LearnToExport - Understand how you may need to adapt your product"
 #
 #
-#   @allure.link:XOT-593
+#   @allure.link:XOT-363
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand how you may need to adapt your product" and click top back
 #
@@ -49,7 +49,7 @@
 #    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Understand how you may need to adapt your product"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Understand how you may need to adapt your product"
 #
-#  @allure.link:XOT-594
+#  @allure.link:XOT-364
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Understand how you may need to adapt your product" and click view all lessons
 #

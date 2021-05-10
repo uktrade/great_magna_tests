@@ -4,7 +4,7 @@ Feature: GreatMagna - Lessons Page
   Background:
     Given test authentication is done
 
-#   @allure.link:XOT-104
+#   @allure.link:XOT-431
 #   @Great-Magna-Lessons
 # Scenario:User should be able to view Lesson pages for topic "Choose the right route to market" and click continue 40 times
 #
@@ -19,7 +19,7 @@ Feature: GreatMagna - Lessons Page
 #   And "Robert" decides to click continue for maximum "40" times from page "LearnToExport - Choose the right route to market" until it reaches "managing-exchange-rates"
 #
 #
-      @allure.link:XOT-111
+      @allure.link:XOT-432
       @beta
    @Great-Magna-Placeholder-lessons-test
   Scenario:User should be able to click on Placeholder Lesson and should not be direct to content lesson page
