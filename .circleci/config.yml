@@ -102,7 +102,7 @@ step_prepare_list_of_scenarios_to_run_by_parallel_browser_tests: &step_prepare_l
 #      else
 #          export BROWSER="firefox";
 #      fi
-      export BROWSER="chrome"
+      export BROWSER="chrome";
       cd tests/browser
       PYTHONPATH=. behave \
         --dry-run \
