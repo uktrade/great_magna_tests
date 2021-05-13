@@ -133,13 +133,13 @@ step_cache_browser_tests_requirements: &step_cache_browser_tests_requirements
   save_cache:
     key: browser-tests-dependency-cache-{{ .Environment.CIRCLE_WORKFLOW_ID }}
     paths:
-      - ~/great_magna
+      - ~/great_magna_tests
 
 step_cache_load_tests_requirements: &step_cache_load_tests_requirements
   save_cache:
     key: load-tests-dependency-cache-{{ .Environment.CIRCLE_WORKFLOW_ID }}
     paths:
-    - ~/great_magna
+    - ~/great_magna_tests
 
 step_restore_cached_browser_tests_requirements: &step_restore_cached_browser_tests_requirements
   restore_cache:
@@ -185,6 +185,7 @@ step_run_browser_tests_in_parallel: &step_run_browser_tests_in_parallel
       cat tests-to-run${SPLIT_FILE_SUFFIX} | while IFS=$'\r' read -r title ; do
         echo -e "\n\n${BROWSER} run:    ${title}"
         PYTHONPATH=. \
+        LOG_FILE="reports/behave_${BROWSER}_${CIRCLE_NODE_INDEX}.log" \
         timeout --verbose --preserve-status --kill-after=5s 5m \
         behave features/ \
         --format=allure_behave.formatter:AllureFormatter \
@@ -298,21 +299,21 @@ steps_run_load_tests: &steps_run_load_tests
 jobs:
 
   setup_env_for_load_tests:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     <<: [
     *machine_python3_node,
     *steps_setup_env_for_load_tests,
     ]
 
   setup_env_for_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     <<: [
     *machine_python3_node_browsers,
     *steps_setup_env_for_parallel_browser_tests_using_circleci,
     ]
 
   load_domestic_tests_stage:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     environment:
       SERVICE: "product_search"
       TEST_ENV: "stage"
@@ -327,7 +328,7 @@ jobs:
     ]
 
   dev_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     parallelism: 12
     environment:
       TEST_ENV: "dev"
@@ -342,7 +343,7 @@ jobs:
     ]
 
   stage_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     parallelism: 12
     environment:
       TEST_ENV: "stage"
@@ -357,7 +358,7 @@ jobs:
     ]
 
   uat_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     parallelism: 12
     environment:
       TEST_ENV: "uat"
@@ -372,7 +373,7 @@ jobs:
     ]
 
   merge_browser_allure_results_and_generate_report_and_send_link_to_slack:
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     <<: [
     *machine_python3_node_browsers,
     *steps_merge_browser_allure_results_and_generate_report_and_send_link_to_slack,
@@ -381,7 +382,7 @@ jobs:
   merge_junit_results_from_parallel_browser_tests:
     docker:
       - image: circleci/python:3.8.0-node-browsers
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     steps:
       - *step_install_junit_merge
       - checkout
@@ -396,7 +397,7 @@ jobs:
 
   store_behave_logs_from_browser_tests_as_artifacts:
     <<: *machine_python3_clean
-    working_directory: ~/great_magna
+    working_directory: ~/great_magna_tests
     steps:
       - attach_workspace:
           at: ./
