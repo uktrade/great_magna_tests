@@ -185,7 +185,6 @@ step_run_browser_tests_in_parallel: &step_run_browser_tests_in_parallel
       cat tests-to-run${SPLIT_FILE_SUFFIX} | while IFS=$'\r' read -r title ; do
         echo -e "\n\n${BROWSER} run:    ${title}"
         PYTHONPATH=. \
-        LOG_FILE="reports/behave_${BROWSER}_${CIRCLE_NODE_INDEX}.log" \
         timeout --verbose --preserve-status --kill-after=5s 5m \
         behave features/ \
         --format=allure_behave.formatter:AllureFormatter \
