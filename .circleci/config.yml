@@ -158,15 +158,8 @@ step_run_browser_tests_in_parallel: &step_run_browser_tests_in_parallel
       . venv/bin/activate
       source ./env_vars/.env_with_export
       export PATH=$PATH:$HOME/bin
-      if [ $(( ${CIRCLE_NODE_INDEX} % 2 )) = 0 ];
-      then
-          export BROWSER="chrome";
-          google-chrome --version;
-      else
-          export BROWSER="firefox";
-          firefox --version;
-          export TAGS="${TAGS} --tags=~@skip-in-firefox"
-      fi
+      export BROWSER="chrome";
+      google-chrome --version;
 
       cd tests/browser
       echo "Found `wc -l < scenario_titles.txt` scenarios to run"
