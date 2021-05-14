@@ -17,13 +17,14 @@ Feature: Domestic - Great site search
 
   @search_2
   @allure.link:XOT-760
+  @failed
   Scenario Outline: Visitor should see search results for "<phrase>"
     Given "Robert" visits the "Domestic - <specific>" page
 
     When "Robert" searches using "<phrase>"
 
     Then "Robert" should see search results page number "1" for "<phrase>"
-#    And "Robert" should see search results in following order "Article, Service, Event, Opportunity"
+    And "Robert" should see search results in following order "Article, Service, Event, Opportunity"
 
     Examples: event, market, service and opportunity
       | specific        | phrase    |
@@ -32,7 +33,7 @@ Feature: Domestic - Great site search
       | Markets listing | Export    |
 
   @search_3
-  @bug
+  @failed
     @allure.issue:XOT-840
     @fixed
     @allure.link:XOT-760
@@ -76,6 +77,7 @@ Feature: Domestic - Great site search
       | Markets listing | Water     |
 
   @search_5
+  @failed
   @allure.link:XOT-760
   Scenario Outline: Visitor should be able to clear the last search for "<first phrase>" and start new search for "<second phrase>"
     Given "Robert" searched using "<first phrase>" on the "Domestic - <specific>" page
@@ -87,6 +89,6 @@ Feature: Domestic - Great site search
 
     Examples: event, market, service and opportunity
       | specific        | first phrase | second phrase     |
-      | Home            | Work         | Full work service |
+#      | Home            | Work         | Full work service |
       | Advice landing  | Transport    | way               |
-      | Markets listing | Water        | selection         |
+#      | Markets listing | Water        | selection         |

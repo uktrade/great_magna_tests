@@ -8,9 +8,7 @@ Feature: Domestic - Sharing on Social Media and via emails
     Given test authentication is done
 
   @allure.link:CMS-686
-    @bug
     @allure.issue:CMS-733
-    @fixed
     @advice
     @article
     @social-media_1
@@ -30,9 +28,7 @@ Feature: Domestic - Sharing on Social Media and via emails
 
 
   @allure.link:CMS-686
-  @bug
   @allure.issue:CMS-733
-  @fixed
   @advice
   @article
   @linkedin
@@ -46,9 +42,7 @@ Feature: Domestic - Sharing on Social Media and via emails
 
 
   @allure.link:CMS-686
-  @bug
   @allure.issue:CMS-733
-  @fixed
   @advice
   @article
   @social-media_3

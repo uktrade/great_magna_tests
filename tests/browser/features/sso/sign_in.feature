@@ -1,3 +1,4 @@
+@domestic
 @sso
 @allure.suite:SSO
 Feature: SSO - Sign in
@@ -6,9 +7,9 @@ Feature: SSO - Sign in
     Given test authentication is done
 
 
-  @bug
+
   @allure.issue:TT-1778
-  @fixed
+
   Scenario: Visitors should see all expected page elements on "SSO - Sign in"
     When "Robert" goes to the "SSO - Sign in" page
 
@@ -22,9 +23,9 @@ Feature: SSO - Sign in
       | Footer                        |
 
 
-  @bug
+
   @allure.issue:TT-1778
-  @fixed
+
   Scenario: Visitors should see all expected page elements on "SSO - Registration" page
     When "Robert" goes to the "SSO - Registration" page
 
@@ -37,9 +38,9 @@ Feature: SSO - Sign in
       | Footer                 |
 
 
-  @bug
+
   @allure.issue:TT-1778
-  @fixed
+
   Scenario: Visitors should see all expected page elements on "Profile - Sign in"
     Given "Robert" visits the "SSO - Sign in" page
 

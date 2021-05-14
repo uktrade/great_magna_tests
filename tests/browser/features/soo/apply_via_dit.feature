@@ -1,3 +1,4 @@
+@domestic
 @allure.suite:SOO
 Feature: SOO - Apply via DIT
 
@@ -9,7 +10,7 @@ Feature: SOO - Apply via DIT
   @exopps
   @captcha
   @dev-only
-  @soo-long-domestic
+  @soo-long-domestic_1
   @account-support
   @read-only
   Scenario Outline: Anonymous Enquirers should be redirected to SSO login page
@@ -28,8 +29,9 @@ Feature: SOO - Apply via DIT
   @exopps
   @captcha
   @dev-only
-  @soo-long-domestic
+  @soo-long-domestic_2
   @account-support
+  @failed
   Scenario Outline: Logged in Domestic "Selling Online Overseas" Enquirers should be able to get the Enquiry page
     Given "Robert" has created a great.gov.uk account for a "UK taxpayer"
     And "Robert" found a marketplace in "<country>" to sell "<products>"
@@ -48,10 +50,11 @@ Feature: SOO - Apply via DIT
 
   @allure.link:XOT-689
   @allure.link:XOT-741
+  @failed
   @exopps
   @captcha
   @dev-only
-  @soo-long-domestic
+  @soo-long-domestic_3
   @account-support
   Scenario Outline: Enquirers representing a "LTD, PLC or Royal Charter" organisation should see SOO contact form pre-populated with their details
     Given "Robert" has created a great.gov.uk account for a "LTD, PLC or Royal Charter"

@@ -1,3 +1,4 @@
+@domestic
 @allure.link:TT-1033
 @allure.link:TT-1094
 @enrol
@@ -121,6 +122,7 @@ Feature: Profile - CH enrolment flows
   @dev-only
   @allure.link:TT-1121
   @ltd-plc-royal
+   @failed
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their business details after providing email confirmation code
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -141,6 +143,7 @@ Feature: Profile - CH enrolment flows
   @dev-only
   @allure.link:TT-1123
   @ltd-plc-royal
+  @failed
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their details after providing business details
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -166,6 +169,7 @@ Feature: Profile - CH enrolment flows
   @dev-only
   @allure.link:TT-1124
   @ltd-plc-royal
+  @failed
   Scenario Outline: A representative of a "<selected business type>" company should be told when account is created and the are the next possible steps
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -207,6 +211,7 @@ Feature: Profile - CH enrolment flows
   @dev-only
   @verification-code
   @ltd-plc-royal
+  @failed
   Scenario: Users should be able to resend email verification code
     Given "Natalia" has received the email confirmation code by opting to register as "LTD, PLC or Royal Charter"
     And "Natalia" is on the "Profile - Enter your confirmation code (LTD, PLC or Royal Charter)" page
@@ -229,6 +234,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1125
   @allure.link:TT-1017
   @ltd-plc-royal
+  @failed
   Scenario Outline: When CH record doesn't include business' address the business representative should be referred to a contact page
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" filled out and submitted the form
@@ -252,6 +258,7 @@ Feature: Profile - CH enrolment flows
   @ltd-plc-royal
   @sole-trader-other-business
   @uk-taxpayer
+  @failed
   Scenario Outline: User representing "<selected business type>" should be notified by email when there is an account already registered to their email address (legacy SSO registration)
     Given "Natalia" has a verified standalone SSO/great.gov.uk account
     And "Natalia" decided to create a great.gov.uk account as "<selected business type>"
@@ -274,6 +281,7 @@ Feature: Profile - CH enrolment flows
   @ltd-plc-royal
   @sole-trader-other-business
   @uk-taxpayer
+  @failed
   Scenario Outline: User representing "<selected business type>" should be notified by email when there is an account already registered to their email address
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" quickly signed out
@@ -311,6 +319,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1036
   @ltd-plc-royal
   @sole-trader-other-business
+  @failed
   Scenario Outline: Handle invalid user state - already logged in - skip ahead to page where they enter business details for "<selected business type>"
     Given "Natalia" has a verified standalone SSO/great.gov.uk account
     And "Natalia" is signed in
@@ -333,6 +342,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1037
   @ltd-plc-royal
   @sole-trader-other-business
+  @failed
   Scenario Outline: Log user in on verification submit, not on account creation for "<selected business type>"
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page

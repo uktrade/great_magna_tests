@@ -1,3 +1,4 @@
+@domestic
 @allure.suite:SOO
 Feature: SOO - Search for marketplace
 
@@ -8,7 +9,7 @@ Feature: SOO - Search for marketplace
   @allure.link:XOT-631
   @allure.link:XOT-689
   @exopps
-  @soo-long-domestic
+  @soo-long-domestic_4
   @account-support
   @read-only
   Scenario Outline: Visitors should be able to search for marketplaces to sell "<products>" in "<country>"
@@ -26,8 +27,9 @@ Feature: SOO - Search for marketplace
 
 
   @allure.link:XOT-689
+  @failed
   @exopps
-  @soo-long-domestic
+  @soo-long-domestic_5
   @account-support
   @read-only
   Scenario Outline: Domestic "Selling Online Overseas" Enquirers should be able to view marketplace page
@@ -46,7 +48,7 @@ Feature: SOO - Search for marketplace
       | Back                |
       | Error reporting     |
 #      See TT-1778 there's a problem with lazy loading and Firefox
-#      | Footer              |
+      | Footer              |
 
     Examples: products and countries
       | country   | products                 |

@@ -73,7 +73,8 @@ SELECTORS = {
             By.XPATH, "//body/main/div[1]/section/div/div/div[1]/div/div[2]/button"
         ),
         "search country": Selector(
-            By.XPATH, "//body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"#//body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"
+            By.XPATH, "//body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"
+            # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"
         ),
         "delete": Selector(
             By.CSS_SELECTOR, "#market-India > th > button > i"
@@ -201,6 +202,7 @@ def search_again_top_bottom(driver: WebDriver):
         except:
             pass
 
+
 def select_product_search_again_top_bottom(driver: WebDriver, product_name: str):
     product_btn = find_element(
         driver, find_selector_by_name(SELECTORS, "product-btn")
@@ -209,7 +211,8 @@ def select_product_search_again_top_bottom(driver: WebDriver, product_name: str)
     search_again_top_bottom(driver)
     driver.implicitly_wait(1)
     driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/label/div/input").clear()
-    driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(product_name)
+    driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(
+        product_name)
     driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/button").click()
 
 
@@ -219,7 +222,7 @@ def search_select_save_random_next(driver: WebDriver):
 
         if counter >= 50:
             break
-        #logging.debug("Counter: " + str(counter))
+        # logging.debug("Counter: " + str(counter))
 
         driver.implicitly_wait(1)
 
@@ -238,7 +241,8 @@ def search_select_save_random_next(driver: WebDriver):
             return
         # look for div's and radio buttons
         # try:
-        parent_1_div_element = driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/span/div/section/div")
+        parent_1_div_element = driver.find_element_by_xpath(
+            "//body/div[4]/div/div/form/div[2]/div/span/div/section/div")
         #      #   "/html/body/div[7]/div/div/form/div[2]/div/span/div/section/div")  # ("interaction grid m-v-xs")
         # except Exception as e:
         #     parent_1_div_element = driver.find_element_by_xpath("//body/div[7]/div[1]/div[1]/form[1]/div[2]/div[1]/span[1]/div[1]/section[1]/div[1]")#"interaction grid m-v-xs")
@@ -269,7 +273,8 @@ def search_select_save_random_next(driver: WebDriver):
 
         counter += 1
 
-def fill_out_country(driver : WebDriver, country : str):
+
+def fill_out_country(driver: WebDriver, country: str):
     # search using the provide country name from the test case
     driver.find_element_by_css_selector("#search-input").clear()
     driver.find_element_by_css_selector("#search-input").send_keys(country)
@@ -288,7 +293,8 @@ def fill_out_country(driver : WebDriver, country : str):
 
     div_elements = section_element_selected.find_elements_by_tag_name("div")  # 2 has to be present
     logging.debug("length of div elements " + str(len(div_elements)))
-    level_1_div_element = div_elements[1]  # section_element_selected.find_element_by_class_name("p-t-s expand-section open")
+    level_1_div_element = div_elements[
+        1]  # section_element_selected.find_element_by_class_name("p-t-s expand-section open")
     level_2_div_element = level_1_div_element.find_element_by_tag_name("div")
     span_elements = level_2_div_element.find_elements_by_tag_name("span")
     logging.debug("length of span elements " + str(len(span_elements)))
@@ -308,7 +314,8 @@ def fill_out_country(driver : WebDriver, country : str):
     if country_name_found == False:
         raise Exception("Country name could not be found " + str(country))
 
-def fill_out_country_and_validate_ui(driver: WebDriver, country:str, display_tab_count : int = 4):
+
+def fill_out_country_and_validate_ui(driver: WebDriver, country: str, display_tab_count: int = 4):
     # fill out country name
     fill_out_country(driver, country)
 
@@ -320,16 +327,17 @@ def fill_out_country_and_validate_ui(driver: WebDriver, country:str, display_tab
     if len(tab_button_elements) != display_tab_count:
         raise Exception("Invalid Tab count")
 
-def enter_country_details(driver:WebDriver,country_name:str, country_place_number : int = 1
-                          , country_max : int = 10
-                          , display_tab_count : int = 4):
+
+def enter_country_details(driver: WebDriver, country_name: str, country_place_number: int = 1
+                          , country_max: int = 10
+                          , display_tab_count: int = 4):
     driver.implicitly_wait(1)
     # logging.debug("country_place_number " + str(country_place_number))
     # logging.debug("country_max " + str(country_max))
     # logging.debug("display_tab_count " + str(display_tab_count))
     table_element = None
     try:
-        #check if the country table already exists
+        # check if the country table already exists
         table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
         # if table doesnt not exists then "add a place" button must exists
         if table_element == None:
@@ -340,7 +348,7 @@ def enter_country_details(driver:WebDriver,country_name:str, country_place_numbe
 
     logging.debug("table_element " + str(table_element))
 
-    if(country_place_number == 1 and table_element == None):
+    if (country_place_number == 1 and table_element == None):
         fill_out_country_and_validate_ui(driver, country_name, display_tab_count=display_tab_count)
         return
 
@@ -348,7 +356,7 @@ def enter_country_details(driver:WebDriver,country_name:str, country_place_numbe
         # if table already exists, then "add place (x) of (y)" button must exists
         add_place_num_btn_element = driver.find_element_by_xpath("//body/main/div[3]/span/div[2]/button")
         button_text = add_place_num_btn_element.text
-        user_entered_button_text = "Add place " + str(country_place_number) +" of " + str(country_max)
+        user_entered_button_text = "Add place " + str(country_place_number) + " of " + str(country_max)
         if button_text != user_entered_button_text:
             raise Exception("Invalid Add Place button index")
 
@@ -358,7 +366,8 @@ def enter_country_details(driver:WebDriver,country_name:str, country_place_numbe
         fill_out_country_and_validate_ui(driver, country_name, display_tab_count=display_tab_count)
         time.sleep(2)
     else:
-        logging.debug("Country "+ str(country_name) + " cannot be added as the CountryPlaceNumber exceeding max limit.")
+        logging.debug(
+            "Country " + str(country_name) + " cannot be added as the CountryPlaceNumber exceeding max limit.")
 
 
 def delete_all_country_details(driver: WebDriver, position: str):
@@ -368,7 +377,8 @@ def delete_all_country_details(driver: WebDriver, position: str):
     driver.find_element_by_xpath(del_btn_ele_xpath).click()
     time.sleep(1)
 
-def check_country_details(driver: WebDriver, on_all_tabs : bool = False):
+
+def check_country_details(driver: WebDriver, on_all_tabs: bool = False):
     driver.implicitly_wait(1)
     country_details_table_element = driver.find_element_by_xpath("//body/main/div[3]/span/div[2]/span/table/tbody")
     if on_all_tabs == False:
@@ -378,10 +388,10 @@ def check_country_details(driver: WebDriver, on_all_tabs : bool = False):
         for tr_element in tr_elements:
             th_element = tr_element.find_element_by_xpath("th")
             td_elements = tr_element.find_elements_by_tag_name("td")
-            #country name
+            # country name
             country_tag_element = th_element.find_element_by_xpath("div")
             country_name = country_tag_element.find_element_by_xpath("div").text
-            #items in the table : Total Population, .....
+            # items in the table : Total Population, .....
             for td_element in td_elements:
                 if "Data not available" in str(td_element.text).strip():
                     if country_name not in data_not_available_countries:
@@ -418,50 +428,50 @@ def check_country_details(driver: WebDriver, on_all_tabs : bool = False):
             if len(data_not_available_countries) != 0:
                 data_not_available_tabs[tab_name] = data_not_available_countries
 
-
         if len(data_not_available_tabs) != 0:
             raise Exception("Country missing details " + str(data_not_available_tabs))
 
-def validate_entered_country_details(driver:WebDriver,country_name:str, country_place_number : int = 1
-                          , country_max : int = 10
-                          , list_selection : int = 10):
-        driver.implicitly_wait(1)
-        
-        table_element = None
-        try:
-            # check if the country table already exists
-            table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
-            # if table doesnt not exists then "add a place" button must exists
-            if table_element == None:
-                find_and_click(driver, element_selector_name="add a place")
-        except Exception as e:
-            table_element = None
+
+def validate_entered_country_details(driver: WebDriver, country_name: str, country_place_number: int = 1
+                                     , country_max: int = 10
+                                     , list_selection: int = 10):
+    driver.implicitly_wait(1)
+
+    table_element = None
+    try:
+        # check if the country table already exists
+        table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
+        # if table doesnt not exists then "add a place" button must exists
+        if table_element == None:
             find_and_click(driver, element_selector_name="add a place")
+    except Exception as e:
+        table_element = None
+        find_and_click(driver, element_selector_name="add a place")
 
-        logging.debug("table_element " + str(table_element))
+    logging.debug("table_element " + str(table_element))
 
-        if (country_place_number == 1 and table_element == None):
-            fill_out_country_and_validate_ui(driver, country_name, list_selection=list_selection)
-            return
+    if (country_place_number == 1 and table_element == None):
+        fill_out_country_and_validate_ui(driver, country_name, list_selection=list_selection)
+        return
 
-        if country_place_number <= country_max:
-            # if table already exists, then "add place (x) of (y)" button must exists
-            add_place_num_btn_element = driver.find_element_by_xpath("//body/main/div[3]/span/div[2]/button")
-            button_text = add_place_num_btn_element.text
-            user_entered_button_text = "Add place " + str(country_place_number) + " of " + str(country_max)
-            if button_text != user_entered_button_text:
-                raise Exception("Invalid Add Place button index")
+    if country_place_number <= country_max:
+        # if table already exists, then "add place (x) of (y)" button must exists
+        add_place_num_btn_element = driver.find_element_by_xpath("//body/main/div[3]/span/div[2]/button")
+        button_text = add_place_num_btn_element.text
+        user_entered_button_text = "Add place " + str(country_place_number) + " of " + str(country_max)
+        if button_text != user_entered_button_text:
+            raise Exception("Invalid Add Place button index")
 
-            # if proper button index found, then click the button to add the country place name
-            add_place_num_btn_element.click()
+        # if proper button index found, then click the button to add the country place name
+        add_place_num_btn_element.click()
 
-            fill_out_country_and_validate_ui(driver, country_name, list_selection=list_selection)
-            time.sleep(2)
-        else:
-            logging.debug(
-                "Country " + str(country_name) + " cannot be added as the CountryPlaceNumber exceeding max limit.")
-
-        list_country = "//body/main/div[4]/div/section/div[2]/div/ul/li" + "[" + country_place_number + "]"
-        list_selection = list_country + "/button"
-        driver.find_element_by_xpath(list_selection).click()
+        fill_out_country_and_validate_ui(driver, country_name, list_selection=list_selection)
         time.sleep(2)
+    else:
+        logging.debug(
+            "Country " + str(country_name) + " cannot be added as the CountryPlaceNumber exceeding max limit.")
+
+    list_country = "//body/main/div[4]/div/section/div[2]/div/ul/li" + "[" + country_place_number + "]"
+    list_selection = list_country + "/button"
+    driver.find_element_by_xpath(list_selection).click()
+    time.sleep(2)

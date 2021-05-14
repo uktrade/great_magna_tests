@@ -8,7 +8,6 @@ Feature: Domestic - Market guides
     Given test authentication is done
 
   @markets_1
-  @pass
   Scenario: Visitors should be able to view all available markets
     Given "Joel" visits the "Domestic - Home" page
 

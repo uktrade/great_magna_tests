@@ -85,32 +85,34 @@ Feature: Domestic - Contact us
       | G3 6AP    | Scottish Enterprise          | Glasgow    |
 
 
-#  @wip
-#  @allure.link:TT-363
-#  @office-finder
-#  @contact-us_5
-#  Scenario: Domestic Enquirers should be able to get to the NEW Office finder page
-#    Given "Robert" visits the "Domestic - New Office Finder" page
-#
-#    When "Robert" found his local trade office by providing his company's postcode
-#    And "Robert" decides to "Contact the local trade office"
-#
-#    Then "Robert" should be on the "Domestic - Short contact form (Office Finder)" page
-#
-#
-#  @wip
-#  @allure.link:TT-363
-#  @captcha
-#  @dev-only
-#  @office-finder
-#  @contact-us_6
-#  Scenario: Domestic Enquirers should be able to contact
-#    Given "Robert" got to the "Short contact-us form" page via "Find local trade office"
-#
-#    When "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Thank you for your enquiry" page
-#    And an email is submitted to "appropriate local office based on the postcode provided"
+  @wip
+  @allure.link:TT-363
+  @office-finder
+  @contact-us_5
+   @failed
+  Scenario: Domestic Enquirers should be able to get to the NEW Office finder page
+    Given "Robert" visits the "Domestic - New Office Finder" page
+
+    When "Robert" found his local trade office by providing his company's postcode
+    And "Robert" decides to "Contact the local trade office"
+
+    Then "Robert" should be on the "Domestic - Short contact form (Office Finder)" page
+
+
+  @wip
+  @allure.link:TT-363
+  @captcha
+  @dev-only
+  @office-finder
+  @contact-us_6
+  @failed
+  Scenario: Domestic Enquirers should be able to contact
+    Given "Robert" got to the "Short contact-us form" page via "Find local trade office"
+
+    When "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Thank you for your enquiry" page
+    And an email is submitted to "appropriate local office based on the postcode provided"
 
 
   @allure.link:TT-758
@@ -128,9 +130,9 @@ Feature: Domestic - Contact us
   @allure.link:TT-758
   @ita
   @captcha
-  @dev-only
   @exporting-from-the-UK
   @contact-us_8
+  @failed
   Scenario: Domestic Enquirers should be able to contact relevant ITA based on the postcode provided
     Given "Robert" got to the "Domestic - Long (Export Advice Comment)" page via "The UK -> Advice to export from the UK"
 
@@ -196,6 +198,7 @@ Feature: Domestic - Contact us
   @short-domestic
   @account-support
   @contact-us_12
+  @failed
   Scenario: Domestic enquirers should be able to get to the "Short Contact Us" form via "The UK -> Great.gov.uk account and services support -> Other"
     Given "Robert" got to the "Domestic - Great.gov.uk account and services support" page via "The UK -> Great.gov.uk account and services support"
 
@@ -246,78 +249,80 @@ Feature: Domestic - Contact us
       | My daily alerts are not relevant to me                      |
 
 
-#  @allure.link:TT-758
-#    @zendesk
-#    @dev-only
-#    @captcha
-#    @account-support
-#    @contact-us_16
-#  Scenario Outline: Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
-#    Given "Robert" got to the "Domestic - <selected topic> - Dedicated Support Content" page via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
-#
-#    When "Robert" decides to "Submit an enquiry"
-#    And "Robert" is on the "Domestic - Short contact form (Tell us how we can help)" page
-#    And "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>)" page
-#    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
-#
-#    Examples:
-#      | selected topic                            |
-#      | I have not received an email confirmation |
-#
-#    @full
-#    Examples:
-#      | selected topic                                                 |
-#      | I have not received an email confirmation                      |
-#      | I need to reset my password                                    |
-#      | My Companies House login is not working                        |
-#      | I do not know where to enter my verification code              |
-#      | I have not received my letter containing the verification code |
-#      | I have not received a verification code                        |
+  @allure.link:TT-758
+    @zendesk
+    @dev-only
+    @captcha
+    @account-support
+    @contact-us_16
+    @failed
+  Scenario Outline: Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
+    Given "Robert" got to the "Domestic - <selected topic> - Dedicated Support Content" page via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
+
+    When "Robert" decides to "Submit an enquiry"
+    And "Robert" is on the "Domestic - Short contact form (Tell us how we can help)" page
+    And "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>)" page
+    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
+
+    Examples:
+      | selected topic                            |
+      | I have not received an email confirmation |
+
+    @full
+    Examples:
+      | selected topic                                                 |
+      | I have not received an email confirmation                      |
+      | I need to reset my password                                    |
+      | My Companies House login is not working                        |
+      | I do not know where to enter my verification code              |
+      | I have not received my letter containing the verification code |
+      | I have not received a verification code                        |
 
 
-#  @allure.link:TT-758
-#    @zendesk
-#    @dev-only
-#    @captcha
-#    @exopps
-#    @contact-us_17
-#  Scenario Outline: Exporters should be to contact Export Opportunities team via Zendesk using "Short contact form" page accessed via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> <selected topic>"
-#    Given "Robert" got to the "Domestic - <selected topic> - Dedicated Support Content" page via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> <selected topic>"
-#
-#    When "Robert" decides to "Submit an enquiry"
-#    And "Robert" is on the "Domestic - Short contact form (Tell us how we can help)" page
-#    And "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>) - Short Domestic Contact us" page
-#    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
-#
-#    Examples:
-#      | selected topic                                              |
-#      | I haven't had a response from the opportunity I applied for |
-#      | My daily alerts are not relevant to me                      |
+  @allure.link:TT-758
+    @zendesk
+    @dev-only
+    @captcha
+    @exopps
+    @contact-us_17
+  Scenario Outline: Exporters should be to contact Export Opportunities team via Zendesk using "Short contact form" page accessed via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> <selected topic>"
+    Given "Robert" got to the "Domestic - <selected topic> - Dedicated Support Content" page via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> <selected topic>"
+
+    When "Robert" decides to "Submit an enquiry"
+    And "Robert" is on the "Domestic - Short contact form (Tell us how we can help)" page
+    And "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>) - Short Domestic Contact us" page
+    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
+
+    Examples:
+      | selected topic                                              |
+      | I haven't had a response from the opportunity I applied for |
+      | My daily alerts are not relevant to me                      |
 
 
   # Choosing "Other" on the "Your account on Great.gov.uk" page takes us
   # directly to the short contact us form
-#  @allure.link:TT-758
-#    @zendesk
-#    @dev-only
-#    @captcha
-#    @account-support
-#    @contact-us_18
-#  Scenario Outline: Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
-#    Given "Robert" got to the "Domestic - Short contact form (Tell us how we can help)" page via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
-#
-#    When "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>) - Short Domestic Contact us" page
-#    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
-#
-#    Examples:
-#      | selected topic |
-#      | Other          |
+  @allure.link:TT-758
+    @zendesk
+    @dev-only
+    @captcha
+    @account-support
+    @contact-us_18
+    @failed
+  Scenario Outline: Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
+    Given "Robert" got to the "Domestic - Short contact form (Tell us how we can help)" page via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> <selected topic>"
+
+    When "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected topic>) - Short Domestic Contact us" page
+    And a "zendesk" notification entitled "great.gov.uk contact form" should be sent to "Robert"
+
+    Examples:
+      | selected topic |
+      | Other          |
 
 
   @allure.link:TT-758
@@ -332,20 +337,20 @@ Feature: Domestic - Contact us
 
 
   # already partially covered by stories for TT-585
-#  @wip
-#  @dev-only
-#  @captcha
-#  @ukef
-#  @contact-us_20
-#  Scenario: Exporters should be able to contact UKEF mailbox
-#    Given "Robert" got to the "Domestic - Your details - UKEF Contact us" page via "The UK -> UK Export Finance (UKEF)"
-#
-#    When "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Domestic - Thank you - UKEF Contact us" page
-#    # No confirmation email is sent to the user
-#    # TODO check if email is sent to dedicated mailbox
-#    And an email is submitted to "UKEF mailbox"
+  @dev-only
+  @captcha
+  @ukef
+  @contact-us_20
+  @failed
+  Scenario: Exporters should be able to contact UKEF mailbox
+    Given "Robert" got to the "Domestic - Your details - UKEF Contact us" page via "The UK -> UK Export Finance (UKEF)"
+
+    When "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Domestic - Thank you - UKEF Contact us" page
+    # No confirmation email is sent to the user
+    # TODO check if email is sent to dedicated mailbox
+    And an email is submitted to "UKEF mailbox"
 
 
   @allure.link:TT-758
@@ -373,6 +378,7 @@ Feature: Domestic - Contact us
   @eu-exit
   @feature-flagged
   @contact-us_22
+  @failed
   Scenario: Exporters should be able to get to the "Domestic EU exit help short contact-us form"
     Given "Robert" got to the "Domestic - What can we help you with? - Domestic Contact us" page via "The UK"
 
@@ -384,11 +390,10 @@ Feature: Domestic - Contact us
   @allure.link:TT-758
   @zendesk
   @allure.link:CMS-506
-  @dev-only
   @captcha
   @eu-exit
-  @feature-flagged
   @contact-us_23
+  @failed
   Scenario: Exporters should be able to contact "Brexit help mailbox"
     Given "Robert" got to the "Domestic - Brexit help" page via "The UK -> Brexit enquiries"
 
@@ -398,25 +403,25 @@ Feature: Domestic - Contact us
     And a "zendesk" notification entitled "Brexit contact form" should be sent to "Robert"
 
 
-#  @allure.link:TT-758
-#    @dev-only
-#    @captcha
-#    @short-form
-#    @contact-us
-#  Scenario Outline: Exporters should be able to contact "<expected recipient>" using "Short contact form (<selected option>)" page accessed via "The UK -> <selected option>"
-#    Given "Robert" got to the "Domestic - Short contact form (<selected option>)" page via "The UK -> <selected option>"
-#
-#    When "Robert" fills out and submits the form
-#
-#    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected option>) - Short Domestic Contact us" page
-#    And "Robert" should receive "<appropriate>" confirmation email
-#    And an email notification about "Robert"'s enquiry should be send to "<expected recipient>"
-#
-#    Examples:
-#      | selected option                         | appropriate                                                  | expected recipient |
-#      | Events                                  | Thank you for your Events enquiry                            | Events mailbox     |
-#      | Defence and Security Organisation (DSO) | Thank you for your Defence and Security Organisation enquiry | DSO mailbox        |
-#      | Other                                   | Thank you for your enquiry                                   | DIT Enquiry unit   |
+  @allure.link:TT-758
+    @dev-only
+    @captcha
+    @short-form
+    @contact-us
+  Scenario Outline: Exporters should be able to contact "<expected recipient>" using "Short contact form (<selected option>)" page accessed via "The UK -> <selected option>"
+    Given "Robert" got to the "Domestic - Short contact form (<selected option>)" page via "The UK -> <selected option>"
+
+    When "Robert" fills out and submits the form
+
+    Then "Robert" should be on the "Domestic - Thank you for your enquiry (<selected option>) - Short Domestic Contact us" page
+    And "Robert" should receive "<appropriate>" confirmation email
+    And an email notification about "Robert"'s enquiry should be send to "<expected recipient>"
+
+    Examples:
+      | selected option                         | appropriate                                                  | expected recipient |
+      | Events                                  | Thank you for your Events enquiry                            | Events mailbox     |
+      | Defence and Security Organisation (DSO) | Thank you for your Defence and Security Organisation enquiry | DSO mailbox        |
+      | Other                                   | Thank you for your enquiry                                   | DIT Enquiry unit   |
 
 
   @allure.link:TT-758
@@ -440,6 +445,7 @@ Feature: Domestic - Contact us
   @allure.link:TT-758
     @international
     @contact-us_25
+    @failed
   Scenario Outline: International Enquirers should be able to get to the "<expected>" form for "<selected>"
     Given "Robert" got to the "Domestic - What would you like to know more about? - International Contact us" page via "Outside the UK"
 
@@ -449,7 +455,7 @@ Feature: Domestic - Contact us
 
     Examples:
       | selected                    | expected                                                |
-#      | Expanding to the UK         | Invest - Contact us                                     |
+      | Expanding to the UK         | Invest - Contact us                                     |
       | Investing capital in the UK | International - Contact the Capital Investment team     |
       | Find a UK business partner  | International - Find a UK business partner - Contact us |
       | The transition period       | International - Transition period enquiries             |
@@ -459,6 +465,7 @@ Feature: Domestic - Contact us
   @allure.link:TT-758
     @going-back
     @contact-us_26
+    @failed
   Scenario Outline: Enquirers should be able to navigate back to previous pages from "<path>" back to "<expected>" page
     Given "Robert" navigates via "<path>"
 

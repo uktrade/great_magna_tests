@@ -26,10 +26,9 @@ Feature: Domestic - Accessing Services
 
   @bug
   @allure.issue:ED-2702
-  @fixed
   @allure.link:ED-2661
   @home-page
-  @accessing-services
+  @accessing-services_2
   @<service>
   @external-service_1
   Scenario Outline: Any Exporter should be able to get to the "<specific>" Service page from "Domestic - Services" page
@@ -47,3 +46,5 @@ Feature: Domestic - Accessing Services
       | UK Export Finance         | Domestic - Get Finance         |
       | Find events and visits    | Events - Home                  |
       | Get an EORI number        | EORI - Home                    |
+      | Report A Trade Barrier    | Report A Barrier               |
+

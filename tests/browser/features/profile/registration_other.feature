@@ -1,3 +1,4 @@
+@domestic
 @allure.link:TT-1033
 @allure.link:TT-1094
 @enrol
@@ -149,6 +150,7 @@ Feature: Profile - Non-CH enrolment flows
   @dev-only
   @allure.link:TT-1121
   @sole-trader-other-business
+  @failed
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their business details after providing email confirmation code
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -170,6 +172,7 @@ Feature: Profile - Non-CH enrolment flows
   @dev-only
   @allure.link:TT-1122
   @uk-taxpayer
+  @failed
   Scenario: A UK taxpayers wanting to register should be asked to enter their details after providing email confirmation code
     Given "Natalia" has received the email confirmation code by opting to register as "UK taxpayer"
     And "Natalia" is on the "Profile - Enter your confirmation code (UK taxpayer)" page
@@ -187,6 +190,7 @@ Feature: Profile - Non-CH enrolment flows
   @dev-only
   @allure.link:TT-1123
   @sole-trader-other-business
+  @failed
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their details after providing business details
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page

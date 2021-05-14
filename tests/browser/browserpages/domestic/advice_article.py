@@ -54,8 +54,8 @@ SELECTORS = {
         "article list": Selector(
             By.CSS_SELECTOR, "nav.breadcrumbs > ol > li:nth-child(3) > a"
         ),
-        # "upskill now":  Selector(
-        #     By.CSS_SELECTOR, "#article-list-page div.cta-container > a"),
+        "upskill now":  Selector(
+            By.CSS_SELECTOR, "#content > div:nth-child(3) > div > div.cta-container > a"),
     },
     "article": {"article name": ARTICLE_NAME, "article text": ARTICLE_TEXT},
 }

@@ -1,3 +1,4 @@
+@domestic
 @international
 @allure.suite:International
 Feature: INTL - Updates for non-UK companies on EU Exit
@@ -9,6 +10,7 @@ Feature: INTL - Updates for non-UK companies on EU Exit
 
   @news
   @eu-exit
+  @failed
   @allure.link:CMS-579
   Scenario: International Visitors should be able to ge to the "Updates for non-UK companies on EU Exit" from "International - Landing" page
     Given at least "1" published "international" news article on "Domestic"

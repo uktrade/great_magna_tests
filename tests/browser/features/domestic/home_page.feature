@@ -9,7 +9,6 @@ Feature: Domestic - Home Page
 
   @allure.link:ED-2366
   @home-page
-  @bug_domestic
   @sections
   Scenario: Any Exporter should see the "Beta bar, Hero, EU Exit enquiries banner, Advice, Services, Case Studies, Business is Great, Error Reporting" sections on the home page
     Given "Robert" visits the "Domestic - Home" page
@@ -27,30 +26,30 @@ Feature: Domestic - Home Page
       | Sign in                  |
 
 
-#  @allure.link:ED-3014
-#  @video
-#  @advice
-#  @home-page_2
-#  @skip-in-firefox
-#  Scenario: Any Exporter should be able to play promotional video on the Home page
-#    Given "Robert" visits the "Domestic - Home" page
-#
-#    When "Robert" decides to watch "7" seconds of the promotional video
-#
-#    Then "Robert" should be able to watch at least first "3" seconds of the promotional video
+  @allure.link:ED-3014
+  @video
+  @advice
+  @home-page_2
+  @skip-in-firefox
+  Scenario: Any Exporter should be able to play promotional video on the Home page
+    Given "Robert" visits the "Domestic - Home" page
+
+    When "Robert" decides to watch "7" seconds of the promotional video
+
+    Then "Robert" should be able to watch at least first "3" seconds of the promotional video
 
 
-#  @allure.link:ED-3014
-#  @video
-#  @home-page_3
-#  @skip-in-firefox
-#  Scenario: Any Exporter should be able to close the window with promotional video on the Home page
-#    Given "Robert" visits the "Domestic - Home" page
-#
-#    When "Robert" decides to watch "57" seconds of the promotional video
-#    And "Robert" closes the window with promotional video
-#
-#    Then "Robert" should not see the window with promotional video
+  @allure.link:ED-3014
+  @video
+  @home-page_3
+  @skip-in-firefox
+  Scenario: Any Exporter should be able to close the window with promotional video on the Home page
+    Given "Robert" visits the "Domestic - Home" page
+
+    When "Robert" decides to watch "57" seconds of the promotional video
+    And "Robert" closes the window with promotional video
+
+    Then "Robert" should not see the window with promotional video
 
 
     @allure.link:XOT-1215
@@ -131,7 +130,7 @@ Feature: Domestic - Home Page
     And "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
 
-     @sections
+   @sections
    @sign_in_required
   Scenario: Visitor should able to login with where to export section on the home page
     Given "Robert" visits the "Domestic - Home" page
@@ -144,7 +143,7 @@ Feature: Domestic - Home Page
     And "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
 
-       @sections
+   @sections
    @sign_in_required
   Scenario: Visitor should able to login with make an export plan section on the home page
     Given "Robert" visits the "Domestic - Home" page
