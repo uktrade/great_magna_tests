@@ -118,7 +118,7 @@ Feature: Domestic - Home Page
     Then "Robert" should get to a working page
 
    @sections
-   @sign_in_required
+   @sign_in_required_1
   Scenario: Visitor should able to login with learn to export section on the home page
     Given "Robert" visits the "Domestic - Home" page
 
@@ -131,7 +131,7 @@ Feature: Domestic - Home Page
     And "Robert" should be on the "GreatMagna - Dashboard" Page
 
    @sections
-   @sign_in_required
+   @sign_in_required_2
   Scenario: Visitor should able to login with where to export section on the home page
     Given "Robert" visits the "Domestic - Home" page
 
@@ -144,7 +144,7 @@ Feature: Domestic - Home Page
     And "Robert" should be on the "GreatMagna - Dashboard" Page
 
    @sections
-   @sign_in_required
+   @sign_in_required_3
   Scenario: Visitor should able to login with make an export plan section on the home page
     Given "Robert" visits the "Domestic - Home" page
 

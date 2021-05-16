@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @lessons-page
 @allure.suite:Great_Magna_Lessons
  @Choose-the-right-funding

@@ -52,7 +52,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#id_sector-container ~ a", type=ElementType.LINK
         ),
         "get started": Selector(
-            By.CSS_SELECTOR, "#-list-section div.cta-container > a"
+            By.CSS_SELECTOR, "#markets-list-section > div:nth-child(2) > div > div > div.cta-container > a"
         ),
     },
     "no results": {"itself": Selector(By.ID, "search-results-list")},
@@ -108,8 +108,8 @@ def open_random_marketplace(driver: WebDriver) -> str:
         link.click()
     return link_text
 
-def find_and_click_change_link(driver: WebDriver, element_selector_name: str):
-    change_link = find_element(
+def find_and_click(driver: WebDriver, *, element_selector_name: str):
+    find_and_click = find_element(
         driver, find_selector_by_name(SELECTORS, element_selector_name)
     )
-    change_link.click()
+    find_and_click.click()

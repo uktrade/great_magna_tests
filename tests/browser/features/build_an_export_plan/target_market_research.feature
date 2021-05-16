@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @target-markets-research-page
 @allure.suite:Great_Magna_Export_Plan_T_M_R
 @Great_Magna_Export_Plan

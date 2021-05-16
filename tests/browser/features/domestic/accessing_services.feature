@@ -46,5 +46,5 @@ Feature: Domestic - Accessing Services
       | UK Export Finance         | Domestic - Get Finance         |
       | Find events and visits    | Events - Home                  |
       | Get an EORI number        | EORI - Home                    |
-      | Report A Trade Barrier    | Report A Barrier               |
+      | Report A Trade Barrier    | Domestic - Report a trade barrier   |
 

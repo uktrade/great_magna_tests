@@ -167,6 +167,7 @@ def when_actor_decides_to_enter_email_address_and_click_login(
         context, actor_alias, email_address, password):
     actor_decides_to_enter_email_address_and_click_login(context, actor_alias, email_address, password)
 
+
 @when('"{actor_alias}" should be on the "{page_name}" page')
 def when_actor_should_be_on_page(
         context, actor_alias, page_name):
@@ -425,11 +426,19 @@ def when_actor_open_tag(context: Context, actor_alias: str):
 def when_actor_shares_article(context, actor_alias, social_media):
     articles_share_on_social_media(context, actor_alias, social_media)
 
+
 @when('"{actor_alias}" should be able to enter products "{products}" and country "{country}"')
 def then_actor_should_be_able_to_enter_products_and_country(context, actor_alias, products, country):
     actor_should_be_able_to_enter_products_and_country(context, products, country)
+
 
 @when('"{actor_alias}" decides to click on element "{element_name}" on page "{page_name}"')
 def then_actor_decides_to_click_on_page_element(
         context, actor_alias, element_name, page_name):
     click_on_link_element_in_page(context, actor_alias, element_name, page_name=page_name)
+
+
+@when('"{actor_alias}" fills out and submits the form (and go 1 page back on error)')
+def when_actor_fills_out_and_submits_the_form(context: Context, actor_alias: str):
+    generic_fill_out_and_submit_form(context, actor_alias, custom_details_table=context.table, retry_on_errors=True,
+                                     go_back=True)

@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @about-your-business-page
 @allure.suite:Great_Magna_Export_Plan_A_Y_B_P
 Feature: GreatMagna - About your Business Page
@@ -138,18 +139,18 @@ Feature: GreatMagna - About your Business Page
     And "Robert" decides to click section complete on "Build An Export Plan - About Your Business"
     And "Robert" decides to click on "Build an export plan"
 
-#@allure.link:XOT-1020
-#   @Great_Magna_Export_Plan
-#  Scenario:User should be able to click on Top Export plan home in "About your business" and should be on Export plan dashboard page
-#
-#    Given "Robert" visited "GreatMagna - Login" page
-#    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
-#    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    #And "Robert" should be able to click on SkipWalkthrough
-#    Then "Robert" decides to click on "Build an export plan"
-#     And "Robert" decides to click on section "About Your Business" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on section "Top Export Plan Home" on page "Build An Export Plan - About Your Business"
-#     And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
+@allure.link:XOT-1020
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click on Top Export plan home in "About your business" and should be on Export plan dashboard page
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "About Your Business" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on section "Top Export Plan Home" on page "Build An Export Plan - About Your Business"
+     And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
   @allure.link:XOT-1021
   @Great_Magna_Export_Plan_B_O_Last_1

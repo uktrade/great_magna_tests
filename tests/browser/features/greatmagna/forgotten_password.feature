@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @forgotten-password-page
 @allure.suite:Great_Magna_Forgotten_Password
 Feature: GreatMagna -  Forgotten Password Page

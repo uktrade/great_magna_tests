@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @adaptation-for-your-target-market-page
 @allure.suite:Great_Magna_Export_Plan_A_F_Y_T_M
 Feature: GreatMagna - Adapting Your Product Page

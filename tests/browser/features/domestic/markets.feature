@@ -32,7 +32,7 @@ Feature: Domestic - Market guides
       | Description                 |
       | Opportunities for exporters |
       | Doing business in           |
-      | Next steps                  |
+#      | Next steps                  |
       | Error Reporting             |
       | Footer                      |
 
@@ -54,8 +54,8 @@ Feature: Domestic - Market guides
       | Description                 |
       | Opportunities for exporters |
       | Doing business in           |
-      | Next steps                  |
-      | Next steps Staging          |
+#      | Next steps                  |
+#      | Next steps Staging          |
       | Error Reporting             |
       | Footer                      |
 
@@ -93,13 +93,27 @@ Feature: Domestic - Market guides
       | Check duties and customs procedures for exporting goods | Japan   |
 
 
-          @markets
+   @markets_6
    @get_started_markets
-  Scenario: Visitor should able to login with get started from the market list
+  Scenario: Visitor should able to login with "get started" from the market list
     Given "Robert" visits the "Domestic - Home" page
 
     When "Robert" decides to click on "Markets"
     And "Robert" decides to click on element "Get started" on page "Domestic - Markets Listing"
+
+    Then "Robert" should be on the "GreatMagna - Sign Up" page
+    And "Robert" decides to click on element "Sign in" on page "GreatMagna - Sign Up"
+    And "Robert" visited "GreatMagna - Login" page
+    And "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+
+   @markets_7
+   @get_started_markets
+  Scenario: Visitor should able to login with "compare now" from the market guide
+     Given "Robert" visits the "Domestic - Brazil - guide" page
+
+#    When "Robert" decides to click on "Markets"
+    When "Robert" decides to click on element "Compare Now" on page "Domestic - Brazil - guide"
 
     Then "Robert" should be on the "GreatMagna - Sign Up" page
     And "Robert" decides to click on element "Sign in" on page "GreatMagna - Sign Up"

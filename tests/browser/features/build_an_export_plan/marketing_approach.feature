@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @marketing-approach-page
 @allure.suite:Great_Magna_Export_Plan_M_A
 Feature: GreatMagna - Marketing approach Page
@@ -18,24 +19,24 @@ Feature: GreatMagna - Marketing approach Page
 #     And "Robert" decides to click on element "Add route to market" on page "Build An Export Plan - Marketing approach"
      And "Robert" decides to select random item for "Route to market" on page "Build An Export Plan - Marketing approach"
 
-#   @allure.link:XOT-1152
-#   @Great_Magna_Export_Plan_B_O
-#   @Great_Magna_Export_Plan
-#  Scenario:User should be able to click on "Add goal" and enter the objectives for exporting
-#
-#    Given "Robert" visited "GreatMagna - Login" page
-#    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
-#    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   #And "Robert" should be able to click on SkipWalkthrough
-#    Then "Robert" decides to click on "Build an export plan"
-#    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
-#    And "Robert" fill business objective details on page "Build An Export Plan - Business Objectives"
-#          | Position | Startdate  | Enddate    | Objectives | Owner        | PlannedReviews   |
-#          | 1     | 01/02/2021 | 01/02/2028 | obj1       | obj1-owner   | obj1-plannedreviews |
-#          | 2     | 01/02/2021 | 01/02/2028 | obj2       | obj2-owner   | obj2-plannedreviews |
-#          | 3     | 01/02/2021 | 01/02/2028 | obj3       | obj3-owner   | obj3-plannedreviews |
-#          | 4     | 01/02/2021 | 01/02/2028 | obj4       | obj4-owner   | obj4-plannedreviews |
-#          | 5     | 01/02/2021 | 01/02/2028 | obj5       | obj5-owner   | obj5-plannedreviews |
+   @allure.link:XOT-1152
+   @Great_Magna_Export_Plan_B_O
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click on "Add goal" and enter the objectives for exporting
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+   #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
+    And "Robert" fill business objective details on page "Build An Export Plan - Business Objectives"
+          | Position | Startdate  | Enddate    | Objectives | Owner        | PlannedReviews   |
+          | 1     | 01/02/2021 | 01/02/2028 | obj1       | obj1-owner   | obj1-plannedreviews |
+          | 2     | 01/02/2021 | 01/02/2028 | obj2       | obj2-owner   | obj2-plannedreviews |
+          | 3     | 01/02/2021 | 01/02/2028 | obj3       | obj3-owner   | obj3-plannedreviews |
+          | 4     | 01/02/2021 | 01/02/2028 | obj4       | obj4-owner   | obj4-plannedreviews |
+          | 5     | 01/02/2021 | 01/02/2028 | obj5       | obj5-owner   | obj5-plannedreviews |
 
   @allure.link:XOT-1153
      @Great_Magna_Export_Plan
@@ -72,19 +73,19 @@ Feature: GreatMagna - Marketing approach Page
      And "Robert" should be on the "LearnToExport - Selling direct to your customer" page
      And "Robert" decides to click on section "Marketing approach" on page "LearnToExport - Selling direct to your customer"
 
-#   @allure.link:XOT-1155
-#   @Great_Magna_Export_Plan
-#  Scenario:User should be able to view Marketing approach pages
-#
-#    Given "Robert" visited "GreatMagna - Login" page
-#    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
-#    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    #And "Robert" should be able to click on SkipWalkthrough
-#    Then "Robert" decides to click on "Build an export plan"
-#     And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on element "open" on page "Build An Export Plan - Marketing approach"
-#     And "Robert" decides to click on element "0-14 year olds" on page "Build An Export Plan - Marketing approach"
-#     And "Robert" decides to click on element "confirm" on page "Build An Export Plan - Marketing approach"
+   @allure.link:XOT-1155
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to view Marketing approach pages
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "open" on page "Build An Export Plan - Marketing approach"
+     And "Robert" decides to click on element "0-14 year olds" on page "Build An Export Plan - Marketing approach"
+     And "Robert" decides to click on element "confirm" on page "Build An Export Plan - Marketing approach"
 
    @allure.link:XOT-1156
    @Great_Magna_Export_Plan

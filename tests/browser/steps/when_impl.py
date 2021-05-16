@@ -19,13 +19,21 @@ from selenium.common.exceptions import (
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
+from great_magna_tests_shared.gov_notify import (
+    get_email_verification_code,
+    get_verification_link,
+
+)
 from great_magna_tests_shared.utils import check_for_errors
 from browserpages import (
     # search,
+    common_language_selector,
     get_page_object,
     greatmagna,
     learntoexport,
     soo,
+    profile,
+    sso,
 )
 from browserpages import (
     domestic,
@@ -591,6 +599,7 @@ def actor_decides_to_enter_email_address_and_click_login(
     page.login(context.driver, email_address=email_address, password=password)
     time.sleep(2)
 
+
 def actor_decides_to_enter_email_address_and_click_sign_up(
         context, actor_alias, email_address, password):
     page = get_last_visited_page(context, actor_alias)
@@ -845,6 +854,29 @@ def generic_unfold_elements_in_section(
     page.unfold_elements_in_section(context.driver, section_name)
 
 
+def registration_should_get_verification_email(context: Context, actor_alias: str):
+    """Will check if the Exporter received an email verification message."""
+    logging.debug("Searching for an email verification message...")
+    actor = get_actor(context, actor_alias)
+    link = get_verification_link(actor.email)
+    update_actor(context, actor_alias, email_confirmation_link=link)
+
+
+def registration_open_email_confirmation_link(context: Context, actor_alias: str):
+    """Given Supplier has received a message with email confirmation link
+    Then Supplier has to click on that link.
+    """
+    actor = get_actor(context, actor_alias)
+    link = actor.email_confirmation_link
+
+    # Step 1 - open confirmation link
+    context.driver.get(link)
+
+    # Step 3 - confirm that Supplier is on SSO Confirm Your Email page
+    sso.confirm_your_email.should_be_here(context.driver)
+    logging.debug("Supplier is on the SSO Confirm your email address page")
+
+
 def registration_submit_form_and_verify_account(
         context: Context, actor_alias: str, *, fake_verification: bool = True
 ):
@@ -1080,4 +1112,61 @@ def generic_create_great_account(
 
     should_be_on_page(
         context, actor_alias, f"Profile - Account created ({business_type})"
+    )
+
+
+def generic_at_least_n_news_articles(
+        context: Context, n: int, visitor_type: str, service: str
+):
+    context.articles = get_news_articles(service, visitor_type)
+    error = (
+        f"Expected to find at least {n} news articles on {service} but "
+        f"got {len(context.articles)}"
+    )
+    assert len(context.articles) >= n, error
+
+
+def sso_actor_received_email_confirmation_code(
+        context: Context, actor_alias: str, business_type: str
+):
+    page_name = (
+        f"Profile - Enter your email address and set a password ({business_type})"
+    )
+    visit_page(context, actor_alias, page_name)
+    generic_fill_out_and_submit_form(context, actor_alias)
+    end_page_name = f"Profile - Enter your confirmation code ({business_type})"
+    should_be_on_page(context, actor_alias, end_page_name)
+    generic_get_verification_code(context, actor_alias)
+
+
+def generic_get_verification_code(
+        context: Context, actor_alias: str, *, resent_code: bool = False
+):
+    """Will check if the Exporter received an email verification message."""
+    logging.debug("Searching for an email verification message...")
+    actor = get_actor(context, actor_alias)
+    code = get_email_verification_code(actor.email, resent_code=resent_code)
+    update_actor(context, actor_alias, email_confirmation_code=code)
+
+
+def registration_create_and_verify_account(
+        context: Context, actor_alias: str, *, fake_verification: bool = True
+):
+    visit_page(context, actor_alias, "SSO - Registration")
+    registration_submit_form_and_verify_account(
+        context, actor_alias, fake_verification=fake_verification
+    )
+
+
+def profile_start_registration_as(
+        context: Context, actor_alias: str, business_type: str
+):
+    if not get_actor(context, actor_alias):
+        add_actor(context, unauthenticated_actor(actor_alias))
+    profile.enrol_select_business_type.visit(context.driver)
+    second_page = profile.enrol_select_business_type.pick_radio_option_and_submit(
+        context.driver, name=business_type
+    )
+    should_be_on_page(
+        context, actor_alias, f"{second_page.SERVICE} - {second_page.NAME}"
     )

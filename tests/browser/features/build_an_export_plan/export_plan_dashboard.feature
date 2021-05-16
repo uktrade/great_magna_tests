@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @upload-logo-page
 @allure.suite:Great_Magna_Export_Plan
 Feature: GreatMagna - Export plan Upload logo

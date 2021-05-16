@@ -36,10 +36,10 @@ NAMES = [
     "Prepare for export procedures and logistics",
     "Sell services overseas",
     "Manage risk of bribery and corruption",
-    "Upskill now",
+    # "Upskill now",
 ]
 SubURLs = {
-    "create an export plan": urljoin(URL, "create-export-plan/"),
+    "create an export plan": urljoin(URL, "create-an-export-plan"),
     "find an export market": urljoin(URL, "find-an-export-market/"),
     "choose a route to market": urljoin(URL, "choose-route-market/"),
     "get export finance": urljoin(URL, "get-export-finance-and-funding/"),
@@ -47,20 +47,20 @@ SubURLs = {
         URL, "manage-payment-export-orders/"
     ),
     "prepare to do business in a foreign country": urljoin(
-        URL, "prepare-do-business-foreign-country/"
+        URL, "prepare-to-do-business-in-a-foreign-country/"
     ),
     "prepare for export procedures and logistics": urljoin(
-        URL, "prepare-export-procedures-and-logistics/"
+        URL, "prepare-for-export-procedures-and-logistics/"
     ),
-    "Sell services overseas": urljoin(
+    "sell services overseas": urljoin(
         URL, "sell-services-overseas/"
     ),
     "manage risk of bribery and corruption": urljoin(
         URL, "manage-risk-bribery-and-corruption/"
     ),
-    "upskill now": urljoin(
-        URL, "signup/?next=/learn/categories/"
-    ),
+    # "upskill now": urljoin(
+    #     URL, "signup/?next=/learn/categories/"
+    # ),
 }
 
 ARTICLE_LINKS = Selector(
@@ -79,9 +79,9 @@ SELECTORS = {
         "itself": Selector(By.CSS_SELECTOR, "section.error-reporting"),
         "link": Selector(By.ID, "error-reporting-section-contact-us"),
     },
-    "upskill now": {
-        "itself": Selector(By.CSS_SELECTOR, "#content div.cta-container > a"),
-    },
+    # "upskill now": {
+    #     "itself": Selector(By.CSS_SELECTOR, "#article-list-page > div:nth-child(2) > div > div.cta-container > a"),
+    # },
 }
 SELECTORS.update(common_selectors.DOMESTIC_HEADER)
 SELECTORS.update(common_selectors.DOMESTIC_HERO_WO_LINK)

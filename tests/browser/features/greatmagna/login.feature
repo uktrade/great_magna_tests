@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @login-page
 @allure.suite:Great_Magna_Login
 Feature: GreatMagna - Login Page

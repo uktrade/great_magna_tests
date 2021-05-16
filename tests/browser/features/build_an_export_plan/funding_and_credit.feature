@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @funding-and-credit-page
 @allure.suite:Great_Magna_Export_Plan_F_A_C
 Feature: GreatMagna - Funding and Credit Page

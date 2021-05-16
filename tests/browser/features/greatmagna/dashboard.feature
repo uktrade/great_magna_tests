@@ -1,4 +1,5 @@
- @dashboard-page
+@Great_Magna_Tests
+@dashboard-page
 @allure.suite:Great_Magna_Dashboard
 Feature: GreatMagna - Dashboard Page
 
@@ -69,22 +70,22 @@ Feature: GreatMagna - Dashboard Page
    And "Robert" decides to click on "Start"
    And "Robert" should be on the "Build An Export Plan - About Your Business" Page
 
-#
-#@allure.link:XOT-025
-#  @Great-Magna-Sign-Up
-#  Scenario Outline: First time landing on the dashboard page
-#  Given "Robert" visited "GreatMagna - Sign Up" page
-#  When "Robert" decides to enter email address "<emailaddress>", password "<password>" and click Sign up
-#  Then "Robert" should be able to see confirmation code page from email "santoshtesting10008@gmail.com", password "Testing@123!" and enter code
-#  Then "Robert" should be on the "GreatMagna - Dashboard" Page
-#  Examples: email address and password
-#     |      emailaddress                 | password    |
-#     | santoshtesting10008+xxxx@gmail.com | Testing@123!|
-#  And "Robert" decides to click on "Build an export plan"
-#  And "Robert" "Robert" decides to click on section "Travel Plan" on page "Build An Export Plan - Export Plan Dashboard"
-#  And "Robert" decides to enter product name "Televisions" on page "Build An Export Plan - Travel Plan"
-#  And "Robert" decides to enter country name "Angola" on the "Build An Export Plan - Travel Plan" page
-#
+
+@allure.link:XOT-025
+  @Great-Magna-Sign-Up
+  Scenario Outline: First time landing on the dashboard page
+  Given "Robert" visited "GreatMagna - Sign Up" page
+  When "Robert" decides to enter email address "<emailaddress>", password "<password>" and click Sign up
+  Then "Robert" should be able to see confirmation code page from email "santoshtesting10008@gmail.com", password "Testing@123!" and enter code
+  Then "Robert" should be on the "GreatMagna - Dashboard" Page
+  Examples: email address and password
+     |      emailaddress                 | password    |
+     | santoshtesting10008+xxxx@gmail.com | Testing@123!|
+  And "Robert" decides to click on "Build an export plan"
+  And "Robert" "Robert" decides to click on section "Travel Plan" on page "Build An Export Plan - Export Plan Dashboard"
+  And "Robert" decides to enter product name "Televisions" on page "Build An Export Plan - Travel Plan"
+  And "Robert" decides to enter country name "Angola" on the "Build An Export Plan - Travel Plan" page
+
 
 
 

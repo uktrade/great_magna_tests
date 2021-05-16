@@ -27,9 +27,10 @@ from .settings import (
     SOO_URL,
 )
 
+
 class Url:
     def __init__(
-        self, service_url: str, relative_endpoint: str, *, template: str = None
+            self, service_url: str, relative_endpoint: str, *, template: str = None
     ):
         join_endpoint = partial(urljoin, service_url)
         self.relative: str = relative_endpoint
@@ -38,6 +39,7 @@ class Url:
         self.absolute_template: Union[str, None] = (
             join_endpoint(template) if template else None
         )
+
 
 class CMSApiUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
@@ -123,21 +125,26 @@ class ProfileUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
         super().__init__(PROFILE_URL, endpoint, template=template)
 
+
 class SOOUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
         super().__init__(SOO_URL, endpoint, template=template)
+
 
 class GreatMagnaUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
         super().__init__(GREAT_MAGNA_URL, endpoint, template=template)
 
+
 class SSOUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
         super().__init__(SSO_URL, endpoint, template=template)
 
+
 class SSOApiUrl(Url):
     def __init__(self, endpoint: str, *, template: str = None):
         super().__init__(SSO_API_URL, endpoint, template=template)
+
 
 @unique
 class URLs(Enum):
@@ -164,7 +171,6 @@ class URLs(Enum):
     @property
     def absolute_template(self) -> Union[str, None]:
         return self.value.absolute_template
-
 
     # CMS API endpoints
     CMS_API_HEALTHCHECK = CMSApiUrl("healthcheck/")
@@ -1211,7 +1217,7 @@ class URLs(Enum):
 
     # Great Magna Pages
     # GREAT_MAGNA_LANDING = GreatMagnaUrl("https://great.dev.uktrade.digital/")
-    #GREAT_MAGNA_HOME = GreatMagnaUrl("https://great-magna.staging.uktrade.digital/")
+    # GREAT_MAGNA_HOME = GreatMagnaUrl("https://great-magna.staging.uktrade.digital/")
     GREAT_MAGNA_HOME = GreatMagnaUrl("https://magna-beta.great.uktrade.digital/")
     GREAT_MAGNA_START = GreatMagnaUrl("")
     GREAT_MAGNA_SIGNUP = GreatMagnaUrl("signup/", template="/signup/")
@@ -1279,6 +1285,8 @@ class URLs(Enum):
         "learn/categories/market-research/research-countries-and-choose-destination-markets/information-you-need-choose-target-country/")
     GREAT_MAGNA_LESSONS_CUSTOMER_DEMAND_VS_EASE_OF_ENTRY = GreatMagnaUrl(
         "learn/categories/market-research/research-countries-and-choose-destination-markets/plot-market-demand-against-ease-entry/")
+    GREAT_MAGNA_LESSONS_RESEARCH_FREE_TRADE_AGREEMENTS = GreatMagnaUrl(
+        "learn/categories/market-research/research-countries-and-choose-destination-markets/research-free-trade-agreements/")
 
     GREAT_MAGNA_LESSONS_PREPARE_TO_SELL_INTO_A_NEW_COUNTRY = GreatMagnaUrl(
         "learn/categories/prepare-sell-new-country/")
@@ -1339,6 +1347,10 @@ class URLs(Enum):
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-duties-and-taxes/")
     GREAT_MAGNA_LESSONS_UNDERSTAND_LOCAL_MARKET_REGULATIONS_FOR_PRODUCTS = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-local-market-regulations-products/")
+    GREAT_MAGNA_LESSONS_USING_COMMODITY_CODES = GreatMagnaUrl(
+        "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/using-commodity-codes/")
+    GREAT_MAGNA_LESSONS_APPLYING_RULES_OF_ORIGIN_TO_YOUR_PRODUCT = GreatMagnaUrl(
+        "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/applying-rules-of-origin-to-your-product/")
     GREAT_MAGNA_LESSONS_CHOOSE_WHICH_INCOTERMS_ARE_RIGHT_FOR_YOU = GreatMagnaUrl(
         "learn/categories/selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/incoterms/")
     GREAT_MAGNA_LESSONS_USING_FREIGHT_FORWARDERS = GreatMagnaUrl(

@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @business-risk-page
 @allure.suite:Great_Magna_Export_Plan_B_R
 

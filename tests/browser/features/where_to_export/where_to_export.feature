@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @where-to-export-page
 @allure.suite:Great_Magna_Export_Plan
 
@@ -555,19 +556,20 @@ Feature: GreatMagna - Where To Export Page
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Albania       | 1 |
       | Andorra     | 2 |
       | Austria   | 3 |
       | Albania      | 4 |
+      | India      | 4 |
       | Bosnia and herzegovina  | 5 |
       | Bulgaria       | 6 |
       | Croatia   | 7 |
       | Cyprus   | 8 |
       | Czechia     | 9 |
-      | Denmark       | 10 |
       | Czechia       | 10 |
+      | Denmark       | 10 |
 
  @allure.link:XOT-1035
    @Great_Magna_Export_Plan_WTE_Link

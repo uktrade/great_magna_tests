@@ -327,7 +327,6 @@ def fill_out_country_and_validate_ui(driver: WebDriver, country: str, display_ta
     if len(tab_button_elements) != display_tab_count:
         raise Exception("Invalid Tab count")
 
-
 def enter_country_details(driver: WebDriver, country_name: str, country_place_number: int = 1
                           , country_max: int = 10
                           , display_tab_count: int = 4):
@@ -338,17 +337,18 @@ def enter_country_details(driver: WebDriver, country_name: str, country_place_nu
     table_element = None
     try:
         # check if the country table already exists
-        table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
+        #table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
         # if table doesnt not exists then "add a place" button must exists
-        if table_element == None:
+        #if table_element == None:
+        if (country_place_number == 1):
             find_and_click(driver, element_selector_name="add a place")
     except Exception as e:
         table_element = None
         find_and_click(driver, element_selector_name="add a place")
 
-    logging.debug("table_element " + str(table_element))
+    #logging.debug("table_element " + str(table_element))
 
-    if (country_place_number == 1 and table_element == None):
+    if (country_place_number == 1):# and table_element == None):
         fill_out_country_and_validate_ui(driver, country_name, display_tab_count=display_tab_count)
         return
 
@@ -358,7 +358,7 @@ def enter_country_details(driver: WebDriver, country_name: str, country_place_nu
         button_text = add_place_num_btn_element.text
         user_entered_button_text = "Add place " + str(country_place_number) + " of " + str(country_max)
         if button_text != user_entered_button_text:
-            raise Exception("Invalid Add Place button index")
+            raise Exception("Invalid Add Place button index - " + str(button_text) + " vs "  +  str(user_entered_button_text))
 
         # if proper button index found, then click the button to add the country place name
         add_place_num_btn_element.click()

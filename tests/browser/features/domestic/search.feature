@@ -43,10 +43,10 @@ Feature: Domestic - Great site search
     When "Robert" decides to find out more about random "<type of>" result
 
     Then "Robert" should be on one of the "<expected>" pages
-
+  #type -Event
     Examples: event, market, service and opportunity
       | specific        | phrase     | type of            | expected                                                                          |
-      | Home            | Exhibition | Event              | Events - Event, Events - Registration                                             |
+      | Home            | Exhibition | Article              | Events - Event, Events - Registration                                             |
       | Markets listing | Food       | Online marketplace | Selling Online Overseas - Marketplace, Domestic - Markets - guide, Events - event |
 
     @bug

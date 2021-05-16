@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @sign-out-page
 @allure.suite:Great_Magna_Sign_Out
 Feature: GreatMagna - Sign out Page

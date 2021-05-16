@@ -1,4 +1,5 @@
- @getting-paid-page
+@Great_Magna_Tests
+@getting-paid-page
 @allure.suite:Great_Magna_Export_Plan_G_P
 Feature: GreatMagna - Getting Paid Page
 

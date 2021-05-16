@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @travel-plan-page
 @allure.suite:Great_Magna_Export_Plan_T_P
 

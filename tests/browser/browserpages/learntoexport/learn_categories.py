@@ -86,7 +86,6 @@ SubURLs = {
     "using-samples-prototypes-and-demos": URLs.GREAT_MAGNA_LESSONS_USING_SAMPLES_PROTOTYPES_AND_DEMOS.absolute_template,
     "how-handle-price-negotiations": URLs.GREAT_MAGNA_LESSONS_HOW_TO_HANDLE_PRICE_NEGOTIATIONS.absolute_template,
 
-
     # "selling-across-borders-product-and-services-regulations-licensing-and-logistics": URLs.GREAT_MAGNA_LESSONS_REGULATIONS_LICENSING_AND_LOGISTICS.absolute_template,
     "labelling-and-packaging": URLs.GREAT_MAGNA_LESSONS_HOW_TO_ADAPT_YOUR_LABELLING_AND_PACKAGING.absolute_template,
     "understand-duties-and-taxes": URLs.GREAT_MAGNA_LESSONS_UNDERSTAND_DUTIES_AND_TAXES.absolute_template,
@@ -105,6 +104,158 @@ SubURLs = {
     "payment-methods-exporters": URLs.GREAT_MAGNA_LESSONS_CHOOSE_THE_RIGHT_PAYMENT_METHOD.absolute_template,
     "managing-exchange-rates": URLs.GREAT_MAGNA_LESSONS_MANAGE_EXCHANGE_RATES.absolute_template,
 
+    # SubURLs = {
+    #
+    # "getting-started/introduction-learning/what-youll-find-each-lesson/": urljoin(URL,
+    #                                                                               "getting-started/introduction-learning/what-youll-find-each-lesson/"),
+    # "getting-started/lesson-basics/introduction-lessons-and-learning/": urljoin(URL,
+    #                                                                             "getting-started/lesson-basics/introduction-lessons-and-learning/"),
+    # "getting-started/new-topic-added/new-lesson-added/": urljoin(URL,
+    #                                                              "getting-started/new-topic-added/new-lesson-added/"),
+    # "getting-started/introduction-learning/how-lessons-can-help-you-make-export-plan/": urljoin(URL,
+    #                                                                                             "getting-started/introduction-learning/how-lessons-can-help-you-make-export-plan/"),
+    # "market-research/": urljoin(URL, "market-research/"),
+    # "market-research/evaluate-opportunities/opportunity-right-you/": urljoin(URL,
+    #                                                                          "market-research/evaluate-opportunities/opportunity-right-you/"),
+    # "market-research/evaluate-opportunities/move-accidental-exporting-strategic-exporting/": urljoin(URL,
+    #                                                                                                  "market-research/evaluate-opportunities/move-accidental-exporting-strategic-exporting/"),
+    # "market-research/market-research-approaches/-market-research/": urljoin(URL,
+    #                                                                         "market-research/market-research-approaches/-market-research/"),
+    # "market-research/market-research-approaches/online-research/": urljoin(URL,
+    #                                                                        "market-research/market-research-approaches/online-research/"),
+    # "market-research/calculate-customer-demand/quantifying-customer-demand-how-much-might-you-sell/": urljoin(URL,
+    #                                                                                                           "market-research/calculate-customer-demand/quantifying-customer-demand-how-much-might-you-sell/"),
+    # "market-research/calculate-customer-demand/understand-your-market-size-and-its-segments/": urljoin(URL,
+    #                                                                                                    "market-research/calculate-customer-demand/understand-your-market-size-and-its-segments/"),
+    # "market-research/competitor-analysis/understanding-competitor-market-share-and-pricing/": urljoin(URL,
+    #                                                                                                   "market-research/competitor-analysis/understanding-competitor-market-share-and-pricing/"),
+    # "market-research/research-countries-and-choose-destination-markets/research-current-market-conditions/": urljoin(
+    #     URL, "market-research/research-countries-and-choose-destination-markets/research-current-market-conditions/"),
+    # "market-research/research-countries-and-choose-destination-markets/how-assess-ease-entry-new-market/": urljoin(URL,
+    #                                                                                                                "market-research/research-countries-and-choose-destination-markets/how-assess-ease-entry-new-market/"),
+    # "market-research/research-countries-and-choose-destination-markets/local-infrastructure/": urljoin(URL,
+    #                                                                                                    "market-research/research-countries-and-choose-destination-markets/local-infrastructure/"),
+    # "market-research/research-countries-and-choose-destination-markets/understand-how-you-may-need-adapt-your-product-meet-international-standards/": urljoin(
+    #     URL,
+    #     "market-research/research-countries-and-choose-destination-markets/understand-how-you-may-need-adapt-your-product-meet-international-standards/"),
+    # "market-research/research-countries-and-choose-destination-markets/information-you-need-choose-target-country/": urljoin(
+    #     URL,
+    #     "market-research/research-countries-and-choose-destination-markets/information-you-need-choose-target-country/"),
+    # "market-research/research-countries-and-choose-destination-markets/plot-market-demand-against-ease-entry/": urljoin(
+    #     URL,
+    #     "market-research/research-countries-and-choose-destination-markets/plot-market-demand-against-ease-entry/"),
+    # "market-research/research-countries-and-choose-destination-markets/research-free-trade-agreements/": urljoin(URL,
+    #                                                                                                              "market-research/research-countries-and-choose-destination-markets/research-free-trade-agreements/"),
+    # "prepare-sell-new-country/": urljoin(URL, "prepare-sell-new-country/"),
+    # "prepare-sell-new-country/routes-to-market/choose-right-route-market/": urljoin(URL,
+    #                                                                                 "prepare-sell-new-country/routes-to-market/choose-right-route-market/"),
+    # "prepare-sell-new-country/routes-to-market/sell-direct-your-customer/": urljoin(URL,
+    #                                                                                 "prepare-sell-new-country/routes-to-market/sell-direct-your-customer/"),
+    # "prepare-sell-new-country/routes-to-market/international-e-commerce/": urljoin(URL,
+    #                                                                                "prepare-sell-new-country/routes-to-market/international-e-commerce/"),
+    # "prepare-sell-new-country/routes-to-market/set-joint-ventures-abroad/": urljoin(URL,
+    #                                                                                 "prepare-sell-new-country/routes-to-market/set-joint-ventures-abroad/"),
+    # "prepare-sell-new-country/routes-to-market/setting-franchise-abroad/": urljoin(URL,
+    #                                                                                "prepare-sell-new-country/routes-to-market/setting-franchise-abroad/"),
+    # "prepare-sell-new-country/routes-to-market/decide-whether-use-licensing/": urljoin(URL,
+    #                                                                                    "prepare-sell-new-country/routes-to-market/decide-whether-use-licensing/"),
+    # "prepare-sell-new-country/routes-to-market/how-set-business-abroad/": urljoin(URL,
+    #                                                                               "prepare-sell-new-country/routes-to-market/how-set-business-abroad/"),
+    # "prepare-sell-new-country/routes-to-market/when-use-agent-or-distributor/": urljoin(URL,
+    #                                                                                     "prepare-sell-new-country/routes-to-market/when-use-agent-or-distributor/"),
+    # "prepare-sell-new-country/different-ways-of-doing-business-across-borders/understand-local-business-culture-your-target-market/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/different-ways-of-doing-business-across-borders/understand-local-business-culture-your-target-market/"),
+    # "prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/understanding-product-liability/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/understanding-product-liability/"),
+    # "prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/protect-your-intellectual-property-abroad/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/manage-intellectual-property-and-legal-protection-risk/protect-your-intellectual-property-abroad/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-mission/": urljoin(URL,
+    #                                                                                                       "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-mission/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-attendee/": urljoin(URL,
+    #                                                                                                             "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-attendee/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-exhibitor/": urljoin(URL,
+    #                                                                                                              "prepare-sell-new-country/finding-customers-and-marketing-events/how-prepare-trade-show-exhibitor/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-online/how-adapt-your-website-international-audience/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/finding-customers-and-marketing-online/how-adapt-your-website-international-audience/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-online/understand-digital-marketing/": urljoin(URL,
+    #                                                                                                          "prepare-sell-new-country/finding-customers-and-marketing-online/understand-digital-marketing/"),
+    # "prepare-sell-new-country/finding-customers-and-marketing-online/using-online-marketplaces/": urljoin(URL,
+    #                                                                                                       "prepare-sell-new-country/finding-customers-and-marketing-online/using-online-marketplaces/"),
+    # "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-business-bribery-and-corruption/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-business-bribery-and-corruption/"),
+    # "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/operating-business-integrity/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/operating-business-integrity/"),
+    # "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-data-abroad/": urljoin(
+    #     URL,
+    #     "prepare-sell-new-country/managing-safety-corruption-and-business-integrity-risk/protect-your-data-abroad/"),
+    # "prepare-sell-new-country/winning-bids-and-expansion/pitching-and-tendering-in-a-new-market/": urljoin(URL,
+    #                                                                                                        "prepare-sell-new-country/winning-bids-and-expansion/pitching-and-tendering-in-a-new-market/"),
+    # "prepare-sell-new-country/winning-bids-and-expansion/how-draft-contract/": urljoin(URL,
+    #                                                                                    "prepare-sell-new-country/winning-bids-and-expansion/how-draft-contract/"),
+    # "prepare-sell-new-country/winning-bids-and-expansion/using-samples-prototypes-and-demos/": urljoin(URL,
+    #                                                                                                    "prepare-sell-new-country/winning-bids-and-expansion/using-samples-prototypes-and-demos/"),
+    # "prepare-sell-new-country/winning-bids-and-expansion/how-handle-price-negotiations/": urljoin(URL,
+    #                                                                                               "prepare-sell-new-country/winning-bids-and-expansion/how-handle-price-negotiations/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/": urljoin(URL,
+    #                                                                                             "selling-across-borders-product-and-services-regulations-licensing-and-logistics/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/labelling-and-packaging/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/labelling-and-packaging/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-duties-and-taxes/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-duties-and-taxes/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-local-market-regulations-products/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/understand-local-market-regulations-products/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/using-commodity-codes/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/using-commodity-codes/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/applying-rules-of-origin-to-your-product/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-goods-into-the-destination-country/applying-rules-of-origin-to-your-product/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/incoterms/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/incoterms/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/freight-forwarders/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/logistics-and-freight-forwarders/freight-forwarders/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/regulations-around-e-commerce/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/regulations-around-e-commerce/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-regulations-around-supplying-service/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-regulations-around-supplying-service/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-data-regulations-and-data-protection/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/understand-services-rules-and-regulations/understand-data-regulations-and-data-protection/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/how-make-uk-customs-declaration/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/how-make-uk-customs-declaration/"),
+    # "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/understand-export-licensing/": urljoin(
+    #     URL,
+    #     "selling-across-borders-product-and-services-regulations-licensing-and-logistics/get-your-good-out-uk/understand-export-licensing/"),
+    # "funding-financing-and-getting-paid/": urljoin(URL, "funding-financing-and-getting-paid/"),
+    # "funding-financing-and-getting-paid/manage-cash-flow/funding-and-credit-options-doing-business-across-borders/": urljoin(
+    #     URL,
+    #     "funding-financing-and-getting-paid/manage-cash-flow/funding-and-credit-options-doing-business-across-borders/"),
+    # "funding-financing-and-getting-paid/manage-cash-flow/how-avoid-cashflow-challenges-when-exporting/": urljoin(URL,
+    #                                                                                                              "funding-financing-and-getting-paid/manage-cash-flow/how-avoid-cashflow-challenges-when-exporting/"),
+    # "funding-financing-and-getting-paid/get-paid/insure-against-non-payment/": urljoin(URL,
+    #                                                                                    "funding-financing-and-getting-paid/get-paid/insure-against-non-payment/"),
+    # "funding-financing-and-getting-paid/get-paid/how-create-export-invoice/": urljoin(URL,
+    #                                                                                   "funding-financing-and-getting-paid/get-paid/how-create-export-invoice/"),
+    # "funding-financing-and-getting-paid/get-paid/decide-when-get-paid-export-orders/": urljoin(URL,
+    #                                                                                            "funding-financing-and-getting-paid/get-paid/decide-when-get-paid-export-orders/"),
+    # "funding-financing-and-getting-paid/get-paid/payment-methods-exporters/": urljoin(URL,
+    #                                                                                   "funding-financing-and-getting-paid/get-paid/payment-methods-exporters/"),
+    # "funding-financing-and-getting-paid/exchange-rates-and-moving-money/managing-exchange-rates/": urljoin(URL,
+    #                                                                                                        "funding-financing-and-getting-paid/exchange-rates-and-moving-money/managing-exchange-rates/"),
 
 }
 

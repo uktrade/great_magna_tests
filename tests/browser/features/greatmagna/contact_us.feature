@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @contact-us-page
 @allure.suite:Great_Magna_Contact-Us
 Feature: Contact Us Form

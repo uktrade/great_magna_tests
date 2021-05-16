@@ -144,7 +144,7 @@ def fill_out(driver: WebDriver, details: dict):
     check_radio(driver, form_selectors, details)
     tick_checkboxes(driver, form_selectors, details)
     pick_option(driver, form_selectors, details)
-    tick_captcha_checkbox(driver)
+    #tick_captcha_checkbox(driver)
 
 
 def submit(driver: WebDriver) -> Union[ModuleType, None]:

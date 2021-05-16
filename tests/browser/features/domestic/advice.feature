@@ -21,7 +21,7 @@ Feature: Domestic - Advice articles
       | Advice & Guidance tiles  |
       | Error reporting          |
       | Footer                   |
-      | Upskill now             |
+#      | Upskill now             |
 
 
   @allure.link:CMS-686
@@ -63,7 +63,7 @@ Feature: Domestic - Advice articles
       | Article         |
       | Error reporting |
       | Footer          |
-      | Upskill now     |
+#      | Upskill now     |
 
     Examples:
       | advice                                      |
@@ -73,11 +73,14 @@ Feature: Domestic - Advice articles
     Examples:
       | advice                                      |
       | Create an export plan                       |
-      | Choose a route to market                      |
+      | Find an export market                       |
+     | Choose a route to market                    |
       | Get export finance                          |
       | Manage payment for export orders            |
       | Prepare to do business in a foreign country |
-      | Manage legal and ethical compliance         |
+      | Prepare for export procedures and logistics  |
+      | Sell services overseas                      |
+      | Manage risk of bribery and corruption       |
 
     @bug
     @allure.issue:TT-2311
@@ -115,5 +118,5 @@ Feature: Domestic - Advice articles
     Examples:
       | breadcrumb   | target              |
       | great.gov.uk | Home                |
-      | Advice       | Advice Landing      |
-      | Article list | Advice article list |
+#      | Advice       | Advice Landing      |
+#      | Article list | Advice article list |

@@ -34,6 +34,9 @@ SELECTORS = {
         "cards": Selector(By.CSS_SELECTOR, "#-list-section div.card"),
         "articles": ARTICLE_LINKS,
         "article images": Selector(By.CSS_SELECTOR, "#-list-section .card-image"),
+    # "upskill now": {
+    #     "itseld": Selector(By.CSS_SELECTOR,"#content > div:nth-child(3) > div > div.cta-container > a"),
+    # }
     }
 }
 SELECTORS.update(common_selectors.DOMESTIC_HEADER)

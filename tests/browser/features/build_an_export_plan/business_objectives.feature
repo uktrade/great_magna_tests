@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @business-objectives-page
 @allure.suite:Great_Magna_Export_Plan_B_O
 Feature: GreatMagna - Business Objectives Page
@@ -58,20 +59,20 @@ Feature: GreatMagna - Business Objectives Page
           | 1    |
 
 
-#@allure.link:XOT-1054
-#   @Great_Magna_Export_Plan
-# Scenario:User should be able to click lessons "Move from accidental exporting to strategic exporting" and click back link "Business Objectives"
-#
-#    Given "Robert" visited "GreatMagna - Login" page
-#    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
-#    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   # #And "Robert" should be able to click on SkipWalkthrough
-#    Then "Robert" decides to click on "Build an export plan"
-#     And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "Build An Export Plan - Business Objectives"
-#     And "Robert" should be on the "LearnToExport - Move from accidental exporting to strategic exporting" page
-#     And "Robert" decides to click on section "Business Objectives" on page "LearnToExport - Move from accidental exporting to strategic exporting"
-#
+@allure.link:XOT-1054
+   @Great_Magna_Export_Plan
+ Scenario:User should be able to click lessons "Move from accidental exporting to strategic exporting" and click back link "Business Objectives"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+   # #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "Build An Export Plan - Business Objectives"
+     And "Robert" should be on the "LearnToExport - Move from accidental exporting to strategic exporting" page
+     And "Robert" decides to click on section "Business Objectives" on page "LearnToExport - Move from accidental exporting to strategic exporting"
+
 
 @allure.link:XOT-1055
    @Great_Magna_Export_Plan

@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @lessons-page-1
 @allure.suite:Great_Magna_Lessons
 Feature: GreatMagna - Lessons Page

@@ -1,4 +1,5 @@
- @costs-and-pricing-page
+@Great_Magna_Tests
+@costs-and-pricing-page
 @allure.suite:Great_Magna_Export_Plan_C_A_P
 Feature: GreatMagna - Costs And Pricing Page
 
