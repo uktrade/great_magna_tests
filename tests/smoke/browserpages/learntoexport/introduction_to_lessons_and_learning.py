@@ -57,7 +57,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//body/main[@id='content']/div[1]/a[1]/i[1]"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(
@@ -68,6 +68,9 @@ SELECTORS = {
         ),
         "view transcript": Selector(
             By.XPATH, "//span[contains(text(),'View transcript')]"
+        ),
+        "next module": Selector(
+            By.XPATH, "//*[@id=\"content\"]/div/div[3]/div[3]/div/div[2]/div/div[1]/p[3]"
         ),
 
     },

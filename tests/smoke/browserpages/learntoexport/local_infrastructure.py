@@ -37,7 +37,7 @@ from browserpages.common_actions import (
 NAME = "Local infrastructure"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_LOCAL_INFRASTRUCTURE.absolute
+URL = URLs.GREAT_MAGNA_LESSONS_RESEARCH_LOCAL_INFRASTRUCTURE.absolute
 PAGE_TITLE = "Local infrastructure"
 
 SELECTORS = {
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

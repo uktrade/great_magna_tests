@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @sign-up-page
 @allure.suite:Great_Magna_Sign_Up
 Feature: GreatMagna - Sign up Page
@@ -41,3 +42,22 @@ Feature: GreatMagna - Sign up Page
   Then "Robert" should be able to see error message "Invalid code" at element "Invalid code" when click "submit"
    |      emailaddress                 | password    |
      | santoshtesting10008+xxxx@gmail.com | Testing@123!|
+
+@allure.link:XOT-034
+  @Great-Magna-Sign-Up_1
+  Scenario: New User should be able to navigate to Export Plan with "Google login"
+
+  Given "Robert" visited "GreatMagna - Login" page
+  When "Robert" decides to click on "Sign in with Google"
+  And "Robert" decides to enter email address "santoshtesting10008+887@gmail.com"
+  Then "Robert" should be on the "GreatMagna - Dashboard" Page
+
+  @allure.link:XOT-035
+  @Great-Magna-Sign-Up_1
+  Scenario: New User should be able to navigate to Export Plan with "Google login"
+
+  Given "Robert" visited "GreatMagna - Login" page
+  When "Robert" decides to click on "Sign in with Google"
+  Then "Robert" decides to enter email address "santoshtesting10008+887@gmail.com"
+  And "Robert" click on email address to login
+  And "Robert" should be on the "GreatMagna - Dashboard" Page

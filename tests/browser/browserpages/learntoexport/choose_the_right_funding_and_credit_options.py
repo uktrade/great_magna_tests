@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study": Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(
@@ -68,6 +68,9 @@ SELECTORS = {
         ),
         "read time": Selector(
             By.XPATH, "//body/main/div/div[1]/div/div/div/div[2]/p/strong"
+        ),
+        "funding and credit": Selector(
+            By.XPATH, "//span[contains(text(),'Funding and credit')]"
         ),
 
     },

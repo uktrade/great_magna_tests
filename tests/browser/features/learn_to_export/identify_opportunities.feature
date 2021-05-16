@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @lessons-page
 @allure.suite:Great_Magna_Lessons
 Feature: GreatMagna - Lessons Page
@@ -11,7 +12,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #   And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   And "Robert" should be able to click on SkipWalkthrough
+#   #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #   And "Robert" decides to click on section "Is this opportunity right for you" on page "LearnToExport - Identify opportunities"
@@ -20,13 +21,13 @@ Feature: GreatMagna - Lessons Page
 #
 
 
-   @allure.link:XOT-111
+   @allure.link:XOT-112
    @Great-Magna-Lessons-progress-bar-test
  Scenario:User should be able to view Lesson page "Choosing the right export opportunities" and click continue and back to check the progress bar on lessons and module and lesson categories section
   Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
    And "Robert" should be on the "GreatMagna - Dashboard" Page
-   And "Robert" should be able to click on SkipWalkthrough
+   #And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
    Then "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
    And "Robert" decides to click on section "Choosing the right export opportunities" on page "LearnToExport - Identify opportunities"
@@ -36,7 +37,7 @@ Feature: GreatMagna - Lessons Page
    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Identify opportunities"
    And "Robert" should be able to see progress bar for section "Identify opportunities" on "LearnToExport - Learn Categories" page
 
-#      @allure.link:XOT-111
+#      @allure.link:XOT-113
 #      @beta
 #       @not-test
 #   @Great-Magna-Placeholder-lessons-test
@@ -44,7 +45,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #   And "Robert" should be on the "GreatMagna - Dashboard" Page
-#   And "Robert" should be able to click on SkipWalkthrough
+#   #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   Then "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
 #   And "Robert" decides to click on element "Placeholder lesson" on page "LearnToExport - Identify opportunities"

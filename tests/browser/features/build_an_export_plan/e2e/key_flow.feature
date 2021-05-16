@@ -18,18 +18,18 @@
 #  Examples: email address and password
 #     |      emailaddress                 | password    |
 #     | santoshtesting10008+xxxx@gmail.com | Testing@123!|
-#  And "Robert" should be able to click on SkipWalkthrough
+#  #And "Robert" should be able to click on SkipWalkthrough
 ##    Then "Robert" should be able to enter products "<products>" and country "<country>"
 ##        Examples: Products and Country
 ##         | products                 | country      |
 ##         | Vehicle                  | India      |
 #    Then "Robert" decides to click on "Learn to export"
 #     And "Robert" decides to click on section "Identify opportunities" on page "LearnToExport - Learn Categories"
-#    And "Robert" decides to click on section "Quantify customer demand" on page "LearnToExport - Identify opportunities"
-#    And "Robert" should be on the "LearnToExport - Quantify customer demand" page
+#    And "Robert" decides to click on section "Work out customer demand" on page "LearnToExport - Identify opportunities"
+#    And "Robert" should be on the "LearnToExport - Work out customer demand" page
 #    And "Robert" decides to watch "25" seconds of the promotional video
-#    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Quantify customer demand"
-#    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Quantify customer demand"
+#    And "Robert" decides to click checkbox Yes and click continue on "LearnToExport - Work out customer demand"
+#    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Work out customer demand"
 #    And "Robert" decides to click on section "Top Back" on page "LearnToExport - Identify opportunities"
 ##     And "Robert" should be able to click on Avatar
 ##     And "Robert" should be able to click on SignOut

@@ -45,13 +45,13 @@ SELECTORS = {
             By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[1]/div/a/div[2]/h3"
         ),
         "business objectives": Selector(
-            By.XPATH, "//body/main[@id='content']/section[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]/div[1]/img[1]"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(2) > div > a > div.p-t-s.p-b-xs.p-h-xs"
         ),
         "target markets research": Selector(
-            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[3]/div/a/div[2]/h3"
+            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[3]/div/a/div[2]"
         ),
-        "adaptation for your target market": Selector(
-            By.XPATH, "//h3[contains(text(),'Adaptation for your target market')]"
+        "Adapting Your Product": Selector(
+            By.XPATH, "//h3[contains(text(),'Adapting Your Product')]"
         ),
         "marketing approach": Selector(
             By.XPATH, "//h3[contains(text(),'Marketing approach')]"
@@ -60,20 +60,20 @@ SELECTORS = {
             By.XPATH, "//h3[contains(text(),'Costs and pricing')]"
         ),
         "funding and credit": Selector(
-            By.XPATH, "//h3[contains(text(),'Funding and Credit')]"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(7) > div > a > div.p-v-s.p-h-xs > h3"
         ),
         "getting paid": Selector(
             By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[8]/div/a"
         ),
         "travel plan": Selector(
-            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[9]/div/div/div[1]/img"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(9) > div > a > div.p-t-s.p-b-xs.p-h-xs"
         ),
         "business risk": Selector(
             By.CSS_SELECTOR,
             "#export-plan-dashboard > div:nth-child(10) > div > div > div.bg-blue-deep-20.section-list__image-container > img"
         ),
         "upload logo": Selector(
-            By.CSS_SELECTOR, "#add-image > h3"
+            By.XPATH, "//h3[contains(text(),'Upload your logo')]"
         ),
         "save your plan as pdf": Selector(
             By.XPATH, "//span[contains(text(),'Save your plan as a PDF')]"

@@ -54,7 +54,7 @@ SELECTORS = {
         "in market research": Selector(
             By.XPATH, "//span[contains(text(),'In-market research')]"
         ),
-        "quantify customer demand": Selector(
+        "Work out customer demand": Selector(
             By.XPATH, "//span[contains(text(),'Quantify customer demand – how much might you sell')]"
         ),
         "module_progress": Selector(
@@ -95,9 +95,6 @@ SELECTORS = {
         ),
         "ok button": Selector(
             By.XPATH, "//button[contains(text(),'Ok')]"
-        ),
-"ok button": Selector(
-            By.XPATH, "//*[@id=\"content\"]/div/div[3]/div[3]/div/div[2]/div/div[1]/p[3]/strong"
         ),
     }
 }

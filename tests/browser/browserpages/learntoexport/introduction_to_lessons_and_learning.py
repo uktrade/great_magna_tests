@@ -57,7 +57,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//body/main[@id='content']/div[1]/a[1]/i[1]"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

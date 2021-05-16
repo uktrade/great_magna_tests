@@ -23,6 +23,7 @@ CAPABILITIES_TEMPLATES = {
     "remote": {
         "common_capabilities": {
             "desktop": {
+                ""
                 "browserstack.debug": False,
                 "browserstack.selenium_version": "3.141.59",
                 "browserstack.timezone": "UTC",

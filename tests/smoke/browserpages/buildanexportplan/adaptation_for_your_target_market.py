@@ -33,14 +33,14 @@ from browserpages.common_actions import (
     fill_out_email_address
 )
 
-NAME = "Adaptation For Your Target Market"
+NAME = "Adapting Your Product"
 SERVICE = Service.BUILD_AN_EXPORT_PLAN
 TYPE = PageType.BUILD_AN_EXPORT_PLAN
 URL = URLs.GREAT_MAGNA_EXPORT_PLAN_ADAPTATION_FOR_YOUR_TARGET_MARKET.absolute
-PAGE_TITLE = "Adaptation For Your Target Market Page"
+PAGE_TITLE = "Adapting Your Product Page"
 
 SELECTORS = {
-    "adaptation for your target market": {
+    "Adapting Your Product": {
         "open data snapshot": Selector(
             By.CSS_SELECTOR, "#stats-for-target-market > div > button"
         ),
@@ -112,10 +112,10 @@ SELECTORS = {
         "add another document": Selector(
             By.XPATH, "//span[contains(text(),'Add another document')]"
         ),
-        "section complete": Selector(
-            By.XPATH, "//label[contains(text(),'Yes')]"
+        "yes checkbox": Selector(
+            By.CSS_SELECTOR, "#section-complete > div > label"
         ),
-        "marketing approach link": Selector(
+        "marketing approach": Selector(
             By.XPATH, "//*[@id=\"adaptation-for-your-target-market-content\"]/section[7]/div/div/div[2]/a/span"
         ),
         "export plan home": Selector(
@@ -129,6 +129,16 @@ SELECTORS = {
         ),
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
+        ),
+        "open navigation": Selector(
+            By.XPATH,
+            "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
+        ),
+        "nav marketing approach": Selector(
+            By.XPATH, "//a[contains(text(),'Marketing approach')]"
         ),
     }
 }
@@ -179,8 +189,9 @@ def enter_document_details(driver: WebDriver, position: str, document_name: str,
     time.sleep(2)
 
 
-def delete_all_document_details(driver: WebDriver, position: str):
+def delete_all_document_details(driver: WebDriver, position: str,del_button_position:str):
     document_div_element_xpath = "/html/body/main/div[2]/section[6]/div/div/div/form/div/div/div[5]/div" + "[" + position + "]"
     del_btn_ele_xpath = document_div_element_xpath + "/div[3]/button/i"
     driver.find_element_by_xpath(del_btn_ele_xpath).click()
     time.sleep(1)
+

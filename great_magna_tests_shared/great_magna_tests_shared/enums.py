@@ -100,8 +100,8 @@ class Account:
         elif BusinessType.ISD_AND_TRADE.value.lower() in self.description:
             self.business_type = BusinessType.ISD_AND_TRADE
         elif (
-                BusinessType.UNPUBLISHED_ISD_AND_PUBLISHED_TRADE.value.lower()
-                in self.description
+            BusinessType.UNPUBLISHED_ISD_AND_PUBLISHED_TRADE.value.lower()
+            in self.description
         ):
             self.business_type = BusinessType.UNPUBLISHED_ISD_AND_PUBLISHED_TRADE
         else:
@@ -131,7 +131,6 @@ class Service(Enum):
     FAS = "Find a Supplier"
     GENERIC = "Generic"
     GOVUK = "GOV.UK"
-    IMPORTTARIFF = "ImportTariff"
     GREATMAGNA = "GreatMagna"
     INTERNATIONAL = "International"
     INVEST = "Invest"
@@ -141,13 +140,11 @@ class Service(Enum):
     MADDB = "Market Access Database"
     PIR = "PIR"
     PROFILE = "Profile"
-    IMPORT_TARIFF_SERVICE_SEARCH = "Search"
     SOO = "Selling Online Overseas"
     SSO = "SSO"
     TWITTER = "Twitter"
     VISIT_BRITAIN = "Visit Britain"
     WHERE_TO_EXPORT = "WhereToExport"
-
     def __str__(self):
         return self.value
 
@@ -164,7 +161,6 @@ class PageType(Enum):
     DOMESTIC_CONTACT_US = "Domestic Contact us"
     ERROR = "error"
     EVENT = "event"
-    EXPORT = "export"
     FORM = "form"
     GUIDE = "guide"
     HOME = "home"

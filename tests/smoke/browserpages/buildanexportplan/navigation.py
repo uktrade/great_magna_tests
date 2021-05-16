@@ -54,8 +54,8 @@ SELECTORS = {
         "target market research": Selector(
             By.XPATH, "//a[contains(text(),'Target markets research')]"
         ),
-        "adaptation for your target market": Selector(
-            By.XPATH, "//a[contains(text(),'Adaptation for your target market')]"
+        "Adapting Your Product": Selector(
+            By.XPATH, "//a[contains(text(),'Adapting Your Product')]"
         ),
         "marketing approach": Selector(
             By.XPATH, "//a[contains(text(),'Marketing approach')]"

@@ -45,13 +45,13 @@ SELECTORS = {
             By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[1]/div/a/div[2]/h3"
         ),
         "business objectives": Selector(
-            By.XPATH, "//body/main[@id='content']/section[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]/div[1]/img[1]"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(2) > div > a > div.p-t-s.p-b-xs.p-h-xs"
         ),
         "target markets research": Selector(
-            By.XPATH, "//body/main[@id='content']/section[1]/div[1]/div[2]/div[2]/div[3]/div[1]/a[1]/div[2]"
+            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[3]/div/a/div[2]"
         ),
-        "adaptation for your target market": Selector(
-            By.XPATH, "//h3[contains(text(),'Adaptation for your target market')]"
+        "adapting your product": Selector(
+            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[4]/div/a/div[2]/h3"
         ),
         "marketing approach": Selector(
             By.XPATH, "//h3[contains(text(),'Marketing approach')]"
@@ -60,20 +60,20 @@ SELECTORS = {
             By.XPATH, "//h3[contains(text(),'Costs and pricing')]"
         ),
         "funding and credit": Selector(
-            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(7) > div > a > div.p-v-s.p-h-xs > h3"
+            By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(7) > div > a > div.p-t-s.p-b-xs.p-h-xs > p"
         ),
         "getting paid": Selector(
-            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[8]/div/a"
+            By.XPATH, "//h3[contains(text(),'Getting paid')]"
         ),
         "travel plan": Selector(
-            By.XPATH, "//*[@id=\"export-plan-dashboard\"]/div[9]/div/div/div[1]/img"
+            By.XPATH, "//h3[contains(text(),'Travel plan')]"
         ),
         "business risk": Selector(
-            By.CSS_SELECTOR,
-            "#export-plan-dashboard > div:nth-child(10) > div > div > div.bg-blue-deep-20.section-list__image-container > img"
+            By.XPATH,
+            "//h3[contains(text(),'Business risk')]"
         ),
         "upload logo": Selector(
-            By.CSS_SELECTOR, "#add-image > h3"
+            By.XPATH, "//h3[contains(text(),'Upload your logo')]"
         ),
         "save your plan as pdf": Selector(
             By.XPATH, "//span[contains(text(),'Save your plan as a PDF')]"
@@ -85,6 +85,9 @@ SELECTORS = {
         "back": Selector(
             By.CSS_SELECTOR,
             "body > div:nth-child(18) > div > div > div > div.modal-header.modal-header-bg.modal-header-bg--3.radius-top-s.bg-blue-deep-80.p-s > a"
+        ),
+        "dashboard": Selector(
+            By.XPATH, "//a[contains(text(),'Dashboard')]"
         ),
 
     }

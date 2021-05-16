@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @lessons-page
 @allure.suite:Great_Magna_Lessons
 Feature: GreatMagna - Lessons Page
@@ -25,7 +26,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    When "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Get Started" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Introduction to lessons and learning" on page "LearnToExport - Get Started"
@@ -39,7 +40,7 @@ Feature: GreatMagna - Lessons Page
 #  Given "Robert" visited "GreatMagna - Login" page
 #   When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
 #    And "Robert" should be on the "GreatMagna - Dashboard" Page
-#    And "Robert" should be able to click on SkipWalkthrough
+#    #And "Robert" should be able to click on SkipWalkthrough
 #   Then "Robert" decides to click on "Learn to export"
 #   And "Robert" decides to click on section "Get Started" on page "LearnToExport - Learn Categories"
 #    And "Robert" decides to click on section "Introduction to lessons and learning" on page "LearnToExport - Get Started"
@@ -48,13 +49,13 @@ Feature: GreatMagna - Lessons Page
    @allure.link:XOT-104
    @Great-Magna-Lessons
     @bug
- Scenario:User should be able to view Lesson page "What you'll find in each lesson" and click continue 40 times
+ Scenario:User should be able to view Lesson page "What youll find in each lesson" and click continue 40 times
 
   Given "Robert" visited "GreatMagna - Login" page
    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
    And "Robert" should be on the "GreatMagna - Dashboard" Page
-   And "Robert" should be able to click on SkipWalkthrough
+   #And "Robert" should be able to click on SkipWalkthrough
    Then "Robert" decides to click on "Learn to export"
    And "Robert" decides to click on section "Get Started" on page "LearnToExport - Learn Categories"
-   And "Robert" decides to click on section "What you'll find in each lesson" on page "LearnToExport - Get Started"
-   And "Robert" decides to click continue for maximum "30" times from page "LearnToExport - What you'll find in each lesson" until it reaches "managing-exchange-rates"
+   And "Robert" decides to click on section "What youll find in each lesson" on page "LearnToExport - Get Started"
+   And "Robert" decides to click continue for maximum "70" times from page "LearnToExport - What youll find in each lesson" until it reaches "managing-exchange-rates"

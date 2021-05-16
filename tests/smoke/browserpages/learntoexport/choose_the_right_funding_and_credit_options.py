@@ -49,12 +49,12 @@ SELECTORS = {
             By.XPATH, "//a[contains(text(),'Continue learning')]"
         ),
         "bottom back": Selector(
-            By.XPATH, "//body/main[@id='content']/div[1]/div[3]/a[1]/i[1]"
+            By.CSS_SELECTOR, "#content > div > div.bg-blue-deep-80 > a > i"
         ),
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(
@@ -65,6 +65,9 @@ SELECTORS = {
         ),
         "view transcript": Selector(
             By.XPATH, "//span[contains(text(),'View transcript')]"
+        ),
+        "read time": Selector(
+            By.XPATH, "//body/main/div/div[1]/div/div/div/div[2]/p/strong"
         ),
 
     },

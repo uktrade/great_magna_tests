@@ -41,7 +41,7 @@ URL = URLs.GREAT_MAGNA_LESSONS_PROTECT_YOUR_INTELLECTUAL_PROPERTY_ABROAD.absolut
 PAGE_TITLE = "Protect your intellectual property abroad"
 
 SELECTORS = {
-    "Protect your intellectual property abroad": {
+    "protect your intellectual property abroad": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

@@ -86,6 +86,9 @@ SELECTORS = {
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
+        ),
     }
 }
 

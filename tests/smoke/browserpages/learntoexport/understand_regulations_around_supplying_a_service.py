@@ -34,14 +34,14 @@ from browserpages.common_actions import (
 
 )
 
-NAME = "Understand regulations around supplying a service"
+NAME = "Regulations around supplying a service"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_UNDERSTAND_REGULATIONS_AROUND_SUPPLYING_A_SERVICE.absolute
-PAGE_TITLE = "Understand regulations around supplying a service"
+URL = URLs.GREAT_MAGNA_LESSONS_REGULATIONS_AROUND_SUPPLYING_A_SERVICE.absolute
+PAGE_TITLE = "Regulations around supplying a service"
 
 SELECTORS = {
-    "understand regulations around supplying a service": {
+    "Regulations around supplying a service": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

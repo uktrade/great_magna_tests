@@ -46,7 +46,7 @@ SELECTORS = {
             By.XPATH, "//a[contains(text(),'Continue learning')]"
         ),
         "bottom back": Selector(
-            By.XPATH, "//body/main[@id='content']/div[1]/div[3]/a[1]/i[1]"
+            By.XPATH, "//body/main[@id='content']/div[1]/div[2]/a[1]/i[1]"
         ),
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
@@ -54,7 +54,7 @@ SELECTORS = {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

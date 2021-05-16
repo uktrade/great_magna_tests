@@ -41,7 +41,7 @@ URL = URLs.GREAT_MAGNA_LESSONS_SETTING_UP_A_FRANCHISE_ABROAD.absolute
 PAGE_TITLE = "Setting up a franchise abroad"
 
 SELECTORS = {
-    "Setting up a franchise abroad": {
+    "setting up a franchise abroad": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

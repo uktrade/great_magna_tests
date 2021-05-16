@@ -37,11 +37,11 @@ from browserpages.common_actions import (
 NAME = "Understand product liability"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_INTRODUCTION_TO_LESSONS_AND_LEARNING.absolute
+URL = URLs.GREAT_MAGNA_LESSONS_UNDERSTAND_PRODUCT_LIABILITY.absolute
 PAGE_TITLE = "Understand product liability"
 
 SELECTORS = {
-    "Understand product liability": {
+    "understand product liability": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

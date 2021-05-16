@@ -37,7 +37,7 @@ from browserpages.common_actions import (
 NAME = "Sell with international e commerce"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_SELL_WITH_INTERNATIONAL_E_COMMERCE.absolute
+URL = URLs.GREAT_MAGNA_LESSONS_SELLING_WITH_INTERNATIONAL_E_COMMERCE.absolute
 PAGE_TITLE = "Sell with international e commerce"
 PROMO_VIDEO = Selector(By.CSS_SELECTOR,
                        "#content > div > div:nth-child(2) > div > div > div > div.c-1-2 > div.lesson-hero.media-section > video")
@@ -56,7 +56,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(

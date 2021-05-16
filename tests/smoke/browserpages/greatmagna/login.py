@@ -49,7 +49,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#login > form > a"  # //a[contains(text(),'Forgotten password?')]
         ),
         "emailaddress": Selector(
-            By.XPATH, "//input[@id='email']", type=ElementType.INPUT
+            By.CSS_SELECTOR, "#email", type=ElementType.INPUT
         ),
         "password": Selector(
             By.XPATH, "//input[@id='password']", type=ElementType.INPUT
@@ -86,6 +86,7 @@ def login(driver: WebDriver, email_address: str, password: str):
     fill_out_email_address(driver, details_dict)
 
 
+
 def find_and_click_change_link(driver: WebDriver, element_selector_name: str):
     change_link = find_element(
         driver, find_selector_by_name(SELECTORS, element_selector_name)
@@ -100,6 +101,7 @@ def fill_out_email_address(driver: WebDriver, details: dict):
     fill_out_input_fields(driver, email_address_selectors, details)
     fill_input_list = find_element(driver, find_selector_by_name(SELECTORS, "login button"))
     fill_input_list.click()
+    driver.implicitly_wait(000)
 
 
 def should_be_error_message(driver: WebDriver, element_name: str, expected_error_message: str):

@@ -45,8 +45,8 @@ SELECTORS = {
         "choose the right route to market": Selector(
             By.XPATH, "//span[contains(text(),'Choose the right route to market')]"
         ),
-        "sell direct to your customer": Selector(
-            By.CSS_SELECTOR, "#\37 3 > ul > li:nth-child(2) > a > span"
+        "Selling direct to your customer": Selector(
+            By.XPATH, "//span[contains(text(),'Selling direct to your customer')]"
         ),
         "sell with international e commerce": Selector(
             By.XPATH, "//span[contains(text(),'Selling with international e-commerce')]"
@@ -109,10 +109,10 @@ SELECTORS = {
             By.XPATH, "//span[contains(text(),'Protect your data abroad')]"
         ),
         "placeholder lesson": Selector(
-            By.XPATH, "//*[@id=\"89\"]/ul/li[1]/a/span"
+            By.XPATH, "//body/main/div/section[2]/ol/li[5]/div/ul/li[1]/a/span"
         ),
         "back" : Selector(
-            By.XPATH, "//body/div[6]/div/div/div/div[1]/a"
+            By.XPATH, "//body/div[7]/div/div/div/div[1]/a"
         ),
         "ok button": Selector(
             By.XPATH, "//button[contains(text(),'Ok')]"

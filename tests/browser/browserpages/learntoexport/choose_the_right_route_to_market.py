@@ -57,7 +57,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "case study": Selector(
+        "open case study" :Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(
@@ -105,7 +105,7 @@ def open(driver: WebDriver, group: str, element: str):
 
 def play_video(driver: WebDriver, *, play_time: int = 5):
     # open(driver, group="what's new", element="watch video")
-    video_load_delay = 2
+    video_load_delay = 5
     play_js = f'document.querySelector("{PROMO_VIDEO.value}").play()'
     pause = f'document.querySelector("{PROMO_VIDEO.value}").pause()'
     driver.execute_script(play_js)

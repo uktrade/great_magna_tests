@@ -89,6 +89,15 @@ SELECTORS = {
         "add a target market": Selector(
             By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
+        "avoid cashflow challenges when exporting": Selector(
+            By.XPATH, "//h4[contains(text(),'Avoid cashflow challenges when exporting')]"
+        ),
+        "choose the right funding": Selector(
+            By.XPATH, "//h4[contains(text(),'Choose the right funding and credit options')]"
+        ),
+        "top export plan home": Selector(
+            By.XPATH, "//*[@id=\"business-risk-content\"]/section[1]/div/div/div[2]/a/span"
+        ),
     }
 }
 

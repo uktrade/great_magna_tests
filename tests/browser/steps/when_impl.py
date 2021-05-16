@@ -19,14 +19,26 @@ from selenium.common.exceptions import (
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
+from great_magna_tests_shared.gov_notify import (
+    get_email_verification_code,
+    get_verification_link,
+
+)
 from great_magna_tests_shared.utils import check_for_errors
 from browserpages import (
-    search,
+    # search,
+    common_language_selector,
     get_page_object,
     greatmagna,
     learntoexport,
+    soo,
+    profile,
+    sso,
 )
+from browserpages import (
+    domestic,
 
+)
 from browserpages.common_actions import (
     accept_all_cookies,
     add_actor,
@@ -40,6 +52,7 @@ from browserpages.common_actions import (
     get_full_page_name,
     get_last_visited_page,
     go_to_url,
+    revisit_page_on_access_denied,
     scroll_to,
     selenium_action,
     take_screenshot,
@@ -49,9 +62,11 @@ from browserpages.common_actions import (
     update_actor,
     update_actor_forms_data,
     wait_for_page_load_after_action,
-
+    revisit_page_on_access_denied,
 )
+
 from steps import has_action
+from browserutils.cms_api import get_news_articles
 from browserutils.gtm import get_gtm_event_definitions, trigger_js_event
 
 NUMBERS = {
@@ -166,6 +181,14 @@ def generic_accept_all_cookies(context: Context, actor_alias: str):
     driver = context.driver
     accept_all_cookies(driver)
     logging.debug(f"{actor_alias} accepted all cookies on {driver.current_url}")
+
+
+def articles_open_any(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "open_any_article")
+    article_name = page.open_any_article(context.driver)
+    update_actor(context, actor_alias, visited_articles=article_name)
+    logging.info(f"{actor_alias} opened article: {article_name}")
 
 
 def click_on_page_element(
@@ -574,6 +597,7 @@ def actor_decides_to_enter_email_address_and_click_login(
     email_address = str(email_address).strip()  # trimming
     password = str(password).strip()  # trimming
     page.login(context.driver, email_address=email_address, password=password)
+    time.sleep(2)
 
 
 def actor_decides_to_enter_email_address_and_click_sign_up(
@@ -644,8 +668,505 @@ def generic_submit_form(context: Context, actor_alias: str):
     has_action(page, "submit")
     page.submit(context.driver)
 
+
 def actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(
         context, actor_alias):
     page = get_last_visited_page(context, actor_alias)
     has_action(page, "click_on_i_have_exported_in_the_last_12_months")
     page.click_on_i_have_exported_in_the_last_12_months(context.driver)
+
+
+def domestic_open_random_advice_article(context: Context, actor_alias: str):
+    if not get_actor(context, actor_alias):
+        add_actor(context, unauthenticated_actor(actor_alias))
+    driver = context.driver
+    domestic.advice_landing.visit(driver)
+    take_screenshot(driver, domestic.advice_landing.NAME)
+    check_for_errors(driver.page_source, driver.current_url)
+    advice_name = domestic.advice_landing.open_any_article(driver)
+    article_name = domestic.advice_article_list.open_any_article(driver)
+    domestic.advice_article.should_be_here(driver)
+    update_actor(
+        context,
+        actor_alias,
+        visited_page=domestic.advice_article,
+        article_url=driver.current_url,
+        article_category=advice_name,
+        visited_articles=article_name,
+    )
+
+
+def generic_report_problem_with_page(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "report_problem")
+    page.report_problem(context.driver)
+
+
+def generic_click_on_random_marketplace(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "open_random_marketplace")
+    page.open_random_marketplace(context.driver)
+
+
+def domestic_open_random_market(context: Context, actor_alias: str):
+    if not get_actor(context, actor_alias):
+        add_actor(context, unauthenticated_actor(actor_alias))
+    driver = context.driver
+    domestic.markets_listing.visit(driver)
+    take_screenshot(driver, domestic.markets_listing.NAME)
+    check_for_errors(driver.page_source, driver.current_url)
+    market_name = domestic.markets_listing.open_random_marketplace(driver)
+    domestic.market_country_guide.should_be_here(driver)
+    update_actor(
+        context,
+        actor_alias,
+        visited_page=domestic.market_country_guide,
+        article_url=driver.current_url,
+        visited_articles=market_name,
+    )
+
+
+def generic_click_on_random_element(
+        context: Context, actor_alias: str, elements_name: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    selector = find_selector_by_name(page.SELECTORS, elements_name)
+    elements = find_elements(context.driver, selector)
+    element = random.choice(elements)
+    href = f" → {element.get_attribute('href')}" if element.tag_name == "a" else ""
+    logging.debug(f"Will click on: '{element.text.strip()}'{href}")
+    scroll_to(context.driver, element)
+    with wait_for_page_load_after_action(context.driver, timeout=10):
+        with try_alternative_click_on_exception(context.driver, element):
+            element.click()
+
+
+def generic_open_any_tag(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "open_any_tag")
+    tag = page.open_any_tag(context.driver)
+    update_actor(context, actor_alias, last_tag=tag)
+
+
+def generic_download_all_pdfs(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "download_all_pdfs")
+    context.pdfs = page.download_all_pdfs(context.driver)
+
+
+def generic_visit_current_page_with_lang_parameter(
+        context: Context, actor_alias: str, preferred_language: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    url = urljoin(page.URL, f"?lang={preferred_language}")
+    context.driver.get(url)
+
+
+def generic_open_news_article(context: Context, actor_alias: str, ordinal_number: str):
+    ordinals = {"first": 1, "second": 2, "third": 3}
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "open_news_article")
+    page.open_news_article(context.driver, ordinals[ordinal_number.lower()])
+
+
+def generic_click_on_random_industry(context: Context, actor_alias: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "open_any_article")
+    page.open_any_article(context.driver)
+
+
+def domestic_submit_soo_contact_us_form(
+        context: Context, actor_alias: str, custom_details_table: Table
+):
+    generic_fill_out_and_submit_form(
+        context, actor_alias, custom_details_table=custom_details_table
+    )
+    domestic.contact_us_soo_3_about_your_products.should_be_here(context.driver)
+
+    generic_fill_out_and_submit_form(context, actor_alias)
+    domestic.contact_us_soo_4_your_experience.should_be_here(context.driver)
+
+    generic_fill_out_and_submit_form(context, actor_alias)
+    domestic.contact_us_soo_1_contact_details.should_be_here(context.driver)
+
+    generic_fill_out_and_submit_form(context, actor_alias)
+    domestic.contact_us_soo_5_thank_you.should_be_here(context.driver)
+
+
+def generic_pick_random_radio_option_and_submit(
+        context: Context, actor_alias: str, ignored: str
+):
+    ignored = [item.strip().lower() for item in ignored.split(",")]
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "pick_random_radio_option_and_submit")
+    new_page = page.pick_random_radio_option_and_submit(context.driver, ignored)
+    update_actor(context, actor_alias, visited_page=new_page)
+
+
+def soo_look_for_marketplace(
+        context: Context, actor_alias: str, country: str, category: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "search")
+    page.search(context.driver, country, category)
+
+
+def generic_search_for_phrase(context: Context, actor_alias: str, phrase: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "search")
+    page.search(context.driver, phrase)
+
+
+def contact_us_navigate_through_options(context: Context, actor_alias: str, via: str):
+    intermediate = [name.strip() for name in via.split("->")]
+    # 1) start at the Contact us "choose location" page
+    visit_page(context, actor_alias, "Domestic - Contact us")
+    # 2) click through every listed option
+    for option in intermediate:
+        generic_pick_radio_option_and_submit(context, actor_alias, option)
+
+
+def domestic_find_more_about_search_result_type(
+        context: Context, actor_alias: str, type_of: str
+):
+    should_be_on_page(context, actor_alias, get_full_page_name(domestic.search_results))
+    domestic.search_results.click_on_result_of_type(context.driver, type_of)
+
+
+def generic_trigger_all_gtm_events(
+        context: Context, actor_alias: str, tagging_package: str, *, event_group: str = None
+):
+    events = get_gtm_event_definitions(
+        context.driver, tagging_package, event_group=event_group
+    )
+    assert events, f"No GTM events were found on {context.driver.current_url}"
+    for event_group, events in events.items():
+        for event in events:
+            trigger_js_event(context.driver, event)
+    logging.debug(f"{actor_alias} triggered all events for GTM event handlers")
+
+
+def generic_unfold_elements_in_section(
+        context: Context, actor_alias: str, section_name: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "unfold_elements_in_section")
+    page.unfold_elements_in_section(context.driver, section_name)
+
+
+def registration_should_get_verification_email(context: Context, actor_alias: str):
+    """Will check if the Exporter received an email verification message."""
+    logging.debug("Searching for an email verification message...")
+    actor = get_actor(context, actor_alias)
+    link = get_verification_link(actor.email)
+    update_actor(context, actor_alias, email_confirmation_link=link)
+
+
+def registration_open_email_confirmation_link(context: Context, actor_alias: str):
+    """Given Supplier has received a message with email confirmation link
+    Then Supplier has to click on that link.
+    """
+    actor = get_actor(context, actor_alias)
+    link = actor.email_confirmation_link
+
+    # Step 1 - open confirmation link
+    context.driver.get(link)
+
+    # Step 3 - confirm that Supplier is on SSO Confirm Your Email page
+    sso.confirm_your_email.should_be_here(context.driver)
+    logging.debug("Supplier is on the SSO Confirm your email address page")
+
+
+def registration_submit_form_and_verify_account(
+        context: Context, actor_alias: str, *, fake_verification: bool = True
+):
+    actor = get_actor(context, actor_alias)
+
+    generic_fill_out_and_submit_form(
+        context, actor_alias, custom_details_table=context.table
+    )
+
+    if fake_verification:
+        sso.common.verify_account(actor.email)
+    else:
+        registration_should_get_verification_email(context, actor_alias)
+        registration_open_email_confirmation_link(context, actor_alias)
+        sso.confirm_your_email.submit(context.driver)
+    update_actor(context, actor_alias, registered=True)
+
+
+def sign_out(context: Context, actor_alias: str):
+    domestic.actions.go_to_sign_out(context.driver)
+    sso.sign_out.submit(context.driver)
+    logging.debug("%s signed out", actor_alias)
+
+
+def sign_in(context: Context, actor_alias: str):
+    actor = get_actor(context, actor_alias)
+    email = actor.email
+    password = actor.password
+    sso.sign_in.visit(context.driver)
+    take_screenshot(context.driver, sso.sign_in.NAME)
+    sso.sign_in.should_be_here(context.driver)
+    sso.sign_in.fill_out(context.driver, email, password)
+    sso.sign_in.submit(context.driver)
+    take_screenshot(context.driver, "after signing in")
+    check_for_errors(context.driver.page_source, context.driver.current_url)
+
+
+def office_finder_find_trade_office(context: Context, actor_alias: str, post_code: str):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "find_trade_office")
+    page.find_trade_office(context.driver, post_code)
+
+
+def click_on_header_menu_button(context: Context):
+    try:
+        button = context.driver.find_element(by=By.ID, value="js-mobile-button")
+    except NoSuchElementException:
+        button = context.driver.find_element(by=By.ID, value="mobile-menu-button")
+    with selenium_action(context.driver, "click on header menu button"):
+        button.click()
+
+
+def generic_select_dropdown_option(
+        context: Context, actor_alias: str, dropdown: str, option: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "select_dropdown_option")
+    page.select_dropdown_option(context.driver, dropdown, option)
+
+
+def language_selector_open(
+        context: Context, actor_alias: str, *, with_keyboard: bool = False
+):
+    logging.debug("%s decided to go open language selector", actor_alias)
+    page = get_last_visited_page(context, actor_alias)
+    common_language_selector.open(
+        context.driver, page=page, with_keyboard=with_keyboard
+    )
+
+
+def domestic_search_for_phrase_on_page(
+        context: Context, actor_alias: str, phrase: str, page_name: str
+):
+    visit_page(context, actor_alias, page_name)
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "search")
+    page.search(context.driver, phrase)
+
+
+def domestic_search_result_has_more_than_one_page(
+        context: Context, actor_alias: str, min_page_num: int
+):
+    should_be_on_page(
+        context,
+        actor_alias,
+        f"{domestic.search_results.SERVICE} - {domestic.search_results.NAME}",
+    )
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "has_pagination")
+    page.has_pagination(context.driver, min_page_num)
+
+
+def domestic_search_finder_should_see_page_number(
+        context: Context, actor_alias: str, page_num: int
+):
+    should_be_on_page(
+        context,
+        actor_alias,
+        f"{domestic.search_results.SERVICE} - {domestic.search_results.NAME}",
+    )
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "should_see_page_number")
+    page.should_see_page_number(context.driver, page_num)
+
+
+def contact_us_get_to_page_via(
+        context: Context,
+        actor_alias: str,
+        final_page: str,
+        via: str,
+        *,
+        start_page: str = None,
+):
+    start_page = start_page or "Domestic - Contact us"
+    intermediate = [name.strip() for name in via.split("->")]
+    # 1) start at the Contact us "choose location" page
+    visit_page(context, actor_alias, start_page)
+    # 2) click through every listed option
+    for option in intermediate:
+        generic_pick_radio_option_and_submit(context, actor_alias, option)
+    # 3) check if we're on the appropriate page
+    should_be_on_page(context, actor_alias, final_page)
+
+
+def generic_pick_radio_option_and_submit(
+        context: Context, actor_alias: str, option: str
+):
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "pick_radio_option_and_submit")
+    new_page = page.pick_radio_option_and_submit(context.driver, option)
+    update_actor(context, actor_alias, visited_page=new_page)
+
+
+def articles_share_on_social_media(
+        context: Context, actor_alias: str, social_media: str
+):
+    avoid_browser_stack_idle_timeout_exception(context.driver)
+    context.article_url = context.driver.current_url
+    if social_media.lower() == "email":
+        domestic.advice_article.check_if_link_opens_email_client(context.driver)
+    else:
+        domestic.advice_article.check_if_link_opens_new_tab(
+            context.driver, social_media
+        )
+        if not social_media.lower() == "linkedin":
+            domestic.advice_article.share_via(context.driver, social_media)
+    logging.debug(
+        "%s successfully got to the share article on '%s'", actor_alias, social_media
+    )
+
+
+def actor_should_be_able_to_enter_products_and_country(context, products, country):
+    page = get_page_object("GreatMagna - Dashboard")
+    has_action(page, "fill_out_products_and_country")
+    page.fill_out_products_and_country(context.driver, products, country)
+
+
+def soo_find_and_open_random_marketplace(
+        context: Context, actor_alias: str, country: str, category: str
+):
+    soo_look_for_marketplaces_from_home_page(context, actor_alias, country, category)
+    generic_click_on_random_marketplace(context, actor_alias)
+    should_be_on_page(
+        context, actor_alias, f"{soo.marketplace.SERVICE} - {soo.marketplace.NAME}"
+    )
+
+
+def soo_look_for_marketplaces_from_home_page(
+        context: Context, actor_alias: str, country: str, category: str
+):
+    visit_page(context, actor_alias, f"{soo.home.SERVICE} - {soo.home.NAME}")
+    soo_look_for_marketplace(context, actor_alias, country, category)
+    should_be_on_page(
+        context,
+        actor_alias,
+        f"{soo.search_results.SERVICE} - {soo.search_results.NAME}",
+    )
+
+
+def generic_create_great_account(
+        context: Context, actor_alias: str, business_type: str
+):
+    page_name = f"Profile - Enter your email address and set a password ({business_type})"  # noqa
+
+    visit_page(context, actor_alias, page_name)
+    generic_fill_out_and_submit_form(context, actor_alias)
+    should_be_on_page(
+        context,
+        actor_alias,
+        f"Profile - Enter your confirmation code ({business_type})",
+    )
+
+    generic_get_verification_code(context, actor_alias)
+    generic_fill_out_and_submit_form(context, actor_alias)
+
+    if business_type == "LTD, PLC or Royal Charter":
+        should_be_on_page(
+            context,
+            actor_alias,
+            f"Profile - Enter your business details ({business_type})",
+        )
+        generic_fill_out_and_submit_form(
+            context, actor_alias, retry_on_errors=True, go_back=True
+        )
+        should_be_on_page(
+            context,
+            actor_alias,
+            f"Profile - Enter your business details [step 2] ({business_type})",
+        )
+        generic_fill_out_and_submit_form(context, actor_alias)
+        should_be_on_page(
+            context, actor_alias, f"Profile - Enter your details ({business_type})"
+        )
+        generic_fill_out_and_submit_form(context, actor_alias)
+    elif business_type == "Sole trader or other type of business":
+        should_be_on_page(
+            context,
+            actor_alias,
+            f"Profile - Enter your business details ({business_type})",
+        )
+        generic_fill_out_and_submit_form(
+            context, actor_alias, retry_on_errors=False, go_back=False
+        )
+        should_be_on_page(
+            context, actor_alias, f"Profile - Enter your details ({business_type})"
+        )
+        generic_fill_out_and_submit_form(context, actor_alias)
+    elif business_type == "UK taxpayer":
+        should_be_on_page(
+            context, actor_alias, f"Profile - Enter your details ({business_type})"
+        )
+        generic_fill_out_and_submit_form(context, actor_alias)
+
+    should_be_on_page(
+        context, actor_alias, f"Profile - Account created ({business_type})"
+    )
+
+
+def generic_at_least_n_news_articles(
+        context: Context, n: int, visitor_type: str, service: str
+):
+    context.articles = get_news_articles(service, visitor_type)
+    error = (
+        f"Expected to find at least {n} news articles on {service} but "
+        f"got {len(context.articles)}"
+    )
+    assert len(context.articles) >= n, error
+
+
+def sso_actor_received_email_confirmation_code(
+        context: Context, actor_alias: str, business_type: str
+):
+    page_name = (
+        f"Profile - Enter your email address and set a password ({business_type})"
+    )
+    visit_page(context, actor_alias, page_name)
+    generic_fill_out_and_submit_form(context, actor_alias)
+    end_page_name = f"Profile - Enter your confirmation code ({business_type})"
+    should_be_on_page(context, actor_alias, end_page_name)
+    generic_get_verification_code(context, actor_alias)
+
+
+def generic_get_verification_code(
+        context: Context, actor_alias: str, *, resent_code: bool = False
+):
+    """Will check if the Exporter received an email verification message."""
+    logging.debug("Searching for an email verification message...")
+    actor = get_actor(context, actor_alias)
+    code = get_email_verification_code(actor.email, resent_code=resent_code)
+    update_actor(context, actor_alias, email_confirmation_code=code)
+
+
+def registration_create_and_verify_account(
+        context: Context, actor_alias: str, *, fake_verification: bool = True
+):
+    visit_page(context, actor_alias, "SSO - Registration")
+    registration_submit_form_and_verify_account(
+        context, actor_alias, fake_verification=fake_verification
+    )
+
+
+def profile_start_registration_as(
+        context: Context, actor_alias: str, business_type: str
+):
+    if not get_actor(context, actor_alias):
+        add_actor(context, unauthenticated_actor(actor_alias))
+    profile.enrol_select_business_type.visit(context.driver)
+    second_page = profile.enrol_select_business_type.pick_radio_option_and_submit(
+        context.driver, name=business_type
+    )
+    should_be_on_page(
+        context, actor_alias, f"{second_page.SERVICE} - {second_page.NAME}"
+    )

@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @login-page
 @allure.suite:Great_Magna_Login
 Feature: GreatMagna - Login Page
@@ -7,7 +8,7 @@ Feature: GreatMagna - Login Page
    @allure.link:XOT-001
    @Great-Magna-Login
      @failure
-Scenario Outline:Visitor should be able to login with email address and password
+  Scenario Outline:Visitor should be able to login with email address and password
 
   Given "Robert" visited "GreatMagna - Login" page
   When "Robert" decides to enter email address "<email address>", password "<password>" and click Login
@@ -18,7 +19,7 @@ Scenario Outline:Visitor should be able to login with email address and password
 
    @allure.link:XOT-002
    @Great-Magna-Login
-Scenario Outline:Visitor should be able to see error message with invalid email address and password
+  Scenario Outline:Visitor should be able to see error message with invalid email address and password
   Given "Robert" visited "GreatMagna - Login" page
   When "Robert" decides to enter email address "<email address>", password "<password>" and click Login
   Then "Robert" should be on the "GreatMagna - Login" Page
@@ -41,7 +42,7 @@ Scenario Outline:Visitor should be able to see error message with invalid email 
       | Testing@123! |
 
  @allure.link:XOT-004
-   @Great-Magna-Login
+ @Great-Magna-Login
      Scenario Outline:Visitor should be able to see error message with empty password
   Given "Robert" visited "GreatMagna - Login" page
   When "Robert" decides to enter email address "<email address>", password " " and click Login
