@@ -454,6 +454,13 @@ jobs:
           path: ./tests/browser/reports/
           destination: behave_logs
 
+
+    setup_env_for_periodic_tasks: &setup_env_for_periodic_tasks
+      working_directory: ~/directory-tests
+      <<: [
+      *machine_python3_clean,
+      *steps_setup_env_for_periodic_tasks,
+      ]
   refresh_geckoboard:
     working_directory: ~/great_magna_tests
     <<: [
