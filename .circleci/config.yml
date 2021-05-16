@@ -338,12 +338,12 @@ steps_setup_env_for_periodic_tasks: &steps_setup_env_for_periodic_tasks
     - *step_install_requirements_for_periodic_tasks
     - *step_cache_periodic_tasks_requirements
 
-setup_env_for_periodic_tasks: &setup_env_for_periodic_tasks
-  working_directory: ~/great_magna_tests
-  <<: [
-  *machine_python3_clean,
-  *steps_setup_env_for_periodic_tasks,
-  ]
+  setup_env_for_periodic_tasks: &setup_env_for_periodic_tasks
+    working_directory: ~/great_magna_tests
+    <<: [
+    *machine_python3_clean,
+    *steps_setup_env_for_periodic_tasks,
+    ]
 
 jobs:
 
