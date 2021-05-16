@@ -371,26 +371,13 @@ steps_run_parallel_browser_tests: &steps_run_parallel_browser_tests
     - persist_to_workspace:
         root: .
         paths:
-          - .
 
-steps_geckoboard_updater: &steps_geckoboard_updater
+steps_run_load_tests: &steps_run_load_tests
   steps:
-    - *step_restore_cached_periodic_tasks_requirements
-    - *step_run_geckoboard_updater
-
-  setup_env_for_load_tests:
-    working_directory: ~/great_magna_tests
-    <<: [
-      *machine_python3_node,
-      *steps_setup_env_for_load_tests,
-    ]
-
-  setup_env_for_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna_tests
-    <<: [
-      *machine_python3_node_browsers,
-      *steps_setup_env_for_parallel_browser_tests_using_circleci,
-    ]
+  - *step_restore_cached_load_tests_requirements
+  - *step_run_load_tests
+  - store_artifacts:
+      path: ./reports
 
 step_restore_cached_periodic_tasks_requirements: &step_restore_cached_periodic_tasks_requirements
   restore_cache:
@@ -402,6 +389,10 @@ steps_setup_env_for_periodic_tasks: &steps_setup_env_for_periodic_tasks
     - *step_install_requirements_for_periodic_tasks
     - *step_cache_periodic_tasks_requirements
 
+steps_geckoboard_updater: &steps_geckoboard_updater
+  steps:
+    - *step_restore_cached_periodic_tasks_requirements
+    - *step_run_geckoboard_updater
 
 jobs:
   setup_env_for_load_tests:
