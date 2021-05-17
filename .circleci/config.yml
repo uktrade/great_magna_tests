@@ -128,20 +128,20 @@ step_prepare_list_of_scenarios_to_run_by_parallel_browser_tests: &step_prepare_l
           export BROWSER="firefox";
       fi
       cd tests/browser
-#      PYTHONPATH=. behave \
-#        --dry-run \
-#        --no-source \
-#        --no-summary \
-#        --no-snippets \
-#        --no-skipped \
-#        --tags=~@wip \
-#        --tags=~@fixme \
-#        --tags=~@skip \
-#        --tags=~@eu-exit \
-#        ${TAGS} \
-#        --format=mini \
-#        features/ \
-#        | grep -v "Supplied path\|Trying base " > scenario_titles.txt
+      PYTHONPATH=. behave \
+        --dry-run \
+        --no-source \
+        --no-summary \
+        --no-snippets \
+        --no-skipped \
+        --tags=~@wip \
+        --tags=~@fixme \
+        --tags=~@skip \
+        --tags=~@eu-exit \
+        ${TAGS} \
+        --format=mini \
+        features/ \
+        | grep -v "Supplied path\|Trying base directory" > scenario_titles.txt
 
 step_install_requirements_for_load_tests: &step_install_requirements_for_load_tests
   run:
@@ -225,7 +225,6 @@ step_run_browser_tests_in_parallel: &step_run_browser_tests_in_parallel
 
       echo "Current instance of ${BROWSER} is going to run `cat tests-to-run${SPLIT_FILE_SUFFIX} | wc -l` scenarios:"
       cat tests-to-run${SPLIT_FILE_SUFFIX}
-
 
       if [ -d "/home/circleci/great_magna_tests/tests/browser/reports" ]; then rm -Rf "/home/circleci/great_magna_tests/tests/browser/reports"; fi
 
@@ -432,36 +431,6 @@ jobs:
       AUTO_RETRY: "false"
       TAKE_SCREENSHOTS: "true"
       TAGS: "--tags=@login-page"
-      BROWSER_ENVIRONMENT: "local"
-      BROWSER_HEADLESS: "true"
-    <<: [
-      *machine_python3_node_browsers,
-      *steps_run_parallel_browser_tests,
-    ]
-
-  stage_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna_tests
-    parallelism: 12
-    environment:
-      TEST_ENV: "stage"
-      AUTO_RETRY: "true"
-      TAKE_SCREENSHOTS: "true"
-      TAGS: "--tags=~@dev-only --tags=~@uat-only --tags=~@erp"
-      BROWSER_ENVIRONMENT: "local"
-      BROWSER_HEADLESS: "true"
-    <<: [
-      *machine_python3_node_browsers,
-      *steps_run_parallel_browser_tests,
-    ]
-
-  uat_parallel_browser_tests_using_circleci:
-    working_directory: ~/great_magna_tests
-    parallelism: 12
-    environment:
-      TEST_ENV: "uat"
-      AUTO_RETRY: "true"
-      TAKE_SCREENSHOTS: "true"
-      TAGS: "--tags=~@stage-only --tags=~@erp"
       BROWSER_ENVIRONMENT: "local"
       BROWSER_HEADLESS: "true"
     <<: [
