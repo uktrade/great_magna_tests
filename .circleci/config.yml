@@ -431,7 +431,7 @@ jobs:
       TEST_ENV: "dev"
       AUTO_RETRY: "false"
       TAKE_SCREENSHOTS: "true"
-      TAGS: "--tags=@login-page"
+      TAGS: "--tags=~@stage-only --tags=~@uat-only --tags=~@erp"
       BROWSER_ENVIRONMENT: "local"
       BROWSER_HEADLESS: "true"
     <<: [
