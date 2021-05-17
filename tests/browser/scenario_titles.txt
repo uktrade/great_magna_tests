@@ -1,0 +1,446 @@
+User should be able to view Lesson page "Move from accidental exporting to strategic exporting" and click Yes and back to check the progress bar on lessons and module and lesson categories section
+New User should be able to navigate to "Learn to Export" and click on "Learn Categories" Page and enter the "Add Product" and "Add Country" -- @1.1 email address and password
+User should be able to open Case study
+User should be able to view "How you started" section and enter text and validate
+User should be able to view  "Where you're based" section and enter text and validate
+User should be able to enter "How you make your products" section and enter text and validate
+User should be able to enter "Your product packaging" section and enter text and validate
+User should be able to click on section complete and  "Business objective link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on "Business performance" section and select random turnover
+User should be able to click on navigation bar and navigate to "Business Objectives" page
+User should be able to click section complete on "About Your Business" page  and back to export plan dashboard
+User should be able to click on Top Export plan home in "About your business" and should be on Export plan dashboard page
+User should be able to click on "Drop down" on About your business page and click on dashboard should see "About your business page" as last visited page
+User should be able to click on "Open DataSnapshot" and check whether atleast one language is present
+User should be able to click lesson link "Adapting your product or service" and click link back to "Adapting your product"
+User should be able to view tool tip and enter relevant text in "Changing your product to adapt to your target market"
+User should be able to view educational tool tip and enter relevant text in "Documents you need to provide to meet the requirements for your target market"
+User should be able to click on navigation bar and navigate to "Marketing Approach" page
+User should be able to click on page "Marketing approach link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on "Add another document" and enter the Document name and Notes
+User should be able to click on "Add another document" and delete the document and notes
+User should be able to click on Top Export plan home and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Adapting your product" Page and enter the "Add Product" and "Add Country" -- @1.1 email address and password
+User should be able to click on "Open DataSnapshot" on Adapting Your Product page and click on dashboard should see "Adapting Your Product" as last visited page
+User should be able to view "Why you want to export" section and enter text and validate
+User should be able to click on "Add goal" and enter the objectives for exporting
+User should be able to delete objectives
+User should be able to click lessons "Move from accidental exporting to strategic exporting" and click back link "Business Objectives"
+User should be able to click on section complete and "Target markets research link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on Top Export plan home and should be on Export plan dashboard page
+User should be able to click on navigation bar and navigate to "Target Markets Research" page
+User should not be able to click on "Add goal" after 5 objectives for exporting
+User should be able to click on "Add goal" and enter the objectives for exporting
+User should be able to click on Top Export plan home in Business Risk and should be on Export plan dashboard page
+User should be able to click on navigation bar and navigate to "Download export plan"
+User should be able to click on Export plan home on "Travel plan" and should be on Export plan Home page
+New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product" -- @1.1 email address and password
+User should be able to click on "Add A Risk" and enter the Risk details for exporting
+User should be able to delete "Add a Risk" details
+User should be able to click section complete on Business Risk page and click on dashboard should see "Business Risk" as last visited page
+User should be able to click on "Add A Risk" and click on Examples and educational moment
+User should be able to click on navigation bar and navigate to "Costs And Pricing" page
+User should be able to click on "Funding and Credit link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on "No. of units and time" section and select random units and time
+User should be able to enter "Direct costs"
+User should be able to enter "Overhead costs"
+User should be able to enter "your net price","Local taxes" and "Duty per unit" value
+User should be able to enter "your net price","Local taxes" and "Duty per unit" value
+User should be able to "select currency" and enter invoicing currency
+User should be able to click on Top Export plan home in Costs And Pricing and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product" -- @1.1 email address and password
+User should be able to click "Net Price example" on Costs And Pricing page and click on dashboard should see "Costs And Pricing" as last visited page
+User should be able to upload logo
+User should be able to enter "How much funding you need"
+User should be able to click on "Add a funding option" and select random option and enter value
+User should be able to delete added funding options
+User should be able to click lessons link "Avoid cashflow challenges when exporting"
+User should be able to click lessons link "Choose the right funding and credit options"
+User should be able to click on navigation bar and navigate to "Getting Paid" page
+User should be able to click on page "Getting paid link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on Top Export plan home in Funding and Credit and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product" -- @1.1 email address and password
+User should be able to click "lesson" on Funding and Credit page and click on dashboard should see "Funding and Credit" as last visited page
+User should be able to click on "Payment methods" section and enter Notes
+User should be able to click on "Payment Terms" section and enter Notes
+User should be able to click on "Incoterms" section and enter Notes
+User should be able to click lessons link "Choose the right payment method"
+User should be able to click lessons link "Decide when to get paid"
+User should be able to click lessons link "Choose which incoterms are right for you"
+User should be able to click on navigation bar and navigate to "Travel Plan" page
+User should be able to click on page "Travel Plan" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on Top Export plan home in Getting Paid and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Getting paid" Page and enter the "Add a target market" -- @1.1 email address and password
+User should be able to click on "Incoterms" on Getting Paid page and click on dashboard should see "Getting Paid" as last visited page
+User should be able to click on "Route to market" section and select random "route" and "how will you promote product"
+User should be able to click on "Add goal" and enter the objectives for exporting
+User should be able to delete Route to market
+User should be able to click lessons link "Selling direct to your customer"
+User should be able to view Marketing approach pages
+User should be able to click on navigation bar and navigate to "Costs and pricing" page
+User should be able to click on page "Costs And Pricing link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on Top Export plan home in Marketing approach and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product" -- @1.1 email address and password
+User should be able to click on "Add route to market" on Marketing approach page and click on dashboard should see "Marketing approach" as last visited page
+User should be able to "Open DataSnapshot" and select random age group and confirm
+User should be able to select random age group and click confirm and verify the selected age group
+User should be able to view "Describe the consumer demand" section and enter text and validate
+User should be able to view "Who are your competitors" section and enter text and validate
+User should be able to view "What are the product trends" section and enter text and validate
+User should be able to view "What’s your unique selling proposition" section and enter text and validate
+User should be able to enter price in  "What’s the average price for your product"
+User should be able to click lesson link "Work out customer demand" and click link back to "Target Markets Research"
+User should be able to click on page "Adapting Your Product link" at the bottom of the page
+User should be able to click on Export plan home and should be on Export plan Home page
+User should be able to click on navigation bar and navigate to "Adapting Your Product" page
+User should be able to click on Top Export plan home in Target Markets Research and should be on Export plan dashboard page
+User should be able to enter price in  "What’s the average price for your product"
+New User should be able to navigate to Export Plan and click on "Target Markets Research" Page and enter "Add Product" and "Add Country" -- @1.1 email address and password
+User should be able to click on "What’s the average price for your product" on Target Markets Research" page and click on dashboard should see "Marketing approach" as last visited page
+User should be able to enter text at  "Travel Information"  and "Cultural Information"section and validate
+User should be able to click on "Visa Information" and "Planned Travel" section and validate
+User should be able to click on "Visa Information" and enter text adn validate
+User should be able to click another trip and enter trip details and delete "Trip details"
+User should be able to delete the trip details
+User should be able to click on page "Business Risk link" at the bottom of the page
+User should be able to click on navigation bar and navigate to "Business Risk" page
+User should be able to click on Export plan home on "Travel plan" and should be on Export plan Home page
+User should be able to click on Top Export plan home in Travel Plan" and should be on Export plan dashboard page
+New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product" -- @1.1 email address and password
+Visitor should be able to Enter and Save Product
+User should be able to click on "Export Plan Home" on Travel Plan page and click on dashboard should see "Marketing approach" as last visited page
+Any Exporter visiting the Services page should be able to see links to all relevant Services
+Any Exporter should be able to get to the "Find a Buyer - Home" Service page from "Domestic - Services" page -- @1.1 
+Any Exporter should be able to get to the "Selling online overseas - Home" Service page from "Domestic - Services" page -- @1.2 
+Any Exporter should be able to get to the "Export Opportunities - Home" Service page from "Domestic - Services" page -- @1.3 
+Any Exporter should be able to get to the "Domestic - Get Finance" Service page from "Domestic - Services" page -- @1.4 
+Any Exporter should be able to get to the "Events - Home" Service page from "Domestic - Services" page -- @1.5 
+Any Exporter should be able to get to the "EORI - Home" Service page from "Domestic - Services" page -- @1.6 
+Any Exporter should be able to get to the "Domestic - Report a trade barrier" Service page from "Domestic - Services" page -- @1.7 
+Any Exporter should see all expected sections on "Domestic - Advice landing" page
+Any Exporter should be able to get to a list of Advice articles from the home page using link in "<specific>" section
+Any Exporter should be able to get to "Find an export market" Advice article -- @1.1 
+Any Exporter should be able to get to "Create an export plan" Advice article -- @2.1 
+Any Exporter should be able to get to "Find an export market" Advice article -- @2.2 
+Any Exporter should be able to get to "Choose a route to market" Advice article -- @2.3 
+Any Exporter should be able to get to "Get export finance" Advice article -- @2.4 
+Any Exporter should be able to get to "Manage payment for export orders" Advice article -- @2.5 
+Any Exporter should be able to get to "Prepare to do business in a foreign country" Advice article -- @2.6 
+Any Exporter should be able to get to "Prepare for export procedures and logistics" Advice article -- @2.7 
+Any Exporter should be able to get to "Sell services overseas" Advice article -- @2.8 
+Any Exporter should be able to get to "Manage risk of bribery and corruption" Advice article -- @2.9 
+Any Exporter should be able to report a problem with Advice Article page
+Any Exporter should see be to use "great.gov.uk" breadcrumb on "Advice article" page to get to "Home" page -- @1.1 
+Enquirers should see all expected contact location options on the "Domestic - Contact us"
+Domestic Enquirers should see all expected contact options on the "Domestic - What can we help you with?" page
+Domestic Enquirers should be able to get to the "New Office finder - Home" page
+Domestic Enquirers should be able to get to find contact details for "Business Wales" office in "Sarn Mynach" -- @1.1 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT East Midlands" office in "Leicester" -- @1.2 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT East of England" office in "Hatfield" -- @2.1 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT London" office in "London" -- @2.2 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT North East" office in "Durham" -- @2.3 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT North West" office in "Manchester" -- @2.4 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT South East" office in "Fareham" -- @2.5 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT South West" office in "Bristol" -- @2.6 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT West Midlands" office in "Birmingham" -- @2.7 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "DIT Yorkshire and the Humber" office in "Barnsley" -- @2.8 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "Invest NI" office in "Belfast" -- @2.9 postcodes and trade offices
+Domestic Enquirers should be able to get to find contact details for "Scottish Enterprise" office in "Glasgow" -- @2.10 postcodes and trade offices
+Domestic Enquirers should be able to get to the "Long (Export Advice Comment) - Contact us" form
+Domestic Enquirers should be able to contact relevant ITA based on the postcode provided
+Domestic enquirers should see all expected help options on the "Great.gov.uk account and services support" page
+Domestic enquirers should see all expected help options for "Export opportunities service"
+Domestic enquirers should see all expected help options for "Great.gov.uk account"
+Domestic enquirers should be able to get to the "Short Contact Us" form via "The UK -> Great.gov.uk account and services support -> Other"
+Domestic enquirers should be able to get to the "Short Contact Us" form via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> Other"
+Domestic enquirers should be able to find answers to sought topic about "Your account on Great.gov.uk"
+Exporters should be able to find answers to Export Opportunities related topic "I haven't had a response from the opportunity I applied for" -- @1.1 
+Exporters should be able to find answers to Export Opportunities related topic "My daily alerts are not relevant to me" -- @1.2 
+Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> I have not received an email confirmation" -- @1.1 
+Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> I have not received an email confirmation" -- @2.1 
+Exporters should be to contact Export Opportunities team via Zendesk using "Short contact form" page accessed via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> I haven't had a response from the opportunity I applied for" -- @1.1 
+Exporters should be to contact Export Opportunities team via Zendesk using "Short contact form" page accessed via "The UK -> Great.gov.uk account and services support -> Export opportunities service -> My daily alerts are not relevant to me" -- @1.2 
+Domestic Enquirers should be able to contact Great Support team via "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk -> Other" -- @1.1 
+Exporters should be able to get to the UKEF Check your eligibility contact-us form
+Exporters should be able to contact UKEF mailbox
+Domestic enquirers should get to the "Short contact us form" via "The UK -> Events" -- @1.1 
+Domestic enquirers should get to the "Short contact us form" via "The UK -> Defence and Security Organisation (DSO)" -- @1.2 
+Domestic enquirers should get to the "Short contact us form" via "The UK -> Other" -- @1.3 
+Exporters should be able to contact "Events mailbox" using "Short contact form (Events)" page accessed via "The UK -> Events" -- @1.1 
+Exporters should be able to contact "DSO mailbox" using "Short contact form (Defence and Security Organisation (DSO))" page accessed via "The UK -> Defence and Security Organisation (DSO)" -- @1.2 
+Exporters should be able to contact "DIT Enquiry unit" using "Short contact form (Other)" page accessed via "The UK -> Other" -- @1.3 
+International Enquirers should be able to see all expected contact options on the "International - What would you like to know more about?" page
+International Enquirers should be able to get to the "Invest - Contact us" form for "Expanding to the UK" -- @1.1 
+International Enquirers should be able to get to the "International - Contact the Capital Investment team" form for "Investing capital in the UK" -- @1.2 
+International Enquirers should be able to get to the "International - Find a UK business partner - Contact us" form for "Find a UK business partner" -- @1.3 
+International Enquirers should be able to get to the "International - Transition period enquiries" form for "The transition period" -- @1.4 
+International Enquirers should be able to get to the "International - Contact us" form for "Other" -- @1.5 
+Enquirers should be able to navigate back to previous pages from "The UK" back to "Domestic - Contact us" page -- @1.1 
+Enquirers should be able to navigate back to previous pages from "Outside the UK" back to "Domestic - Contact us" page -- @1.2 
+Enquirers should be able to navigate back to previous pages from "The UK -> Great.gov.uk account and services support" back to "Domestic - What can we help you with? - Domestic Contact us" page -- @1.3 
+Enquirers should be able to navigate back to previous pages from "The UK -> Great.gov.uk account and services support -> Export opportunities service" back to "Domestic - Great.gov.uk account and services support" page -- @1.4 
+Enquirers should be able to navigate back to previous pages from "The UK -> Great.gov.uk account and services support -> Your account on Great.gov.uk" back to "Domestic - Great.gov.uk account and services support" page -- @1.5 
+Accepting all cookies on "Home" page should trigger appropriate GA event and set correct cookies policy -- @1.1 
+Accepting all cookies on "Advice landing" page should trigger appropriate GA event and set correct cookies policy -- @1.2 
+Accepting all cookies on "Markets listing" page should trigger appropriate GA event and set correct cookies policy -- @1.3 
+Accepting all cookies on "Services" page should trigger appropriate GA event and set correct cookies policy -- @1.4 
+Accepting all cookies on "Search results" page should trigger appropriate GA event and set correct cookies policy -- @1.5 
+Accepting all cookies on "Transition period enquiries - contact us" page should trigger appropriate GA event and set correct cookies policy -- @1.6 
+Accepting all cookies on "Create an export plan - article list" page should trigger appropriate GA event and set correct cookies policy -- @1.7 
+Accepting all cookies on "Get export finance - article list" page should trigger appropriate GA event and set correct cookies policy -- @1.8 
+Accepting all cookies on "Join our export community - landing" page should trigger appropriate GA event and set correct cookies policy -- @1.9 
+Accepting all cookies on "Join our Export Community - form" page should trigger appropriate GA event and set correct cookies policy -- @1.10 
+Users should be able to "Accept all" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.1 
+Users should be able to "Reject all" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.2 
+Users should be able to "Reject measuring website use" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.3 
+Users should be able to "Reject marketing campaigns" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.4 
+Users should be able to "Reject remembering my settings" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.5 
+Users should be able to "Allow measuring website use" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.6 
+Users should be able to "Allow marketing campaigns" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.7 
+Users should be able to "Allow to remember my settings" cookies via "Cookies on great.gov.uk" page should trigger appropriate GA event and set correct cookies policy -- @1.8 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Domestic - Get finance" page -- @1.1 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Domestic - Home" page -- @1.2 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Find a Buyer - Home" page -- @1.3 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Selling Online Overseas - Home" page -- @1.4 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Profile - About" page -- @1.5 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "SSO - Registration" page -- @1.6 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "SSO - Sign in" page -- @1.7 
+Any Exporter should see correct EIG header logo & GREAT footer logo on "Export Opportunities - Home" page
+Any Exporter should see correct Business Is Great (BIG) header & footer logo on "Events - Home" page
+Any Exporter should see correct GREAT header & footer logo on "Find a Supplier - Landing" page
+Any Exporter should be able to get to the Domestic Home page from "Domestic - Home" page by using DIT logo in the page header and footer -- @1.1 
+Any Exporter should be able to get to the Domestic Home page from "Domestic - Get finance" page by using DIT logo in the page header and footer -- @1.2 
+Any Exporter should be able to get to the Domestic Home page from "SSO - Registration" page by using DIT logo in the page header and footer -- @1.3 
+Any Exporter should be able to get to the Domestic Home page from "SSO - Sign in" page by using DIT logo in the page header and footer -- @1.4 
+Any Exporter should be able to get to the Domestic Home page from "Find a Buyer - Home" page by using DIT logo in the page header and footer -- @1.5 
+Any Exporter should be able to get to the Domestic Home page from "Selling Online Overseas - Home" page by using DIT logo in the page header and footer -- @1.6 
+Any Exporter should be able to get to the Domestic Home page from "Profile - About" page by using DIT logo in the page header and footer -- @1.7 
+Any Exporter should be able to get to the Domestic Home page from "Export Opportunities - Home" page by using DIT logo in the page header and footer -- @2.1 
+Any user should see the correct favicon on "Domestic - Home" page -- @1.1 Domestic pages
+Any user should see the correct favicon on "Find a Buyer - Home" page -- @1.2 Domestic pages
+Any user should see the correct favicon on "Find a Supplier - Landing" page -- @1.3 Domestic pages
+Any user should see the correct favicon on "SSO - Registration" page -- @1.4 Domestic pages
+Any user should see the correct favicon on "SSO - Sign in" page -- @1.5 Domestic pages
+Any user should see the correct favicon on "Profile - About" page -- @1.6 Domestic pages
+Any user should see the correct favicon on "Selling Online Overseas - Home" page -- @1.7 Domestic pages
+Any user should see the correct favicon on "Export Opportunities - Home" page -- @2.1 Export Opportunities
+Any mobile user should see mobile-friendly header on "Domestic - Home" page -- @1.1 Domestic pages
+Any mobile user should see mobile-friendly header on "Find a Buyer - Home" page -- @1.2 Domestic pages
+Any mobile user should see mobile-friendly header on "Find a Supplier - Landing" page -- @1.3 Domestic pages
+Any mobile user should see mobile-friendly header on "SSO - Registration" page -- @1.4 Domestic pages
+Any mobile user should see mobile-friendly header on "SSO - Sign in" page -- @1.5 Domestic pages
+Any mobile user should see mobile-friendly header on "Profile - About" page -- @1.6 Domestic pages
+Any mobile user should see mobile-friendly header on "Selling Online Overseas - Home" page -- @1.7 Domestic pages
+Any Exporter should see the "Beta bar, Hero, EU Exit enquiries banner, Advice, Services, Case Studies, Business is Great, Error Reporting" sections on the home page
+Any Exporter should be able to play promotional video on the Home page
+Any Exporter should be able to close the window with promotional video on the Home page
+Any Exporter should be able to get to the "Market Access Database" using link on the home page
+Any Exporter should be able to get to the export markets listing using "view export market guides" link on Home page -- @1.1 
+Any Exporter should be able to get to the export markets listing using "view all market guides" link on Home page -- @1.2 
+Exporters should be able to quickly filter export markets by one of the preselected sectors
+Exporters should be able to filter export markets by the sector their business is in
+Any Exporter should be able to learn what's new on our site
+Visitor should able to login with learn to export section on the home page
+Visitor should able to login with where to export section on the home page
+Visitor should able to login with make an export plan section on the home page
+Visitors should be able to view all available markets
+Visitors should be able to view market guide page
+Visitors should be able to view market guide page
+Visitors which decided to "Read more advice about doing business abroad" after they read about random market should get to "Advice landing" page -- @1.1 next step
+Visitors which decided to "Check duties and customs procedures for exporting goods" after they read about random market should get to Check Duties and Customs "Brazil" page -- @1.1 next step
+Visitors which decided to "Check duties and customs procedures for exporting goods" after they read about random market should get to Check Duties and Customs "Germany" page -- @1.2 next step
+Visitors which decided to "Check duties and customs procedures for exporting goods" after they read about random market should get to Check Duties and Customs "Italy" page -- @1.3 next step
+Visitors which decided to "Check duties and customs procedures for exporting goods" after they read about random market should get to Check Duties and Customs "Japan" page -- @1.4 next step
+Visitor should able to login with "get started" from the market list
+Visitor should able to login with "compare now" from the market guide
+Pixels should be present on "International - Home" page -- @1.1 Various pages
+Pixels should be present on "International - Advice landing" page -- @1.2 Various pages
+Pixels should be present on "International - Contact us" page -- @1.3 Various pages
+Pixels should be present on "International - Feedback - contact us" page -- @1.4 Various pages
+Pixels should be present on "International - Find an export market - Article list" page -- @1.5 Various pages
+Pixels should be present on "International - Get finance" page -- @1.6 Various pages
+Pixels should be present on "International - Join our Export Community - form" page -- @1.7 Various pages
+Pixels should be present on "International - Join our export community - landing" page -- @1.8 Various pages
+Pixels should be present on "International - Markets listing" page -- @1.9 Various pages
+Pixels should be present on "International - Services" page -- @1.10 Various pages
+Pixels should be present on "International - Trade finance" page -- @1.11 Various pages
+Pixels should be present on "International - What can we help you with? - Domestic Contact us" page -- @1.12 Various pages
+Pixels should be present on "International - What would you like to know more about? - International Contact us" page -- @1.13 Various pages
+Visitor should see empty search results if they don't specify search phrase
+Visitor should see search results for "Work" -- @1.1 event, market, service and opportunity
+Visitor should see search results for "Transport" -- @1.2 event, market, service and opportunity
+Visitor should see search results for "Export" -- @1.3 event, market, service and opportunity
+Visitors should be able to find out more about the "Article" search results -- @1.1 event, market, service and opportunity
+Visitors should be able to find out more about the "Online marketplace" search results -- @1.2 event, market, service and opportunity
+Visitors should be able to navigate through search results pages for "Work" -- @1.1 event, market, service and opportunity
+Visitors should be able to navigate through search results pages for "Transport" -- @1.2 event, market, service and opportunity
+Visitors should be able to navigate through search results pages for "Water" -- @1.3 event, market, service and opportunity
+Visitor should be able to clear the last search for "Transport" and start new search for "way" -- @1.1 event, market, service and opportunity
+Visitor should be able to fill contact us form
+User should be able to view Dashboard pages -- @1.1 email address and password
+User should be click on the questions for vfm -- @1.1 email address and password
+User should be able to click Menu and the links
+New User should be able to navigate to Dashbaord and click on Export plan section and click on Got to export plan and Start BUtton
+First time landing on the dashboard page -- @1.1 email address and password
+Visitor should be able to click on forgotten password and create new password -- @1.1 email address and password
+Visitor should be able to login with email address and password -- @1.1 email address and password
+Visitor should be able to see error message with invalid email address and password -- @1.1 email address and password
+Visitor should be able to see error message with invalid email address and password -- @1.2 email address and password
+Visitor should be able to see error message with empty email address -- @1.1 email address and password
+Visitor should be able to see error message with empty password -- @1.1 email address and password
+New Visitor should be able to go to Dashboard page on click "Search again"
+Visitor should be able to Enter and Save Product
+Visitor should be able to Enter and Save Country
+User should be able to search I want to export products in country -- @1.1 Products and Country
+User should be able to search I want to export products in country -- @1.2 Products and Country
+User should be able to search I want to export products in country -- @1.3 Products and Country
+User should be able to search I want to export products in country -- @1.4 Products and Country
+User should be able to search I want to export products in country -- @1.5 Products and Country
+Visitor should be able to see error message on failure to enter product -- @1.1 Products and Country
+Visitor should be able to see error message on failure to enter product -- @1.2 Products and Country
+Visitor should be able to see error message on failure to enter product -- @1.3 Products and Country
+Visitor should be able to see error message on failure to enter product -- @1.4 Products and Country
+Visitor should be able to sign out from the dashboard page -- @1.1 email address and password
+New Visitor should be able to sign up -- @1.1 email address and password
+Existing user try to sign up
+New Visitor should not be able to sign up with wrong confirmation code
+New User should be able to navigate to Export Plan with "Google login"
+New User should be able to navigate to Export Plan with "Google login"
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Creative industries Industry" page -- @1.1 common industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Automotive Industry" page -- @2.1 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Aerospace Industry" page -- @2.2 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Education Industry" page -- @2.3 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Engineering and manufacturing Industry" page -- @2.4 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Healthcare and Life Sciences Industry" page -- @2.5 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Legal services Industry" page -- @2.6 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Real Estate Industry" page -- @2.7 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Space Industry" page -- @2.8 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Technology Industry" page -- @2.9 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Engineering and manufacturing Industry" page -- @3.1 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Financial and professional services Industry" page -- @3.2 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Legal services Industry" page -- @3.3 promoted industries
+Buyers should be able to get to "Domestic - Feedback" form in order to report a problem with "Technology Industry" page -- @3.4 promoted industries
+Buyers should be able to report a problem with the "Creative industries" page -- @1.1 common industries
+User should be able to view Lesson pages read time on  "Choose the right funding" page
+User should be able to view the Lesson page "Choose the right funding"and click Yes and back to check the progress bar on the Dashboard page.
+User should be able to view Lesson page "Choose the right route to market" and watch video
+User should be able to view Lesson page "Choose the right route to market" and click video transcript
+User should be able to view Lesson page "What youll find in each lesson" and click continue 40 times
+User should be able to view Lesson page "Choosing the right export opportunities" and click continue and back to check the progress bar on lessons and module and lesson categories section
+User should be able to view Lesson page "In market research" and click Yes lesson complete and click back to check the progress bar on Topics , module and lessons categories section.
+User should be able to click on Placeholder Lesson and should not be direct to content lesson page
+User should be able to view Lesson pages for topic "Selling direct to your customer" and watch video
+Users should be presented with the Enrolment Steps prior to starting the registration process
+"LTD, PLC or Royal Charter" representative should be asked to enter their email and set a password after selecting their business type -- @1.1 
+"LTD, PLC or Royal Charter" representative should receive an email with confirmation code -- @1.1 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.1 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.2 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.3 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password is entirely numeric" -- @1.4 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "Passwords don't match" -- @1.5 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This field is required" -- @1.6 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This field is required" -- @1.7 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password contains the word 'password'" -- @1.8 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This password is too short. It must contain at least 10 characters" -- @1.9 
+"LTD, PLC or Royal Charter" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "This field is required" -- @1.10 
+"LTD, PLC or Royal Charter" representative should be able to use spaces in password -- @1.1 examples affected by bug TT-2192
+"LTD, PLC or Royal Charter" representative should be able to use spaces in password -- @1.2 examples affected by bug TT-2192
+A representative of a "LTD, PLC or Royal Charter" company should be asked to enter their business details after providing email confirmation code -- @1.1 
+A representative of a "LTD, PLC or Royal Charter" company should be asked to enter their details after providing business details -- @1.1 
+A representative of a "LTD, PLC or Royal Charter" company should be told when account is created and the are the next possible steps -- @1.1 
+Companies House company enrolment creates a business profile
+Users should be able to resend email verification code
+When CH record doesn't include business' address the business representative should be referred to a contact page -- @1.1 
+User representing "LTD, PLC or Royal Charter" should be notified by email when there is an account already registered to their email address (legacy SSO registration) -- @1.1 
+User representing "Sole trader or other type of business" should be notified by email when there is an account already registered to their email address (legacy SSO registration) -- @1.2 
+User representing "UK taxpayer" should be notified by email when there is an account already registered to their email address (legacy SSO registration) -- @1.3 
+User representing "LTD, PLC or Royal Charter" should be notified by email when there is an account already registered to their email address -- @1.1 
+User representing "Sole trader or other type of business" should be notified by email when there is an account already registered to their email address -- @1.2 
+User representing "UK taxpayer" should be notified by email when there is an account already registered to their email address -- @1.3 
+A logged-in user representing "LTD, PLC or Royal Charter" company should not be able to access SSO Sign in or Create an account pages
+Handle invalid user state - already logged in - skip ahead to page where they enter business details for "LTD, PLC or Royal Charter" -- @1.1 
+Handle invalid user state - already logged in - skip ahead to page where they enter business details for "Sole trader or other type of business" -- @1.2 
+Log user in on verification submit, not on account creation for "LTD, PLC or Royal Charter" -- @1.1 
+Log user in on verification submit, not on account creation for "Sole trader or other type of business" -- @1.2 
+Newly registered users should see "UK business registered in Companies House" business type on their "Profile - Business profile" page -- @1.1 business types
+Newly registered users should see "UK business not registered in Companies House" business type on their "Profile - Business profile" page -- @1.2 business types
+Newly registered users should see "Get a business profile" business type on their "Profile - Business profile" page -- @1.3 business types
+"Sole trader" representative should be asked to specify the type of their business before being asked to enter their email and set a password
+UK taxpayers can create an SSO account
+Only UK business can create a great.gov.uk account
+Foreing business representative should be able to come back to our International site after learning that they can't create an account
+"Sole trader or other type of business" representative should receive an email with confirmation code -- @1.1 
+"UK taxpayer" representative should receive an email with confirmation code -- @1.2 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("letters" & "letters") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.1 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("abcdefghij" & "abcdefghij") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.2 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("abcdefghijk" & "abcdefghijk") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.3 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("0123456789" & "0123456789") that doesn't meet requirements otherwise their going to see "This password is entirely numeric" -- @1.4 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("password" & "don't match") that doesn't meet requirements otherwise their going to see "Passwords don't match" -- @1.5 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("password" & "empty") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.6 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("empty" & "empty") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.7 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("empty" & "password") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.8 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("password" & "password") that doesn't meet requirements otherwise their going to see "This password contains the word 'password'" -- @1.9 
+"Sole trader or other type of business" representative shouldn't be able to use a password ("123 short" & "123 short") that doesn't meet requirements otherwise their going to see "This password is too short. It must contain at least 10 characters" -- @1.10 
+"UK taxpayer" representative shouldn't be able to use a password ("letters" & "letters") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.11 
+"UK taxpayer" representative shouldn't be able to use a password ("abcdefghij" & "abcdefghij") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.12 
+"UK taxpayer" representative shouldn't be able to use a password ("abcdefghijk" & "abcdefghijk") that doesn't meet requirements otherwise their going to see "This password contains letters only" -- @1.13 
+"UK taxpayer" representative shouldn't be able to use a password ("0123456789" & "0123456789") that doesn't meet requirements otherwise their going to see "This password is entirely numeric" -- @1.14 
+"UK taxpayer" representative shouldn't be able to use a password ("password" & "don't match") that doesn't meet requirements otherwise their going to see "Passwords don't match" -- @1.15 
+"UK taxpayer" representative shouldn't be able to use a password ("password" & "empty") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.16 
+"UK taxpayer" representative shouldn't be able to use a password ("empty" & "empty") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.17 
+"UK taxpayer" representative shouldn't be able to use a password ("empty" & "password") that doesn't meet requirements otherwise their going to see "This field is required" -- @1.18 
+"UK taxpayer" representative shouldn't be able to use a password ("password" & "password") that doesn't meet requirements otherwise their going to see "This password contains the word 'password'" -- @1.19 
+"UK taxpayer" representative shouldn't be able to use a password ("123 short" & "123 short") that doesn't meet requirements otherwise their going to see "This password is too short. It must contain at least 10 characters" -- @1.20 
+"Sole trader or other type of business" representative should be able to use spaces in password -- @1.1 examples affected by bug
+"UK taxpayer" representative should be able to use spaces in password -- @1.2 examples affected by bug
+A representative of a "Sole trader or other type of business" company should be asked to enter their business details after providing email confirmation code -- @1.1 
+A UK taxpayers wanting to register should be asked to enter their details after providing email confirmation code
+A representative of a "Sole trader or other type of business" company should be asked to enter their details after providing business details -- @1.1 
+A logged-in user representing "Sole trader or other type of business" should not be able to access SSO Sign in or Create an account pages
+A logged-in user representing "UK taxpayer" should not be able to access SSO Sign in or Create an account pages
+New registration for an individual who starts journey in Business profiles
+Anonymous Enquirers should be redirected to SSO login page -- @1.1 products and countries
+Logged in Domestic "Selling Online Overseas" Enquirers should be able to get the Enquiry page -- @1.1 products and countries
+Enquirers representing a "LTD, PLC or Royal Charter" organisation should see SOO contact form pre-populated with their details -- @1.1 products and countries
+Visitors should be able to search for marketplaces to sell "Clothing and accessories" in "Australia" -- @1.1 products and countries
+Visitors should be able to search for marketplaces to sell "Home and lifestyle" in "Poland" -- @1.2 products and countries
+Domestic "Selling Online Overseas" Enquirers should be able to view marketplace page -- @1.1 products and countries
+Domestic "Selling Online Overseas" Enquirers should be able to view marketplace page -- @1.2 products and countries
+Visitors should see all expected page elements on "SSO - Sign in"
+Visitors should see all expected page elements on "SSO - Registration" page
+Visitors should see all expected page elements on "Profile - Sign in"
+User should be able to "Add place" and " Add Country" -- @1.1 product name
+User should be able to "Add a place"
+User should be able to see the country and data in the table on default tab
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to delete entered country details
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to see the country and data in the table in all tabs
+User should be able to validate entered country details
+User should be not able to enter more than 10 countries
+User should not be able to enter country name which already entered
+User should be able to change country name which already entered in the personalisation bar with ready to choose country list
+User should be able to click on Learn to export button and View your export plan button
+User should be able to click on Learn to export button and View your export plan button
