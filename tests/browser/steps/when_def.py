@@ -62,6 +62,7 @@ from steps.when_impl import (
     generic_pick_radio_option_and_submit,
     actor_should_be_able_to_enter_products_and_country,
     click_on_link_element_in_page,
+    actor_should_be_able_to_click_on_not_now,
 
 )
 
@@ -179,6 +180,11 @@ def when_actor_should_be_able_to_click_on_skipwalkthrough(
         context, actor_alias):
     actor_should_be_able_to_click_on_skipwalkthrough(context, actor_alias)
 
+@when('"{actor_alias}" should be able to click on Notnow')
+def when_actor_should_be_able_to_click_on_not_now(
+        context, actor_alias):
+    actor_should_be_able_to_click_on_not_now(context, actor_alias)
+
 
 @when('"{actor_alias}" should be able to click on Avatar')
 def when_actor_should_be_able_to_click_on_avatar(
@@ -204,10 +210,10 @@ def when_actor_decides_to_enter_email_address_and_click_sign_up(
     actor_decides_to_enter_email_address_and_click_sign_up(context, actor_alias, email_address, password)
 
 
-# @when('"{actor_alias}" decides to accept all cookies')
-# def when_actor_decides_to_accept_all_cookies(
-#         context, actor_alias):
-#     generic_accept_all_cookies(context, actor_alias)
+@when('"{actor_alias}" decides to accept all cookies')
+def when_actor_decides_to_accept_all_cookies(
+        context, actor_alias):
+    generic_accept_all_cookies(context, actor_alias)
 
 @when('"{actor_alias}" should be able to click on I have exported in the last 12 months')
 def when_actor_should_be_able_to_click_on_i_have_exported_in_the_last_12_months(

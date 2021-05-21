@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @advice
 @allure.suite:Domestic
@@ -42,7 +43,7 @@ Feature: Domestic - Advice articles
       | List of articles         |
       | Error reporting          |
       | Footer                   |
-      | Upskill now              |
+#      | Upskill now              |
 
 
   @allure.link:CMS-686
@@ -118,5 +119,5 @@ Feature: Domestic - Advice articles
     Examples:
       | breadcrumb   | target              |
       | great.gov.uk | Home                |
-#      | Advice       | Advice Landing      |
-#      | Article list | Advice article list |
+      | Advice       | Advice Landing      |
+      | Article list | Advice article list |

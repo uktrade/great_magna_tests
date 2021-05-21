@@ -18,6 +18,7 @@ CAPABILITIES_TEMPLATES = {
         "browser_capabilities": {
             "chrome": {"browser": "Chrome"},
             "firefox": {"browser": "Firefox"},
+            "safari": {"browser": "Safari"},
         },
     },
     "remote": {
@@ -71,6 +72,12 @@ CAPABILITIES_TEMPLATES = {
                 "browser_version": "11.0",
                 "os": "Windows",
                 "os_version": "10",
+            },
+            "safari": {
+                "browser": "Safari",
+                "browser_version": "14.0.3",
+                "os": "macOS Catalina",
+                "os_version": "10.15.7",
             },
         },
     },
@@ -148,6 +155,7 @@ def start_driver_session(
             "edge": webdriver.Edge,
             "firefox": webdriver.Firefox,
             "ie": webdriver.Ie,
+            "safari": webdriver.Safari,
         }
 
         options = None
@@ -174,6 +182,11 @@ def start_driver_session(
                 options.add_experimental_option("mobileEmulation", mobile_emulation)
             else:
                 options.add_argument("--start-maximized")
+
+            logging.debug(
+                f"Starting local instance of {browser_name} with options: {options.arguments}"
+            )
+
         elif browser_name == "firefox":
             from selenium.webdriver.firefox.options import Options
 
@@ -183,10 +196,22 @@ def start_driver_session(
                 options.add_argument("--window-size=1920x2200")
                 options.add_argument("--safe-mode")
 
-        logging.debug(
-            f"Starting local instance of {browser_name} with options: {options.arguments}"
-        )
+            logging.debug(
+                f"Starting local instance of {browser_name} with options: {options.arguments}"
+            )
+
+        elif browser_name == "safari":
+            options = None
+        else:
+            logging.debug(
+                f"Starting local instance of {browser_name} with options: {options.arguments}"
+            )
         driver = drivers[browser_name](options=options)
+
+        if browser_name == "safari":
+            import os
+            cmd = """ osascript -e 'tell application "System Events" to keystroke "h" using {command down}' """
+            os.system(cmd)
 
     driver.set_page_load_timeout(time_to_wait=30)
     if not mobile:

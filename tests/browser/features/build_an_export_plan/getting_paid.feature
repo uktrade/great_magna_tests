@@ -8,6 +8,7 @@ Feature: GreatMagna - Getting Paid Page
 
    @allure.link:XOT-1131
    @Great_Magna_Export_Plan
+    @failed_great_magna_payment_methods
   Scenario:User should be able to click on "Payment methods" section and enter Notes
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -21,6 +22,7 @@ Feature: GreatMagna - Getting Paid Page
 
    @allure.link:XOT-1132
    @Great_Magna_Export_Plan
+   @failed_great_magna_payment_terms
   Scenario:User should be able to click on "Payment Terms" section and enter Notes
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -33,6 +35,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to enter text at "Payment Terms Notes" on page "Build An Export Plan - Getting Paid"
 
    @allure.link:XOT-1133
+   @Great_Magna_Export_Plan_1001
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Incoterms" section and enter Notes
 
@@ -48,7 +51,8 @@ Feature: GreatMagna - Getting Paid Page
 
    @allure.link:XOT-1134
    @Great_Magna_Export_Plan_321
-  Scenario:User should be able to click lessons link "Choose the right payment method"
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click lessons link "Choose the right payment method" and click link back to "Getting Paid"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -64,7 +68,8 @@ Feature: GreatMagna - Getting Paid Page
 
    @allure.link:XOT-1135
    @Great_Magna_Export_Plan_321
-  Scenario:User should be able to click lessons link "Decide when to get paid"
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click lessons link "Decide when to get paid" and click link back to "Getting Paid"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -79,7 +84,8 @@ Feature: GreatMagna - Getting Paid Page
 
    @allure.link:XOT-1136
    @Great_Magna_Export_Plan_321
-  Scenario:User should be able to click lessons link "Choose which incoterms are right for you"
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click lessons link "Choose which incoterms are right for you" and click link back to "Getting Paid"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -105,7 +111,7 @@ Feature: GreatMagna - Getting Paid Page
      And "Robert" decides to click on section "Getting Paid" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "Open Navigation" on page "Build An Export Plan - Getting Paid"
      And "Robert" decides to click on element "Nav Travel Plan" on page "Build An Export Plan - Getting Paid"
-     And "Robert" should be on the "Build An Export Plan - Travel Plan"" Page
+     And "Robert" should be on the "Build An Export Plan - Travel Plan" Page
 
 @allure.link:XOT-1138
    @Great_Magna_Export_Plan
@@ -149,6 +155,7 @@ Feature: GreatMagna - Getting Paid Page
 
 @allure.link:XOT-1141
   @Great-Magna-Sign-Up_1
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Getting paid" Page and enter the "Add a target market"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -164,6 +171,7 @@ Feature: GreatMagna - Getting Paid Page
 
  @allure.link:XOT-1142
    @Great_Magna_Export_Plan_113
+   @Great_Magna_Export_Plan_g_p_inc
   Scenario:User should be able to click on "Incoterms" on Getting Paid page and click on dashboard should see "Getting Paid" as last visited page
 
     Given "Robert" visited "GreatMagna - Login" page

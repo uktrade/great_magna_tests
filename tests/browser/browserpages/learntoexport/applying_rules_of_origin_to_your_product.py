@@ -34,14 +34,14 @@ from browserpages.common_actions import (
 
 )
 
-NAME = "Understand duties and taxes"
+NAME = "Applying rules of origin to your product"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_UNDERSTAND_DUTIES_AND_TAXES.absolute
-PAGE_TITLE = "Understand duties and taxes"
+URL = URLs.GREAT_MAGNA_LESSONS_APPLYING_RULES_OF_ORIGIN_TO_YOUR_PRODUCT.absolute
+PAGE_TITLE = "Applying rules of origin to your product"
 
 SELECTORS = {
-    "understand duties and taxes": {
+    "applying rules of origin to your product": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -54,7 +54,7 @@ SELECTORS = {
         "top back": Selector(
             By.XPATH, "//*[@id=\"content\"]/div/a/i"
         ),
-        "open case study" :Selector(
+        "open case study": Selector(
             By.XPATH, "//button[contains(text(),'Open case study')]"
         ),
         "close case study": Selector(
@@ -66,9 +66,6 @@ SELECTORS = {
         "view transcript": Selector(
             By.XPATH, "//span[contains(text(),'View transcript')]"
         ),
-        "costs and pricing": Selector(
-            By.CSS_SELECTOR, "#content > div > div.bg-white > div > div > div.c-1-4.back-section > div > div > a > span"
-        ),
 
     },
 }
@@ -77,17 +74,14 @@ SELECTORS = {
 def visit(driver: WebDriver, *, page_name: str = None):
     go_to_url(driver, URL, page_name or NAME)
 
-
 def should_be_here(driver: WebDriver):
     check_url(driver, URL, exact_match=False)
-
 
 def check_lesson_complete_yes(driver: WebDriver, element_selector_name: str):
     check_yes_link = find_element(
         driver, find_selector_by_name(SELECTORS, element_selector_name)
     )
     check_yes_link.click()
-
 
 def find_and_click(driver: WebDriver, *, element_selector_name: str):
     find_and_click = find_element(

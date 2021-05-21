@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @international
 @allure.suite:International

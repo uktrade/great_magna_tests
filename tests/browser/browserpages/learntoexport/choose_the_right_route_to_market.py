@@ -69,6 +69,9 @@ SELECTORS = {
         "view transcript": Selector(
             By.XPATH, "//span[contains(text(),'View transcript')]"
         ),
+        "marketing approach": Selector(
+            By.CSS_SELECTOR, "#content > div > div.bg-white > div > div > div.c-1-4.back-section > div > div > a > span"
+        ),
     },
 }
 

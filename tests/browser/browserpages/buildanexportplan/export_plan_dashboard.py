@@ -76,7 +76,7 @@ SELECTORS = {
             By.XPATH, "//h3[contains(text(),'Upload your logo')]"
         ),
         "save your plan as pdf": Selector(
-            By.XPATH, "//span[contains(text(),'Save your plan as a PDF')]"
+            By.CSS_SELECTOR, "#content > section > aside > a.button.button--secondary.button--full-width.button--icon.m-b-xs > i"
         ),
         "ok button": Selector(
             By.CSS_SELECTOR,
@@ -88,6 +88,9 @@ SELECTORS = {
         ),
         "dashboard": Selector(
             By.XPATH, "//a[contains(text(),'Dashboard')]"
+        ),
+        "sections complete": Selector(
+            By.CSS_SELECTOR, "#section-progress > div > p"
         ),
 
     }

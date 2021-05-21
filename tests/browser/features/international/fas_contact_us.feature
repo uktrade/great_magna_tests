@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @contact-us
 @no-sso-email-verification-required

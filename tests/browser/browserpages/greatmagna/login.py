@@ -69,6 +69,15 @@ SELECTORS = {
         "password - field may not be blank": Selector(
             By.CSS_SELECTOR, "#login > form > div:nth-child(4) > ul > li"
         ),
+        "login with linkedin": Selector(
+            By.CSS_SELECTOR, "#signup-modal-linkedin > span"
+        ),
+        "sign in with google": Selector(
+            By.CSS_SELECTOR, "#signup-modal-google > span"
+        ),
+        "santoshtesting10008@gmail.com": Selector(
+            By.XPATH, "//body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/div[1]/div[1]/div[2]/div[2]"
+        ),
     },
 }
 
@@ -118,3 +127,9 @@ def should_be_error_message(driver: WebDriver, element_name: str, expected_error
         pass
 
     return False
+
+def click_skip_not_now(driver: WebDriver):
+    skip_link = find_element(
+        driver, find_selector_by_name(SELECTORS, "notnow")
+    )
+    skip_link.click()

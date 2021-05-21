@@ -66,7 +66,7 @@ SELECTORS = {
             By.XPATH, "//body/main/div[2]/section[5]/div/div[2]/div[2]/div/div[2]/label"
         ),
         "planned travel educational": Selector(
-            By.CSS_SELECTOR, "#planned-travel > div > div.learning__buttons.m-b-xs > div > div > button > i",
+            By.CSS_SELECTOR, "#planned-travel > div > div.learning__buttons > div > div > button > i",#planned-travel > div > div.learning__buttons.m-b-xs > div > div > button > i",
             type=ElementType.INPUT
         ),
         "add a trip": Selector(
@@ -85,7 +85,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#notes"
         ),
         "yes checkbox": Selector(
-            By.XPATH, "//input[@id='checkbox_complete']"
+            By.CSS_SELECTOR, "#section-complete > div"
         ),
         "Selling direct to your customer link": Selector(
             By.CSS_SELECTOR,
@@ -95,8 +95,8 @@ SELECTORS = {
             By.XPATH, "//h4[contains(text(),'How to manage exchange rates')]"
         ),
         "lesson": Selector(
-            By.CSS_SELECTOR,
-            "#cost-and-pricing > section.bg-blue-deep-10.m-t-l.p-v-s > div > div > div.c-1-1.c-2-3-m.c-1-2-xl > button"
+            By.XPATH,
+            "//*[@id=\"culture-and-rules\"]/div[3]/div[2]/div[1]/button"
         ),
         "open navigation": Selector(
             By.XPATH, "//*[@id=\"collapseNav\"]/div/button/i"
@@ -105,7 +105,7 @@ SELECTORS = {
             By.XPATH, "//*[@id=\"collapseNav\"]/div/ul/li[10]/a"
         ),
         "add a target market": Selector(
-            By.XPATH, "//button[contains(text(),'Add a target market')]"
+            By.CSS_SELECTOR, "#set-country-button > span > button"#By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
         "top export plan home": Selector(
             By.XPATH, "//*[@id=\"travel-plan-content\"]/section[1]/div/div/div[2]/a/span"
@@ -129,6 +129,13 @@ SELECTORS = {
         "export plan home": Selector(
             By.CSS_SELECTOR,
             "#travel-plan-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a"
+        ),
+        "business risk": Selector(
+            By.CSS_SELECTOR,
+            "#travel-plan-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > a > span"
+        ),
+        "understand the local business culture": Selector(
+            By.XPATH, "//*[@id=\"culture-and-rules\"]/div[3]/div[2]/div[2]/a/div/h4"
         ),
     }
 }
@@ -173,7 +180,7 @@ def enter_trip_details(driver: WebDriver, position: str, trip_name: str):
     document_div_element_xpath = "/html/body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + position + "]"
     document_text_ele_xpath = document_div_element_xpath + "/td/div/textarea"
     driver.find_element_by_xpath(document_text_ele_xpath).send_keys(trip_name)
-    time.sleep(2)
+    time.sleep(3)
 
 
 def delete_all_trip_details(driver: WebDriver, del_button_position: str):
@@ -182,18 +189,21 @@ def delete_all_trip_details(driver: WebDriver, del_button_position: str):
     trip_text_area_element_x_path = "/html/body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr" \
                                     + "[" + str(trip_text_area_element_index) + "]" + "/td/div/textarea"
     trip_text_area_text_exists = True
+    time.sleep(1)
     try:
         trip_text_area_text = driver.find_element_by_xpath(trip_text_area_element_x_path).text
         if trip_text_area_text == None or len(trip_text_area_text) <= 0:
             trip_text_area_text_exists = False
     except:
         trip_text_area_text_exists = False
-
+    #//body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr[8]/td/button/i
+    #/html/body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr[2]/td/button/i
     # del_button_position: 2,4,6,8,10,.....
-    document_div_element_xpath = "/html/body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + del_button_position + "]"
+    document_div_element_xpath = "//body/main/div[2]/section[6]/div/div[2]/div/div[2]/table/tbody/tr" + "[" + del_button_position + "]"
     del_btn_ele_xpath = document_div_element_xpath + "/td/button/i"
+    time.sleep(1)
     driver.find_element_by_xpath(del_btn_ele_xpath).click()
-
+    time.sleep(1)
     if trip_text_area_text_exists == True:
         driver.implicitly_wait(1)
         # 12,13,14,15.......
@@ -302,7 +312,7 @@ def fill_out_country(driver: WebDriver, country: str):
 
         # look out for the list displayed after entering country name and select random/provided country
         ul_list_element = driver.find_element_by_xpath(
-            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+            "//body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
 
         section_elements = ul_list_element.find_elements_by_tag_name("section")
         logging.debug("length of section elements " + str(len(section_elements)))

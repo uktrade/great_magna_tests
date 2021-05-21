@@ -26,6 +26,7 @@ Feature: GreatMagna - Travel Plan Page
 
    @allure.link:XOT-1192
    @Great_Magna_Export_Plan_D
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Visa Information" and "Planned Travel" section and validate
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -39,6 +40,7 @@ Feature: GreatMagna - Travel Plan Page
 
    @allure.link:XOT-1193
    @Great_Magna_Export_Plan_D
+    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Visa Information" and enter text adn validate
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -56,6 +58,8 @@ Feature: GreatMagna - Travel Plan Page
 #
     @allure.link:XOT-1194
    @Great_Magna_Export_Plan_tp
+   @Great_Magna_Export_Plan
+  @failed_great_magna
   Scenario:User should be able to click another trip and enter trip details and delete "Trip details"
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -74,6 +78,8 @@ Feature: GreatMagna - Travel Plan Page
 
   @allure.link:XOT-1195
    @Great_Magna_Export_Plan_tp
+   @Great_Magna_Export_Plan
+    @failed_great_magna
    Scenario:User should be able to delete the trip details
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -92,6 +98,7 @@ Feature: GreatMagna - Travel Plan Page
 
    @allure.link:XOT-1196
    @Great-Magna-Export_Plan-progress-bar-test
+   @Great_Magna_Export_Plan_link_t_p
  Scenario:User should be able to click on page "Business Risk link" at the bottom of the page
 
 Given "Robert" visited "GreatMagna - Login" page
@@ -101,8 +108,8 @@ Given "Robert" visited "GreatMagna - Login" page
    Then "Robert" decides to click on "Build an export plan"
    Then "Robert" decides to click on section "Travel Plan" on page "Build An Export Plan - Export Plan Dashboard"
     And "Robert" decides to click section complete on "Build An Export Plan - Travel Plan"
-    And "Robert" decides to click on section "Business Risk" on page "Build An Export Plan - Getting Paid"
-    And "Robert" decides to click on "Build An Export Plan - Business Risk" page
+    And "Robert" decides to click on section "Business Risk" on page "Build An Export Plan - Travel Plan"
+    And "Robert" should be on the "Build An Export Plan - Business Risk" page
 
 
     @allure.link:XOT-1197
@@ -135,6 +142,7 @@ Given "Robert" visited "GreatMagna - Login" page
 
 @allure.link:XOT-1199
    @Great_Magna_Export_Plan_124
+  @Great_Magna_Export_Plan
   Scenario:User should be able to click on Top Export plan home in Travel Plan" and should be on Export plan dashboard page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -148,6 +156,7 @@ Given "Robert" visited "GreatMagna - Login" page
 
 @allure.link:XOT-1200
   @Great-Magna-Sign-Up
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -165,6 +174,7 @@ Given "Robert" visited "GreatMagna - Login" page
 
     @allure.link:XOT-1201
    @Great-Magna-Search-2
+   @Great_Magna_Export_Plan
   Scenario: Visitor should be able to Enter and Save Product
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+999888@gmail.com", password "Testing@123!" and click Login
@@ -175,6 +185,7 @@ Given "Robert" visited "GreatMagna - Login" page
 
  @allure.link:XOT-1202
    @Great_Magna_Export_Plan_118
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Export Plan Home" on Travel Plan page and click on dashboard should see "Marketing approach" as last visited page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -187,3 +198,19 @@ Given "Robert" visited "GreatMagna - Login" page
     And "Robert" decides to click on section "Export Plan Home" on page "Build An Export Plan - Travel plan"
    And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Travel Plan"
      And "Robert" should see "Travel Plan" text under section "Export Plan" on page "GreatMagna - Dashboard"
+
+    @allure.link:XOT-1114
+   @Great_Magna_Export_Plan_lesson_link_local_business
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click lessons link "Understand the local business culture" and click link back to "Travel Plan"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Travel Plan" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Travel Plan"
+     And "Robert" decides to click on section "Understand the local business culture" on page "Build An Export Plan - Travel Plan"
+     And "Robert" should be on the "LearnToExport - Understand the local business culture" page
+     And "Robert" decides to click on section "Travel Plan" on page "LearnToExport - Understand the local business culture"

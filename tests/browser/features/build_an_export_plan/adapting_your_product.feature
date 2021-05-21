@@ -20,6 +20,8 @@ Feature: GreatMagna - Adapting Your Product Page
 
    @allure.link:XOT-1032
    @Great_Magna_Export_Plan_1040
+   @bug
+   @Great_Magna_Export_Plan_a_y_P_o_s
  Scenario:User should be able to click lesson link "Adapting your product or service" and click link back to "Adapting your product"
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -95,7 +97,7 @@ Feature: GreatMagna - Adapting Your Product Page
     And "Robert" decides to validate entered text at "UK customs declaration" on page "Build An Export Plan - Adapting Your Product"
 
     @allure.link:XOT-1035
-   @Great_Magna_Export_Plan_Nav
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on navigation bar and navigate to "Marketing Approach" page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -138,6 +140,7 @@ Feature: GreatMagna - Adapting Your Product Page
 
  @allure.link:XOT-1038
    @Great_Magna_Export_Plan_112D
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Add another document" and enter the Document name and Notes
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -156,6 +159,7 @@ Feature: GreatMagna - Adapting Your Product Page
 
     @allure.link:XOT-1039
    @Great_Magna_Export_Plan_112D
+    @Great_Magna_Export_Plan
    Scenario:User should be able to click on "Add another document" and delete the document and notes
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -186,7 +190,8 @@ Feature: GreatMagna - Adapting Your Product Page
      And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
 @allure.link:XOT-1041
-  @Great-Magna-Sign-Up
+  @Great-Magna-Sign-Up_a_y_p
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Adapting your product" Page and enter the "Add Product" and "Add Country"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -202,6 +207,8 @@ Feature: GreatMagna - Adapting Your Product Page
   And "Robert" decides to enter country name "India" on the "Build An Export Plan - Adapting Your Product" page
 
      @allure.link:XOT-1042
+   @Great_Magna_Export_Plan_a_y_P
+   @failed_great_magna
    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Open DataSnapshot" on Adapting Your Product page and click on dashboard should see "Adapting Your Product" as last visited page
 
@@ -215,3 +222,115 @@ Feature: GreatMagna - Adapting Your Product Page
    And "Robert" decides to click on element "Open Data Snapshot" on page "Build An Export Plan - Adapting Your Product"
      And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Adapting Your Product"
      And "Robert" should see "Adapting Your Product" text under section "Export Plan" on page "GreatMagna - Dashboard"
+
+        @allure.link:XOT-1043
+   @Great_Magna_Export_Plan_adapting_a_y_p_1
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Adapting your product or service" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Adapting lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "Adapting your product or service" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - Adapting your product or service" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - Adapting your product or service"
+
+  @allure.link:XOT-1044
+   @Great_Magna_Export_Plan_adapting_a_y_p_2
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "How to adapt your labelling and packaging" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Labelling lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "How to adapt your labelling and packaging" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - How to adapt your labelling and packaging" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - How to adapt your labelling and packaging"
+
+  @allure.link:XOT-1045
+   @Great_Magna_Export_Plan_adapting_a_y_p_3
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "How to adapt your labelling and packaging" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Packaging lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "Howto adapt your labelling and packaging" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - How to adapt your labelling and packaging" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - How to adapt your labelling and packaging"
+
+     @allure.link:XOT-1046
+   @Great_Magna_Export_Plan_adapting_a_y_p_4
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Understand the local market regulations for products and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Product lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "Understand local market regulations for products" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - Understand local market regulations for products" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - Understand local market regulations for products"
+
+         @allure.link:XOT-1047
+   @Great_Magna_Export_Plan_adapting_a_y_p_5
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Understand export licensing" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Documentation lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "Understand export licensing" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - Understand export licensing" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - Understand export licensing"
+
+            @allure.link:XOT-1048
+   @Great_Magna_Export_Plan_adapting_a_y_p_6
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Create an export invoice" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Export invoice lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "Create an export invoice" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - Create an export invoice" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - Create an export invoice"
+
+ @allure.link:XOT-1048
+   @Great_Magna_Export_Plan_adapting_a_y_p_7
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "How to make a uk customs declaration" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Adapting Your Product" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "Customs lesson" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" decides to click on section "How to make a uk customs declaration" on page "Build An Export Plan - Adapting Your Product"
+     And "Robert" should be on the "LearnToExport - How to make a uk customs declaration" page
+     And "Robert" decides to click on section "Adapting Your Product" on page "LearnToExport - How to make a uk customs declaration"

@@ -69,6 +69,9 @@ SELECTORS = {
         "target markets research": Selector(
             By.XPATH, "//span[contains(text(),'Target markets research')]"
         ),
+        "adapting your product": Selector(
+            By.CSS_SELECTOR, "#content > div > div.bg-white > div > div > div.c-1-4.back-section > div > div > a > span"
+        ),
 
     },
 }

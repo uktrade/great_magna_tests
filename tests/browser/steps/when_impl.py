@@ -143,6 +143,7 @@ def set_small_screen(context: Context):
 
 
 def should_be_on_page(context: Context, actor_alias: str, page_name: str):
+    time.sleep(1)
     page = get_page_object(page_name)
     # revisit_page_on_access_denied(context.driver, page, page_name)
     take_screenshot(context.driver, f"should be on {page_name}")
@@ -617,6 +618,14 @@ def actor_should_be_able_to_click_on_skipwalkthrough(
     page.click_skip_walk_through(context.driver)
     # page.click_avatar(context.driver)
 
+def actor_should_be_able_to_click_on_not_now(
+        context, actor_alias):
+    # time.sleep(5)
+    page = get_last_visited_page(context, actor_alias)
+    has_action(page, "click_skip_not_now")
+    # has_action(page, "click_avatar")
+    page.click_not_now(context.driver)
+    # page.click_avatar(context.driver)
 
 def actor_should_be_able_to_click_on_avatar(
         context, actor_alias):

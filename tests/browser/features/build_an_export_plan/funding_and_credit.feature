@@ -22,6 +22,8 @@ Feature: GreatMagna - Funding and Credit Page
 
    @allure.link:XOT-1112
    @Great_Magna_Export_Plan_FUNDING
+   @Great_Magna_Export_Plan
+   @failed_great_magna
   Scenario:User should be able to click on "Add a funding option" and select random option and enter value
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -30,20 +32,18 @@ Feature: GreatMagna - Funding and Credit Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Funding and Credit"
-#    And "Robert" decides to click on section "Choose the right funding and Credit Options" on page "Build An Export Plan - Funding and Credit"
-#    And "Robert" should be on the "LearnToExport - Choose the right funding and Credit Options" page
-
      And "Robert" decides to select random funding options on page "Build An Export Plan - Funding and Credit"
           | Position | Amount  |
           | 1        | 5000    |
-          | 2        | 1000    |
-          | 3        | 12000   |
-          | 4        | 25000   |
-          | 5        | 35000   |
-
+          | 3        | 1000    |
+          | 5        | 12000   |
+          | 7        | 25000   |
+          | 9        | 35000   |
+#
      @allure.link:XOT-1113
    @Great_Magna_Export_Plan_FUNDING
+   @failed_great_magna
+   @Great_Magna_Export_Plan
   Scenario:User should be able to delete added funding options
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -52,23 +52,20 @@ Feature: GreatMagna - Funding and Credit Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Funding and Credit"
-#    And "Robert" decides to click on section "Choose the right funding and Credit Options" on page "Build An Export Plan - Funding and Credit"
-#    And "Robert" should be on the "LearnToExport - Choose the right funding and Credit Options" page
-
      And "Robert" decides to delete funding options on page "Build An Export Plan - Funding and Credit"
           | Position |
-          | 10        |
+          | 10       |
           | 8        |
           | 6        |
           | 4        |
-          | 2       |
+          | 2        |
 
 
 
   @allure.link:XOT-1114
-   @Great_Magna_Export_Plan_lesson_link
-  Scenario:User should be able to click lessons link "Avoid cashflow challenges when exporting"
+   @Great_Magna_Export_Plan_lesson_link_avoid_cashflow
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click lessons link "Avoid cashflow challenges when exporting" and click link back to "Funding and Credit"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -76,14 +73,14 @@ Feature: GreatMagna - Funding and Credit Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
-     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Funding and Credit"
+     And "Robert" decides to click on element "Avoid cashflow lesson" on page "Build An Export Plan - Funding and Credit"
      And "Robert" decides to click on section "Avoid cashflow challenges when exporting" on page "Build An Export Plan - Funding and Credit"
      And "Robert" should be on the "LearnToExport - Avoid cashflow challenges when exporting" page
      And "Robert" decides to click on section "Funding and Credit" on page "LearnToExport - Avoid cashflow challenges when exporting"
 
   @allure.link:XOT-1115
-  @Great_Magna_Export_Plan
-  Scenario:User should be able to click lessons link "Choose the right funding and credit options"
+  @Great_Magna_Export_Plan_choose_right_funding
+  Scenario:User should be able to click lessons link "Choose the right funding and credit options" and click link back to "Funding and Credit"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -91,13 +88,14 @@ Feature: GreatMagna - Funding and Credit Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
-     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Funding and Credit"
+     And "Robert" decides to click on element "Funding lesson" on page "Build An Export Plan - Funding and Credit"
      And "Robert" decides to click on section "Choose the right funding" on page "Build An Export Plan - Funding and Credit"
      And "Robert" should be on the "LearnToExport - Choose the right funding" page
      And "Robert" decides to click on section "Funding and Credit" on page "LearnToExport - Choose the right funding"
 
 
    @allure.link:XOT-1116
+   @Great_Magna_Export_Plan_nav_g_p
    @Great_Magna_Export_Plan
   Scenario: User should be able to click on navigation bar and navigate to "Getting Paid" page
 
@@ -107,8 +105,8 @@ Feature: GreatMagna - Funding and Credit Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
-     And "Robert" decides to click on element "Open Navigation" on page "Build An Export Plan - Costs And Pricing"
-     And "Robert" decides to click on element "Nav Getting Paid" on page "Build An Export Plan - Costs And Pricing"
+     And "Robert" decides to click on element "Open Navigation" on page "Build An Export Plan - Funding and Credit"
+     And "Robert" decides to click on element "Nav Getting Paid" on page "Build An Export Plan - Funding and Credit"
      And "Robert" should be on the "Build An Export Plan - Getting paid" Page
 
 
@@ -154,6 +152,7 @@ Feature: GreatMagna - Funding and Credit Page
 
   @allure.link:XOT-1120
   @Great-Magna-Sign-Up
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -170,6 +169,8 @@ Feature: GreatMagna - Funding and Credit Page
 
    @allure.link:XOT-1121
    @Great_Magna_Export_Plan_12
+    @failed_great_magna
+     @Great_Magna_Export_Plan
   Scenario:User should be able to click "lesson" on Funding and Credit page and click on dashboard should see "Funding and Credit" as last visited page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -179,6 +180,6 @@ Feature: GreatMagna - Funding and Credit Page
     Then "Robert" decides to click on "Build an export plan"
     And "Robert" decides to click on section "Funding and Credit" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" should be on the "Build An Export Plan - Funding and Credit" Page
-    And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Funding and Credit"
+    And "Robert" decides to click on element "funding lesson" on page "Build An Export Plan - Funding and Credit"
      And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Funding and Credit"
      And "Robert" should see "Funding and Credit" text under section "Export Plan" on page "GreatMagna - Dashboard"

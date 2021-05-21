@@ -105,10 +105,6 @@ SELECTORS = {
         "uk customs declaration": Selector(
             By.XPATH, "//*[@id=\"uk_customs_declaration\"]", type=ElementType.INPUT
         ),
-        # "delete": Selector(
-        #     By.CSS_SELECTOR,
-        #     "#documents-for-target-market > div > div > div.target-market-documents-form > div > div.form-delete.m-b-xs > button > i"
-        # ),
         "add another document": Selector(
             By.XPATH, "//*[@id=\"documents-for-target-market\"]/div/div/button"
         ),
@@ -128,7 +124,7 @@ SELECTORS = {
             By.XPATH, "//button[contains(text(),'Add a product')]"
         ),
         "add a target market": Selector(
-            By.XPATH, "//button[contains(text(),'Add a target market')]"
+            By.CSS_SELECTOR, "#set-country-button > span > button"
         ),
         "top export plan home": Selector(
             By.XPATH, "//*[@id=\"adapting-your-product-content\"]/section[1]/div/div/div[2]/a/span"
@@ -146,13 +142,54 @@ SELECTORS = {
         "dashboard": Selector(
             By.XPATH, "//a[contains(text(),'Dashboard')]"
         ),
-        "lesson": Selector(
+        "adapting lesson": Selector(
             By.XPATH,
             "//*[@id=\"changes-to-product\"]/div[1]/div[1]/button"
         ),
         "adapting your product or service": Selector(
+            By.CSS_SELECTOR,
+            "#changes-to-product > div.learning > div.learning__content > a > div > h4"
+        ),
+        "labelling lesson": Selector(
+            By.XPATH, "//*[@id=\"changes-to-product\"]/div[2]/div/div[1]/div/div[1]/button"
+        ),
+        "how to adapt your labelling and packaging": Selector(
+            By.CSS_SELECTOR, "#changes-to-product > div.form-table.bg-blue-deep-10.radius.p-h-s.p-v-xs > div > div:nth-child(1) > div > div.learning__content > a > div > h4"
+        ),
+        "packaging lesson": Selector(
+            By.XPATH, "//*[@id=\"changes-to-product\"]/div[2]/div/div[2]/div/div[1]/button"
+        ),
+        "howto adapt your labelling and packaging": Selector(
+            By.XPATH, "//*[@id=\"changes-to-product\"]/div[2]/div/div[2]/div/div[2]/a/div/h4"
+        ),
+        "product lesson": Selector(
             By.XPATH,
-            "//*[@id=\"changes-to-product\"]/div[1]/div[2]/a/div/h4"
+            "//*[@id=\"changes-to-product\"]/div[2]/div/div[4]/div/div[1]/button"
+        ),
+        "understand local market regulations for products": Selector(
+            By.XPATH, "//*[@id=\"changes-to-product\"]/div[2]/div/div[4]/div/div[2]/a/div/h4"
+        ),
+        "documentation lesson" : Selector(
+            By.CSS_SELECTOR, "#documents-for-target-market > div.learning > div.learning__buttons > button"
+        ),
+        "understand export licensing": Selector(
+            By.CSS_SELECTOR, "#documents-for-target-market > div.learning > div.learning__content > a > div > h4"
+        ),
+        "export invoice lesson": Selector(
+            By.CSS_SELECTOR,
+            "#documents-for-target-market > div.form-table.bg-blue-deep-10.radius.p-h-s.p-v-xs > div > div:nth-child(3) > div > div.learning__buttons > button"
+        ),
+        "create an export invoice": Selector(
+            By.CSS_SELECTOR,
+            "#documents-for-target-market > div.form-table.bg-blue-deep-10.radius.p-h-s.p-v-xs > div > div:nth-child(3) > div > div.learning__content > a > div > h4"
+        ),
+        "customs lesson": Selector(
+            By.CSS_SELECTOR,
+            "#documents-for-target-market > div.form-table.bg-blue-deep-10.radius.p-h-s.p-v-xs > div > div:nth-child(4) > div > div.learning__buttons > button"
+        ),
+        "how to make a uk customs declaration": Selector(
+            By.CSS_SELECTOR,
+            "#documents-for-target-market > div.form-table.bg-blue-deep-10.radius.p-h-s.p-v-xs > div > div:nth-child(4) > div > div.learning__content > a > div > h4"
         ),
     }
 }
@@ -248,7 +285,7 @@ def fill_out_country(driver: WebDriver, country: str):
 
         # look out for the list displayed after entering country name and select random/provided country
         ul_list_element = driver.find_element_by_xpath(
-            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+            "//body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
 
 
         section_elements = ul_list_element.find_elements_by_tag_name("section")

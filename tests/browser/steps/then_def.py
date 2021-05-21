@@ -115,6 +115,8 @@ from steps.then_impl import (
     promo_video_check_watch_time,
     promo_video_should_not_see_modal_window,
     should_be_on_working_page,
+    actor_decides_to_select_random_route_to_markets_on_page,
+    profile_supplier_uploads_logo,
 )
 
 from steps.when_impl import (
@@ -343,8 +345,7 @@ def then_actor_decides_to_enter_email_address_and_click_on_reset_password(
     actor_decides_to_enter_email_address_and_click_on_reset_password(context, email_address)
 
 
-@then(
-    '"{actor_alias}" should be able to click on reset password link from email "{email_address}", "{password}" and enters new password "{new_password}" and confirm')
+@then('"{actor_alias}" should be able to click on reset password link from email "{email_address}", "{password}" and enters new password "{new_password}" and confirm')
 def then_actor_should_be_able_to_click_on_reset_password_link_from_email_password_and_enters_new_password_and_confirm(
         context, actor_alias, email_address, password, new_password):
     actor_should_be_able_to_click_on_reset_password_link_from_email_password_and_enters_new_password_and_confirm(
@@ -409,6 +410,10 @@ def then_actor_decides_to_validate_entered_text(context, actor_alias, element_na
 @then('"{actor_alias}" decides to select random item for "{element_name}" on page "{page_name}"')
 def then_actor_decides_to_select_random_item_list_on_page(context, actor_alias, element_name, page_name):
     actor_decides_to_select_random_item_list_on_page(context, actor_alias, element_name, page_name)
+
+# @then('"{actor_alias}" decides to select random item for for VFM on page "{page_name}"')
+# def then_actor_decides_to_select_random_item_list_on_page(context, actor_alias, element_name, page_name):
+#     actor_decides_to_select_random_item_list_on_page(context, actor_alias, element_name, page_name)
 
 
 @then('"{actor_alias}" fill business objective details on page "{page_name}"')
@@ -496,6 +501,12 @@ def then_actor_decides_to_select_random_option_on_page(context, actor_alias, pag
     input_data_table = context.table
     for row in input_data_table:
         actor_decides_to_select_funding_options_on_page(context, actor_alias, row["Position"], row["Amount"], page_name)
+
+@then('"{actor_alias}" decides to select random Route to markets on page "{page_name}"')
+def then_actor_decides_to_select_random_route_to_markets_on_page(context, actor_alias, page_name):
+    input_data_table = context.table
+    for row in input_data_table:
+        actor_decides_to_select_random_route_to_markets_on_page(context, actor_alias, row["Position"], row["Text"], page_name)
 
 
 @then('"{actor_alias}" decides to enter product name "{product_name}" on page "{page_name}"')
@@ -934,3 +945,7 @@ def then_actor_decides_to_click_open_case_study_in_all_lessons_for_number_of_tim
 def when_actor_decides_to_enter_email_address_and_click_login(
         context, actor_alias, email_address, password):
     actor_decides_to_enter_email_address_and_click_login(context, actor_alias, email_address, password)
+
+@then('"{supplier_alias}" uploads "{picture}" as company\'s logo')
+def when_supplier_uploads_logo(context, supplier_alias, picture):
+    profile_supplier_uploads_logo(context, supplier_alias, picture)

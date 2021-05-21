@@ -7,6 +7,7 @@ Feature: GreatMagna -  Forgotten Password Page
 
   @allure.link:XOT-051
   @Great-Magna-Forgotten-Password
+   @failed_great_magna
   Scenario Outline: Visitor should be able to click on forgotten password and create new password
 
   Given "Robert" visited "GreatMagna - Login" page
@@ -17,4 +18,4 @@ Feature: GreatMagna -  Forgotten Password Page
   And "Robert" should be on the "GreatMagna - About" Page
   Examples: email address and password
      |      emailaddress                 | password    | newpassword  |
-     | santoshtesting10008+777@gmail.com | Testing@123!| Test@1234568 |
+     | santoshtesting10008+9898@gmail.com | Testing@123!| Test@1234568 |

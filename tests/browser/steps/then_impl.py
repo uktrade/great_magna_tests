@@ -389,12 +389,18 @@ def actor_enters_overhead_costs_on_page(context, actor_alias, productadaptation,
     has_action(page, "enter_overhead_costs")
     page.enter_overhead_costs(context.driver, productadaptation, freightandlogistics, agentanddistributionfees,
                               marketing, finance)
+    time.sleep(1)
 
 
 def actor_decides_to_select_funding_options_on_page(context, actor_alias, position, amount, page_name):
     page = get_page_object(page_name)
     has_action(page, "find_and_select_random_funding_options")
     page.find_and_select_random_funding_options(context.driver, position, amount)
+
+def actor_decides_to_select_random_route_to_markets_on_page(context, actor_alias, position, text, page_name):
+    page = get_page_object(page_name)
+    has_action(page, "find_and_select_random_route_to_markets")
+    page.find_and_select_random_route_to_markets(context.driver, position, text)
 
 
 def actor_decides_to_enter_product_name(context, actor_alias, product_name, page_name):
@@ -558,7 +564,7 @@ def actor_should_see_last_visited_page_under_section_on_page(context, actor_alia
                                                              page_name):
     page = get_last_visited_page(context, actor_alias)
     # page_to_be_landed = get_page_object(page_name)
-    if page.NAME != text_to_see:
+    if str(page.NAME).lower() != str(text_to_see).lower():
         raise Exception("Last visited page is incorrect - " + str(page.NAME))
 
 
@@ -1370,3 +1376,27 @@ def generic_search_for_phrase(context: Context, actor_alias: str, phrase: str):
     page = get_last_visited_page(context, actor_alias)
     has_action(page, "search")
     page.search(context.driver, phrase)
+
+def profile_supplier_uploads_logo(context: Context, supplier_alias: str, picture: str):
+    """Upload a picture and set it as Company's logo.
+
+    :param picture: name of the picture file stored in ./tests/files
+    """
+    actor = get_actor(context, supplier_alias)
+    session = actor.session
+    file_path = get_absolute_path_of_file(picture)
+
+    # Step 1 - upload the logo
+    response = profile.upload_logo.upload(session, file_path)
+    context.response = response
+
+    # # Step 2 - check if Supplier is on the FAB profile page
+    # profile.edit_company_profile.should_be_here(response)
+    # logging.debug("Successfully uploaded logo picture: %s", picture)
+    #
+    # # Step 3 - Keep logo details in Company's scenario data
+    # logo_url = extract_logo_url(response)
+    # md5_hash = get_md5_hash_of_file(file_path)
+    # set_company_logo_detail(
+    #     context, actor.company_alias, picture=picture, hash=md5_hash, url=logo_url
+    # )

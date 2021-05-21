@@ -46,9 +46,10 @@ SELECTORS = {
         ),
         "data snapshot": Selector(
             By.XPATH, "//*[@id=\"target-age-groups\"]/div/button"
+            #//body/main/div[2]/section[3]/div/div/div[2]/div/div[1]/div[3]/div/button
         ),
         "select": Selector(
-            By.XPATH, "//*[@id=\"target-age-groups\"]/div[1]/div[3]/div/button"
+            By.CSS_SELECTOR, "#target-age-groups > div:nth-child(2) > div.selected-groups > div > button > i"
         ),
         "close": Selector(
             By.XPATH, "//span[contains(text(),'close')]"
@@ -57,19 +58,19 @@ SELECTORS = {
             By.XPATH, "//button[contains(text(),'Confirm')]"
         ),
         "describe the consumer demand example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.learning > div.learning__buttons.m-b-xs > button.button-example.button.button--small.button--tertiary.m-r-xxs"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.learning > div.learning__buttons > button.button-example.button.button--small.button--tertiary.m-r-xxs.m-b-xs"
         ),
         "describe the consumer demand": Selector(
             By.CSS_SELECTOR, "#demand"
         ),
         "Who are your competitors example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(2) > div.learning > div.learning__buttons.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(2) > div.learning > div.learning__buttons > button"
         ),
         "Who are your competitors": Selector(
             By.CSS_SELECTOR, "#competitors"
         ),
         "What are the product trends example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(3) > div.learning > div.learning__buttons.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(3) > div.learning > div.learning__buttons > button"
         ),
         "What are the product trends": Selector(
             By.CSS_SELECTOR, "#trend"
@@ -78,7 +79,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#resources > div > div.m-b-xs > button"
         ),
         "What’s your unique selling proposition example": Selector(
-            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(4) > div.learning > div.learning__buttons.m-b-xs > button"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(4) > div.learning > div.learning__buttons > button"
         ),
         "What’s your unique selling proposition": Selector(
             By.CSS_SELECTOR, "#unqiue_selling_proposition"
@@ -87,8 +88,8 @@ SELECTORS = {
             By.XPATH, "//span[contains(text(),'Adapting your product')]"
         ),
         "export plan home": Selector(
-            By.XPATH,
-            "//*[@id=\"adapting-your-product-content\"]/section[7]/div/div/div[2]/div[2]/a/span"
+            By.CSS_SELECTOR,
+            "#target-markets-research-content > section.p-v-m.bg-blue-deep-80 > div > div > div.c-2-3-m.c-1-2-xl > div.m-t-l > a > span"
         ),
         "what’s the average price for your product": Selector(
             By.CSS_SELECTOR, "#average_price", type=ElementType.INPUT
@@ -97,10 +98,10 @@ SELECTORS = {
             By.XPATH, "//h4[contains(text(),'Using what you know to help inform your positionin')]"
         ),
         "work out customer demand": Selector(
-            By.XPATH, "//h4[contains(text(),'Work out customer demand – how much might you sell')]"
+            By.CSS_SELECTOR, "#target-markets-research > div:nth-child(1) > div.learning > div.learning__content > a > div > h4"
         ),
-        "understand market trends": Selector(
-            By.XPATH, "//h4[contains(text(),'Understand market trends')]"
+        "understanding the competition": Selector(
+            By.XPATH, "//*[@id=\"target-markets-research\"]/div[2]/div[2]/div[2]/a/div/h4"
         ),
         "open navigation": Selector(
             By.XPATH,
@@ -114,7 +115,11 @@ SELECTORS = {
         ),
         "lesson": Selector(
             By.CSS_SELECTOR,
-            "#target-markets-research > div:nth-child(1) > div.learning > div.learning__buttons.m-b-xs > button.button-lesson.button.button--small.button--tertiary.m-r-xxs"
+            "#target-markets-research > div:nth-child(1) > div.learning > div.learning__buttons > button.button-lesson.button.button--small.button--tertiary.m-r-xxs.m-b-xs"
+        ),
+        "understanding lesson": Selector(
+            By.XPATH,
+            "//*[@id=\"target-markets-research\"]/div[2]/div[2]/div[1]/button[2]"
         ),
         "add a product": Selector(
             By.XPATH, "//button[contains(text(),'Add a product')]", type=ElementType.INPUT
@@ -123,7 +128,7 @@ SELECTORS = {
             By.XPATH, "//body/div[8]/div/div/div/div[1]/a"
         ),
         "add a target market": Selector(
-            By.XPATH, "//button[contains(text(),'Add a target market')]"
+            By.CSS_SELECTOR, "#set-country-button > span > button"
         ),
         "search": Selector(
             By.CSS_SELECTOR, "#search-input", type=ElementType.INPUT
@@ -195,8 +200,11 @@ def random_select_checkbox(driver: WebDriver, element_name: str):
     random_age_group_element_xpath = "//body/main/div[2]/section[3]/div/div/div[2]/div/div[1]/form/ul/li" \
                                      + "["+ str(random.randint(0, 8)) + "]"+ "/label"
     driver.implicitly_wait(1)
+    time.sleep(2)
     driver.find_element_by_xpath(random_age_group_element_xpath).click()
+    time.sleep(2)
     find_and_click(driver, element_selector_name="Confirm")
+    time.sleep(2)
 
 def enter_value(driver: WebDriver, element_name: str):
     value_element = find_element(
@@ -239,7 +247,7 @@ def fill_out_country(driver: WebDriver, country: str):
 
         # look out for the list displayed after entering country name and select random/provided country
         ul_list_element = driver.find_element_by_xpath(
-            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+            "//body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
 
 
         section_elements = ul_list_element.find_elements_by_tag_name("section")

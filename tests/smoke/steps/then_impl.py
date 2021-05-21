@@ -558,7 +558,7 @@ def actor_should_see_last_visited_page_under_section_on_page(context, actor_alia
                                                              page_name):
     page = get_last_visited_page(context, actor_alias)
     # page_to_be_landed = get_page_object(page_name)
-    if page.NAME != text_to_see:
+    if str(page.NAME).lower() != str(text_to_see).lower():
         raise Exception("Last visited page is incorrect - " + str(page.NAME))
 
 

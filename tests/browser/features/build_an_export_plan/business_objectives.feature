@@ -19,7 +19,7 @@ Feature: GreatMagna - Business Objectives Page
      And "Robert" decides to enter text at "Why you want to export" on page "Build An Export Plan - Business Objectives"
      And "Robert" decides to validate entered text at "Why you want to export" on page "Build An Export Plan - Business Objectives"
 
- @bug
+
  @allure.link:XOT-1052
    @Great_Magna_Export_Plan_B_O_123
    @Great_Magna_Export_Plan
@@ -38,7 +38,8 @@ Feature: GreatMagna - Business Objectives Page
           | 3     | 01/02/2021 | 01/02/2028 | obj3       | obj3-owner   | obj3-plannedreviews |
           | 4     | 01/02/2021 | 01/02/2028 | obj4       | obj4-owner   | obj4-plannedreviews |
           | 5     | 01/02/2021 | 01/02/2028 | obj5       | obj5-owner   | obj5-plannedreviews |
-   
+
+
    @allure.link:XOT-1053
      @Great_Magna_Export_Plan
    @Great_Magna_Export_Plan_B_O_D_123
@@ -60,16 +61,18 @@ Feature: GreatMagna - Business Objectives Page
 
 
 @allure.link:XOT-1054
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_lesson_b_a
+  @Great_Magna_Export_Plan
  Scenario:User should be able to click lessons "Move from accidental exporting to strategic exporting" and click back link "Business Objectives"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
-    And "Robert" should be on the "GreatMagna - Dashboard" Page
-   # #And "Robert" should be able to click on SkipWalkthrough
+  #And "Robert" should be able to click on Notnow
+  And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
-     And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "Build An Export Plan - Business Objectives"
+    And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Business Objectives"
+    And "Robert" decides to click on section "Move from accidental exporting to strategic exporting" on page "Build An Export Plan - Business Objectives"
      And "Robert" should be on the "LearnToExport - Move from accidental exporting to strategic exporting" page
      And "Robert" decides to click on section "Business Objectives" on page "LearnToExport - Move from accidental exporting to strategic exporting"
 
@@ -104,6 +107,7 @@ Feature: GreatMagna - Business Objectives Page
 
  @allure.link:XOT-1057
    @Great_Magna_Export_Plan_123
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on Top Export plan home and should be on Export plan dashboard page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -130,6 +134,7 @@ Feature: GreatMagna - Business Objectives Page
      And "Robert" should be on the "Build An Export Plan - Target Markets Research" Page
 
 
+ @failed_great_magna
  @allure.link:XOT-1059
    @Great_Magna_Export_Plan_B_O_1
    @Great_Magna_Export_Plan

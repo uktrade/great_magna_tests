@@ -1,5 +1,6 @@
+@Great_Magna_Tests
 @domestic
-@header
+@header_footer
 @footer
 @allure.suite:Domestic
 Feature: Domestic - Header-Footer

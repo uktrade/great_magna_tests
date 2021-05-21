@@ -7,30 +7,31 @@ Feature: GreatMagna - Where To Export Page
    Given test authentication is done
 
    @allure.link:XOT-1021
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_w_T_e_1
   Scenario Outline:User should be able to "Add place" and " Add Country"
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-     And "Robert" decides to enter product name "Coffee" on page "WhereToExport - Compare Countries"
+     And "Robert" decides to enter product name "<product>" on page "WhereToExport - Compare Countries"
      And "Robert" decides to click on select and save random product options on the "WhereToExport - Compare Countries" Page
     Examples: product name
       | product |
       | Coffee |
 
+
    @allure.link:XOT-1022
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_wte_1
   Scenario:User should be able to "Add a place"
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-     And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+     And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | India       | 1 |
       | Nigeria     | 2 |
@@ -47,10 +48,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Default_Tab
   Scenario:User should be able to see the country and data in the table on default tab
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Kosovo       | 1 |
       | Latvia     | 2 |
@@ -68,10 +69,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Europe_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Norway       | 1 |
       | Poland     | 2 |
@@ -89,10 +90,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Europe_Asiapacific_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Switzerland       | 1 |
       | Vatican City     | 2 |
@@ -110,10 +111,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Asiapacific_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Laos       | 1 |
       | Malaysia     | 2 |
@@ -128,13 +129,13 @@ Feature: GreatMagna - Where To Export Page
     And "Robert" should see country details on all tabs on page "WhereToExport - Compare Countries"
 
       @allure.link:XOT-1027
-   @Great_Magna_Export_Plan_WTE_Asiapacific_ALL_Tabs
+   @Great_Magna_Export_Plan_WTE_Asiapacific_ALL_Tabs_a
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Philippines       | 1 |
       | Samoa     | 2 |
@@ -152,10 +153,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africa_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Algeria       | 1 |
       | Angola     | 2 |
@@ -173,7 +174,7 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africa_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
     And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
@@ -194,10 +195,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africa_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Ghana       | 1 |
       | Guinea     | 2 |
@@ -215,10 +216,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africa_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Mali       | 1 |
       | Mauritania     | 2 |
@@ -236,10 +237,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africa_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Senegal       | 1 |
       | Seychelles     | 2 |
@@ -257,10 +258,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Africafinal_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Tunisia       | 1 |
       | Uganda     | 2 |
@@ -278,10 +279,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Estonia       | 1 |
       | Finland     | 2 |
@@ -300,11 +301,11 @@ Feature: GreatMagna - Where To Export Page
   Scenario:User should be able to delete entered country details
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Albania       | 1 |
       | Andorra     | 2 |
@@ -333,10 +334,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_ASIA_NorthAmerica_UAE_Yemen_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Bangladesh           | 1 |
       | Bhutan               | 2 |
@@ -354,10 +355,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Midlleeast_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Afghanistan          | 1 |
       | Bahrain               | 2 |
@@ -375,10 +376,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Midlleeast_Latinamerica_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Saudi Arabia         | 1 |
       | Syria              | 2 |
@@ -396,10 +397,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Latinamerica_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Costa rica         | 1 |
       | Cuba              | 2 |
@@ -417,10 +418,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Latinamerica_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Honduras         | 1 |
       | Jamaica              | 2 |
@@ -438,10 +439,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Latinamerica_easterneurope_china_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Suriname         | 1 |
       | The Bahamas              | 2 |
@@ -459,10 +460,10 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Latinamerica_easterneurope_china_ALL_Tabs
   Scenario:User should be able to see the country and data in the table in all tabs
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Armenia         | 1 |
       | Azerbaijan              | 2 |
@@ -481,11 +482,11 @@ Feature: GreatMagna - Where To Export Page
   Scenario:User should be able to validate entered country details
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Albania       | 1 |
       | Andorra     | 2 |
@@ -504,11 +505,11 @@ Feature: GreatMagna - Where To Export Page
   Scenario:User should be not able to enter more than 10 countries
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Albania       | 1 |
       | Andorra     | 2 |
@@ -527,11 +528,11 @@ Feature: GreatMagna - Where To Export Page
   Scenario:User should not be able to enter country name which already entered
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
       | CountryName | CountryPlaceNumber |
       | Albania       | 1 |
       | Albania     | 2 |
@@ -552,7 +553,7 @@ Feature: GreatMagna - Where To Export Page
   Scenario:User should be able to change country name which already entered in the personalisation bar with ready to choose country list
 
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
@@ -575,11 +576,11 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Link
   Scenario:User should be able to click on Learn to export button and View your export plan button
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
     | CountryName | CountryPlaceNumber |
       | Senegal       | 1 |
       | Seychelles     | 2 |
@@ -601,11 +602,11 @@ Feature: GreatMagna - Where To Export Page
    @Great_Magna_Export_Plan_WTE_Link_1
   Scenario:User should be able to click on Learn to export button and View your export plan button
     Given "Robert" visited "GreatMagna - Login" page
-    When "Robert" decides to enter email address "santoshtesting10008+9878@gmail.com", password "Testing@123!" and click Login
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
     And "Robert" should be on the "GreatMagna - Dashboard" Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Where To Export"
-    And "Robert" decides to enter maximum "10" country names with display "3" tabs on page "WhereToExport - Compare Countries"
+    And "Robert" decides to enter maximum "10" country names with display "5" tabs on page "WhereToExport - Compare Countries"
     | CountryName | CountryPlaceNumber |
       | Senegal       | 1 |
     And "Robert" decides to click on element "UN Comtrade" on page "WhereToExport - Compare Countries"

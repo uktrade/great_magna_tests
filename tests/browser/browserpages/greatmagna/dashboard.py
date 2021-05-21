@@ -68,18 +68,6 @@ SELECTORS = {
         "country-btn": Selector(
             By.CSS_SELECTOR, "#set-country-button > span > button"
         ),
-        "i have exported in last 12 months": Selector(
-            By.XPATH, "//label[contains(text(),'I have exported in the last 12 months')]"
-        ),
-        "i have exported before but not in the last 12 months": Selector(
-            By.XPATH, "//label[contains(text(),'I have exported before but not in the last 12 mont')]"
-        ),
-        "i have never exported but have a product or service": Selector(
-            By.XPATH, "//label[contains(text(),'I have never exported but have a product or servic')]"
-        ),
-        "i do not have a product or service for export": Selector(
-            By.XPATH, "//label[contains(text(),'I do not have a product or service for export')]"
-        ),
         "save": Selector(
             By.XPATH, "//button[contains(text(),'Save')]"
         ),
@@ -163,6 +151,15 @@ SELECTORS = {
         ),
         "header logo": Selector(
             By.XPATH, "//img[@id='header-logo-exporting-is-great']"
+        ),
+        "vfmcontinue": Selector(
+            By.CSS_SELECTOR, "body > div:nth-child(20) > div > div > div > div.modal-button-bar > button.button.button--primary.m-v-xs"
+        ),
+        "vfmnext": Selector(
+            By.CSS_SELECTOR, "body > div:nth-child(20) > div > div > div > div.modal-button-bar > button.button.button--primary.m-v-xs"
+        ),
+        "vfm": Selector(
+            By.XPATH, "//body/div[9]/div/div/div/h3"
         ),
 
     },
@@ -300,14 +297,7 @@ def fill_out_product(driver: WebDriver, products: str):
 
 def fill_out_country(driver: WebDriver, country: str):
     driver.implicitly_wait(1)
-    # parent div: //body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]
-    # parent ul: //body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul
 
-    # where to export : country search
-    # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[2]/div[2]
-    # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[2]/div[2]/ul
-
-    # country
     country_btn = find_element(
         driver, find_selector_by_name(SELECTORS, "country-btn")  # dashboard add country button
     )
@@ -384,17 +374,6 @@ def fill_out_products(driver: WebDriver, products: str):
     driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(products)
     driver.find_element_by_xpath("//body/div[4]/div/div/form/div[2]/div/div/div[2]/button").click()
     time.sleep(5)
-
-
-def click_on_i_have_exported_in_the_last_12_months(driver: WebDriver):
-    click_element = find_element(
-        driver, find_selector_by_name(SELECTORS, "i have exported in last 12 months")
-    )
-    click_element.click()
-    save = find_element(
-        driver, find_selector_by_name(SELECTORS, "save")
-    )
-    save.click()
 
 
 def search_again_top_bottom(driver: WebDriver):
@@ -509,3 +488,80 @@ def find_and_click(driver: WebDriver, *, element_selector_name: str):
 def fills_out_submit(driver: WebDriver, page_name):
     driver.find_element_by_css_selector("#id_comment").clear()
     driver.find_element_by_css_selector("#id_comment").send_keys("Automated Tests")
+
+def find_and_select_random_item_list(driver: WebDriver ,element_selector_name: str):
+    find_and_click(driver, element_selector_name="vfmnext")
+    find_and_click(driver, element_selector_name="vfmcontinue")
+    # counter = 0
+    # while True:
+    #
+    #     if counter >= 10:
+    #         break
+    #/html/body/div[9]/div/div/div/div[1]/form/div/div/div[1]/label
+    random_radio_element_xpath = "//body/div[9]/div/div/div/div[1]/form/div/div/div" \
+                                     + "[" + str(random.randint(0, 8)) + "]" + "/label"
+    driver.implicitly_wait(1)
+    time.sleep(2)
+    driver.find_element_by_xpath(random_radio_element_xpath).click()
+
+
+
+    vfm_drop_down_element_xpath = "//body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[2]"
+    vfm_element = driver.find_element_by_xpath(vfm_drop_down_element_xpath)
+    vfm_element.click()
+
+    vfm_drop_down_list_xpath = "//body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[3]"
+    driver.find_element_by_xpath(vfm_drop_down_list_xpath).click()
+    driver.implicitly_wait(5)
+
+    # logging.debug(vfm_drop_down_list_xpath)
+    # div_elements = driver.find_element_by_xpath(vfm_drop_down_list_xpath).find_elements_by_tag_name("div")
+    # # select__list body-l bg-white radius
+    # business_type_element = driver.find_element_by_xpath(
+    #     "//body/div[9]/div/div/div/div[1]/form/div/div/div[1]/label")
+    #
+    # best_describe_element = driver.find_element_by_xpath(
+    #     "//body/div[9]/div/div/div/div[1]/form/div/div/div[1]/label")
+
+    #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[2]
+    #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[3]
+
+    #//body/div[9]/div/div/div/div[1]/form/div/div
+    # find element with above path
+
+    # find element(S) by tag "div" with the above element
+
+
+    #/html/body/div[9]/div/div/div/div[1]/form/div/div
+    # inter growth
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div[1]
+    #
+    # opportunity for business
+    #     #/html/body/div[9]/div/div/div/div[1]/form/div/div/div[2]
+    #
+    # interested in support
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div[1]/label
+    # business name
+    # #/html/body/div[9]/div/div/div/div[1]/div/div/div[2]/div/div[2]/div[1]/input
+    # #/html/body/div[9]/div/div/div/div[1]/div/div/div[2]/div/div[2]/div[2]
+    #
+    # headquater
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[2]
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[3]
+    #
+    # business unit
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[2]
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[3]
+    #
+    #
+    # which sector
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[2]
+    # #/html/body/div[9]/div/div/div/div[1]/form/div/div/div/div[3]/div[3]
+
+
+
+
+
+
+    nextbtnclick(driver)
+

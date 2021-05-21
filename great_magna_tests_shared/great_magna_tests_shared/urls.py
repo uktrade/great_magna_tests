@@ -1225,12 +1225,14 @@ class URLs(Enum):
     GREAT_MAGNA_SIGNUP_WHERE_TO_EXPORT = GreatMagnaUrl("signup/", template="/signup/?next=/where-to-export/")
     GREAT_MAGNA_SIGNUP_MAKE_AN_EXPORT_PLAN = GreatMagnaUrl("signup/", template="/signup/?next=/export-plan/dashboard/")
 
+
     GREAT_MAGNA_LOGIN = GreatMagnaUrl("login/")
     GREAT_MAGNA_FORGOTTEN_PASSWORD = GreatMagnaUrl("https://great.staging.uktrade.digital/sso/accounts/password/reset/")
     GREAT_MAGNA_LEARN_TO_EXPORT = GreatMagnaUrl("learn/categories/")
     GREAT_MAGNA_SEARCH = GreatMagnaUrl("search/")
     GREAT_MAGNA_DASHBOARD = GreatMagnaUrl("dashboard/")
     GREAT_MAGNA_SHOW_ME_AROUND = GreatMagnaUrl("dashboard/")
+    GREAT_MAGNA_VFM = GreatMagnaUrl("/dashboard/?startsurvey")
     GREAT_MAGNA_SIGN_OUT = GreatMagnaUrl("dashboard/")
     GREAT_MAGNA_PROFILE_ABOUT = GreatMagnaUrl("profile/about/")
     GREAT_MAGNA_CONTACT_US = GreatMagnaUrl("contact-us/help/")

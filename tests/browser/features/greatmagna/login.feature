@@ -52,4 +52,19 @@ Feature: GreatMagna - Login Page
       | email address |
       | santoshtesting10008+88@gmail.com |
 
+@allure.link:XOT-005
+ @Great-Magna-login_Linkedin
+  @failed_great_magna
+     Scenario:Visitor should be able to login with linkedin
+  Given "Robert" visited "GreatMagna - Login" page
+  When "Robert" decides to click on "Login with linkedin"
+  Then "Robert" should be on the "GreatMagna - Dashboard" Page
 
+  @allure.link:XOT-005
+ @Great-Magna-login_Google
+    @failed_great_magna
+     Scenario:Visitor should be able to login with google
+  Given "Robert" visited "GreatMagna - Login" page
+  When "Robert" decides to click on "sign in with Google"
+   And "Robert" decides to click on "santoshtesting10008@gmail.com"
+  Then "Robert" should be on the "GreatMagna - Dashboard" Page

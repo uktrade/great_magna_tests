@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @allure.link:TT-1033
 @allure.link:TT-1094

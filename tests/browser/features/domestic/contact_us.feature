@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @contact-us
 @allure.suite:Domestic
@@ -186,7 +187,7 @@ Feature: Domestic - Contact us
       | radio elements                                                 |
       | I have not received an email confirmation                      |
       | I need to reset my password                                    |
-#      | I cannot find my company                                       |
+      | I cannot find my company                                       |
       | My Companies House login is not working                        |
       | I do not know where to enter my verification code              |
       | I have not received my letter containing the verification code |
@@ -274,11 +275,11 @@ Feature: Domestic - Contact us
     Examples:
       | selected topic                                                 |
       | I have not received an email confirmation                      |
-#      | I need to reset my password                                    |
-#      | My Companies House login is not working                        |
-#      | I do not know where to enter my verification code              |
-#      | I have not received my letter containing the verification code |
-#      | I have not received a verification code                        |
+      | I need to reset my password                                    |
+      | My Companies House login is not working                        |
+      | I do not know where to enter my verification code              |
+      | I have not received my letter containing the verification code |
+      | I have not received a verification code                        |
 
 
   @allure.link:TT-758

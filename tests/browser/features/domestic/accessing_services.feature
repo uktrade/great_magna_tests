@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @services
 @allure.suite:Domestic

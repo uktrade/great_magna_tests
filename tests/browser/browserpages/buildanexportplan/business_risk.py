@@ -96,7 +96,8 @@ SELECTORS = {
         ),
         "contingency plan example": Selector(
             By.CSS_SELECTOR,
-            "#business-risks > div.costs.costs--risks.bg-blue-deep-10.p-v-s.m-b-s > table > tbody > tr:nth-child(4) > td > div.learning > div.learning__buttons.m-b-xs > button"
+            "#business-risks > div.costs.costs--risks.bg-blue-deep-10.p-v-s.m-b-s > table > tbody > tr:nth-child(9) > td > div.learning > div.learning__buttons > button",
+            #"#business-risks > div.costs.costs--risks.bg-blue-deep-10.p-v-s.m-b-s > table > tbody > tr:nth-child(4) > td > div.learning > div.learning__buttons.m-b-xs > button"
         ),
         "add a risk": Selector(
             By.CSS_SELECTOR, "#business-risks > button"
@@ -119,7 +120,7 @@ SELECTORS = {
             By.XPATH, "//body/div[10]/div/div/div/div[1]/a"
         ),
         "add a target market": Selector(
-            By.XPATH, "//button[contains(text(),'Add a target market')]"
+            By.CSS_SELECTOR, "#set-country-button > span > button"#By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
         "nav download export plan": Selector(
             By.XPATH, "//body/main/div[1]/nav/div/div[2]/button[2]/i"
@@ -141,6 +142,12 @@ SELECTORS = {
         ),
         "dashboard": Selector(
             By.XPATH, "//a[contains(text(),'Dashboard')]"
+        ),
+        "lesson": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div/div[1]/button"
+        ),
+        "protect your intellectual property abroad": Selector(
+            By.XPATH, "//*[@id=\"business-risks\"]/div/div[2]/a/div/h4"
         ),
     }
 }
@@ -242,7 +249,7 @@ def fill_out_country(driver: WebDriver, country: str):
 
         # look out for the list displayed after entering country name and select random/provided country
         ul_list_element = driver.find_element_by_xpath(
-            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+            "//body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
 
         section_elements = ul_list_element.find_elements_by_tag_name("section")
         logging.debug("length of section elements " + str(len(section_elements)))

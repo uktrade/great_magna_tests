@@ -46,7 +46,7 @@ SELECTORS = {
             By.CSS_SELECTOR, "#export-plan-dashboard > div:nth-child(2) > div > a > div.p-t-s.p-b-xs.p-h-xs"
         ),
         "why you want to export example": Selector(
-            By.CSS_SELECTOR, "#objectives-reasons > div > div.learning > div.learning__buttons.m-b-xs > button",
+            By.CSS_SELECTOR, "#objectives-reasons > div > div.learning > div.learning__buttons > button.button-example.button.button--small.button--tertiary.m-r-xxs.m-b-xs",#objectives-reasons > div > div.learning > div.learning__buttons.m-b-xs > button",
             type=ElementType.INPUT
         ),
         "why you want to export": Selector(
@@ -74,14 +74,6 @@ SELECTORS = {
             # "//body/main[@id='content']/div[@id='business-objectives-content']/section[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/textarea[1]"
             , type=ElementType.TEXTAREA
         ),
-        # "delete": Selector(
-        #     By.CSS_SELECTOR, "#objectives-form--objectives > div > div > div.text-center > button > i",
-        #     wait_after_click=False
-        # ),
-        # "add goal": Selector(
-        #     By.CSS_SELECTOR, "#objectives-form--objectives > div > button"#"//*[@id=\"objectives-form--objectives\"]/div/button"
-        #     , wait_after_click=False
-        # ),
         "yes checkbox": Selector(
             By.CSS_SELECTOR, "#section-complete > div > label"
         ),
@@ -96,14 +88,11 @@ SELECTORS = {
             By.XPATH, "//p[contains(text(),'Is this opportunity right for you?')]"
         ),
         "move from accidental exporting to strategic exporting": Selector(
-            By.XPATH, "//*[@id=\"business-objectives-content\"]/section[4]/div/div[1]/div/a/div/p"
+            By.CSS_SELECTOR, "#objectives-reasons > div > div.learning > div.learning__content > a > div"#//*[@id=\"business-objectives-content\"]/section[4]/div/div[1]/div/a/div/p"
         ),
         "top export plan home": Selector(
             By.XPATH, "//*[@id=\"business-objectives-content\"]/section[1]/div/div/div[2]/a/span"
         ),
-        # "add goal": Selector(
-        #     By.CSS_SELECTOR, "#objectives-form--objectives > div > button"
-        # ),
         "open navigation": Selector(
             By.XPATH,
             "//body/main[@id='content']/div[@id='sidebar-content']/nav[@id='collapseNav']/div[1]/button[1]/i[1]"
@@ -116,6 +105,12 @@ SELECTORS = {
         ),
         "dashboard": Selector(
             By.XPATH, "//a[contains(text(),'Dashboard')]"
+        ),
+        "lesson": Selector(
+            By.CSS_SELECTOR, "#objectives-reasons > div > div.learning > div.learning__buttons > button.button-lesson.button.button--small.button--tertiary.m-r-xxs.m-b-xs"
+        ),
+        "not now": Selector(
+            By.XPATH, "//body/div[9]/div/div/div/div[2]/button[1]"
         ),
     }
 }
@@ -262,4 +257,8 @@ def check_section_complete_yes(driver: WebDriver, element_selector_name: str):
     )
     check_yes_link.click()
 
-
+def click_skip_not_now(driver: WebDriver):
+    skip_link = find_element(
+        driver, find_selector_by_name(SELECTORS, "notnow")
+    )
+    skip_link.click()

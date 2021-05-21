@@ -219,22 +219,22 @@ def fill_out_product(driver: WebDriver, products: str):
         # time.sleep(2)
         # driver.find_element_by_xpath(
         #     "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").clear()
-        product_input_text = driver.find_element_by_xpath("//input[@id='input-commodity-name']").text
-        logging.debug("product_input_text -> " + product_input_text)
+        select_product_text = driver.find_element_by_xpath("//input[@id='input-commodity-name']").text
+        logging.debug("select_product_text -> " + select_product_text)
         # actions = action_chains(driver)
         # driver.find_element_by_xpath("//input[@id='input-commodity-name']").click()
-        # for i in range(len(product_input_text)):
+        # for i in range(len(select_product_text)):
         #     actions.sendKeys(Keys.ARROW_LEFT)
         #
         # actions.build().perform()
         #
-        # for i in range(len(product_input_text)):
+        # for i in range(len(select_product_text)):
         #     actions.sendKeys(Keys.DELETE)
         #
         # time.sleep(1);
         # actions.build().perform()
 
-        for i in range(len(product_input_text)):
+        for i in range(len(select_product_text)):
             driver.find_element_by_xpath(
                 "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").sendKeys(
                 Keys.BACKSPACE)

@@ -56,7 +56,7 @@ SELECTORS = {
             By.ID, "id_choice_4", type=ElementType.RADIO, is_visible=False
         ),
         "submit": SUBMIT_BUTTON,
-        "back": Selector(By.PARTIAL_LINK_TEXT, "Back", type=ElementType.LINK),
+        "back": Selector(By.CSS_SELECTOR, "#content > div:nth-child(2) > form > div > div > button", type=ElementType.LINK),
     }
 }
 POs = {

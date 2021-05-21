@@ -42,7 +42,7 @@ PAGE_TITLE = "Compare Countries"
 
 SELECTORS = {
     "compare countries": {
-        "product_input": Selector(
+        "select_product": Selector(
             By.CSS_SELECTOR, "#cta-container > button"
         ),
         "product-btn": Selector(
@@ -72,6 +72,9 @@ SELECTORS = {
         "add a place": Selector(
             By.XPATH, "//body/main/div[1]/section/div/div/div[1]/div/div[2]/button"
         ),
+        "add a place next": Selector(
+            By.XPATH, "//body/main/div[3]/span/div[2]/button"
+        ),
         "search country": Selector(
             By.XPATH, "//body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"
             # //body/div[8]/div/div/div/div/div/div[1]/div[3]/div[1]/div/label/div/input"
@@ -79,65 +82,11 @@ SELECTORS = {
         "delete": Selector(
             By.CSS_SELECTOR, "#market-India > th > button > i"
         ),
-        "add a second place": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/button"
-        ),
-        "cpi educational": Selector(
-            By.CSS_SELECTOR, "//body/main/div[3]/span/div[2]/span/table/thead/tr/th[6]/div/div/div/button/i"
-        ),
-        "adjusted national income": Selector(
-            By.XPATH, "//*[@id=\"open-product-finder\"]/span/div[2]/span/table/thead/tr/th[4]/div/div/div/button/i"
-        ),
-        "adjusted national income educational": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/thead/tr/th[4]/div/div/div/button/i"
-        ),
-        "ease of doing business rank": Selector(
-            By.XPATH, "//*[@id=\"open-product-finder\"]/span/div[2]/span/table/thead/tr/th[5]/div/div/div/button/i"
-        ),
-        "ease of doing business rank educational": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/thead/tr/th[5]/div/div/div/button/i"
-        ),
-        "corruption perception index": Selector(
-            By.XPATH, "//*[@id=\"open-product-finder\"]/span/div[2]/span/table/thead/tr/th[6]/div/div/div/button/i"
-        ),
         "where to export": Selector(
             By.XPATH, "#header-link-markets"
         ),
-        "country 1": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[1]/th/div"
-        ),
-        "country 2": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[2]/th/div"
-        ),
-        "country 3": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[3]/th/div"
-        ),
-        "religion 1": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[1]/td[1]/div[1]"
-        ),
-        "religion 2": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[2]/td[1]/div[1]"
-        ),
-        "religion 3": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[3]/td[1]/div[1]"
-        ),
-        "language 1": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[3]/td[1]/div[1]"
-        ),
-        "language 2": Selector(
-            By.XPATH, "//body/main/div[3]/span/div[2]/span/table/tbody/tr[3]/td[1]/div[1]"
-        ),
         "rule of law making educational": Selector(
             By.XPATH, "//body/main/div[3]/span/div[2]/span/table/thead/tr/th[4]/div/div/div/button/i"
-        ),
-        "country 1 bottom": Selector(
-            By.XPATH, "//body/main/div[4]/div/section/div[2]/ul/li[1]/button"
-        ),
-        "country 2 bottom": Selector(
-            By.XPATH, "//body/main/div[4]/div/section/div[2]/ul/li[2]/button"
-        ),
-        "country 3 bottom": Selector(
-            By.XPATH, "//body/main/div[4]/div/section/div[2]/ul/li[3]/button"
         ),
         "country list item": Selector(
             By.XPATH, "//li[@id='origin_country__option--0']"
@@ -327,9 +276,10 @@ def fill_out_country_and_validate_ui(driver: WebDriver, country: str, display_ta
     if len(tab_button_elements) != display_tab_count:
         raise Exception("Invalid Tab count")
 
+
 def enter_country_details(driver: WebDriver, country_name: str, country_place_number: int = 1
                           , country_max: int = 10
-                          , display_tab_count: int = 4):
+                          , display_tab_count: int = 5):
     driver.implicitly_wait(1)
     # logging.debug("country_place_number " + str(country_place_number))
     # logging.debug("country_max " + str(country_max))
@@ -337,18 +287,18 @@ def enter_country_details(driver: WebDriver, country_name: str, country_place_nu
     table_element = None
     try:
         # check if the country table already exists
-        #table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
+        # table_element = driver.find_element_by_xpath("/html/body/main/div[3]/span/div[2]/span/table")
         # if table doesnt not exists then "add a place" button must exists
-        #if table_element == None:
+        # if table_element == None:
         if (country_place_number == 1):
             find_and_click(driver, element_selector_name="add a place")
     except Exception as e:
         table_element = None
-        find_and_click(driver, element_selector_name="add a place")
+        find_and_click(driver, element_selector_name="add a place next")
 
-    #logging.debug("table_element " + str(table_element))
+    # logging.debug("table_element " + str(table_element))
 
-    if (country_place_number == 1):# and table_element == None):
+    if (country_place_number == 1):  # and table_element == None):
         fill_out_country_and_validate_ui(driver, country_name, display_tab_count=display_tab_count)
         return
 
@@ -358,7 +308,8 @@ def enter_country_details(driver: WebDriver, country_name: str, country_place_nu
         button_text = add_place_num_btn_element.text
         user_entered_button_text = "Add place " + str(country_place_number) + " of " + str(country_max)
         if button_text != user_entered_button_text:
-            raise Exception("Invalid Add Place button index - " + str(button_text) + " vs "  +  str(user_entered_button_text))
+            raise Exception(
+                "Invalid Add Place button index - " + str(button_text) + " vs " + str(user_entered_button_text))
 
         # if proper button index found, then click the button to add the country place name
         add_place_num_btn_element.click()
@@ -444,9 +395,11 @@ def validate_entered_country_details(driver: WebDriver, country_name: str, count
         # if table doesnt not exists then "add a place" button must exists
         if table_element == None:
             find_and_click(driver, element_selector_name="add a place")
+            time.sleep(1)
     except Exception as e:
         table_element = None
-        find_and_click(driver, element_selector_name="add a place")
+        find_and_click(driver, element_selector_name="add a place next")
+        time.sleep(1)
 
     logging.debug("table_element " + str(table_element))
 
@@ -475,3 +428,83 @@ def validate_entered_country_details(driver: WebDriver, country_name: str, count
     list_selection = list_country + "/button"
     driver.find_element_by_xpath(list_selection).click()
     time.sleep(2)
+
+
+def fill_out_product(driver: WebDriver, products: str):
+    product_btn = find_element(
+        driver, find_selector_by_name(SELECTORS, "product-btn")
+    )
+    product_btn.click()
+
+    try:
+        if driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").is_displayed():
+            driver.find_element_by_css_selector("body > div:nth-child(11) > div > div > button").click()
+    except:
+        pass
+
+    try:
+
+        select_product_text = driver.find_element_by_css_selector("#search-input").text#"//input[@id='input-commodity-name']").text
+        logging.debug("select_product_text -> " + select_product_text)
+
+        for i in range(len(select_product_text)):
+            driver.find_element_by_xpath(
+                "//body/div[7]/div/div/form/div[2]/div/div/div[2]/label/div/input" ).sendKeys(
+                 #"//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").sendKeys(
+                Keys.BACKSPACE)
+        driver.find_element_by_xpath(
+                "//body/div[7]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys("")
+                 #"//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").send_keys("")
+        driver.find_element_by_xpath(
+                "//body/div[7]/div/div/form/div[2]/div/div/div[2]/label/div/input").send_keys(products)
+                 #"//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").send_keys(products)
+        driver.find_element_by_xpath(
+                "//body/div[7]/div/div/form/div[2]/div/div/div[2]/button/i").click()
+                #"//body/div[4]/div/div/form/div[2]/div/div/div[2]/button/i").click()
+
+        while True:
+            find_and_select_random_radio_and_click_next(driver)
+            time.sleep(1)  # seconds
+            try:
+                if driver.find_element_by_xpath("//button[contains(text(),'Save product')]").is_displayed():
+                    driver.find_element_by_xpath("//button[contains(text(),'Save product')]").click()
+                    break
+                else:
+                    continue
+            except:
+                pass
+    except Exception as ex:
+        logging.debug("Exception in product input " + str(ex))
+        driver.find_element_by_css_selector("#search-input").send_keys(products)##input-commodity-name
+        driver.find_element_by_xpath("//body/div[7]/div/div/form/div[2]/div/div/div[2]/button/i").click()#/html/body/div[3]/div/div/form/div[2]/div/div/section/div/button").click()
+
+
+def find_and_select_random_radio_and_click_next(driver: WebDriver):
+    parent_div_radio_element = driver.find_element_by_class_name("m-b-xs")
+    time.sleep(2)
+    child_radio_div_elements = parent_div_radio_element.find_elements_by_xpath("//input[@type='radio']");
+    RADIO_SELECTORS_DICT = {}
+    for index in range(len(child_radio_div_elements)):
+        child_radio_element = child_radio_div_elements[index]
+        key_name = "radio" + str(index)
+        radio_element_xpath = f"//input[@id='" + str(child_radio_element.get_attribute("id")) + "']"
+        key_value = Selector(By.XPATH, radio_element_xpath, type=ElementType.RADIO)
+
+        if index == 0:
+            rsdict = {}
+            rsdict[key_name] = key_value
+            RADIO_SELECTORS_DICT["product radio info"] = rsdict
+        else:
+            rsdict = RADIO_SELECTORS_DICT["product radio info"]
+            rsdict[key_name] = key_value
+            RADIO_SELECTORS_DICT.clear()
+            RADIO_SELECTORS_DICT["product radio info"] = rsdict
+
+    radio_selectors = RADIO_SELECTORS_DICT["product radio info"]
+    check_random_radio(driver, radio_selectors)
+
+    nextbtnclick(driver)
+
+
+def nextbtnclick(driver: WebDriver):
+    driver.find_element_by_xpath("//button[contains(text(),'Next')]").click()

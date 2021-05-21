@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @markets
 @allure.suite:Domestic
@@ -32,7 +33,7 @@ Feature: Domestic - Market guides
       | Description                 |
       | Opportunities for exporters |
       | Doing business in           |
-#      | Next steps                  |
+      | Next steps                  |
       | Error Reporting             |
       | Footer                      |
 
@@ -54,8 +55,8 @@ Feature: Domestic - Market guides
       | Description                 |
       | Opportunities for exporters |
       | Doing business in           |
-#      | Next steps                  |
-#      | Next steps Staging          |
+      | Next steps                  |
+      | Next steps Staging          |
       | Error Reporting             |
       | Footer                      |
 
@@ -71,7 +72,7 @@ Feature: Domestic - Market guides
     Examples: next step
       | follow up                                    | expected       |
       | Read more advice about doing business abroad | Advice landing |
-#      | Get in touch with one of our trade advisers  | New Office Finder |
+      | Get in touch with one of our trade advisers  | New Office Finder |
 
 
 
@@ -112,7 +113,7 @@ Feature: Domestic - Market guides
   Scenario: Visitor should able to login with "compare now" from the market guide
      Given "Robert" visits the "Domestic - Brazil - guide" page
 
-#    When "Robert" decides to click on "Markets"
+    When "Robert" decides to click on "Markets"
     When "Robert" decides to click on element "Compare Now" on page "Domestic - Brazil - guide"
 
     Then "Robert" should be on the "GreatMagna - Sign Up" page

@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @search
 @allure.suite:Domestic
@@ -89,6 +90,6 @@ Feature: Domestic - Great site search
 
     Examples: event, market, service and opportunity
       | specific        | first phrase | second phrase     |
-#      | Home            | Work         | Full work service |
+      | Home            | Work         | Full work service |
       | Advice landing  | Transport    | way               |
-#      | Markets listing | Water        | selection         |
+      | Markets listing | Water        | selection         |

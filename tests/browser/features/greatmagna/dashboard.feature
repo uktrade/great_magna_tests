@@ -86,6 +86,80 @@ Feature: GreatMagna - Dashboard Page
   And "Robert" decides to enter product name "Televisions" on page "Build An Export Plan - Travel Plan"
   And "Robert" decides to enter country name "Angola" on the "Build An Export Plan - Travel Plan" page
 
+@allure.link:XOT-026
+  @Great_Magna_Export_Plan
+      @export_plan_dashboard_sections
+  Scenario: User should see all Dashboard sections and services
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    Then "Robert" decides to click on "Build an export plan"
+    And "Robert" should see following sections
+      | sections         |
+      | Header           |
+      | Dashboard        |
+      | I want to export |
+      | Menu             |
+      | Learn to export  |
+      | Export plan      |
+      | where to export  |
+      | Footer           |
+
+  @allure.link:XOT-027
+  @Great_Magna_Export_Plan
+   @export_plan_menu_list
+    @failed_great_magna
+  Scenario: User should see all Dashboard sections and services
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    Then "Robert" decides to click on "Menu"
+    And "Robert" should see following sections
+      | sections                 |
+      | Home                     |
+      | Learn to export     new  |
+      | Where to export     new  |
+      | Make an export plan new  |
+      | Account                  |
+      | Advice                   |
+      | Markets                  |
+      | Services                 |
+      | Sign out                 |
+
+
+@allure.link:XOT-1011
+   @Great_Magna_Export_Plan_pdf_download
+   @Great_Magna_Export_Plan
+  Scenario:User should be able to click on "Download as PDF" on the dashboard page
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+   #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+    And "Robert" should be able to see progress bar for section "10 out of 10" on "Build An Export Plan - Export Plan Dashboard" page
+    And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Export Plan Dashboard"
+    And "Robert" decides to click on element "Download as PDF" on page "GreatMagna - Dashboard"
+    And "Robert" decides to click on element "Go to export plan" on page "GreatMagna - Dashboard"
+    #And "Robert" decides to verify all sections complete on "Download as PDF" on page "Build An Export Plan - Export Plan Dashboard""
+
+    @allure.link:XOT-027
+  @Great_Magna_Export_Plan
+   @footer_links
+  Scenario: User should see all footer links
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    Then "Robert" should be on the "GreatMagna - Dashboard" Page
+    And "Robert" should see following sections
+      | sections                                      |
+      | Contact us                                    |
+      | Privacy and cookies                           |
+      | Terms and conditions                          |
+      | Accessibility                                 |
+      | Performance                                   |
+      | Department for International Trade on GOV.UK  |
+      | Go to the page for international business     |
+
 
 
 

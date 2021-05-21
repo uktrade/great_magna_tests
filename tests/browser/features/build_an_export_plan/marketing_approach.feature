@@ -4,10 +4,13 @@
 Feature: GreatMagna - Marketing approach Page
  Background:
    Given test authentication is done
+# features/build_an_export_plan/marketing_approach.feature:13  User should be able to click on "Route to market" section and select random "route" and "how will you promote product"
+
 
 
   @allure.link:XOT-1151
    @Great_Magna_Export_Plan_B_O_D_1_123
+    @Great_Magna_Export_Plan_112_m_a
   Scenario:User should be able to click on "Route to market" section and select random "route" and "how will you promote product"
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -16,12 +19,12 @@ Feature: GreatMagna - Marketing approach Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
-#     And "Robert" decides to click on element "Add route to market" on page "Build An Export Plan - Marketing approach"
      And "Robert" decides to select random item for "Route to market" on page "Build An Export Plan - Marketing approach"
 
    @allure.link:XOT-1152
-   @Great_Magna_Export_Plan_B_O
+   @Great_Magna_Export_Plan_BB_O_D_1
    @Great_Magna_Export_Plan
+    @failed_great_magna
   Scenario:User should be able to click on "Add goal" and enter the objectives for exporting
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -29,18 +32,19 @@ Feature: GreatMagna - Marketing approach Page
     And "Robert" should be on the "GreatMagna - Dashboard" Page
    #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
-    And "Robert" decides to click on section "Business Objectives" on page "Build An Export Plan - Export Plan Dashboard"
-    And "Robert" fill business objective details on page "Build An Export Plan - Business Objectives"
-          | Position | Startdate  | Enddate    | Objectives | Owner        | PlannedReviews   |
-          | 1     | 01/02/2021 | 01/02/2028 | obj1       | obj1-owner   | obj1-plannedreviews |
-          | 2     | 01/02/2021 | 01/02/2028 | obj2       | obj2-owner   | obj2-plannedreviews |
-          | 3     | 01/02/2021 | 01/02/2028 | obj3       | obj3-owner   | obj3-plannedreviews |
-          | 4     | 01/02/2021 | 01/02/2028 | obj4       | obj4-owner   | obj4-plannedreviews |
-          | 5     | 01/02/2021 | 01/02/2028 | obj5       | obj5-owner   | obj5-plannedreviews |
+    And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
+    And "Robert" decides to select random Route to markets on page "Build An Export Plan - Marketing approach"
+          | Position |  Text             |
+          | 1        |  First route      |
+          | 2        |  Second route     |
+          | 3        |  Third route      |
+          | 4        |  Fourth route     |
+          | 5        |  Fifth route      |
 
   @allure.link:XOT-1153
      @Great_Magna_Export_Plan
-   @Great_Magna_Export_Plan_B_O_D_1_123
+   @Great_Magna_Export_Plan_B_O_D_1
+    @failed_great_magna
    Scenario:User should be able to delete Route to market
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -58,8 +62,10 @@ Feature: GreatMagna - Marketing approach Page
           | 1    |
 
    @allure.link:XOT-1154
+   @Great_Magna_Export_Plan_lesson_m_a
+   @bug
    @Great_Magna_Export_Plan
-  Scenario:User should be able to click lessons link "Selling direct to your customer"
+  Scenario:User should be able to click lessons link "What Marketing resources example"
 
     Given "Robert" visited "GreatMagna - Login" page
     When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
@@ -68,13 +74,11 @@ Feature: GreatMagna - Marketing approach Page
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
      And "Robert" decides to click on element "What Marketing resources example" on page "Build An Export Plan - Marketing approach"
-     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Marketing approach"
-     And "Robert" decides to click on section "Selling direct to your customer" on page "Build An Export Plan - Marketing approach"
-     And "Robert" should be on the "LearnToExport - Selling direct to your customer" page
-     And "Robert" decides to click on section "Marketing approach" on page "LearnToExport - Selling direct to your customer"
 
    @allure.link:XOT-1155
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_checkbox
+   @failed_great_magna
+   @Great_Magna_Export_Plan_m_a_target
   Scenario:User should be able to view Marketing approach pages
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -83,12 +87,12 @@ Feature: GreatMagna - Marketing approach Page
     #And "Robert" should be able to click on SkipWalkthrough
     Then "Robert" decides to click on "Build an export plan"
      And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
-     And "Robert" decides to click on element "open" on page "Build An Export Plan - Marketing approach"
-     And "Robert" decides to click on element "0-14 year olds" on page "Build An Export Plan - Marketing approach"
-     And "Robert" decides to click on element "confirm" on page "Build An Export Plan - Marketing approach"
+     And "Robert" decides to select random checkbox "open" on page "Build An Export Plan - Marketing approach"
+
 
    @allure.link:XOT-1156
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_m_a_nav
+    @Great_Magna_Export_Plan
   Scenario:User should be able to click on navigation bar and navigate to "Costs and pricing" page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -145,6 +149,7 @@ Feature: GreatMagna - Marketing approach Page
 
   @allure.link:XOT-1160
   @Great-Magna-Sign-Up
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -160,7 +165,9 @@ Feature: GreatMagna - Marketing approach Page
   And "Robert" decides to enter country name "Brazil" on the "Build An Export Plan - Marketing approach" page
 
     @allure.link:XOT-1161
-   @Great_Magna_Export_Plan_115
+   @Great_Magna_Export_Plan_1150
+   @failed_great_magna
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click on "Add route to market" on Marketing approach page and click on dashboard should see "Marketing approach" as last visited page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -173,3 +180,19 @@ Feature: GreatMagna - Marketing approach Page
     And "Robert" decides to click on element "Add route to market" on page "Build An Export Plan - Marketing approach"
    And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Marketing approach"
      And "Robert" should see "Marketing approach" text under section "Export Plan" on page "GreatMagna - Dashboard"
+
+       @allure.link:XOT-1048
+   @Great_Magna_Export_Plan_marketing_m_a_7
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Choose the right route to market" and click link back to "Adapting Your Product"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Marketing approach" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "lesson" on page "Build An Export Plan - Marketing approach"
+     And "Robert" decides to click on section "Choose the right route to market" on page "Build An Export Plan - Marketing approach"
+     And "Robert" should be on the "LearnToExport - Choose the right route to market" page
+     And "Robert" decides to click on section "Marketing approach" on page "LearnToExport - Choose the right route to market"

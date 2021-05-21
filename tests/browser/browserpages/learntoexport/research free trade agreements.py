@@ -34,14 +34,14 @@ from browserpages.common_actions import (
 
 )
 
-NAME = "Understand duties and taxes"
+NAME = "Research free trade agreements"
 SERVICE = Service.LEARNTOEXPORT
 TYPE = PageType.LESSON
-URL = URLs.GREAT_MAGNA_LESSONS_UNDERSTAND_DUTIES_AND_TAXES.absolute
-PAGE_TITLE = "Understand duties and taxes"
+URL = URLs.GREAT_MAGNA_LESSONS_RESEARCH_FREE_TRADE_AGREEMENTS.absolute
+PAGE_TITLE = "Research free trade agreements"
 
 SELECTORS = {
-    "understand duties and taxes": {
+    "research free trade agreements": {
         "lesson yes checkbox": Selector(
             By.XPATH, "//label[contains(text(),'Yes')]"
         ),
@@ -66,8 +66,8 @@ SELECTORS = {
         "view transcript": Selector(
             By.XPATH, "//span[contains(text(),'View transcript')]"
         ),
-        "costs and pricing": Selector(
-            By.CSS_SELECTOR, "#content > div > div.bg-white > div > div > div.c-1-4.back-section > div > div > a > span"
+        "target markets research": Selector(
+            By.XPATH, "//span[contains(text(),'Target markets research')]"
         ),
 
     },

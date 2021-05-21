@@ -1,3 +1,4 @@
+@Great_Magna_Tests
 @domestic
 @home-page
 @allure.suite:Domestic
@@ -20,7 +21,7 @@ Feature: Domestic - Home Page
       | How DIT helps            |
       | Find new markets         |
       | Export goods from the UK |
-#      | What's new               |
+      | What's new               |
       | Error Reporting          |
       | Footer                   |
       | Sign in                  |

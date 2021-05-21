@@ -18,11 +18,12 @@ class ReadEmail:
         imap = imaplib.IMAP4_SSL(self.host)
         # authenticate
         imap.login(self.emailid, self.password)
-        logging.debug("I am sucessfull")
+        print("I am sucessfull")
         status, messages = imap.select("INBOX")
 
         # total number of emails
         messages = int(messages[0])
+        print("total number of emails " + str(messages))
         actualmesasgestofetch = self.noofemailstofetch
 
         if messages >= 1:

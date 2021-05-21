@@ -48,7 +48,8 @@ Feature: GreatMagna - Costs And Pricing Page
      And "Robert" should be on the "Build An Export Plan - Export Plan Dashboard" page
 
    @allure.link:XOT-1094
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_number
+    @Great_Magna_Export_Plan
   Scenario:User should be able to click on "No. of units and time" section and select random units and time
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -100,7 +101,7 @@ Feature: GreatMagna - Costs And Pricing Page
           | Product Adaptation  | Freight and Logistics | Agent and Distribution fees | Marketing | Insurance |
           |        210          |          35           |            44               |     55    |     66    |
 
-    And "Robert" decides to validate entered text at "Insurance certificate" on page "Build An Export Plan - Adapting Your Product"
+    #And "Robert" decides to validate entered text at "Insurance certificate" on page "Build An Export Plan - Adapting Your Product"
 
 
    @allure.link:XOT-1097
@@ -123,7 +124,8 @@ Feature: GreatMagna - Costs And Pricing Page
     And "Robert" decides to enter value in "Duty" on page "Build An Export Plan - Costs And Pricing"
 
    @allure.link:XOT-1098
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_1098
+    @Great_Magna_Export_Plan
   Scenario:User should be able to enter "your net price","Local taxes" and "Duty per unit" value
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -142,7 +144,8 @@ Feature: GreatMagna - Costs And Pricing Page
     And "Robert" decides to enter value in "Duty" on page "Build An Export Plan - Costs And Pricing"
 
    @allure.link:XOT-1099
-   @Great_Magna_Export_Plan
+   @Great_Magna_Export_Plan_1099
+    @Great_Magna_Export_Plan
   Scenario:User should be able to "select currency" and enter invoicing currency
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -173,6 +176,7 @@ Feature: GreatMagna - Costs And Pricing Page
 
    @allure.link:XOT-1101
   @Great-Magna-Sign-Up
+  @Great_Magna_Export_Plan
   Scenario Outline: New User should be able to navigate to Export Plan and click on "Travel Plan" Page and enter the "Add Product"
 
   Given "Robert" visited "GreatMagna - Sign Up" page
@@ -188,7 +192,7 @@ Feature: GreatMagna - Costs And Pricing Page
   And "Robert" decides to enter country name "Israel" on the "Build An Export Plan - Costs And Pricing" page
 
       @allure.link:XOT-1102
-   @Great_Magna_Export_Plan_1
+   @Great_Magna_Export_Plan
   Scenario:User should be able to click "Net Price example" on Costs And Pricing page and click on dashboard should see "Costs And Pricing" as last visited page
 
     Given "Robert" visited "GreatMagna - Login" page
@@ -201,3 +205,35 @@ Feature: GreatMagna - Costs And Pricing Page
     And "Robert" decides to click on element "Net Price example" on page "Build An Export Plan - Costs And Pricing"
      And "Robert" decides to click on element "Dashboard" on page "Build An Export Plan - Costs And Pricing"
      And "Robert" should see "Costs And Pricing" text under section "Export Plan" on page "GreatMagna - Dashboard"
+
+         @allure.link:XOT-1048
+   @Great_Magna_Export_Plan_marketing_c_a_p_7
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Understand duties and taxes" and click link back to "Costs And Pricing"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "localtaxeslesson" on page "Build An Export Plan - Costs And Pricing"
+     And "Robert" decides to click on section "Understandduties and taxes" on page "Build An Export Plan - Costs And Pricing"
+     And "Robert" should be on the "LearnToExport - Understand duties and taxes" page
+     And "Robert" decides to click on section "Costs And Pricing" on page "LearnToExport - Understand duties and taxes"
+
+            @allure.link:XOT-1048
+   @Great_Magna_Export_Plan_marketing_c_a_p_8
+    @Great_Magna_Export_Plan
+    Scenario:User should be able to click lesson link "Choose the right route to market" and click link back to "Costs And Pricing"
+
+    Given "Robert" visited "GreatMagna - Login" page
+    When "Robert" decides to enter email address "santoshtesting10008+888@gmail.com", password "Testing@123!" and click Login
+    And "Robert" should be on the "GreatMagna - Dashboard" Page
+    #And "Robert" should be able to click on SkipWalkthrough
+    Then "Robert" decides to click on "Build an export plan"
+     And "Robert" decides to click on section "Costs And Pricing" on page "Build An Export Plan - Export Plan Dashboard"
+     And "Robert" decides to click on element "dutylesson" on page "Build An Export Plan - Costs And Pricing"
+     And "Robert" decides to click on section "Understand duties and taxes" on page "Build An Export Plan - Costs And Pricing"
+     And "Robert" should be on the "LearnToExport - Understand duties and taxes" page
+     And "Robert" decides to click on section "Costs And Pricing" on page "LearnToExport - Understand duties and taxes"

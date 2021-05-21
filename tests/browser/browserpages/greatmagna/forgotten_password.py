@@ -77,12 +77,13 @@ def fill_out_email_address(driver: WebDriver, details: dict):
 
 
 def read_reset_password_email(driver: WebDriver, emailaddress: str, emailpassword: str, newpassword: str):
+    #print("email_body_text")
     # create and load the confirmation code email from the test user
     objreadmail = ReadEmail(settings.DEV_GMAIL_HOST, emailaddress, emailpassword, settings.EMAIL_FETCH_COUNT)
     # search the test user INBOX, read the email body text from the Reset password email
     email_search_criteria = "Reset your password at "
     email_body_text = objreadmail.reademailbody("Reset your great.gov.uk password", email_search_criteria)
-    # print(email_body_text)
+    #print(email_body_text)
 
     # check if the email_body_text exists or empty
     if email_body_text:
@@ -97,7 +98,7 @@ def read_reset_password_email(driver: WebDriver, emailaddress: str, emailpasswor
             if reset_link_end_pos != -1:
                 reset_link_text = reset_link_text[:reset_link_end_pos + len("/about/")]
                 reset_link_text = reset_link_text.strip()  # trim left and right
-                # print(reset_link_text)
+                print(reset_link_text)
                 driver.get(reset_link_text)
                 if driver.find_element_by_xpath("//h1[contains(text(),'Change Password')]").is_displayed():
                     driver.find_element_by_xpath("//input[@id='id_password1']").send_keys(newpassword)

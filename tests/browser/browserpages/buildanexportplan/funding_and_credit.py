@@ -51,8 +51,11 @@ SELECTORS = {
         "how much funding": Selector(
             By.XPATH, "//input[@id='funding_amount_required']", type=ElementType.INPUT
         ),
-        "lesson": Selector(
-            By.CSS_SELECTOR, "#finance-funding-credit-options > button"
+        "funding lesson": Selector(
+            By.XPATH, "//*[@id=\"finance-funding-credit-options\"]/div[1]/div[1]/button"
+        ),
+        "avoid cashflow lesson": Selector(
+            By.CSS_SELECTOR, "#finance-how-much-funding > div > div.learning > div.learning__buttons > button"
         ),
         "add a funding option": Selector(
             By.XPATH, "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tfoot/tr/td/button"
@@ -90,13 +93,13 @@ SELECTORS = {
             By.XPATH, "//button[contains(text(),'Add a product')]"
         ),
         "add a target market": Selector(
-            By.XPATH, "//button[contains(text(),'Add a target market')]"
+            By.CSS_SELECTOR, "#set-country-button > span > button"#By.XPATH, "//button[contains(text(),'Add a target market')]"
         ),
         "avoid cashflow challenges when exporting": Selector(
             By.CSS_SELECTOR, "#finance-how-much-funding > div > div.learning > div.learning__content > a > div"
         ),
         "choose the right funding": Selector(
-            By.XPATH, "//*[@id=\"finance-funding-credit-options\"]/a/div/h4"
+            By.XPATH, "//*[@id=\"finance-funding-credit-options\"]/div[1]/div[2]/a/div/h4"
         ),
         "top export plan home": Selector(
             By.XPATH, "//*[@id=\"funding-and-credit-content\"]/section[1]/div/div/div[2]/a/span"
@@ -171,65 +174,44 @@ def find_and_select_random_funding_options(driver: WebDriver, position: str, amo
     find_and_click(driver, element_selector_name="Add a funding option")
     driver.implicitly_wait(5)
 
-    actual_positon = 1
-    if int(position) != 1:
-        actual_positon = int(position) + (int(position) - 1)
+    funding_option_element_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr" + "[" + str(position) + "]"
+    funding_option_1_element = funding_option_element_xpath + "/td[1]/div/div/div[3]/div[2]"
+    driver.find_element_by_xpath(funding_option_1_element).click()
+    driver.implicitly_wait(5)
 
-    # funding_option_element_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr" + "[" + str(actual_positon) + "]"
-    # funding_option_1_element = funding_option_element_xpath + "/td[1]/div/div/div[2]/button"
-    # driver.find_element_by_xpath(funding_option_1_element).click()
-    # driver.implicitly_wait(5)
-    #
-    # #driver.implicitly_wait(5)
-    # #/html/body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr[1]/td[1]/div/div/ul/li[3]
-    # ulist_funding_options_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr[1]/td[1]/div/div/ul"
-    # ulist_funding_options_element = driver.find_element_by_xpath(ulist_funding_options_xpath)
-    # funding_options_elements = ulist_funding_options_element.find_elements_by_tag_name("li")
-    #
-    # random_number = 0
-    # if len(funding_options_elements) > 2:
-    #     random_number = random.randint(1, len(funding_options_elements) - 1)
-    # #random_li_element = funding_options_elements[random_number]
-    # #random_li_element.click()
-    # random_li_element = driver.find_element_by_xpath(ulist_funding_options_xpath + "/li[" + str(random_number) + "]")
-    # random_li_element.click()
-    # time.sleep(2)
+    ulist_funding_options_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr" + "[" + str(position) + "]"
+    ulist_funding_options_element = ulist_funding_options_xpath + "/td[1]/div/div/div[3]/div[2]"
+    driver.find_element_by_xpath(ulist_funding_options_element).click()
 
+    ul_funding_options_element_xpath = ulist_funding_options_xpath + "/td[1]/div/div/div[3]/div[3]/ul"
+    li_elements = driver.find_element_by_xpath(ul_funding_options_element_xpath).find_elements_by_tag_name("li")
+    # logging.debug("list elements")
+    # logging.debug(li_elements)
+    random_number = 0
+    if len(li_elements) > 2:
+        random_number = random.randint(1, len(li_elements) - 1)
+    random_li_element = li_elements[random_number]
+    # logging.debug(random_number)
+    # logging.debug(random_li_element.tag_name)
+    # logging.debug(random_li_element)
+    random_li_element.click()
+    time.sleep(2)
     gbp_elem_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr" + "[" + str(
-        actual_positon) + "]"
+        position) + "]"
     gbp_text_elem_xpath = gbp_elem_xpath + "/td[2]/div/div[2]/input"
     driver.find_element_by_xpath(gbp_text_elem_xpath).clear()
     driver.find_element_by_xpath(gbp_text_elem_xpath).send_keys(amount)
     time.sleep(2)
 
-    # try to run the code
-    #
-    #
-    #
-    #
-    #
-    #
-    # funding_option_1_drop_down_element = driver.find_element_by_css_selector("#finance-funding-credit-options > div.costs.costs--funding.bg-blue-deep-10.p-v-s > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > ul")
-    # funding_option_2_drop_down_element = driver.find_element_by_css_selector("#finance-funding-credit-options > div.costs.costs--funding.bg-blue-deep-10.p-v-s > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > ul")
-    # funding_option_3_drop_down_element = driver.find_element_by_css_selector("#finance-funding-credit-options > div.costs.costs--funding.bg-blue-deep-10.p-v-s > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > ul")
-    # funding_option_4_drop_down_element = driver.find_element_by_css_selector("#finance-funding-credit-options > div.costs.costs--funding.bg-blue-deep-10.p-v-s > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > ul")
-    # funding_option_5_drop_down_element = driver.find_element_by_css_selector("#finance-funding-credit-options > div.costs.costs--funding.bg-blue-deep-10.p-v-s > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > ul")
-    # li_elements = funding_option_1_drop_down_element.find_elements_by_tag_name("li")
-    # li_elements = funding_option_2_drop_down_element.find_elements_by_tag_name("li")
-    # li_elements = funding_option_3_drop_down_element.find_elements_by_tag_name("li")
-    # li_elements = funding_option_4_drop_down_element.find_elements_by_tag_name("li")
-    # li_elements = funding_option_5_drop_down_element.find_elements_by_tag_name("li")
-    #
-    # random_number = 0
-    # if len(li_elements) > 2:
-    #     random_number = random.randint(1, len(li_elements)-1)
-    # random_li_element = li_elements[random_number]
 
     # time.sleep(1)
 def delete_all_funding_options(driver: WebDriver, del_button_position: str):
     # 1,3,5,7,......
     time.sleep(1)
-
+    #/html/body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr[2]/td/button/i
+    #//body/div[16]/div/div/div/div[2]/div[2]/button[1]
+    #/html/body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr[2]/td/button/i
+    #2,4,6,8,10
     funding_options_div_element_xpath = "//body/main/div[2]/div/div/div[2]/div/div[3]/div[1]/table/tbody/tr" + "[" + del_button_position + "]"
     del_btn_ele_xpath = funding_options_div_element_xpath + "/td/button"
     driver.find_element_by_xpath(del_btn_ele_xpath).click()
@@ -237,6 +219,7 @@ def delete_all_funding_options(driver: WebDriver, del_button_position: str):
     driver.implicitly_wait(2)
     delete_msg_yes_index = int(12 + (int((int(del_button_position) / 2)) - 1))
     time.sleep(1)
+    #12,13,14,15,16
     delete_message_yes_element_xpath = "//body/div" + "[" + str(
         delete_msg_yes_index) + "]" + "/div/div/div/div[2]/div[2]/button[1]"
     logging.debug(delete_message_yes_element_xpath)
@@ -291,7 +274,7 @@ def fill_out_country(driver: WebDriver, country: str):
 
         # look out for the list displayed after entering country name and select random/provided country
         ul_list_element = driver.find_element_by_xpath(
-            "//body/div[11]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
+            "//body/div[5]/div/div/div/div/div/div[1]/div[4]/div[2]/div[2]/ul")
 
         section_elements = ul_list_element.find_elements_by_tag_name("section")
         logging.debug("length of section elements " + str(len(section_elements)))
