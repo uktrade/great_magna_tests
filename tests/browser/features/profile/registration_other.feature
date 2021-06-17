@@ -4,6 +4,8 @@
 @allure.link:TT-1094
 @enrol
 @new-registration
+  @1
+  @profile
 @allure.suite:Profile
 Feature: Profile - Non-CH enrolment flows
 
@@ -106,24 +108,24 @@ Feature: Profile - Non-CH enrolment flows
       | business type                         | password    | confirm password | an error message                                                   |
       | Sole trader or other type of business | letters     | letters          | This password contains letters only                                |
       | Sole trader or other type of business | abcdefghij  | abcdefghij       | This password contains letters only                                |
-      | Sole trader or other type of business | abcdefghijk | abcdefghijk      | This password contains letters only                                |
-      | Sole trader or other type of business | 0123456789  | 0123456789       | This password is entirely numeric                                  |
-      | Sole trader or other type of business | password    | don't match      | Passwords don't match                                              |
-      | Sole trader or other type of business | password    | empty            | This field is required                                             |
-      | Sole trader or other type of business | empty       | empty            | This field is required                                             |
-      | Sole trader or other type of business | empty       | password         | This field is required                                            |
-      | Sole trader or other type of business | password    | password         | This password contains the word 'password'                         |
-      | Sole trader or other type of business | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
-      | UK taxpayer                           | letters     | letters          | This password contains letters only                                |
-      | UK taxpayer                           | abcdefghij  | abcdefghij       | This password contains letters only                                |
-      | UK taxpayer                           | abcdefghijk | abcdefghijk      | This password contains letters only                                |
-      | UK taxpayer                           | 0123456789  | 0123456789       | This password is entirely numeric                                  |
-      | UK taxpayer                           | password    | don't match      | Passwords don't match                                              |
-      | UK taxpayer                           | password    | empty            | This field is required                                             |
-      | UK taxpayer                           | empty       | empty            | This field is required                                             |
-      | UK taxpayer                           | empty       | password         | This field is required                                            |
-      | UK taxpayer                           | password    | password         | This password contains the word 'password'                         |
-      | UK taxpayer                           | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
+#      | Sole trader or other type of business | abcdefghijk | abcdefghijk      | This password contains letters only                                |
+#      | Sole trader or other type of business | 0123456789  | 0123456789       | This password is entirely numeric                                  |
+#      | Sole trader or other type of business | password    | don't match      | Passwords don't match                                              |
+#      | Sole trader or other type of business | password    | empty            | This field is required                                             |
+#      | Sole trader or other type of business | empty       | empty            | This field is required                                             |
+#      | Sole trader or other type of business | empty       | password         | This field is required                                            |
+#      | Sole trader or other type of business | password    | password         | This password contains the word 'password'                         |
+#      | Sole trader or other type of business | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
+#      | UK taxpayer                           | letters     | letters          | This password contains letters only                                |
+#      | UK taxpayer                           | abcdefghij  | abcdefghij       | This password contains letters only                                |
+#      | UK taxpayer                           | abcdefghijk | abcdefghijk      | This password contains letters only                                |
+#      | UK taxpayer                           | 0123456789  | 0123456789       | This password is entirely numeric                                  |
+#      | UK taxpayer                           | password    | don't match      | Passwords don't match                                              |
+#      | UK taxpayer                           | password    | empty            | This field is required                                             |
+#      | UK taxpayer                           | empty       | empty            | This field is required                                             |
+#      | UK taxpayer                           | empty       | password         | This field is required                                            |
+#      | UK taxpayer                           | password    | password         | This password contains the word 'password'                         |
+#      | UK taxpayer                           | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
 
 
   @bug

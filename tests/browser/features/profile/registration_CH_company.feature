@@ -1,8 +1,11 @@
 @Great_Magna_Tests
 @domestic
+  @profile
 @allure.link:TT-1033
 @allure.link:TT-1094
 @enrol
+  @1
+  @profile_1
 @new-registration
 @allure.suite:Profile
 Feature: Profile - CH enrolment flows
@@ -12,6 +15,7 @@ Feature: Profile - CH enrolment flows
 
 
   @allure.link:TT-1115
+    @profile_2
   Scenario: Users should be presented with the Enrolment Steps prior to starting the registration process
     Given "Natalia" visits the "Profile - Create an account" page
 
@@ -33,6 +37,7 @@ Feature: Profile - CH enrolment flows
 
   @allure.link:TT-1117
   @ltd-plc-royal
+    @profile_3
   Scenario Outline: "<business type>" representative should be asked to enter their email and set a password after selecting their business type
     Given "Natalia" visits the "Profile - Enter your email address and set a password (<business type>)" page
 
@@ -50,6 +55,7 @@ Feature: Profile - CH enrolment flows
   @dev-only
   @allure.link:TT-1120
   @ltd-plc-royal
+    @profile_4
   Scenario Outline: "<business type>" representative should receive an email with confirmation code
     Given "Natalia" visits the "Profile - Enter your email address and set a password (<business type>)" page
 
@@ -74,6 +80,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-2193
   @password
   @ltd-plc-royal
+    @profile_5
   Scenario Outline: "<business type>" representative shouldn't be able to use a password that doesn't meet requirements otherwise their going to see "<an error message>"
     Given "Natalia" visits the "Profile - Enter your email address and set a password (<business type>)" page
 
@@ -88,15 +95,15 @@ Feature: Profile - CH enrolment flows
     Examples:
       | business type             | password    | confirm password | an error message                                                   |
       | LTD, PLC or Royal Charter | letters     | letters          | This password contains letters only                                |
-      | LTD, PLC or Royal Charter | abcdefghij  | abcdefghij       | This password contains letters only                                |
-      | LTD, PLC or Royal Charter | abcdefghijk | abcdefghijk      | This password contains letters only                                |
-      | LTD, PLC or Royal Charter | 0123456789  | 0123456789       | This password is entirely numeric                                  |
-      | LTD, PLC or Royal Charter | password    | don't match      | Passwords don't match                                              |
-      | LTD, PLC or Royal Charter | password    | empty            | This field is required                                             |
-      | LTD, PLC or Royal Charter | empty       | empty            | This field is required                                             |
-      | LTD, PLC or Royal Charter | password    | password         | This password contains the word 'password'                         |
-      | LTD, PLC or Royal Charter | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
-      | LTD, PLC or Royal Charter | empty       | password         | This field is required                                             |
+#      | LTD, PLC or Royal Charter | abcdefghij  | abcdefghij       | This password contains letters only                                |
+#      | LTD, PLC or Royal Charter | abcdefghijk | abcdefghijk      | This password contains letters only                                |
+#      | LTD, PLC or Royal Charter | 0123456789  | 0123456789       | This password is entirely numeric                                  |
+#      | LTD, PLC or Royal Charter | password    | don't match      | Passwords don't match                                              |
+#      | LTD, PLC or Royal Charter | password    | empty            | This field is required                                             |
+#      | LTD, PLC or Royal Charter | empty       | empty            | This field is required                                             |
+#      | LTD, PLC or Royal Charter | password    | password         | This password contains the word 'password'                         |
+#      | LTD, PLC or Royal Charter | 123 short   | 123 short        | This password is too short. It must contain at least 10 characters |
+#      | LTD, PLC or Royal Charter | empty       | password         | This field is required                                             |
 
 
   @bug
@@ -104,6 +111,7 @@ Feature: Profile - CH enrolment flows
   @fixed
   @dev-only
   @ltd-plc-royal
+    @profile_6
   Scenario Outline: "<selected business type>" representative should be able to use spaces in password
     Given "Natalia" visits the "Profile - Enter your email address and set a password (<selected business type>)" page
 
@@ -124,6 +132,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1121
   @ltd-plc-royal
    @failed
+    @profile_7
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their business details after providing email confirmation code
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -145,6 +154,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1123
   @ltd-plc-royal
   @failed
+    @profile_8
   Scenario Outline: A representative of a "<selected business type>" company should be asked to enter their details after providing business details
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -171,6 +181,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1124
   @ltd-plc-royal
   @failed
+    @profile_9
   Scenario Outline: A representative of a "<selected business type>" company should be told when account is created and the are the next possible steps
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -201,6 +212,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1126
   @allure.link:TT-1031
   @ltd-plc-royal
+    @profile_10
   Scenario: Companies House company enrolment creates a business profile
     Given "Natalia" has created a great.gov.uk account for a "LTD, PLC or Royal Charter"
 
@@ -213,6 +225,7 @@ Feature: Profile - CH enrolment flows
   @verification-code
   @ltd-plc-royal
   @failed
+    @profile_11
   Scenario: Users should be able to resend email verification code
     Given "Natalia" has received the email confirmation code by opting to register as "LTD, PLC or Royal Charter"
     And "Natalia" is on the "Profile - Enter your confirmation code (LTD, PLC or Royal Charter)" page
@@ -236,6 +249,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1017
   @ltd-plc-royal
   @failed
+    @profile_12
   Scenario Outline: When CH record doesn't include business' address the business representative should be referred to a contact page
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" filled out and submitted the form
@@ -260,6 +274,7 @@ Feature: Profile - CH enrolment flows
   @sole-trader-other-business
   @uk-taxpayer
   @failed
+    @profile_13
   Scenario Outline: User representing "<selected business type>" should be notified by email when there is an account already registered to their email address (legacy SSO registration)
     Given "Natalia" has a verified standalone SSO/great.gov.uk account
     And "Natalia" decided to create a great.gov.uk account as "<selected business type>"
@@ -272,8 +287,8 @@ Feature: Profile - CH enrolment flows
     Examples:
       | selected business type                |
       | LTD, PLC or Royal Charter             |
-      | Sole trader or other type of business |
-      | UK taxpayer                           |
+#      | Sole trader or other type of business |
+#      | UK taxpayer                           |
 
 
   @dev-only
@@ -283,6 +298,7 @@ Feature: Profile - CH enrolment flows
   @sole-trader-other-business
   @uk-taxpayer
   @failed
+    @profile_14
   Scenario Outline: User representing "<selected business type>" should be notified by email when there is an account already registered to their email address
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" quickly signed out
@@ -296,8 +312,8 @@ Feature: Profile - CH enrolment flows
     Examples:
       | selected business type                |
       | LTD, PLC or Royal Charter             |
-      | Sole trader or other type of business |
-      | UK taxpayer                           |
+#      | Sole trader or other type of business |
+#      | UK taxpayer                           |
 
 
   @captcha
@@ -305,6 +321,7 @@ Feature: Profile - CH enrolment flows
   @allure.link:TT-1128
   @allure.link:TT-1036
   @ltd-plc-royal
+    @profile_15
   Scenario: A logged-in user representing "LTD, PLC or Royal Charter" company should not be able to access SSO Sign in or Create an account pages
     Given "Natalia" has created a great.gov.uk account for a "LTD, PLC or Royal Charter"
 
@@ -321,6 +338,7 @@ Feature: Profile - CH enrolment flows
   @ltd-plc-royal
   @sole-trader-other-business
   @failed
+    @profile_16
   Scenario Outline: Handle invalid user state - already logged in - skip ahead to page where they enter business details for "<selected business type>"
     Given "Natalia" has a verified standalone SSO/great.gov.uk account
     And "Natalia" is signed in
@@ -335,7 +353,7 @@ Feature: Profile - CH enrolment flows
     Examples:
       | selected business type                |
       | LTD, PLC or Royal Charter             |
-      | Sole trader or other type of business |
+#      | Sole trader or other type of business |
 
 
   @dev-only
@@ -344,6 +362,7 @@ Feature: Profile - CH enrolment flows
   @ltd-plc-royal
   @sole-trader-other-business
   @failed
+    @profile_17
   Scenario Outline: Log user in on verification submit, not on account creation for "<selected business type>"
     Given "Natalia" has received the email confirmation code by opting to register as "<selected business type>"
     And "Natalia" is on the "Profile - Enter your confirmation code (<selected business type>)" page
@@ -356,7 +375,7 @@ Feature: Profile - CH enrolment flows
     Examples:
       | selected business type                |
       | LTD, PLC or Royal Charter             |
-      | Sole trader or other type of business |
+#      | Sole trader or other type of business |
 
 
   @bug
@@ -367,6 +386,7 @@ Feature: Profile - CH enrolment flows
   @ltd-plc-royal
   @sole-trader-other-business
   @uk-taxpayer
+    @profile_18
   Scenario Outline: Newly registered users should see "<expected business type>" business type on their "Profile - Business profile" page
     Given "Natalia" has created a great.gov.uk account for a "<selected business type>"
 
@@ -377,5 +397,5 @@ Feature: Profile - CH enrolment flows
     Examples: business types
       | selected business type                | expected business type                        |
       | LTD, PLC or Royal Charter             | UK business registered in Companies House     |
-      | Sole trader or other type of business | UK business not registered in Companies House |
-      | UK taxpayer                           | Get a business profile                        |
+#      | Sole trader or other type of business | UK business not registered in Companies House |
+#      | UK taxpayer                           | Get a business profile                        |

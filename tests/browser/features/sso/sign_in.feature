@@ -1,6 +1,7 @@
 @Great_Magna_Tests
 @domestic
 @sso
+  @1
 @allure.suite:SSO
 Feature: SSO - Sign in
 
@@ -10,6 +11,7 @@ Feature: SSO - Sign in
 
 
   @allure.issue:TT-1778
+    @2_failed
 
   Scenario: Visitors should see all expected page elements on "SSO - Sign in"
     When "Robert" goes to the "SSO - Sign in" page
@@ -26,6 +28,7 @@ Feature: SSO - Sign in
 
 
   @allure.issue:TT-1778
+   @1_failed
 
   Scenario: Visitors should see all expected page elements on "SSO - Registration" page
     When "Robert" goes to the "SSO - Registration" page

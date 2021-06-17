@@ -1,6 +1,7 @@
 @Great_Magna_Tests
 @domestic
 @international
+ @1
 @allure.suite:International
 Feature: INTL - Updates for non-UK companies on EU Exit
 

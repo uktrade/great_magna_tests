@@ -38,7 +38,7 @@ SELECTORS = {
         "email input": EMAIL_INPUT,
         "password input": PASSWORD_INPUT,
         "sign in": (
-            Selector(By.CSS_SELECTOR, "form button.button", type=ElementType.SUBMIT)
+            Selector(By.CSS_SELECTOR, "#login-form > form > button", type=ElementType.SUBMIT)
         ),
         "forgotten password?": RESET_YOUR_PASSWORD_LINK,
     },

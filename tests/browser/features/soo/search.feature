@@ -1,5 +1,7 @@
 @Great_Magna_Tests
 @domestic
+  @1
+  @soo
 @allure.suite:SOO
 Feature: SOO - Search for marketplace
 
