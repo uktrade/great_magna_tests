@@ -25,7 +25,7 @@ machine_python3_node_browsers: &machine_python3_node_browsers
 
 # Individual (shared) steps.
 step_checkout_repo: &step_checkout_repo
-                      checkout
+  checkout
 
 step_install_requirements_for_parallel_browser_tests: &step_install_requirements_for_parallel_browser_tests
   run:
