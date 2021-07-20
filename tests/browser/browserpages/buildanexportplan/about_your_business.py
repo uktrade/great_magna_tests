@@ -162,12 +162,6 @@ def find_and_select_random_item_list(driver: WebDriver, element_selector_name: s
     logging.debug(random_li_element.tag_name)
     logging.debug(random_li_element)
     time.sleep(2)
-    # random_li_element.click()
-
-    # select = Select(random_li_element)
-    # select.select_by_index(0)
-
-    # £500,000 up to £1,999,999
 
 
 def check_section_complete_yes(driver: WebDriver, element_selector_name: str):
@@ -301,34 +295,10 @@ def fill_out_product(driver: WebDriver, products: str):
         pass
 
     try:
-        # time.sleep(2)
-        # driver.find_element_by_xpath("/html/body/div[3]/div/div/form/div[2]/div/div/section/div/div[2]/label/div[2]/div/i").click()
-        # driver.find_element_by_xpath(
-        #     "/html/body/div[3]/div/div/form/div[2]/div/div/section/div/div[2]/label/div[2]/div/i").click()
 
-        # driver.find_element_by_xpath(
-        #     "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").sendKeys(Keys.CONTROL + "a");
-        # driver.find_element_by_xpath(
-        #     "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").send_keys(u'\ue009' + u'\ue003')
-        # driver.find_element_by_xpath(
-        #     "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").sendKeys(Keys.DELETE);
-        # time.sleep(2)
-        # driver.find_element_by_xpath(
-        #     "//body/div[3]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]").clear()
         product_input_text = driver.find_element_by_xpath("//input[@id='input-commodity-name']").text
         logging.debug("product_input_text -> " + product_input_text)
-        # actions = action_chains(driver)
-        # driver.find_element_by_xpath("//input[@id='input-commodity-name']").click()
-        # for i in range(len(product_input_text)):
-        #     actions.sendKeys(Keys.ARROW_LEFT)
-        #
-        # actions.build().perform()
-        #
-        # for i in range(len(product_input_text)):
-        #     actions.sendKeys(Keys.DELETE)
-        #
-        # time.sleep(1);
-        # actions.build().perform()
+
 
         for i in range(len(product_input_text)):
             driver.find_element_by_xpath(
@@ -416,14 +386,6 @@ def fill_out_country(driver: WebDriver, country: str):
                 button_element.click()
                 # time.sleep(5)
                 break
-        # country_name_btn_xpath = "//button[contains(text(),'"+ country + "')]"
-        # driver.find_element_by_xpath(country_name_btn_xpath).click()
-    # try:
-    #     time.sleep(1)
-    #     driver.find_element_by_xpath("//a[@id='page-tour-skip']").click()
-    # except:
-    #     pass
-
 
 def fill_out_products_and_country(driver: WebDriver, products: str, country: str):
     fill_out_product(driver, products)
@@ -431,9 +393,7 @@ def fill_out_products_and_country(driver: WebDriver, products: str, country: str
     fill_out_country(driver, country)
 
 def fill_out_products(driver: WebDriver, products: str):
-    # details_dict = {"emailaddress": products}
-    # product_selectors = SELECTORS["dashboard"]
-    # fill_out_input_fields(driver, product_selectors, details_dict)
+
     product_btn = find_element(
         driver, find_selector_by_name(SELECTORS, "product-btn")
     )
