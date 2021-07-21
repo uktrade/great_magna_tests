@@ -103,27 +103,12 @@ step_prepare_list_of_scenarios_to_run_by_parallel_browser_tests: &step_prepare_l
           export BROWSER="firefox";
       fi
       cd tests/browser
-#      PYTHONPATH=. behave \
-#        --dry-run \
-#        --no-source \
-#        --no-summary \
-#        --no-snippets \
-#        --no-skipped \
-#        --tags=~@wip \
-#        --tags=~@fixme \
-#        --tags=~@skip \
-#        --tags=~@eu-exit \
-#        ${TAGS} \
-#        --format=mini \
-#        features/ \
-#        | grep -v "Supplied path\|Trying base directory" > scenario_titles.txt
 
 step_cache_browser_tests_requirements: &step_cache_browser_tests_requirements
   save_cache:
     key: browser-tests-dependency-cache-{{ .Environment.CIRCLE_WORKFLOW_ID }}
     paths:
       - ~/great_magna_tests
-
 
 step_restore_cached_browser_tests_requirements: &step_restore_cached_browser_tests_requirements
   restore_cache:
@@ -159,12 +144,6 @@ step_run_browser_tests_in_parallel: &step_run_browser_tests_in_parallel
       SPLIT_FILE_SUFFIX=$(( ${CIRCLE_NODE_INDEX} / 2 ))
 
       echo "Current instance of ${BROWSER} is going to run `cat tests-to-run${SPLIT_FILE_SUFFIX} | wc -l` scenarios:"
-      cat tests-to-run${SPLIT_FILE_SUFFIX}
-
-
-#      if [ -d "/home/circleci/great_magna_tests/tests/browser/reports" ]; then rm -Rf "/home/circleci/great_magna_tests/tests/browser/reports"; fi
-#
-#      mkdir /home/circleci/great_magna_tests/tests/browser/reports
 
       cat tests-to-run${SPLIT_FILE_SUFFIX} | while IFS=$"\r" read -r title ; do
         echo -e "\n\n${BROWSER} run:    ${title}"
@@ -254,10 +233,6 @@ steps_run_parallel_browser_tests: &steps_run_parallel_browser_tests
         root: .
         paths:
 
-step_restore_cached_periodic_tasks_requirements: &step_restore_cached_periodic_tasks_requirements
-  restore_cache:
-    key: periodic-tasks-dependency-cache-{{ .Revision }}
-
 jobs:
   setup_env_for_parallel_browser_tests_using_circleci:
     working_directory: ~/great_magna_tests
@@ -305,7 +280,9 @@ jobs:
           destination: junit_report
 
   store_behave_logs_from_browser_tests_as_artifacts:
-    <<: *machine_python3_clean
+    <<: [
+      *machine_python3_clean,
+    ]
     working_directory: ~/great_magna_tests
     steps:
       - attach_workspace:
@@ -313,8 +290,6 @@ jobs:
       - store_artifacts:
           path: ./tests/browser/reports/
           destination: behave_logs
-
-    ]
 
 workflows:
   version: 2
@@ -365,26 +340,3 @@ workflows:
       - store_behave_logs_from_browser_tests_as_artifacts:
           requires:
             - dev_parallel_browser_tests_using_circleci
-
-
-  run_browser_tests_in_parallel_in_uat:
-    triggers:
-      - schedule:
-          cron: "3 6 * * 1-5"
-          filters:
-            branches:
-              only: master
-    jobs:
-      - setup_env_for_parallel_browser_tests_using_circleci
-      - uat_parallel_browser_tests_using_circleci:
-          requires:
-            - setup_env_for_parallel_browser_tests_using_circleci
-      - merge_browser_allure_results_and_generate_report_and_send_link_to_slack:
-          requires:
-            - uat_parallel_browser_tests_using_circleci
-      - merge_junit_results_from_parallel_browser_tests:
-          requires:
-            - uat_parallel_browser_tests_using_circleci
-      - store_behave_logs_from_browser_tests_as_artifacts:
-          requires:
-            - uat_parallel_browser_tests_using_circleci
